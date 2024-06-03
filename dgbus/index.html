@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>대전복합터미널</title>
+</head>
+<body>
+    <!-- id="wrap" : 홈페이지 전체를 감싸는 요소
+         id명은 한페이지에서 절대 중복사용 불가능함-->
+    <div id="wrap">
+        <header></header>
+        <!--container : header와 footer를 제외한 나머지 전부(몸통)-->
+        <div class="container">
+            <section class="visual"></section><!--visual-->
+            <section class="introduce">
+                <div class="art"></div><!--art-->
+                <div class="scholarship"></div><!--scholarship-->
+            </section><!--introduce-->
+
+            <!--섹션 news와 movie는 배경이 연결되어 있어서 div로 묶어줌
+                section태그는 section으로 감싸는 게 불가능해서 사용불가-->
+            <div class="promotion">
+                <section class="news"></section><!--news-->
+                <section class="movie"></section><!--movie-->
+            </div><!--promotion-->
+        </div><!--container-->
+        <footer></footer>
+    </div>
+</body>
+</html>
