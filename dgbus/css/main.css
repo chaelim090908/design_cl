@@ -1,0 +1,211 @@
+@import url(default.css);
+@import url(fonts.css);
+
+/* 글자 스타일은 상속받음. 기본 글자 스타일은 모든 태그를 감싸는 html과 body에 선언
+   (body에만 선언하면 되잖아 > 가끔 html에 태그해야 하는 경우가 있어서 한번에. */
+html, body {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #3d3d3d; /* 글자 색상 */
+    letter-spacing: -0.05em; /* 자간 */
+    line-height: 1.4; /* 배수 - 글자크기의 1.4배 */
+    word-break: keep-all; /* 단어별로 줄바꿈 */
+}
+/* 홈페이지 전체를 감싸는 요소 - 가로 스크롤바가 생겼을 때 옆 배경이 잘리는 현상을 막음*/
+#wrap {
+    min-width: 1260px;
+}
+/*  wrapper : 홈페이지의 넓이를 제한하고 가운데정렬*/
+.wrapper {
+    width: 1260px; /* 넓이 */
+    margin: 0 auto; /* 가운데정렬 */
+}
+
+header {
+    height: 100px;
+}
+header .wrapper { /* flex는 자신에게 주지 않고 해당 태그의 부모에게 줌 */
+    display: flex;
+    justify-content: space-between; /* 양쪽정렬 */
+}
+header .logo {
+    margin: 22px 0 0 0;
+}
+header .gnb ul {
+    display: flex;
+}
+/* 1차메뉴는 큼직하게 누려야 됨. 여백 및 사이즈는 a한테 줘야함*/
+header .gnb ul li a {
+    font-size: 22.5px;
+    color: #1d1d1d;
+    padding: 37px 23px 41px 23px;
+    /* display : block = padding값을 적용하기 위해서 - a가 inline 태그라 적용이 안됨 */
+    display: block;
+}
+/* a태긍 마우스를 올렸을 때의 스타일 */
+header .gnb ul li a:hover {
+    color: #645AB2;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.visual {
+    height: 720px;
+    letter-spacing: -0.05em;
+    background-image: url(../images/visual_bg_test.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*  background 속성을 한번에 선언하는 방법.
+    background이미지 url  repeat  position(좌우, 상하)  /  size */
+    background: url(../images/visual_bg.png) no-repeat center center / cover;
+    color: rgba(255,255,255,1);
+    padding: 0 0 0 150px;
+
+}
+.visual strong {
+    padding: 246px 0 0 4px;
+    margin: 0 0 -4px 0;
+    display: block; /* strong이 inline 요소라서 적용이 안되기 때문에 block으로 변경 */
+}
+.visual h2 {
+    font-size: 40px;
+    line-height: 1.2;
+}
+.visual h2 em {
+    font-weight: 700;
+}
+.visual h2 em .blue {
+    color: #A5CEF8;
+}
+.visual h2 em .pink {
+    color: #F198AE;
+}
+
+.introduce {
+    margin: 133px 0 0 0;
+}
+.introduce .art {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 45px 0;
+}
+.introduce .art .txt {
+    margin: 0 0 0 74px;
+    width: 461px;
+}
+.introduce .scholarship {
+    display: flex;
+    justify-content: center;
+    text-align: right;
+}
+.introduce h2 {
+    font-weight: 700;
+    color: #1d1d1d;
+    font-size: 35px;
+    margin: 125px 0 0 0;
+}
+.introduce strong {
+    font-weight: 700;
+    color: #1d1d1d;
+    font-size: 18px;
+    line-height: 1.2;
+    margin: 9px 0 11px 0;
+    display: block;
+}
+.introduce .btn {
+    display: flex;
+    /* a태그는 원래 좌우로 배치됨
+    하지만 사이사이 여백이 발생 > 이 여백을 삭제하려면  display-flex로
+    좌우 배치해야 함*/
+    margin: 20px 0 0 0;
+}
+.introduce .scholarship .txt {
+    margin: 0 74px 0 0;
+}
+.introduce .scholarship .btn {
+    justify-content: flex-end;
+    /* flex로 배치한 버튼은 오른쪽 정렬 text-align 영향을 받지 않음 */
+}
+.introduce .scholarship .txt {
+    width: 461px;
+}
+.introduce .btn a {
+    border: 1px solid #cccccc;
+    padding: 6px 19px;
+    display: block; /*  padding값을 적용하기 위해서 */
+    margin: 0 10px 0 0;
+}
+.introduce .btn a:hover {
+    /* 오버전에 border가 있었다면 오버후에도 border를 주는 것이 사이즈가 유지됨*/
+    background-color: #645AB2;
+    border: 1px solid #645AB2;
+    color: #fff;
+}
+/* btn 클래스 안에 있는 a 중에서 마지막 a */
+.introduce .btn a:last-child {
+    margin-right: 0;
+}
+
+.promotion {
+    /* 배경보다 promotion 내부의 컨텐츠 길이가 더 김
+       = 배경의 위치를 정확하게(가운데/상단)
+         background-size 주면 안됨(디자인한 사이즈대로 들어가야 하니까)*/
+    background: url(../images/promotion_bg.png) no-repeat center top;
+}
+.promotion .news {
+    color: rgba(255,255,255,0.8);
+    padding: 79px 0 140px 0;
+    margin: 154px 0 0 0;
+}
+.promotion .news .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.promotion .news .tit {
+    margin: 0 0 0 21px;
+    letter-spacing: -0.05em;
+}
+.promotion .news .tit h2 {
+    font-size: 35px;
+    font-weight: 700;
+    color: #fff;
+    margin: 5px 0 1px 0;
+}
+.promotion .news .tit a {
+    border: 1px solid rgba(255,255,255,0.6);
+    padding: 6px 19px;
+    display: inline-block; /* inline 요소는 padding 적용 안됨 */
+    margin: 11px 0 0 0;
+}
+.promotion .news .tit a:hover {
+    border: 1px solid #fff;
+    background-color: #fff;
+    color: #645AB2;
+    font-weight: 700;
+}
+.promotion .list {
+    width: 648px;
+}
+.promotion .list ul li {
+    border-top: 1px solid rgba(255,255,255,0.6);
+}
+.promotion .list ul li:last-child {
+    border-bottom: 1px solid rgba(255,255,255,0.6);
+}
+.promotion .list ul li a {
+    /* display:flex는 해당 요소를 block요소로 만들어서 넓이를 100%로 만듬 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 위아래 가운데 */
+    padding: 23px 11px;
+}
+.promotion .list ul li a strong {
+    color: #fff;
+    font-size: 18px;
+}
+/* a 태그에 오버했을 때 strong태그가 잡힘 */
+.promotion .list ul li a:hover strong {
+    font-weight: 700;
+}
