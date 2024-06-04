@@ -1,0 +1,171 @@
+@import url(default.css); /* default.css 불러오기 */
+@font-face {
+	font-family: 'Pre';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Pretendard ExtraBold'), url(../fonts/Pretendard-Bold.woff2) format('woff2'), url(../fonts/Pretendard-ExtraBold.woff) format('woff');
+}
+@font-face {
+	font-family: 'Pre';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
+}
+html, body {
+    /* font-family에서 사용하는 서체명은 font-face에서 사용한 이름으로 사용,<br>
+    sans-serif : 고딕체 */
+    font-family: "Pre", sans-serif;
+    font-weight: 400; /*글자두께*/
+    font-size: 15px;
+    color: #3d3d3d;
+    line-height: 1.4; /*행간*/
+    letter-spacing: 0; /*자간*/
+    word-break: keep-all;/*단어별로 줄바꿈*/
+}
+#wrap { /* id는 .이 아니라 #으로 불러냄 / 홈페이지 전체를 감싸는 요소 */
+    min-width: 1260px; /* 네가 아무리 사이즈가 줄어들어도 최대 해당 사이즈를 유지해야 한다. */
+}
+.wrapper { /* 홈페이지의 넓이를 규정(제한), 가운데 정렬 */
+    width: 1260px;
+    margin: 0 auto;
+}
+header {
+    height: 100px;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+header .logo {
+    margin: 33px 0 0 0;
+}
+header .gnb ul {
+    display: flex;
+}
+header .gnb ul li a {
+    font-size: 22px;
+    color: #1d1d1d;
+    letter-spacing: -0.05em;
+    line-height: 100px; /* header의 높이와 동일한 값 */
+    /* 행간을 100px을 주면, 높이 100px 안에 글자가 그 행간의 위아래, 가운데로 정렬함 */
+    display: block; /* inline 요소인 a를 block 요소로 변경 - 여백을 주기 위해 */
+    padding: 0 23px; /* a태그 자간의 1/2을 좌우로 줌*/
+}
+header .gnb ul li a:hover { /* 마우스를 오버했을 때 글씨 반응 */
+    color: #2b38ec;
+    font-weight: 800;
+}
+.visual {
+    background: url(../images/visual_bg.png) no-repeat center / cover;
+    /* no-repeat / 위치 / 사이즈(cover : 만약 사이즈가 안맞으면 비율을 늘리거나 줄여서 맞추겠음) */
+    height: 700px;
+    color: #fff;
+    text-align: right;
+}
+.visual h2 {
+    font-size: 55px;
+    letter-spacing: 0;
+    font-weight: 800;
+    padding: 130px 86px 0 0;
+}
+.visual p {
+    padding: 0 86px 0 0;
+}
+.biz .tit {
+    text-align: center;
+    margin: 130px 0 63px 0;
+}
+.biz .tit h2 {
+    color: #1d1d1d;
+    font-weight: 1;
+    font-size: 40px;
+    letter-spacing: -1.2em;
+    font-weight: 800;
+
+    /* margin은 -(마이너스)가 되지만 padding은 -가 안됨*/
+}
+.biz .tit p {
+    letter-spacing: -0.05em;
+    margin: -5px 0 0 0;
+}
+.biz .list ul {
+    display: flex; /* 특정 비율을 늘리더라도 옆으로 세움 */
+    justify-content: space-between;
+}
+.biz .list ul li {
+    width: 297px;
+    text-align: center;
+}
+.biz .list ul li a {
+    display: block;
+}
+.biz .list ul li a h3 {
+    font-size: 30px;
+    letter-spacing: -0.05em;
+    color: #1d1d1d;
+    padding: 15px 0 11px 0;
+}
+.biz .list ul li a p {
+    margin: 0 25px 25px 25px;
+}
+.biz .list ul li a .more {
+    width: 233px;
+    height: 44px;
+    line-height: 44px;
+    /* 행간을 높이와 동일하게 주면 글자가 위아래 가운데 정렬이 됨 */
+    border: 1px solid #cccccc;
+    display: inline-block;
+}
+.brand {
+    background: url(../images/brand_bg.png) no-repeat center center / cover;
+    color: #fff;
+    height: 1071px;
+    margin: 175px 0 0 0;
+}
+.brand strong {
+    color: #2b38ec;
+    font-size: 17px;
+    letter-spacing: -0.05em;
+    padding: 175px 0 0 0;
+    display: block;
+}
+.brand h2 {
+    font-size: 40px;
+    font-weight: 800;
+    margin: -5px 0 35px 0;
+}
+.brand a {
+    border: 1px solid rgba(255,255,255,0.6);
+    padding: 14px 47px;
+    display: inline-block;
+    /* 기본 block은 전체넓이에 100% 맞춰서 나오지만 inline <- 본인이 준 넓이에 맞춰서 block을 줌 */
+}
+footer {
+    background-color: #151515;
+    color: rgba(255,255,255,0.8);
+    padding: 30px 0  40px 0;
+}
+footer .f_nav ul {
+    display: flex;
+}
+footer .f_nav ul li {
+    margin: 0 30px 0 0;
+}
+/* li.privacy (여백없음) : li 중에서 privacy라는 클래스명을 가진 li를 지칭함
+   li .privacy (여백있음) : li 안에 privacy라는 클래스명을 갖춘 요소를 지칭함*/
+footer .f_nav ul li.privacy {
+    font-weight: 800;
+}
+footer .f_sub {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin: 28px 0 0 0; /* 선 밖 여백 */
+    padding: 32px 0 0 0; /* 선 내부 여백 */
+}
+footer .f_sub .f_info span {
+    margin: 0 38px 13px 0;
+    display: inline-block;
+}
+footer .f_sub .copyright {
+    color: rgba(255,255,255,0.6);
+    margin: 45px 0 0 0;
+}

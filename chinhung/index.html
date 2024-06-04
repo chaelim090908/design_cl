@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>진흥기업</title>
+</head>
+<body>
+    <div id="wrap">
+        <header> <!-- 로고와 메뉴가 배치되는 영역 / 메인 페이지와 컨텐츠 페이지에서 동일하게 보이는 영역 -->
+            <div class="wrapper">
+                <h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="진흥기업 로고"></a></h1>
+                <!--global navigation bar : gnb 메인/컨텐츠 모두 표시되는 메뉴--> <!--lnb : local navigation bar / gnb 아래 메뉴 등-->
+                <nav class="gnb">
+                    <!--메뉴는 ul-li로만 함-->
+                    <ul>
+                        <!-- 임시링크 : #n : 링크주소가 아직 없어서 임시로 쓰는 링크
+                        href="" 이렇게 비워두고 클릭하면 새로고침이 되나,
+                        href="#n" 이렇게 써두면 클릭해도 새로고침이 안됨-->
+                        <li><a href="#n">기업소개</a></li>
+                        <li><a href="#n">사업분야</a></li>
+                        <li><a href="#n">홍보센터</a></li>
+                        <li><a href="#n">고객센터</a></li>
+                        <li><a href="#n">사이버감사실</a></li>
+                    </ul>
+                </nav>
+            </div><!--wrapper-->
+        </header>
+        <!-- 홈페이지 상단에 이미지가 크게 들어가고 홈페이지의 슬로건 등을 쓰는 영역 = visual (비쥬얼) -->
+        <section class="visual">
+            <div class="wrapper">
+                <h2>65년 건설 명가 진흥기업</h2>
+                <p>진흥기업은 삶의 미학을 창조하는 글로벌 건설 리더를 목표로<br>
+                    “사람과 사람을 이어주는 공간”, “사람과 자연을 조화시키는 공간”을 창조하는 데 노력하며,<br>
+                    대한민국 건설 명가의 자리를 지켜왔습니다.</p>
+            </div><!--wrapper-->
+        </section> <!--visual-->
+        <section class="biz">
+            <div class="wrapper">
+                <div class="tit">
+                    <h2>BUSINESS</h2>
+                    <p>65년 건설 역사의 축적된 기술력으로 대한민국의 미래를 만들어 나갈 것입니다.</p>
+                </div><!--tit-->
+                <div class="list">
+                    <!--html5부터는 a태그만 안에 heading태크(h2~h6)와 p태그가 허용
+                    = 에러로 처리하지 않겠다는 이야기 -->
+                    <ul>
+                        <li>
+                            <a href="#n">
+                                <div class="photo"><img src="images/biz_1.png" alt="토목사업 사진"></div>
+                                <h3>토목</h3>
+                                <p>안전하고 편리한 지하철/철도가 행복은 가깝게, 삶의 공간은 더욱 넓히고 있습니다.</p>
+                                <span class="more">자세히보기</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="photo"><img src="images/biz_2.png" alt="건축사업 사진"></div>
+                                <h3>건축</h3>
+                                <p>열정과 문화가 숨쉬는 건축, 진흥이 창조하고 있습니다.</p>
+                                <span class="more">자세히보기</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="photo"><img src="images/biz_3.png" alt="주택사업 사진"></div>
+                                <h3>주택</h3>
+                                <p>고객의 신뢰를 바탕으로 친환경 주거문화의 트랜드를 제시하고 있습니다.</p>
+                                <span class="more">자세히보기</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="photo"><img src="images/biz_4.png" alt="플랜트사업 사진"></div>
+                                <h3>플랜트</h3>
+                                <p>오랜 노하우와 전문성으로 산업발전의 기틀을 마련하고 사업을 구축해왔습니다.</p>
+                                <span class="more">자세히보기</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div><!--wrapper-->
+        </section> <!--biz-->
+        <section class="brand">
+            <div class="wrapper">
+                <!-- strong 태그는 inline 태그라서 이럴 경우 display: block 태그를 줘야 함 -->
+                <strong>Post-Premium Place</strong>
+                <h2>모두들 프리미엄만 이야기할 때<br>
+                    해링턴 플레이스는 ”혁신”을 꿈꾸었습니다.<br>
+                    전통성 위에 미래를 짓습니다.</h2>
+                    <a href="#n">해링턴 플레이스 바로가기</a>
+            </div><!--wrapper-->
+        </section><!--brand-->
+        <footer>
+            <!-- footer에는 웬만하면 nav 태그는 쓰지 않음 -->
+            <div class="wrapper">
+                <div class="f_nav"><!--f_nav-->
+                    <ul>
+                        <li class="privacy"><a href="#n">개인정보처리방침</a></li>
+                        <li><a href="#n">법적고지</a></li>
+                        <li><a href="#n">찾아오시는 길</a></li>
+                        <li><a href="#n">고객상담</a></li>
+                        <li><a href="#n">사이트맵</a></li>
+                    </ul>
+                </div><!--f_nav-->
+                <!-- 요소의 이름을 줄 때 위/아래로 구분하면
+                    위는 top, 아래는 sub -->
+                <div class="f_sub">
+                    <div class="f_info">
+                        <span>진흥기업</span>
+                        <span>TEL : 032-432-0658</span>
+                        <span>FAX 032-432-0659</span>
+                        <address>주소 : 인천광역시 연수구 컨벤시아대로 69 807호</address>
+                    </div>
+                    <div class="copyright">ⓒ HYOSUNG. All Right Reserved.</div>
+                </div>
+            </div><!--wrapper-->
+        </footer>
+    </div>
+</body>
+</html>

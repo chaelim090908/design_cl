@@ -1,0 +1,161 @@
+@font-face {
+	font-family: 'PT';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Pretendard ExtraBold'), url(../fonts/Pretendard-ExtraBold.woff2) format('woff2'), url(../fonts/Pretendard-ExtraLight.woff) format('woff');
+}
+    @font-face {
+        font-family: 'PT';
+        font-weight: 400;
+        font-display: swap;
+        src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
+    }
+
+    /* 홈페이지 전체에 적용될 기본 글자 스타일 */
+body {
+    font-family: "PT";
+    font-weight: 400;
+    color: #3d3d3d;
+    letter-spacing: -0.02em;
+    line-height: 1.4; /* 배수 */
+    font-size: 15px;
+    word-break: keep-all; /* 단어별로 줄바꿈(가독성↑) */
+}
+/* 홈페이지의 넓이를 결정하고 홈페이지의 가운데 정렬하게 하는 요소 */
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+/* 모든 태그에 여백 삭제(와이드카드) */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* 높이·넓이가 padding때문에 늘어나는 현상을 막는 속성 */
+}
+em {
+    font-style: normal; /* 태그의 기울임 스타일 삭제 */
+}
+/* li 앞에 (순서)동그라미 삭제 */
+li {
+    list-style: none;
+}
+.intro {
+    text-align: center;
+    margin: 120px 0 120px 0;
+}
+.biz {
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 120px 0 120px 0;
+}
+.intro h1,
+.biz h1 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #1499ff;
+}
+.intro p,
+.biz p {
+    color: #666666;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    line-height: 1.2;
+}
+.intro p {
+    margin: 2px 0 0 0;
+}
+.intro p em,
+.biz p em {
+    color: #1d1d1d;
+}
+.intro p strong,
+.biz p strong {
+    color: #1499ff;
+}
+.company {
+    margin: 150px 0 160px 0;
+}
+.company h1 {
+    color: #1d1d1d;
+    font-size: 35px;
+    font-weight: 400;
+    margin : 0 0 12px 0;
+}
+.company p strong {
+    color: #1d1d1d;
+    font-weight: 800;
+}
+.over {
+    /* 배경에 아무리 커다란 이미지를 넣어도 그 영역이 존재하는 만큼만 이미지가 보임 - 즉 영역이 작으면 이미지 잘림 */
+    background: url(../images/overview_bg.png) no-repeat center center / cover;
+    height: 550px;
+    height: 600px;
+    color: #ffffff;
+    /* 배경 때문에 글자의 색상이 변경되었다면, 배경과 글자색상을 동시에 선언하는 게 좋음 */
+    text-align: right;
+    padding: 180px 40px 0 0;
+}
+.over h1 {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 400;
+    margin : 0 0 12px 0;
+}
+.over p {
+    letter-spacing: -0.05em;
+}
+.over p strong {
+    font-weight: 800;
+    text-decoration: underline;
+}
+.color {
+    margin: 150px 0 160px 0;
+}
+.color h1 {
+    color: #1d1d1d;
+    font-size: 35px;
+    font-weight: 800;
+    margin : 0 0 12px 0;
+}
+.color h2 {
+    color: #1d1d1d;
+    font-size: 25px;
+    font-weight: 800;
+    margin : 40px 0 20px 0;
+}
+.color  ul {
+    display: flex;
+    justify-content: space-between;
+}
+.color  ul li {
+    width: 190px;
+    height: 269px;
+    color: #ffffff;
+    padding: 175px 0 0 20px;
+}
+.color  ul li.blue {
+    background-color: #00507d;
+}
+.color  ul li.lb {
+    background-color: #00a5e5;
+}
+.color  ul li.dg {
+    background-color: #4b5151;
+}
+.color  ul li.lg {
+    background-color: #bcbdbb;
+}
+.color  ul li.gold {
+    background-color: #86754e;
+}
+.color  ul li.silver {
+    background-color: #8d908f;
+}
+.color  ul li h3 {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1;
+    margin: 0 0 15px 0;
+}
