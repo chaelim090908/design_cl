@@ -174,18 +174,6 @@ header .gnb ul li a:hover {
     color: #fff;
     margin: 5px 0 1px 0;
 }
-.promotion .news .tit a {
-    border: 1px solid rgba(255,255,255,0.6);
-    padding: 6px 19px;
-    display: inline-block; /* inline 요소는 padding 적용 안됨 */
-    margin: 11px 0 0 0;
-}
-.promotion .news .tit a:hover {
-    border: 1px solid #fff;
-    background-color: #fff;
-    color: #645AB2;
-    font-weight: 700;
-}
 .promotion .news .list {
     width: 648px;
 }
@@ -208,6 +196,35 @@ header .gnb ul li a:hover {
 }
 /* a 태그에 오버했을 때 strong태그가 잡힘 */
 .promotion .news .list ul li a:hover strong {
+    font-weight: 700;
+}
+.promotion .news .wrapper {
+    position: relative;
+    /* more 정렬을 기준으로 세움
+       more를 감싸는 wrapper를 기준으로 정렬
+       wrapper에 position을 하나 줘야함
+       position 속성값 중에서 유일하게 relative 값만이
+       요소에 아무런 영향을 끼치지 않음 */
+}
+.promotion .news .more {
+    border: 1px solid rgba(255,255,255,0.6);
+    padding: 6px 19px;
+    display: inline-block; /* inline 요소는 padding 적용 안됨 */
+    margin: 11px 0 0 0;
+    position: absolute;
+    left: 20px;
+    top: 70px;
+    /* position : absolute는 반드시
+       좌우위치 left or right
+       위아래 위치 top or bottom 값이 필수이고
+       이 값이 어디서부터 계산하는지 기준이 필요함.
+       *** 나를 감싸는 요소 중에서 position 속성을 가진 *** 요소를 기준으로 정렬
+       ---- .news의 .wrapper를 기준으로 정렬 */
+}
+.promotion .news .more:hover {
+    border: 1px solid #fff;
+    background-color: #fff;
+    color: #645AB2;
     font-weight: 700;
 }
 .promotion .movie .tit h2 {
@@ -279,6 +296,28 @@ footer .f_info span {
     /* address는 블럭태그인데 span태그와 좌우에 배치되려고,
        span은 margin을 적용시키려고 하여 display: inline-block 태그를 붙임*/
 }
+footer .wrapper {
+    /* footer .family 정렬의 기준 */
+    position: relative; /* 꼭 relative를 주지 않고 아무거나 줘도 상관 X */
+}
 footer .copyright {
     color: rgba(255,255,255,0.6);
+}
+footer .family {
+    position: absolute;
+     right: 0;
+     top: -2.5px;
+    /* 코딩순서와 상관 없이 위치를 지정, 상단의 헤더처럼 고정해야 하는 것을 위해
+       footer .wrapper를 기준으로 정렬 */
+}
+footer .family button {
+    border: 1px solid rgba(255,255,255,0.5);
+    width: 190px;
+    height: 28px;
+    /* 원래 버튼 태그는 요소 자체가 좌우/위아래 가운데 정렬함 */
+    display: flex;
+    justify-content: space-between;
+    /* 내부 두 요소를 좌우 끝ㄷ나에 배치하기 위해서 */
+    align-items: center; /* 위아래 가운데 */
+    padding: 0 14px;
 }
