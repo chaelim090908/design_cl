@@ -19,6 +19,6 @@ img { /* img태그를 a태그를 감싸면 일부 부라우저에서 파란색 �
          그런 것들을 막음*/
     border: 0;
 }
-em { /* 글자의 기울어짐 삭제 */
+em, address { /* 글자의 기울어짐 삭제 */
     font-style: normal;
 }
