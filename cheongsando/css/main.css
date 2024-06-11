@@ -432,9 +432,27 @@ footer .wrapper {
 footer .f_nav ul {
     display: flex;
     gap: 44px; /* li 사이여백 */
+
 }
 footer .f_nav ul li {
-    /* margin: 0 22px 0 0; - 위에 ul 태그에 gap으로 줬음 */
+    position: relative; /* after-absolute의 정렬의 기준 */
+        /* margin: 0 22px 0 0; - 위에 ul 태그에 gap으로 줬음 */
+}
+footer .f_nav ul li::after {
+    content: "";
+    /* 가상요소 before와 after를 사용할 때는 반드시 content 선언해야 함
+       content 사용하지 않을 시 after로 선언한 것이 나타나지 않음 */
+       width: 1px;
+       height: 9px;
+       background-color: rgba(112,112,112,0.2);
+       display: block;
+       position: absolute; /* 각각의 li를 기준으로 정렬 */
+       right: -22px;
+       top: 4px;
+}
+/* li중에서 마지막 li의 after */
+footer .f_nav ul li:last-child::after {
+    display: none; /* 숨김 */
 }
 footer .f_nav ul li.prav {
     font-weight: 800;
