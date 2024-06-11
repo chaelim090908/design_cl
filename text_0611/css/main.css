@@ -1,0 +1,188 @@
+@import url(default.css); /* default.css 불러오기 */
+@import url(font.css);
+
+html, body {
+    /* font-family에서 사용하는 서체명은 font-face에서 사용한 이름으로 사용,<br>
+    sans-serif : 고딕체 */
+    font-family: "Pretendard", sans-serif;
+    font-weight: 400; /*글자두께*/
+    font-size: 15px;
+    color: #3d3d3d;
+    line-height: 1.4; /*행간*/
+    letter-spacing: -0.05em; /*자간*/
+    word-break: keep-all;/*단어별로 줄바꿈*/
+}
+#wrap { /* id는 .이 아니라 #으로 불러냄 / 홈페이지 전체를 감싸는 요소 */
+    min-width: 1260px; /* 네가 아무리 사이즈가 줄어들어도 최대 해당 사이즈를 유지해야 한다. */
+}
+.wrapper { /* 홈페이지의 넓이를 규정(제한), 가운데 정렬 */
+    width: 1260px;
+    margin: 0 auto; /* 가운데 정렬 */
+}
+
+@media screen and (max-width:640px){
+    /* 640px 이하에서"만" 우선 적용
+    --> ★선택자가 동일해야 함
+    Pc버전 스타일과 mobile 버전 스타일이 동시에 적용되어서
+    변경되는 요소만 스타일을 적용 */
+	html, body {
+        font-size: 13px;
+    }
+    #wrap {
+        min-width: 100%; /* 최소넓이 꽉차게 */
+    }
+    .wrapper { 
+        width: auto;
+        /* div(block 요소)의 속성대로 알아서 주기
+           100%를 주면 margin이 좌우로 20px씩 들어가서
+           실제 넓이가 100% + 40px로 사이즈가 넘치게 됨
+           auto로 주면 알아서 여백까지 계산해서 꽉차게 들어감 */
+        margin: 0 20px; /* 좌우에 여백 20px */
+    }
+} /* midia */
+
+.eco h2 {
+    color: #1d1d1d;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.2;
+    margin: 192px 0 31px 1px;
+}
+.eco ul {
+    display: flex;
+    justify-content: space-between;
+}
+.eco ul li {
+    width: 404px;
+}
+.eco ul li a h3 {
+    color: #1d1d1d;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 16px 0 5px 0;
+}
+
+@media screen and (max-width:640px){
+    .eco h2 {
+        font-size: 20px;
+        margin: 45px 0 12px 1px;
+    }
+    .eco ul li {
+        /* 두개의 li가 반반 들어가는데 사이의 여백이 16px 고정으로 들어감
+           계산식 = (100% / li 개수) - (사이 여백의 총합 / (li개수))
+           (100/2) - (16/2) > 50% - 8px = 42 */
+        width: calc(50% - 8px);
+        /* 퍼센트와 px 두 단위를 동시에 계산하는 계산식
+           반드시 -, + 같은 기호 앞뒤로 여백이 있어야 함 */
+    }
+    .eco ul li:last-child { /* 3개 나오다가 2개만 나옴 - 마지막 거 숨김*/
+        display: none;
+    }
+    /* 글자는 넓이가 부족하면 줄이 바뀜
+       - 하지만 이미지는 넓이를 주지 않으면 넓이가 절대로 바뀌지 않음
+       - 아무리 이미지를 감싸는 영역의 넓이가 줄어도 이미지는 삐져 나옴 */
+    .eco ul li a .photo img { /* 정확하게 이미지에 줘야 함 */
+        width: 100%;
+        /* 넓이만 줌 - 높이는 비율에 맞게 알아서 들어감
+           (넓이와 높이를 동시에 선언하면 비율에 맞지 않게 깨질 수도 있음)
+           100% - 이미지를 감싸는 요소의 넓이에서 100% (원래 이미지 사이즈는 중요하지 X)
+           ==> 만약 이미지의 사이즈가 더 작다면 늘어남 */
+    }
+    .eco ul li a h3 {
+        font-size: 16px;
+        margin: 8px 0 4px 0;
+    }
+} /*media */
+
+.pure {
+    background: url(../images/pure_bg.png) no-repeat center center / cover;
+    color: rgba(255,255,255,0.8);
+    margin: 113px 0 0 0;
+    height: 600px;
+    text-align: center;
+}
+.pure h2 {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 0;
+    padding: 113px 0 7px 0;
+}
+.pure ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 42px 166px 0 166px;
+    gap: 16px;
+}
+.pure ul li {
+    width: 214px;
+    height: 214px;
+    border: 1px solid #333333;
+    border-radius: 20px;
+}
+@media screen and (max-width:640px){
+    .pure {
+        margin: 50px 0 0 0;
+        padding: 0 0 39px 0;
+        /* 모바일에서 높이는 계속 바뀌기 때문에
+           높이를 지정해주는 것이 아니라 콘텐츠 하단 여백을 줌 */
+        height: auto;
+        /* 기존에 선언된 높이값을 해제하는 방법
+           auto로 주면 내부 콘텐츠의 길이대로 늘어남 (원래대로) */
+    }
+    .pure h2 {
+        font-size: 20px;
+        padding: 34px 0 9px 0;
+    }
+    .pure ul {
+        flex-wrap: wrap; /* 여러줄 허용 */
+        margin: 11px 0 0 0;
+    }
+    .pure ul li {
+        height: 152px;
+        width: calc(50% - 8px);
+    }
+} /* media */
+
+.tech {
+    margin: 116px 0 0 0;
+}
+.tech .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.tech strong {
+    color: #1d1d1d;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 100px 0 5px 0;
+    display: block; /* strong은 inline 요소이기 때문에 margin 값을 적용하기 위해 줌 */
+}
+.tech h2 {
+    color: #1d1d1d;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.2;
+}
+.tech p {
+    width: 405px;
+    /* 영역을 제한해서 줄바꿈 */
+    margin: 20px 0 39px 0;
+}
+@media screen and (max-width:640px){
+    .tech .wrapper {
+        display: block;
+        /* flex를 해제하기 위해서는 display의 다른 속성을 선언
+           inline, inline-block, none 등을 주며 제일 만만한 게 block */
+    }
+    .tech p {
+        width: auto; /* 100%를 줄 시 margin 등 다른 값을 줄 때 충돌됨 */
+    }
+    .tech .photo img {
+        width: 100%;
+    }
+} /* media */
