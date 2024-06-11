@@ -33,6 +33,7 @@ button { /* 버튼태그는 글자의 스타일을 상속받지 않음 */
     /* 이 아래까진 잘 안함. 보통 브라우저가 설정한 기본 스타일만 변경함. */
     letter-spacing: inherit;
     line-height: inherit;
+    cursor: pointer; /* 버튼에 오버 시 마우스 포인터를 손바닥으로 변경*/
 }
 strong {
     font-style: normal;
