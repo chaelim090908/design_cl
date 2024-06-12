@@ -10,6 +10,7 @@
     letter-spacing: -0.05em; /* 자간 */
     line-height: 1.4; /* 배수 - 글자크기의 1.4배 */
     word-break: keep-all; /* 단어별로 줄바꿈 */
+    word-wrap: break-word; /* 만약 단어가 너무 길면 줄바꿈 강제로 실행 */
 }
 
 #wrap {
