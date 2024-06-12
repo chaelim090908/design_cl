@@ -2,6 +2,8 @@
 @import url(fonts.css);
 @import url(common.css);
 
+/* display는 auto가 없음 */
+
 .sound {
     background: url(../images/sound_bg.png) no-repeat center center / cover;
     color: #fff;
@@ -18,6 +20,7 @@
 }
 .sound p {
     margin: 0 360px;
+    color: rgba(255,255,255,0.8);
     /* 글자에 좌우 여백이 있어서
        글자가 들어갈 공간이 좁아서 글자가 2줄이 되도록 함
        width로 주면 가운데 정렬이 안됨 */
@@ -28,7 +31,7 @@
         /* 높이를 설정해준 것 해제 - 원래 스타일대로 적용
            원래 스타일 = 콘텐츠 높이에 맞춰서 자동으로 늘어나는 스타일 */
         padding: 0 0 150px 0;
-        margin: 0 0 101px 0;
+        margin: 0 0 39px 0;
     }
     .sound h2 {
         font-size: 25px;
@@ -38,5 +41,205 @@
     .sound p {
         /* pc버전에서 준 여백을 삭제하려면 여백 0을 줌 */
         margin: 0;
+        font-size: 14px;
     }
 } /* media */
+
+.health {
+    background: url(../images/sound_bg.png) no-repeat center center;
+    color: #fff;
+    text-align: center;
+    padding: 215px 0 208px 0;
+    margin: 0 0 101px 0;
+}
+.health h2 {
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 0 0 19px 0;
+}
+.health p {
+    color: rgba(255,255,255,0.8);
+}
+
+@media screen and (max-width:640px){
+    .health {
+        padding: 133px 0 150px 0;
+        margin: 0 0 39px 0;
+    }
+    .health h2 {
+        font-size: 25px;
+        margin: 0 0 22px 0;
+    }
+    .health p {
+        font-size: 14px;
+    }
+    .health p br { /* 줄바꿈을 주던 태그를 삭제 */
+        display: none;
+    }
+}/* media */
+
+.solution {
+    background: url(../images/sound_bg.png) no-repeat center center;
+    color: #fff;
+    text-align: center;
+    padding: 215px 0 208px 0;
+    margin: 0 0 101px 0;
+}
+.solution h2 {
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 0 0 19px 0;
+}
+.solution p {
+    color: rgba(255,255,255,0.8);
+}
+.solution p span {
+    display: block; /* 줄바꿈 */
+}
+
+@media screen and (max-width:640px){
+    .solution {
+        padding: 133px 0 150px 0;
+        margin: 0 0 39px 0;
+    }
+    .solution h2 {
+        font-size: 25px;
+        margin: 0 0 22px 0;
+    }
+    .solution p {
+        font-size: 14px;
+    }
+    .solution p span {
+        display: inline; /* 줄바꿈 해제 */
+    }
+}/* media */
+
+.story {
+    margin-bottom: 138px ;
+}
+.story .group1,
+.story .group2 {
+    display: flex;
+    align-items: center;
+    /* txt와 photo를 위아래 가운데 정렬 (세로정렬) */
+}
+.story .group2 {
+    flex-direction: row-reverse; /* 좌우 순서역전 */
+}
+.story .txt {
+    width: 630px;
+    padding: 0 0 0 107px;
+}
+.story .txt strong {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    line-height: 1.2;
+}
+.story .txt h2 {
+    color: #1d1d1d;
+    font-size: 50px;
+    font-weight: 900;
+    margin: 2px 0 11px 0;
+}
+.story .txt .more {
+    margin: 32px 0 0 0;
+}
+.story .txt .more a {
+    padding: 16px 77px 16px 42px ;
+    background-color: #76C23A;
+    color: #fff;
+    font-size: 20px;
+    display: inline-block; /* padding 적용 */
+    position: relative;
+}
+.story .txt .more a::after {
+    /*
+    before, after - 가상선택자는 반드시 content 속성을 줘야 나타남
+    가상선택자는 넓이와 높이가 존재하지 않음
+    -> 이미지를 배경으로 넣으려면 이미지 사이즈를 넓이와 높이로 지정해줘야 함
+    */
+    background: url(../images/more.svg) no-repeat center center / contain;
+    /* 아이콘같이 전체가 보여야 하는 경우는 contain (이미지를 자르지 않음)
+       배경에 이미지를 넣는 경우는 cover (화면에 꽉 차게 이미지 자름)
+       둘 다 영역의 크기에 맞춰서 배경이미지가 리사이즈 됨 */
+    width: 24px;
+    height: 24px;
+    content: ""; /* 넓이와 높이를 적용시킴 */
+    /* 위치가 태그의 시작위치-종료위치 맘대로 배치되기 때문에
+       내가 원하는 위치에 배치하려면 absolute로 배치해야 함
+       그냥 before, after 가상선택자는 반드시 absolute를 준다고 생각하면 됨 */
+    position: absolute; /* a태그 기준으로 정렬 */
+    right: 42px;
+    top: 18px;
+}
+.story .photo {
+    /* 이미지 태그 하단에는 행간이 적용되는데
+       이것을 없애려면 감싸는 태그에 글자크기와 행간을 0으로 줘야 함 */
+    font-size: 0;
+    line-height: 0;
+}
+@media screen and (max-width:640px){
+                .story {
+                    margin-bottom: 68px ;
+                }
+                .story .group1,
+                .story .group2 {
+                    display: block;
+                    /* display:flex를 해제하기 위해서
+                       display 속성 중에서 주기 적합한 값으로 대체
+                       (block이 해제요소는 아님) */
+                    /* align-items: center; -- flex일 때만 적용되는 속성이라 해제가 필요 X */
+                }
+                .story .group2 {
+                    /* 노란색 밑줄 -- 속성값을 주지 않는데 왜 썼냐는 컴퓨터 용어 */
+                    /* flex-direction: row-reverse; -- flex일 때만 적용되는 속성 해제가 필요 X */
+                }
+                .story .txt {
+                    width: auto; /* 넓이를 제한한 것 해제하고 내부 사이즈 값만큼 들어감 */
+                    padding: 0;
+                    margin: 16px 0 22px 0;
+                }
+                .story .txt strong { /* inline 요소 */
+                    /* 여백을 줄 때 mobile 시안의 여백으로 주면 디바이스 width가
+                       줄어들 때 부담스러워짐. %로 주는 게 좋음 */
+                    margin: 0 30% 0 0;
+                    display: block; /* margin 적용하기 위해 */
+                }
+                .story .txt strong br {
+                    display: none; /* br로 줄바꿈한 것 삭제 */
+                }
+                .story .txt h2 {
+                    color: #1d1d1d;
+                    font-size: 25px;
+                    font-weight: 900;
+                    margin: 2px 0 7px 0;
+                }
+                .story .txt p {
+                    font-size: 13px;
+                    line-height: 1.4;
+                }
+                .story .txt .more {
+                    margin: 32px 0 0 0;
+                }
+                .story .txt .more a {
+                    padding: 8px 60px 8px 37px ;
+                    font-size: 13px;
+                }
+                .story .txt .more a::after {
+                    width: 15px;
+                    height: 15px;
+                    right: 37px;
+                    top: 10px;
+                }
+                .story .photo {
+                    /* 이미지 태그 하단에는 행간이 적용되는데
+                    이것을 없애려면 감싸는 태그에 글자크기와 행간을 0으로 줘야 함 */
+                    font-size: 0;
+                    line-height: 0;
+                }
+                .story .photo img {
+                    width: 100%; /* photo 넓이의 100% */
+}
