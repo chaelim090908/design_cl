@@ -1,0 +1,174 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+
+/*
+(ex) 폰트 2개 : 제목에는 gmarket / 본문 pretendard
+     body에는 본문 서체 적용 / 제목에는 서체 적용하는 방법
+     1. css에서 해당하는 요소를 모두 선택 .biz h2 이렇게 각각 불러서 gmarket 서체 적용 (font-family:gmarket을 계속 선언)
+     2. css를 하나를 만들어 둠
+        예시 - .tit
+        html에서 gmarket 서체를 써야하는 html 요소에
+        <section class="biz">
+            <h2 class="tit"><h2> <!--필요한 곳에 class명을 주는 방식-->
+        </section>
+
+.tit {
+    font-family: 'GmarketSans', sans-serif; <!--sans-serif : 고딕 / Gmarket을 지원하지 않는 브라우저에서는 고딕을 지원하라는 요청 -->
+    font-weight: 700
+}
+.tit_b {
+     font-family: 'GmarketSans', sans-serif;
+     font-weight: 500
+}
+*/
+.tit_b {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 500
+}
+
+header {
+    position: absolute; /* relitive를 따로 주지 않으면 body를 기준으로 정렬 */
+    width: 100%; /* absolute는 inline 요소라서 width 설정값을 줘야 wrapper에 영향받음 */
+    height: 100px;
+    z-index: 100;
+    /* position을 가지고 있는 요소들 중에서 제일 높은 숫자를 줘서 위에 배치함
+       why? > 맨 앞에 두지 않으면 메뉴가 안눌림 */
+    left: 0;
+    top: 0;
+    color: #fff;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+header .logo {
+    margin: 23px 0 0 0;
+}
+header .gnb_open {
+    /* 모바일에서만 나타남 - pc에서는 숨김 */
+    display: none;
+} 
+header .gnb .gnb_wrap ul {
+    display: flex;
+}
+header .gnb .gnb_wrap ul li a {
+    padding: 36px 40px;
+    display: block;
+    font-size: 20px;
+    position: relative; /* after 정렬의 기준 */
+}
+header .gnb .gnb_wrap ul li a::after { /* a의 오른쪽 */
+    position: absolute; /* a의 정렬의 기준 */
+    right: 0;
+    top: 50px;
+    content: ""; /* after를 보 이게 하는 값 */
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+}
+/* 마지막 li의 a의 after 선택자를 숨김 */
+header .gnb .gnb_wrap ul li:last-child a:after {
+    display: none;
+}
+@media screen and (max-width:640px){
+    header {
+        height: 45px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    header .logo {
+        margin: 11px 0 0 0;
+    }
+    header .logo img {
+        width: 73px;
+        /* 이미지태그로 코딩한 요소는 사이즈가 변경되면
+           반드시 css에서 img태그를 불러서 스타일을 줘야함
+           감싸는 요소에 줘도 적용 안됨
+           이미지는 넓이만 주면 높이는 알아서 조정됨 (background는 아님) */
+    }
+    header .gnb_open {
+        /* 모바일에서 나타남. block, inline 요소 상관 없이 나오기만 하면 됨 */
+        display: block;
+        background: url(../images/gnb_open.svg) no-repeat center center;
+        position: absolute; /* 이미 header에 position 값이 존재함 > header를 기준으로 정렬 */
+        right: 0;
+        top: 0;
+        width: 45px;
+        height: 45px;
+        /* button의 사이즈를 크게 줘서 잘 눌리게 하려고 */
+        font-size: 0;
+        line-height: 0; /* font-size, height 글자 숨기기 (투명하게 처리하기도 함) */
+    } 
+    header .gnb .gnb_wrap {
+        /* 메뉴는 열기 버튼을 클릭했을 때만 나옴 */
+        display: none;
+    }
+}
+.visual {
+    background: url(../images/visual_bg.png) no-repeat center center / cover;
+    color: #fff;
+    height: 850px;
+    text-align: center;
+}
+.visual h2 {
+    font-weight: 300;
+    font-size: 45px;
+    line-height: 1.1;
+    padding: 377px 0 0 0;
+    margin: 0 0 1px 0;
+}
+.visual span {
+    color: rgba(255,255,255,0.8);
+}
+@media screen and (max-width:640px){
+    .visual {
+        height: auto; /* 높이는 콘텐츠의 길이에 맞춰 알아서 들어감 */
+        padding: 0 0 158px 0;
+    }
+    .visual h2 {
+        font-size: 20px;
+        line-height: 1.1;
+        padding: 198px 0 0 0;
+    }
+    .visual span {
+        display: none; /* 숨김 */
+    }
+}
+.biz {
+    margin: 207px 0 0 0;
+}
+.biz .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.biz .subject {
+    padding: 73px 0 0 85px;
+    position: sticky; /* 이 요소를 감싸는 범위 안에서만 움직임 */
+    top: 0;
+}
+.biz .subject span {
+    color: #1A44DC;
+    font-weight: 500;
+}
+.biz .subject h2 {
+    color: #1d1d1d;
+    font-weight: 300;
+    font-size: 45px;
+    line-height: 1.1;
+    margin: 0 0 4px 0;
+}
+.biz .subject h2 .tit_b {
+    font-weight: 500;
+    font-size: 66px;
+}
+.biz .list {
+    width: 500px;
+    height: 1500px;
+    background-color: #1A44DC;
+}
+
+footer {
+    height: 2000px;
+}
