@@ -223,7 +223,7 @@ header .gnb .gnb_wrap ul li:last-child a:after {
     bottom: 134px;
     /* width: 100%;
     text-align: center; 이건 옆에 아이콘을 놓아야 해서 안됨 */
-    padding-right: 3px; /* 오른쪽에 아이콘 들어갈 여백 */
+    padding-right: 18px; /* 오른쪽에 아이콘 들어갈 여백 */
 }
 .biz .list ul li a .photo::before { /* before와 afer는 그저 div가 하나 더 생기는 것 */
     display: none;
@@ -243,8 +243,8 @@ header .gnb .gnb_wrap ul li:last-child a:after {
     right: 0;
     top: 0;
     width: 15px;
-    height: 15px;
-    background: url(../images/biz_more.svg) no-repeat center center / contain;
+    height: 18px;
+    background: url(../images/biz_more.svg) no-repeat center top 3px / contain;
     content: ""; /* after를 보이게 하는 값 */
 }
 .biz .list ul li a:hover .more { /* 오버시에 */
