@@ -250,7 +250,6 @@ header .gnb .gnb_wrap ul li:last-child a:after {
 .biz .list ul li a:hover .more { /* 오버시에 */
     display: block;
 }
-
 @media screen and (max-width:640px){
     .biz {margin: 45px 0 0 0;}
     .biz .wrapper {display: block;}
@@ -287,6 +286,196 @@ header .gnb .gnb_wrap ul li:last-child a:after {
     .biz .list ul li a .more::after { display: none;}
     .biz .list ul li a:hover .more {display: none;}
 }
+
+.new {background-color: #EEF1F5; margin: 306px 0 0 0; padding: 94px 0 144px 0;}
+.new .wrapper {
+    padding: 0 84px;
+    position: relative; /* more 정렬의 기준 */
+}
+.new .subject strong {
+    font-size: 20px;
+    font-weight: 500;
+    color: #1A44DC;
+}
+.new .subject h2 {
+    font-size: 45px;
+    color: #1d1d1d;
+    margin: 0 0 45px 0;
+}
+.new .list ul {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.new .list ul li {
+    width: 340px;
+    align-items: center;
+    padding: 0 0 0 8px;
+    
+}
+.new .list ul li a {
+    border-top: 2px solid #3d3d3d;
+    width: 340px;
+    display: block;
+    padding: 0 0 0 8px;
+}
+.new .list ul li a:hover {
+    border-top: 2px solid #1A44DC;
+    /* border-image: linear-gradient(to right, #1A44DC 0%, #F596A7 100%); */
+}
+.new .list ul li a:hover h3 {
+    color: #1A44DC;
+}
+.new .list ul li a:hover p{
+    color: rgba(26,68,220,0.8)
+} 
+.new .list ul li a:hover span{
+    color: rgba(26,68,220,0.8)
+} 
+.new .list ul li h3 {
+    color: #1d1d1d;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 23px 0 19px 0;
+    /* 무조건 2줄 - 절대 padding 주면 안됨 (설정값이 무너져서)
+    line-height: 1.2;
+    height: 2.4em; /* 행간 x 줄수 (단위 em) */
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.new .list ul li p {
+    line-height: 1.4;
+    height: 4.2em;
+    overflow: hidden;
+    color: rgba(61,61,61,0.8);
+    word-break: break-all;
+}
+.new .list ul li .date {
+    color: rgba(61,61,61,0.6);
+    margin: 34px 0 0 0;
+    display: block;
+}
+.new .more {
+    position: absolute;
+    right: 84px;
+    top: 90px;
+}
+.new .more a {
+    color: #666;
+    display: block;
+    padding-right: 18px;
+    position: relative; /* after 정렬의 기준 */
+}
+.new .more a::after {
+    position: absolute; /* more를 기준으로 정렬 */
+    right: 0;
+    top: 0;
+    width: 15px;
+    height: 18px;
+    background: url(../images/news_more_ico.svg) no-repeat center center / contain;
+    cursor: pointer;
+    padding-bottom: 3px;
+    content: "";
+}
+.new .more a:hover {
+    color: #1A44DC;
+}
+.new .more a:hover::after {
+    background: url(../images/news_more_ho.svg) no-repeat center center / contain;
+}
+@media screen and (max-width:640px){
+    .new {margin: 45px 0 0 0; padding: 45px 0 66px 0;}
+    .new .wrapper {padding: 0;}
+
+    .new .subject strong {font-size: 15px; font-weight: 300; color: #1A44DC; margin: 0 0 0 2px;}
+    .new .subject h2 {font-size: 28px; margin: -5px 0 17px 0;}
+    .new .list ul {display: block;
+        /* flex 해제, inline/inline-block/block/none 등 flex 말고 다른 값을 주면
+                      flex가 해제 - 그 중에 제일 해당 요소에 영향이 없는 block을 줌 */}
+    .new .list ul li {width: auto; /* 넓이 고정 해제 - 원래 해당 태그 스타일대로(li=block태그라서 넓이 100%) 100%를 주면 margin 등의 여백을 줬을 때 사이즈가 늘어날 수 있음 */ align-items: left; padding: 0;}
+    .new .list ul li a {border-top: 1px solid #EAEAEA; padding: 8px 0 0 0; width: auto;display: flex; flex-direction: column-reverse;}
+    .new .list ul li:last-child a {border-bottom: 1px solid #EAEAEA;} /* 마지막 li의 a */
+    .new .list ul li h3 {font-size: 16px; margin: 0 0 8px 0; text-overflow: ellipsis;overflow: hidden;}
+    /* h3
+
+       무조건 1줄 -> 줄제한 해제
+       white-space: nowrap;
+       text-overflow: ellipsis;
+       overflow: hidden;
+
+       무조건 2줄 -> 줄제한 해제
+       white-space: wrap;
+       overflow: visible;
+
+       heeight: auto;
+       overflow: visible;
+
+       무조건 2줄 -> 1줄로 제한
+       white-space: nowrap;
+       height: auto;
+       text-overflow: ellipsis;
+
+    */
+    .new .list ul li p {display: none;}
+    .new .list ul li .date { margin: 0; font-size: 13px;}
+
+    .new .more {position: relative; right: auto; top: auto; margin: 20px 0 0 0; text-align: center;}
+    .new .more a {display: inline-block; padding-right: 17px;}
+    .new .more a::after {width: 15px; height: 16px; padding-bottom: 2px;}
+}
+
+.webzine {
+        font-weight: 300;
+        
+    }
+.webzine .wrapper {padding: 0 83px 0 110px;}
+.webzine .subject strong {
+    color: #1A44DC;
+    margin: 207px 0 0 0;
+    display: block;
+    font-weight: 500;
+}
+.webzine .subject h2 {
+        color: #1d1d1d;
+        font-weight: 300;
+        font-size: 45px;
+        line-height: 1.1;
+        margin: 0 0 42px 0;
+}
+.webzine .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.webzine .list ul li {
+    width: 340px;
+}
+/* 게시판에서 이미지를 가져오는 경우는 이미지의 사이즈가 다양함.
+   이를 디자인한대로 동일한 사이즈로 리사이즈하는 방법
+   1. 이미지를 감싸는 요소가 넓이와 높이, overflow:hidden을 가지고 있어야 함
+   2. 이미지에는 width:100%, height:100%, object-fit:cover를 줘야함 */
+.webzine .list ul li .photo {
+    overflow: hidden;
+    height: 377px;
+}
+.webzine .list ul li .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 감싸는 요소에 꽉 맞게 리사이징 - 위아래/좌우에 가운데 이미지 정렬 */
+}
+.webzine .list  ul li strong {
+    color: #1A44DC;
+    font-weight: 500;
+    font-size: 20px;
+}
+.webzine .list ul li a {
+    height: 504px;
+    border-radius: 50px 50px 0 0;
+    border: 1px solid #CCCCCC;
+    display: block;
+    overflow: hidden;
+}
+
 
 footer {
     height: 2000px;
