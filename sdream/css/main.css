@@ -273,7 +273,7 @@ header .gnb .gnb_wrap ul li:last-child a:after {
     .biz .list ul li a {
         height: auto; /* 제목이 여러줄이 될 수도 있기 때문에 높이 제한 X */
     }
-    .biz .list ul li a h3 {position: relative; /* absolute 해제 */ left: auto; bottom: auto; font-size: 15px; font-weight: 500;}
+    .biz .list ul li a h3 {position: relative; /* absolute 해제 */ left: auto; bottom: auto; font-size: 15px; font-weight: 500; margin-top: 5px;}
     .biz .list ul li a:hover h3 {bottom: auto;}
     .biz .list ul li a .more {display: none;}
     .biz .list ul li a .photo {height: 132px; overflow: hidden; /* 넘치는 것 자르기 */ border-radius: 10px;}
