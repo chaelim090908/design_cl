@@ -4,10 +4,10 @@
    (body에만 선언하면 되잖아 > 가끔 html에 태그해야 하는 경우가 있어서 한번에. */
    html, body {
     font-family: 'Pretendard', sans-serif;
-    font-weight: 300;
-    font-size: 16px;
+    font-weight: 400;
+    font-size: 15px;
     color: #3d3d3d; /* 글자 색상 */
-    letter-spacing: 0; /* 자간 */
+    letter-spacing: -0.05em; /* 자간 */
     line-height: 1.4; /* 배수 - 글자크기의 1.4배 */
     word-break: keep-all; /* 단어별로 줄바꿈 */
     word-wrap: break-word; /* 만약 단어가 너무 길면 줄바꿈 강제로 실행 */
