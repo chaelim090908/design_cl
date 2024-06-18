@@ -542,7 +542,7 @@ header .gnb .gnb_wrap ul li:last-child a:after {
     /* display:none;은 해당 태그가 존재하지 않았던 것처럼 사라짐
        = 공간을 차지하지 않음 */
     .webzine .list ul li .photo {overflow: hidden; height: 194px; /* block 요소이기 때문에 width는 주지 않아도 됨 */ border-radius: 20px;}
-    .webzine .list ul li a {height: auto; border: 0; display: block; overflow: hidden; border-radius: 0;}
+    .webzine .list ul li a {height: 100%; border: 0; display: block; overflow: hidden; border-radius: 0;}
     .webzine .list ul li a:hover {background-color: transparent; /* 투명 */ border: transparent; box-shadow: none;}
     .webzine .list  ul li a strong {color: #1A44DC; font-weight: 300; font-size: 11px; padding: 13px 0 0 0; display: block;}
     .webzine .list  ul li a:hover strong {color: #1A44DC; font-weight: 300; font-size: 11px; padding: 13px 0 0 0; display: block;}
@@ -556,6 +556,45 @@ header .gnb .gnb_wrap ul li:last-child a:after {
     .webzine .more a::after {position: absolute; right: 145px; top: 0; width: 15px; height: 17px; padding-top: 1px;}
     .webzine .more a:hover::after {position: absolute; right: 145px; top: 0; width: 15px; height: 17px; padding-top: 1px;}
 }
+
+.introduce {background-color: #EEF1F5; margin: 207px 0 0 0; padding: 98px 0 142px 0;}
+.introduce .subject h2 {color: #1d1d1d; font-size: 45px; margin-bottom: 48px;}
+.introduce .list ul {display: flex; justify-content: space-between;}
+.introduce .list ul li {width: 618px;}
+.introduce .list ul li a {display: block; /* height 때문에 */ height: 457px; padding: 364px 0 0 33px;;}
+.introduce .list ul li.intro1 a {background: url(../images/intro1.png) no-repeat center center / cover; color: #666;}
+.introduce .list ul li.intro2 a {background: url(../images/intro2.png) no-repeat center center / cover; margin-top: 80px; color: #666;}
+.introduce .list ul li a h3 {color: #fff; font-size: 25px; font-weight: 500;}
+.introduce .list ul li a .more {position: relative; padding: 0 0 0 2px;}
+.introduce .list ul li a .more::after {position: absolute; background: url(../images/intro_more.svg) no-repeat center center / contain; left: 121px; top: 2px; width: 15px; height: 15px; display: block; content: "";}
+
+
+/* 다른 버전 */
+.introduce2 {
+    display: flex;
+}
+.introduce2 .intro_left  {
+    width: 50%;
+    background: url(../images/intro1.png) no-repeat center center / cover;
+    display: flex; /* a를 오른쪽 정렬하려고 */
+    /* flex-direction: row-reverse; 이것도 오른쪽 정렬이 되지만 아래 것이 흔하게 쓰임 */
+    justify-content: flex-end;
+}
+.introduce2 .intro_right  {
+    width: 50%;
+    background: url(../images/intro2.png) no-repeat center center / cover;
+}
+.introduce2 a {
+    height: 263px;
+    width: 630px; /* 1260/2 */
+    display: block; /* height를 주기 위한 값 */
+    color: #fff;
+    align-items: center;
+    padding: 180px 0 0 35px;
+}
+.introduce2 a h3 {color: #fff; font-size: 25px; font-weight: 500;}
+.introduce2 a .more {color: #666; position: relative;}
+.introduce2 a .more::after {position: absolute; background: url(../images/intro_more.svg) no-repeat center center / contain; left: 115px; top: 2px; width: 15px; height: 15px; display: block; content: "";}
 
 footer {
     height: 200px;
