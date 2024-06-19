@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- swiper 라이브러리 불러오기(cdn방식) -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <!-- js 불러오기 -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- 구글아이콘을 쓰는 코드(구글아이콘 사이트 - Web - Variable icon font) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>반응형, swiper 테스트</title>
+</head>
+<body>
+    <div id="wrap">
+        <main class="container">
+            <section class="biz">
+                <div class="wrapper">
+                    <ul>
+                        <li>
+                            <a href="#n">
+                                <!-- pc에서는 사진 위에 글자가 들어가지만
+                                     mobile에서는 사진 아래에 글자가 들어가서
+                                     img태그로 따로 코딩해줘야 쉬움 -->
+                                <div class="photo"><img src="images/biz1.png" alt=""></div>
+                                <h2>멘토링 꿈장학사업</h2>
+                                <p>꿈과 가능성이 있는 청소년들이 멘토선생님과 함게 자신의 꿈을 찾고</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="photo"><img src="images/biz2.png" alt=""></div>
+                                <h2>희망키움장학</h2>
+                                <p>대학 희망장학생들이 한 단계 높은 차원으로 스스로를 성장시키고,</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="photo"><img src="images/biz3.png" alt=""></div>
+                                <h2>글로벌 국내장학사업</h2>
+                                <p>개발도상국 출신의 유학생 중 추천협력대학의 추천을 통해 장학금</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="photo"><img src="images/biz4.png" alt=""></div>
+                                <h2>글로벌 국외장학사업</h2>
+                                <p>개발도상국 현지 빈곤 아동·청소년들에게 꿈도서관 독서교육프로그램 지원</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 다른 버전 -->
+
+            <section class="business">
+                <div class="wrapper">
+                    <ul>
+                        <!-- pc버전과 mobile 모두에서 글자 하단에 이미지가 나타남
+                             => background로 처리
+                             각각의 li를 구분해서 배경 이미지를 주기 위해 li한테 class를 줌
+                             (a는 방, li는 집같은 개념) -->
+                        <li class="biz1">
+                            <a href="#n">
+                                <h2>멘토링 꿈장학사업</h2>
+                                <p>꿈과 가능성이 있는 청소년들이 멘토선생님과 함게 자신의 꿈을 찾고</p>
+                            </a>
+                        </li>
+                        <li class="biz2">
+                            <a href="#n">
+                                <h2>희망키움장학</h2>
+                                <p>대학 희망장학생들이 한 단계 높은 차원으로 스스로를 성장시키고,</p>
+                            </a>
+                        </li>
+                        <li class="biz3">
+                            <a href="#n">
+                                <h2>글로벌 국내장학사업</h2>
+                                <p>개발도상국 출신의 유학생 중 추천협력대학의 추천을 통해 장학금</p>
+                            </a>
+                        </li>
+                        <li class="biz4">
+                            <a href="#n">
+                                <h2>글로벌 국외장학사업</h2>
+                                <p>개발도상국 현지 빈곤 아동·청소년들에게 꿈도서관 독서교육프로그램 지원</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+
+
+            <section class="gallery">
+                <div class="wrapper">
+                    <ul>
+                        <li>
+                            <a href="#n">
+                                <div class="photo"><img src="images/gallery1.png" alt=""></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="photo"><img src="images/gallery2.png" alt=""></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="photo"><img src="images/gallery3.png" alt=""></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 다른 버전 -->
+
+            <section class="news">
+                <div class="wrapper">
+                    <ul>
+                        <li>
+                            <a href="#n">
+                                <div class="photo"><img src="images/gallery1.png" alt=""></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="photo"><img src="images/gallery2.png" alt=""></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="photo"><img src="images/gallery3.png" alt=""></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- js-swiper -->
+
+            <section class="popup">
+                <div class="wrapper">
+                    <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                        <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                            <li class="swiper-slide"><img src="images/popup1.png"></li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                            <li class="swiper-slide"><img src="images/popup2.png"></li>
+                            <li class="swiper-slide"><img src="images/popup3.png"></li>
+                        </ul>
+                    </div>
+                    <div class="swiper-pagination"></div>  <!-- 컨트롤 요소는 swiper 안에 배치-->
+                    <button class="swiper-button-prev"></button>
+                    <button class="swiper-button-next"></button>
+                </div>
+            </section>
+            <section class="visual">
+                    <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                        <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                            <li class="swiper-slide bg1">
+                                <div class="wrapper">
+                                    <h2>기후 인텔리전스 고도화</h2>
+                                    <p>탄소중립 이행평가, 기후기술 및 정책평가, 기후영향 평가를<br>통한 탄소중립 과학기술 솔루션을 도출하겠습니다.</p>
+                                </div>
+                            </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                            <li class="swiper-slide bg2">
+                                <div class="wrapper">
+                                    <h2>기후기술시스템 혁신체계 고도화</h2>
+                                    <p>탄소중립기술, 녹색에너지, 자원순환 기술통합 시스템의<br>혁신체계(개발-실증-확산)를 구축하겠습니다.</p>
+                                </div>
+                            </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                            <li class="swiper-slide bg3">
+                                <div class="wrapper">
+                                    <h2>한계돌파형 기후기술 도약 생태계 구축</h2>
+                                    <p>기후변화 대응 임팩트가 높은 혁신적인 기후기술 개발과<br>사업화(Lab to Market)를 지원하겠습니다.</p>
+                                </div>
+                            </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                        </ul>
+                        <div class="btn_wrap">
+                            <div class="paging"></div>  <!-- 컨트롤 요소는 swiper 안에 배치-->
+                            <button class="play" title="실행"><i class="material-symbols-rounded">play_arrow</i></button>
+                            <button class="stop" title="정지"><i class="material-symbols-rounded">pause</i></button>
+                        </div>
+                        <button class="btn_prev" title="이전팝업">
+                            <i class="material-symbols-rounded">
+                            arrow_back_ios</i>
+                        </button> <!-- arrow_back_ios 무조건 들어가 있어야 함(글자를 인식해서 플레이하기 때문) -->
+                        <button class="btn_next" title="다음팝업">
+                            <i class="material-symbols-rounded">arrow_forward_ios</i>
+                        </button>
+                    </div>
+            </section>
+            <section class="book">
+                <div class="wrapper">
+                    <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                        <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/book1.png" alt=""></div>
+                                    <h2>계곡</h2>
+                                </a>
+                            </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/book2.png" alt=""></div>
+                                    <h2>필름</h2>
+                                </a>
+                            </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/book3.png" alt=""></div>
+                                    <h2>스테인글라스</h2>
+                                </a>
+                            </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/book4.png" alt=""></div>
+                                    <h2>흑백체계</h2>
+                                </a>
+                            </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- mobile 다른 버전 -->
+
+            <section class="sns">
+                <div class="wrapper">
+                    <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                        <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/book1.png" alt=""></div>
+                                    <h2>계곡</h2>
+                                </a>
+                            </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/book2.png" alt=""></div>
+                                    <h2>필름</h2>
+                                </a>
+                            </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/book3.png" alt=""></div>
+                                    <h2>스테인글라스</h2>
+                                </a>
+                            </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/book4.png" alt=""></div>
+                                    <h2>흑백체계</h2>
+                                </a>
+                            </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+</body>
+</html>
