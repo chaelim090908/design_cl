@@ -1,0 +1,46 @@
+/* common.css 는 공통요소가 들어감 */
+
+/* 글자 스타일은 상속받음. 기본 글자 스타일은 모든 태그를 감싸는 html과 body에 선언
+   (body에만 선언하면 되잖아 > 가끔 html에 태그해야 하는 경우가 있어서 한번에. */
+   html, body {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #3d3d3d; /* 글자 색상 */
+    letter-spacing: 0; /* 자간 */
+    line-height: 1.4; /* 배수 - 글자크기의 1.4배 */
+    word-break: keep-all; /* 단어별로 줄바꿈 */
+    word-wrap: break-word; /* 만약 단어가 너무 길면 줄바꿈 강제로 실행 */
+}
+
+#wrap {
+    min-width: 1260px;
+}
+
+.wrapper { /* wrapper : 홈페이지의 넓이를 제한하고 가운데정렬 */
+    width: 1260px; /* 넓이 */
+    margin: 0 auto; /* 가운데정렬 */
+}
+
+/* 1260px (나의 wrapper의 넓이)에 좌우 여백 20px씩 추가한 사이즈부터 - 반응형 */
+@media screen and (max-width:1300px){
+    #wrap {
+        min-width: 1300px;
+    }
+    .wrapper {
+        /* 넓이는 1260px 유지 */
+        margin: 0 20px; /* 좌우에 20px */
+    }
+} /* media */
+
+@media screen and (max-width:640px){ /* mobile 반응형 = break point */
+    html, body {
+        font-size: 13px;
+    }
+    #wrap {
+        min-width: 100%; /* 브라우저 넓이에 꽉차게 */
+    }
+    .wrapper {
+        width: auto;
+    } 
+} /* media */

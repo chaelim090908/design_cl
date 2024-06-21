@@ -1,0 +1,51 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+
+.visual ul li {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px;
+    color: rgba(255,255,255,0.8);
+}
+.visual ul li.pop_gb1 {background-image: url(../images/visual_bg1.png);}
+.visual ul li.pop_gb2 {background-image: url(../images/visual_bg2.png);}
+.visual ul li.pop_gb3 {background-image: url(../images/visual_bg3.png);}
+
+.visual ul li .txt_1 strong {font-family: 'Eulyoo1945'; font-size:100px; color: rgba(255,255,255,0.05); margin: 172px 0 0 50px; display: block;}
+.visual ul li .txt_1 h2 {font-family: 'Eulyoo1945'; font-size:100px; color: #fff; line-height: 1.2; margin: -91px 0 0 105px;}
+.visual ul li .txt_1 p {margin: 14px 0 0 127px; width: 500px;}
+
+.visual ul li .txt_2 span {margin: 273px 52px 0 0; text-align: right; color: rgba(255,255,255,0.6); display: block;}
+.visual ul li .txt_2 h3 {font-family: 'Eulyoo1945'; font-size: 50px; color: rgba(255,255,255,0.6); margin: 0 46px 0 0; text-align: right; display: block;}
+
+.visual .btn_prev,
+.visual .btn_next {
+    position: absolute;/* 감싸고 있는 swiper를 기준으로 정렬 */
+    top: 455px;
+    z-index: 10; /* position 속성이 들어간 요소끼리의 순서 - 숫자가 높으면 위 */
+    width: 100px; /* 버튼의 넓이, 높이 */
+    height: 20px;
+}
+.visual .btn_prev::before,
+.visual .btn_next::before {
+    position: absolute;/* button을 기준으로 정렬 */
+    left: 0;
+    top: 0;
+    width: 100%; /* 같은 구간인데 넓이를 2번 주는 건 X. 따라가게 줘야함 */
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+.visual .btn_next::before {background-image: url("data:image/svg+xml,%3Csvg width='102' height='22' viewBox='0 0 102 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M100 20.7802L100.282 20.3675L101.617 21.2802L100 21.2802L100 20.7802ZM70.7921 1.41273C70.5642 1.25686 70.5058 0.94571 70.6617 0.717767C70.8175 0.489825 71.1287 0.431402 71.3566 0.587276L70.7921 1.41273ZM100 21.2802L1.77295e-06 21.2802L1.68553e-06 20.2802L100 20.2802L100 21.2802ZM99.7178 21.1929L70.7921 1.41273L71.3566 0.587276L100.282 20.3675L99.7178 21.1929Z' fill='white' fill-opacity='0.3'/%3E%3C/svg%3E%0A");}
+.visual .btn_prev::before {background-image: url("data:image/svg+xml,%3Csvg width='102' height='22' viewBox='0 0 102 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 20.7802L1.71776 20.3675L0.383038 21.2802H2V20.7802ZM31.2079 1.41273C31.4358 1.25685 31.4942 0.945708 31.3383 0.717765C31.1825 0.489822 30.8713 0.431399 30.6434 0.587273L31.2079 1.41273ZM2 21.2802H102V20.2802H2V21.2802ZM2.28224 21.1929L31.2079 1.41273L30.6434 0.587273L1.71776 20.3675L2.28224 21.1929Z' fill='white' fill-opacity='0.3'/%3E%3C/svg%3E ");}
+.visual .btn_next {right: 2%;}
+.visual .btn_prev {left: 2%;}
+
+@media screen and (max-width:1400px){
+    .visual .btn_prev::before,
+.visual .btn_next::before {display: none;}
+}
