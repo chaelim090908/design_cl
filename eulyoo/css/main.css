@@ -15,7 +15,7 @@
 
 .visual ul li .txt_1 strong {font-family: 'Eulyoo1945'; font-size:100px; color: rgba(255,255,255,0.05); margin: 172px 0 0 50px; display: block;}
 .visual ul li .txt_1 h2 {font-family: 'Eulyoo1945'; font-size:100px; color: #fff; line-height: 1.2; margin: -91px 0 0 105px;}
-.visual ul li .txt_1 p {margin: 14px 0 0 127px; width: 500px;}
+.visual ul li .txt_1 p {margin: 6px 0 0 127px; width: 500px;}
 
 .visual ul li .txt_2 span {margin: 273px 52px 0 0; text-align: right; color: rgba(255,255,255,0.6); display: block;}
 .visual ul li .txt_2 h3 {font-family: 'Eulyoo1945'; font-size: 50px; color: rgba(255,255,255,0.6); margin: 0 46px 0 0; text-align: right; display: block;}
@@ -44,8 +44,118 @@
 .visual .btn_prev::before {background-image: url("data:image/svg+xml,%3Csvg width='102' height='22' viewBox='0 0 102 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 20.7802L1.71776 20.3675L0.383038 21.2802H2V20.7802ZM31.2079 1.41273C31.4358 1.25685 31.4942 0.945708 31.3383 0.717765C31.1825 0.489822 30.8713 0.431399 30.6434 0.587273L31.2079 1.41273ZM2 21.2802H102V20.2802H2V21.2802ZM2.28224 21.1929L31.2079 1.41273L30.6434 0.587273L1.71776 20.3675L2.28224 21.1929Z' fill='white' fill-opacity='0.3'/%3E%3C/svg%3E ");}
 .visual .btn_next {right: 2%;}
 .visual .btn_prev {left: 2%;}
-
 @media screen and (max-width:1400px){
     .visual .btn_prev::before,
 .visual .btn_next::before {display: none;}
 }
+
+@media screen and (max-width:640px){
+    .visual ul li {height: 288px;}
+    
+    .visual ul li .txt_1 strong {font-size:30px; margin: 56px 0 0 27px;}
+    .visual ul li .txt_1 h2 {font-size:30px; margin: -32px 0 0 34px;}
+    .visual ul li .txt_1 p {margin: 2px 0 0 37px; width: 70%;}
+    
+    .visual ul li .txt_2 span {margin: 60px 39px 0 0; color: rgba(255,255,255,0.4);}
+    .visual ul li .txt_2 h3 {display: none;}
+}
+
+.book {margin: 160px 0 0 0;}
+.book .wrapper {position: relative; /* more 정렬의 기준 */}
+
+.book .tit {
+    float: left; /* float - 부유요소. 공간을 차지하지만 인식하지 X */
+}
+.book .tit h2 {color: #1d1d1d; font-family: 'Eulyoo1945'; font-size: 40px; line-height: 1.2;}
+.book .tit span {margin: 0 0 0 25px;}
+.book .list ul li {width: 297px;}
+.book .list ul li a .photo {
+    overflow: hidden;
+    font-size: 0; /* 이미지 하단 여백 삭제 */
+    line-height: 0;
+}
+.book .list { /* flex - X, absolute - X */
+    margin: 0 0 0 428px;
+    width: 1162px;
+}
+.book .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 감싸는 요소 photo 영역에 이미지 꽉 채우기 */
+    transition: 0.3s;
+}
+.book .list ul li a:hover .photo img {transform: scale3d(1.1, 1.1, 1); /* 가운데를 기준으로 1.2배 확대 */}
+/* ↓ white-space 요소부터 한줄 제한 요소 - block 요소여야 함 */
+.book .list ul li a h3 {color: #1d1d1d; font-family: 'Eulyoo1945'; font-size: 22px; line-height: 1.2; margin: 9px 0 4px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.book .list ul li a:hover h3 {color: #5D331B;}
+.book .list ul li a:hover span {color: #B88E6A;}
+
+.book .more {
+    position: absolute; /* wrapper 기준 */
+    left: 25px;
+    top: 143px;
+    display: block;
+}
+.book .more a {
+    width: 70px;
+    height: 18px;
+    color: #666;
+    position: relative; /* after의 정렬의 기준 */
+}
+.book .more a::after {
+    position: absolute;
+    right: -16px;
+    top: 9px;
+    width: 29px;
+    height: 6px;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    background-image: url("data:image/svg+xml,%3Csvg width='31' height='8' viewBox='0 0 31 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M29 7L29.2909 6.59332L30.5585 7.5L29 7.5L29 7ZM20.3207 1.40668C20.0961 1.24603 20.0442 0.933718 20.2049 0.709116C20.3655 0.484515 20.6779 0.432673 20.9025 0.593324L20.3207 1.40668ZM29 7.5L5.68248e-07 7.5L4.80825e-07 6.5L29 6.5L29 7.5ZM28.7091 7.40667L20.3207 1.40668L20.9025 0.593324L29.2909 6.59332L28.7091 7.40667Z' fill='%23666666'/%3E%3C/svg%3E%0A");
+}
+.book .more a:hover {color: #962C25;}
+.book .more a:hover::after {fill: #962C25;}
+
+@media screen and (max-width:640px){
+    .book {margin: 60px 0 0 0;}
+
+    .book .tit {float: none;}
+    .book .tit h2 {font-size: 25px; margin-bottom: 29px;}
+    .book .tit span {display: none;}
+
+    
+    .book .list ul li {width: auto;} /* 넓이는 jquery가 줌 - slidesPerView: "auto",*/
+    /* width: calc(100% + 20px);
+       오른쪽 wrapper 밖까지 list가 나오게 하기 위해서
+       list한테 100%, 오른쪽 여백 20px을 추가해줌 */
+    .book .list {margin: 0; width: calc(100% + 20px); /* list가 가질 수 있는 최대 넓이(wrapper 안) */}
+    .book .list ul li a h3 {font-size: 16px; margin: 8px 0 0 0;}
+    /*
+    1줄 제한 > 무제한 (제목 여러줄 허용) - 제목밖에 안들어가는 경우 종종 사용
+    white-space: wrap;
+    over-flow: visible;
+    */
+
+    .book .more {
+        left: auto;
+        right: 0;
+        /* 만약 왼쪽 정렬이었다가 오른쪽 정렬로 변경하면
+           왼쪽값을 취소하고 auto, 오른쪽 값을 줘야함 */
+        top: 15px;
+    }
+    .book .more a {
+        width: 62px;
+        height: 16px;
+        color: #666;
+        position: relative; /* after의 정렬의 기준 */
+    }
+    .book .more a::after {
+        top: 7px;
+        width: 28px;
+    }
+}
+
+
+footer {margin: 500px 0 0 0;}
+

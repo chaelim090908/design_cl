@@ -15,6 +15,7 @@
 
 #wrap {
     min-width: 1260px;
+    overflow: hidden; /* book-list에 가로스크롤바 삭제 */
 }
 
 .wrapper { /* wrapper : 홈페이지의 넓이를 제한하고 가운데정렬 */
