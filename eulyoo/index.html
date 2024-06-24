@@ -19,7 +19,29 @@
 <body>
     <div id="wrap">
         <header>
-            <div class="wrapper"></div>
+            <div class="wrapper">
+                <!-- 로고 이미지가 검은색과 흰색으로 교체됨
+                     > 이미지 태그로 코딩 불가하여 background로 해서
+                       css에서 상황에 따라 교체하게 해야 함 -->
+                <h1 class="logo"><a href="#n">을유문화사</a></h1>
+                <nav class="gnb">
+                    <button class="gnb_open">메뉴열기</button>
+                    <div class="gnb_wrap">
+                        <ul>
+                            <li><a href="#n">을유문화사</a></li>
+                            <li><a href="#n">콘텐츠</a></li>
+                            <li><a href="#n">을유소식</a></li>
+                            <li><a href="#n">독자참여</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- top navigation bar - 메뉴 말고 상단에 있는 다른 요소들 -->
+                <div class="tnb">
+                    <a href="#n" class="mypage">마이페이지</a>
+                    <a href="#n" class="search">검색</a>
+                    
+                </div>
+            </div>
         </header>
 
         <div class="container">
@@ -136,12 +158,15 @@
                     </div>
                     <div class="list">
                         <ul>
-                            <li>
+                            <!-- 마우스를 오버하면 jquery에서
+                                 오버한 li에만 on 클래스 추가 -->
+                            <li class="on">
                                 <a href="#n">
                                     <div class="photo"><img src="images/interview1.png" alt="인터뷰 사진"></div>
                                     <div class="txt">
-                                        <h3>화가<br>홍지희</h3>
+                                        <h3>화가<br><em>홍지희</em></h3>
                                         <p>어느 날 길을 걷다가 무언가 반짝거려서 들여다봤는데 그게 폐유리병이었어요. 부서진 유리를 보고 누군가는 희망의 빛을 발견하는 중의적인 표현에 매료되었어요.</p>
+                                        <span>전체보기</span>
                                     </div>
                                 </a>
                             </li>
@@ -149,8 +174,9 @@
                                 <a href="#n">
                                     <div class="photo"><img src="images/interview2.png" alt="인터뷰 사진"></div>
                                     <div class="txt">
-                                        <h3>한국외대교수<br>신근혜</h3>
+                                        <h3>한국외대교수<br><em>신근혜</em></h3>
                                         <p>모든 인물에 공감이 가요. 제가 10년 전쯤 이 책을 처음 읽었고, 그 후 번역 작업을 하면서 여러 번 반복해서 읽었는데 그때마다 감정이 조금씩 달라지면서 어느 한 사람에게만 공감이 가지는 않더라고요.</p>
+                                        <span>전체보기</span>
                                     </div>
                                 </a>
                             </li>
@@ -158,8 +184,9 @@
                                 <a href="#n">
                                     <div class="photo"><img src="images/interview3.png" alt="인터뷰 사진"></div>
                                     <div class="txt">
-                                        <h3>시인<br>문정희</h3>
+                                        <h3>시인<br><em>문정희</em></h3>
                                         <p>시를 쓰는 순간만이 가장 내가 완벽해진다는 느낌이 들어요. 시라는 게 나이가 든다고 권위가 생기고 쓰는 능력이 느는 게 아니더라고요. 다시 새로움이에요.</p>
+                                        <span>전체보기</span>
                                     </div>
                                 </a>
                             </li>
