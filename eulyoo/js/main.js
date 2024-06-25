@@ -57,24 +57,8 @@ $(document).ready(function(){ /* document가 ready(로딩)된 이후 */
         }//if
     }) //scroll
 
-    /* 
-        .interview .list ul li 태그에 오버한 li에만 on클래스를 주고
-        나머지 다른(이전에 오버한) li에는 on크래스를 삭제
-        ---> 이전에 오버했던 li를 선택하는 명령 X
-             모든 li의 on클래스를 다 삭제함
-             다음, 오버한 li에만 다시 on클래스 추가
 
-        <ul>
-            <li></li> -- 오버했을 때, 이 li만을 지칭하는 언어 $(this)
-            <li></li>
-            <li></li>
-        <ul>
-    */
-   $('.interview .list ul li').on('mouseenter', function(){
-        $('.interview .list ul li').removeClass('on')
-        $(this).addClass('on')
-   })
-   const story_swiper = new Swiper('.story .swiper', { /* 팝업을 감싼는 요소의 class명 */
+    const story_swiper = new Swiper('.story .swiper', { /* 팝업을 감싼는 요소의 class명 */
         slidesPerView: "auto", /* li의 넓이 비율로 안함 - css에서 준 넓이대로 함 */
         spaceBetween: 16, /* li와 li사이 - 제일 작은 여백 */
         breakpoints: {

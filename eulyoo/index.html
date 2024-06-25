@@ -253,8 +253,58 @@
                 </div>
             </section>
         </div>
-        
-        <footer></footer>
+        <footer>
+            <div class="wrapper">
+                <!-- 일반적으로 p태그와 heading 태그는 footer에서 사용하지 않음 -->
+                <!-- br태그 : 디자인적 의도를 가지고 사용 -->
+                <div class="slogan">일본의 민족문화 말살정책으로<br>잃어버린 우리말과 영혼을 되살리다.</div>
+                <div class="f_info">
+                    <!-- item : 일렬된 정보의 class명으로 종종 사용함 -->
+                    <div class="item">
+                        <h2>위치</h2>
+                        <address>03997 서울 마포구 서교동 469-48(월드컵로16길 52-7)</address>
+                    </div>
+                    <div class="item">
+                        <h2>연락처</h2>
+
+                        <!-- 아래 item-sns 의 ul-li와 겹치기 때문에 개별로 class명을 줌 -->
+                        <ul class="tel">
+                            <li>
+                                <strong>전화번호</strong>
+                                <span>02-733-8153</span>
+                            </li>
+                            <li>
+                                <strong>팩스번호</strong>
+                                <span>02-732-9154</span>
+                            </li>
+                            <li>
+                                <strong>메일</strong>
+                                <span>eulyoo1945@eulyoo.co.kr</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h2>소셜네트워크</h2>
+                        <!-- html에 링크를 걸면 새창이 아닌, 현재 창에서 링크 페이지로 바뀜(기본) -->
+                        <!-- 같은 홈페이지 내에서 이동 - target을 주지 않음
+                             다른 홈페이지로 연결할 때 - 새 창 링크 (target="_blank")
+
+                             단, target="_blank"만 쓰면 안됨 (시각 장애인의 screen leader 프로그램 UI/UX 사용 등 웹 접근성 위배)
+                                 title="새창링크"를 적어줘야 함 > 최근에는 다시 철폐된 듯. 적지 않아도 O -->
+                        <ul class="sns">
+                            <li><a href="https://m.post.naver.com/my.nhn?memberNo=20168227" target="_blank" title="새창열림">블로그</a></li>
+                            <li><a href="https://www.instagram.com/eulyoo/" target="_blank" title="새창열림">인스타그램</a></li>
+                            <li><a href="https://www.facebook.com/eulyoo/" target="_blank" title="새창열림">페이스북</a></li>
+                            <li><a href="https://www.youtube.com/@eulyoo1945" target="_blank" title="새창열림">유튜브</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <div class="f_logo"><img src="images/logo_white.png" alt="로고 이미지"></div>
+                    <div class="copy">© 2020 EULYOO PUBLISHING CO., LTD. ALL RIGHTS RESERVED. SINCE 1945<br>DESIGNED BY WORKROOM</div>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
