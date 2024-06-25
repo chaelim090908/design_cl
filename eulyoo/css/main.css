@@ -608,7 +608,7 @@ footer .slogan {
     line-height: 1.2;
 }
 footer .f_info {
-    width: 100%;
+    width: 535px;
 }
 footer .f_info .item {
     margin: 0 0 55px 0;
@@ -635,7 +635,7 @@ footer .f_info .item h2 {
 footer .f_info .item .tel li {
     /* 원래 나뉘어져 있는데 어째서 flex 사용하는지 - 정확하게 넓이 등을 분배시키기 위함 */
     display: flex;
-    width: 535px;
+    width: 474px;
 }
 footer .f_info .item .tel li strong {
     /* em - 상대적인 크기의 단위
