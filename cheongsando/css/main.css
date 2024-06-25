@@ -59,12 +59,20 @@ header {
     */
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
+header.fixed {
+    backdrop-filter: blur(5px) brightness(0.85);
+    position: fixed; /* header에 직접 fixed를 줘도 상관 없음 */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.02);
+}
 header .wrapper {
     display: flex;
     justify-content: space-between;
 }
 header .logo {
-    margin: 17px 0 0 0;
+    margin: 30px 0 0 0;
+}
+header .logo img {
+    width: 230px;
 }
 header .gnb ul {
     display: flex;
@@ -81,6 +89,10 @@ header .gnb ul li a:hover {
     letter-spacing: -0.02em;
     transition: 0.5s;
 }
+
+
+
+
 .visual { /* cover - 사이즈 */
     background: url(../images/visual_bg.png) no-repeat center center / cover;
     border-radius: 0 0 200px 0;
@@ -224,14 +236,25 @@ header .gnb ul li a:hover {
 }
 .tour .list ul li {
     width: 190px;
+    /* transition할 때 글자가 움직이는 것을 막음
+       내가 준 넓이보다 내부요소가 더 크면 자르기 */
+    overflow: hidden;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover; /* 그 영역에 최대한 꽉 채우기 */
     color: rgba(255,255,255,0.8);
     font-size: 12px;
+    transition: 0.5s;
 }
 .tour .list ul li.active { /* li 중에서 active 클래스를 갖고 있는 li */
     width: 618px;
+}
+.tour .list ul li.active a {
+    width: 618px;
+    /* 100% X
+       transition 영향으로 넓이가 0.5초동안 190px -> 618px로 점점 변함
+       하지만 a에는 transition이 없기 때문에 즉시 넓이가 618px로 고정되기 때문에
+       내부 콘텐츠 넓이가 고정된 p태그의 글이 여러줄로 바뀌는 현상이 사라짐 */
 }
 .tour .list ul li.tour1 { /* li 중에서 tour1 클래스를 갖고 있는 li */
     background-image: url(../images/tour1.png);
@@ -428,6 +451,7 @@ footer {
 footer .wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start; /* family의 길이가 같이 늘어나는 것을 방지 */
 }
 footer .f_nav ul {
     display: flex;
@@ -465,6 +489,10 @@ footer .f_info {
 footer .copy {
     color: rgba(61,61,61,0.6);
 }
+
+footer .family {
+    position: relative; /* list 정렬의 기준 */
+}
 footer .family button {
     width: 182px;
     height: 34px;
@@ -472,6 +500,56 @@ footer .family button {
     border-radius: 20px;
     padding: 0 19px;
     text-align: left;
-    margin: 36px 0 0 0;
-    background: url(../images/family_button.svg) no-repeat right 21px center;
+    margin: 0;
+    position: relative; /* after 정렬의 기준 */
+}
+footer .family button.btn_close {
+    margin: 0;
+}
+
+footer .family button::after {
+    position: absolute;
+    right: 21px;
+    top: 10px;
+    width: 17px;
+    height: 13px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    content: "";
+}
+footer .family button.btn_open::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='12.698' viewBox='0 0 17 12.698'%3E%3Cpath id='family_button' d='M215.012-677.444H200.622a.6.6,0,0,1-.444-.179.6.6,0,0,1-.178-.443.6.6,0,0,1,.178-.444.6.6,0,0,1,.444-.179h14.391l-4.644-4.644a.619.619,0,0,1-.19-.428.609.609,0,0,1,.19-.452.634.634,0,0,1,.444-.209.609.609,0,0,1,.444.2l5.45,5.45a.966.966,0,0,1,.229.332,1.017,1.017,0,0,1,.066.371,1,1,0,0,1-.066.37.957.957,0,0,1-.229.332l-5.45,5.45a.618.618,0,0,1-.432.19.6.6,0,0,1-.456-.2.639.639,0,0,1-.2-.44.6.6,0,0,1,.2-.44Z' transform='translate(-200 684.422)' fill='%23666'/%3E%3C/svg%3E%0A");
+}
+footer .family button.btn_close::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='1.417' viewBox='0 0 17 1.417'%3E%3Cpath id='remove_24dp_FILL0_wght200_GRAD0_opsz24' d='M240.708-498.583a.686.686,0,0,1-.5-.2.687.687,0,0,1-.2-.506.683.683,0,0,1,.2-.5.685.685,0,0,1,.5-.2h15.583a.686.686,0,0,1,.5.2.687.687,0,0,1,.2.5.685.685,0,0,1-.2.5.685.685,0,0,1-.5.2Z' transform='translate(-240 500)' fill='%235f6368'/%3E%3C/svg%3E%0A");
+}
+footer .family button.btn_close {
+    display: none;
+}
+footer .family .list {
+    display: none; /* 닫혀있는 상태에서 안보임 */
+    position: absolute; /* family를 기준으로 정렬 */
+    left: 0;
+    bottom: 34px;
+    border-radius: 20px;
+    border: 1px solid #666;
+    background-color: #fff;
+    width: 100%; /* 정렬의 기준이 되는 family의 넓이를 그대로 따라감 */
+    padding: 10px 19px;
+}
+footer .family .list ul li a {
+    display: block; /* 글자만 클릭되지 않고 넓이를 가짐 */
+    line-height: 2;
+}
+
+/* family 사이트가 열렸을 때(.open) */
+footer .family.open button.btn_open {
+    display: none;
+}
+footer .family.open button.btn_close {
+    display: block; /* display 중 아무 영향도 끼치지 않는 요소인 block을 줌 */
+}
+footer .family.open .list {
+    display: none;
 }
