@@ -375,6 +375,10 @@ header.fixed .tnb .search::after {
     margin: 160px 0 0 0;
     color: rgba(61,61,61,0.8)
 }
+.interview .wrapper {
+    position: relative; /* 전체보기 정렬의 기준 */
+}
+
 .interview .tit {
     text-align: center;
     padding: 71px 0 0 0;
@@ -389,19 +393,80 @@ header.fixed .tnb .search::after {
     display: block;
 }
 
+
+
+
+
+
+
+
+
+
 .interview .list ul {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 }
 .interview .list ul li {
     width: 404px;
+    position: relative; /* txt 정렬의 기준 */
 }
 
-.interview .list ul li a .photo {
+.interview .list ul li:nth-child(2) {
+    margin: 80px 0 0 0;
+}
+
+.interview .list ul li a .photo img {
     border-radius: 80px 0 30px 0;
 }
+.interview .list ul li:nth-child(2) a .photo img {
+    /* nth-child()를 넣을 때 img와 관련있는 값에 직접적으로 주기 보단
+       나열되어 있는 값을 잡아줄 수 있는 가장 가까운 요소를 기준으로 함 */
+    border-radius: 0 30px 0 80px;
+}
+
+.interview .list ul li a .txt {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    align-items: center;
+    width: 100%; /* li에 width 값을 줬음 */
+    padding: 0 0 36px 42px;
+
+}
 
 
+
+
+
+
+
+
+
+
+.interview .list ul li a .txt p {
+    display: none;
+}
+
+.interview .more a {
+    position: absolute;
+    left: 595px;
+    top: 155px;
+    width: 70px;
+}
+.interview .more a::after {
+    position: absolute; /* .more a 를 기준으로 삼음. (position 값이 있기 때문) */
+    right: 0;
+    bottom: 0;
+    width: 29px;
+    height: 6px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='31' height='8' viewBox='0 0 31 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M29 7L29.2909 6.59332L30.5585 7.5L29 7.5L29 7ZM20.3207 1.40668C20.0961 1.24603 20.0442 0.933718 20.2049 0.709116C20.3655 0.484515 20.6779 0.432673 20.9025 0.593324L20.3207 1.40668ZM29 7.5L5.68248e-07 7.5L4.80825e-07 6.5L29 6.5L29 7.5ZM28.7091 7.40667L20.3207 1.40668L20.9025 0.593324L29.2909 6.59332L28.7091 7.40667Z' fill='%233D3D3D'/%3E%3C/svg%3E%0A");
+    display: block;
+    content: "";
+}
 
 
 
