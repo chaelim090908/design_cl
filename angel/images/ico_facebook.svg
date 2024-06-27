@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36.065" height="36.065" viewBox="0 0 36.065 36.065">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_169" data-name="사각형 169" width="36.065" height="36.065" transform="translate(0 0)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="ico_facebook" transform="translate(0 0)">
+    <g id="그룹_107" data-name="그룹 107" clip-path="url(#clip-path)">
+      <path id="패스_241" data-name="패스 241" d="M26.937,36.065H20.822l-2.789-.921-2.767.921H9.129A9.129,9.129,0,0,1,0,26.937V9.128A9.129,9.129,0,0,1,9.129,0H26.937a9.128,9.128,0,0,1,9.128,9.128V26.937a9.128,9.128,0,0,1-9.128,9.128" fill="#337fff"/>
+      <path id="패스_242" data-name="패스 242" d="M15.249,14.108v3.924H10.726v5.15h4.523V36.065h5.566V23.182h4.151l.79-5.15H20.815V14.691a2.575,2.575,0,0,1,2.9-2.782h2.247V7.525a27.474,27.474,0,0,0-3.988-.347c-4.069,0-6.728,2.465-6.728,6.93" fill="#fff"/>
+    </g>
+  </g>
+</svg>
