@@ -1,3 +1,110 @@
 @import url(default.css);
 @import url(fonts.css);
 @import url(common.css);
+
+.font_hs {
+    font-family: 'HS';
+}
+
+.visual h2 {
+    display: none;
+}
+.visual ul li {
+    height: 896px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+.visual ul li p {
+    margin: 395px 0 0 0;
+    text-align: center;
+    font-size: 50px;
+    line-height: 1.2;
+}
+.visual ul li.bg1 {
+    background-image: url(../images/visual_1.png);
+}
+.visual ul li.bg2 {
+    background-image: url(../images/visual_2.png);
+}
+.visual ul li.bg3 {
+    background-image: url(../images/visual_3.png);
+}
+.visual ul li.bg4 {
+    background-image: url(../images/visual_4.png);
+}
+.visual .btn_wrap {
+    position: absolute; /* swiper 기준으로 정렬. 다른 요소에 relative를 줘도 swiper에 적용됨 */
+    left: 50%; /* 50% - 정렬의 기준 swiper 넓이의 왼쪽 절반부터 시작 */
+    transform: translate(-50%, 0); /* translate(좌우, 위아래); */
+    /* btrn_wrap(자신)의 넓이의 절반만큼 왼쪽으로 이동 */
+    bottom: 26px;
+    z-index: 10; /* 아래에 깔려있어서 안보임. 숫자를 높게 적용 */
+    display: flex;
+    gap: 4px;
+}
+.visual .btn_wrap button {
+    font-size: 0;
+    line-height: 0;
+    width: 25px;
+    height: 25px;
+    position: relative; /* before 정렬의 기준 */
+}
+.visual .btn_wrap button::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%; /* button 사이즈를 기준으로 100% */
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    content: "";
+}
+.visual .btn_wrap button.btn_prev::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3E%3Cg id='prev' transform='translate(-962 -845)'%3E%3Cg id='타원_2' data-name='타원 2' transform='translate(962 845)' fill='none' stroke='rgba(255,255,255,0.6)' stroke-width='1'%3E%3Ccircle cx='12.5' cy='12.5' r='12.5' stroke='none'/%3E%3Ccircle cx='12.5' cy='12.5' r='12' fill='none'/%3E%3C/g%3E%3Cpath id='arrow_forward_ios_24dp_FILL0_wght200_GRAD0_opsz24' d='M296.731-832.5l-6.43-6.431a.6.6,0,0,1-.182-.443.612.612,0,0,1,.187-.443.6.6,0,0,1,.443-.184.6.6,0,0,1,.443.184l6.365,6.37a1.255,1.255,0,0,1,.295.45,1.411,1.411,0,0,1,.093.5,1.411,1.411,0,0,1-.093.5,1.256,1.256,0,0,1-.295.45l-6.37,6.37a.592.592,0,0,1-.441.182.609.609,0,0,1-.441-.187.6.6,0,0,1-.184-.443.6.6,0,0,1,.184-.443Z' transform='translate(1266.944 24.5) rotate(180)' fill='rgba(255,255,255,0.6)'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.visual .btn_wrap button.btn_next::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3E%3Cg id='next' transform='translate(-991 -845)'%3E%3Cg id='타원_1' data-name='타원 1' transform='translate(991 845)' fill='none' stroke='rgba(255,255,255,0.6)' stroke-width='1'%3E%3Ccircle cx='12.5' cy='12.5' r='12.5' stroke='none'/%3E%3Ccircle cx='12.5' cy='12.5' r='12' fill='none'/%3E%3C/g%3E%3Cpath id='arrow_forward_ios_24dp_FILL0_wght200_GRAD0_opsz24' d='M296.731-832.5l-6.43-6.431a.6.6,0,0,1-.182-.443.612.612,0,0,1,.187-.443.6.6,0,0,1,.443-.184.6.6,0,0,1,.443.184l6.365,6.37a1.255,1.255,0,0,1,.295.45,1.411,1.411,0,0,1,.093.5,1.411,1.411,0,0,1-.093.5,1.256,1.256,0,0,1-.295.45l-6.37,6.37a.592.592,0,0,1-.441.182.609.609,0,0,1-.441-.187.6.6,0,0,1-.184-.443.6.6,0,0,1,.184-.443Z' transform='translate(709.882 1689.5)' fill='rgba(255,255,255,0.6)'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.visual .btn_wrap button.btn_stop::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3E%3Cg id='stop' transform='translate(-904 -845)'%3E%3Cg id='타원_4' data-name='타원 4' transform='translate(904 845)' fill='none' stroke='rgba(255,255,255,0.6)' stroke-width='1'%3E%3Ccircle cx='12.5' cy='12.5' r='12.5' stroke='none'/%3E%3Ccircle cx='12.5' cy='12.5' r='12' fill='none'/%3E%3C/g%3E%3Cline id='선_1' data-name='선 1' y2='11' transform='translate(913.5 851.56)' fill='none' stroke='rgba(255,255,255,0.6)' stroke-linecap='round' stroke-width='1'/%3E%3Cline id='선_2' data-name='선 2' y2='11' transform='translate(919.5 851.56)' fill='none' stroke='rgba(255,255,255,0.6)' stroke-linecap='round' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.visual .btn_wrap button.btn_play::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3E%3Cg id='play' transform='translate(-933 -845)'%3E%3Cg id='타원_3' data-name='타원 3' transform='translate(933 845)' fill='none' stroke='rgba(255,255,255,0.6)' stroke-width='1'%3E%3Ccircle cx='12.5' cy='12.5' r='12.5' stroke='none'/%3E%3Ccircle cx='12.5' cy='12.5' r='12' fill='none'/%3E%3C/g%3E%3Cpath id='play_arrow_24dp_FILL0_wght100_GRAD0_opsz24' d='M372-627.4v-12.2a1.3,1.3,0,0,1,.419-1.025A1.426,1.426,0,0,1,373.4-641a1.531,1.531,0,0,1,.373.047,1.819,1.819,0,0,1,.373.14l9.6,6.149a1.686,1.686,0,0,1,.489.512,1.271,1.271,0,0,1,.163.652,1.271,1.271,0,0,1-.163.652,1.685,1.685,0,0,1-.489.512l-9.6,6.149a1.819,1.819,0,0,1-.373.14,1.531,1.531,0,0,1-.373.047,1.427,1.427,0,0,1-.978-.373A1.3,1.3,0,0,1,372-627.4ZM373.3-633.5Zm0,6.242,9.876-6.242-9.876-6.242Z' transform='translate(568.536 1491)' fill='rgba(255,255,255,0.6)'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.visual .btn_wrap button.btn_play {
+    display: none; /* 처음에는 숨김 */
+}
+
+@media screen and (max-width:1024px){
+    .visual ul li {
+        height: 700px;
+    }
+    .visual ul li p {
+        margin: 330px 0 0 0;
+        font-size: 40px;
+    }
+}
+@media screen and (max-width:768px){
+    .visual .btn_wrap {
+        display: none;
+    }
+    .visual ul li {
+        height: 500px;
+    }
+    .visual ul li p {
+        margin: 260px 0 0 0;
+        font-size: 30px;
+    }
+}
+@media screen and (max-width:640px){
+    .visual ul li {
+        height: 300px;
+    }
+    .visual ul li p {
+        margin: 228px 0 0 0;
+        font-size: 20px;
+    }
+}

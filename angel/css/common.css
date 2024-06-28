@@ -26,22 +26,21 @@
 /* 1260px (나의 wrapper의 넓이)에 좌우 여백 20px씩 추가한 사이즈부터 - 반응형 */
 @media screen and (max-width:1300px){
     #wrap {
-        min-width: 1300px;
+        min-width: 100%; /* 가로 스크롤바가 생기지 X */
     }
     .wrapper {
-        /* 넓이는 1260px 유지 */
+        width: auto; /* 가로 스크롤바가 생기지 X -2 */
         margin: 0 20px; /* 좌우에 20px */
     }
 } /* media */
-
+@media screen and (max-width:1024px){ /* 1024px 이하는 태블릿이라고 생각함 */
+    html, body {
+        font-size: 14px;
+    }
+}
 @media screen and (max-width:640px){ /* mobile 반응형 = break point */
     html, body {
         font-size: 13px;
     }
-    #wrap {
-        min-width: 100%; /* 브라우저 넓이에 꽉차게 */
-    }
-    .wrapper {
-        width: auto;
-    } 
+    /* wrap, wrapper 값은 위에서 상속받음 */
 } /* media */
