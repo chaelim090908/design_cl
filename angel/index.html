@@ -15,10 +15,10 @@
 </head>
 <body>
     <div class="wrap">
-        <header>
+        <header> <!-- class="fixed" -->
             <div class="wrapper">
                 <h1 class="logo"><a href="index.html">동물보호센터</a></h1>
-                <nav class="gnb">
+                <nav class="gnb font_noto">
                     <button class="gnb_open">메뉴열기</button>
                     <div class="gnb_wrap">
                         <!-- 1차 메뉴(ul 최상위 메뉴 - 1depth)
@@ -47,7 +47,27 @@
                     </div>
                     <button class="gnb_close">메뉴닫기</button>
                 </nav>
-                <div class="tnb"></div>
+                <!-- pc에서는 검색 입려이 있고, 모바일에서는 검색버튼을 클릭하면 페이지로 이동하거나 검색창이 나타남 -->
+                <a href="#n" class="btn_open">검색 페이지 이동</a>
+                <div class="tnb font_noto_r">
+                    <div class="search">
+                        <!-- form과 fieldset은 개발자가 삭제할 수도 있음(개발자의 영역임)
+                             그래서 절대 선택자로 사용하면 X
+                             그래서 div로 한번 더 감싸줌 -->
+                        <form> <!-- css - html, body 태그 값을 상속받지 X -->
+                            <fieldset>
+                                <div class="search_box">
+                                    <legend>검색어 입력</legend>
+                                    <label for="keyword">검색어</label>
+                                    <input type="text" id="keyword" placeholder="검색어 입력"> <!-- 한줄 입력란 -->
+                                    <!-- placeholder : 검색창 안에 글씨 -->
+                                    <input type="submit"> <!-- 전송버튼. '제출' 버튼 생김 -->
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="link"><a href="http://www.dogcat-e.com/index.php?code=apply" target="_blank" title="새창열림">전단지</a></div>
+                </div>
             </div>
         </header>
         <div class="container">

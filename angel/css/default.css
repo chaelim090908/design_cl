@@ -23,9 +23,14 @@ img { /* img태그를 a태그를 감싸면 일부 부라우저에서 파란색 �
 em, address { /* 글자의 기울어짐 삭제 */
     font-style: normal;
 }
-button { /* 버튼태그는 글자의 스타일을 상속받지 않음 */
+button { /* 버튼태그는 글자의 스타일을 상속받지 않음. 아래 form 태그 상속요소와 중복된 것 없앰 */
     background-color: transparent; /* 투명 */
     border: 0; /* 테두리 삭제 */
+    cursor: pointer;
+}
+
+/* form 태그가 문자스타일 상속을 안받음 */
+input, select, textarea {
     font-family: inherit;
     font-weight: inherit;
     font-size: inherit;
@@ -33,5 +38,10 @@ button { /* 버튼태그는 글자의 스타일을 상속받지 않음 */
     /* 이 아래까진 잘 안함. 보통 브라우저가 설정한 기본 스타일만 변경함. */
     letter-spacing: inherit;
     line-height: inherit;
-    cursor: pointer;
+}
+legend {
+    display: none;
+}
+fieldset { /* 검색창 테두리 없앰 */
+    border: 0;
 }

@@ -17,3 +17,9 @@
     src: local('NotoSans-Bold'), url(../fonts/NotoSans-Bold.woff2) format('woff2'), url(../fonts/NotoSans-Bold.woff) format('woff');
     font-style: normal;
 }
+@font-face {
+    font-family: 'Noto_r';
+    font-weight: 400;
+    src: local('NotoSans-Regular'), url(../fonts/NotoSans-Regular.woff2) format('woff2'), url(../fonts/NotoSans-Regular.woff) format('woff');
+    font-style: normal;
+}
