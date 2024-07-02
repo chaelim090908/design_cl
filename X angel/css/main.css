@@ -566,7 +566,6 @@ header.fixed .tnb .link a {
     color: #fff;
     padding: 12px 23px 11px 23px;
 }
-
 .find .tab > ul > li.find01.on .tab_menu {
     /* li의 find01이라는 클래스의 on클래스 (전부 포함) */
     background-color: #F67B7B;
@@ -577,12 +576,223 @@ header.fixed .tnb .link a {
     background-color: #766BE1;
     border-radius: 30px;
 }
+.find .tab .tab_detail ul li {
+    width: 297px;
+}
+@media screen and (max-width:768px){
+    .find .tab .tab_detail ul li {
+        width: 200px;
+    }
+}
 
 .find .tab .tab_detail ul li a { /* 꺽새 없음 (중간 swiper 있는데 무시해서) */
     display: block;
 }
+.find .tab .tab_detail ul li a .photo {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    border-radius: 40px;
+}
+.find .tab .tab_detail ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.find .tab .tab_detail ul li a .tit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 23px 0 11px 0;
+    font-size: 24px;
+}
+.find .tab .tab_detail ul li a .tit strong {
+    /* 글자 크기가 24px, 넓이가 83px이면
+       83/24 = 3.45555… > 반올림하여 3.5em
+       글자크기 하나가 1em */
+    width: 3.5em;
+    height: 1.6em;
+    line-height: 1.6em; /* 보통 높이는 em을 주지 않음 */
+    /* 왜 넓이와 높이로 주냐
+       > 옆의 h3태그에 정확한 넓이를 주기 위해서 (글 잘릴 때 효과 등)
+         strong 태그의 넓이가 특정되어야 함 */
+    text-align: center;
+    border-radius: 1em;
+    white-space: nowrap;
+    /* strong 태그와 h3가 좌우로 배치되어 있음
+       -> 넓이가 줄어들면 h3 태그의 글자만 잘림
+          (그렇지 않으면 공간 부족할 때 여백이 빠질 수 있음) */
+}
+.find .tab .tab_detail ul li a .tit strong.cate01 {
+    background-color: #F67B7B;
+}
+.find .tab .tab_detail ul li a .tit strong.cate02 {
+    background-color: rgba(246, 123, 123, 0.3);
+}
+.find .tab .tab_detail ul li a .tit strong.cate03 {
+    background-color: #766BE1;
+}
+.find .tab .tab_detail ul li a .tit strong.cate04 {
+    background-color: #D460A9;
+}
+.find .tab .tab_detail ul li a .tit h3 {
+    width: calc(100% - 4.2em);
+    /* 한줄제한 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.find .tab .tab_detail ul li a p {
+    color: rgba(255,255,255,0.8);
+    /* 내용이 2줄이지만 <br>태그를 이용하여 줄바꿈을 했으면 1줄로 계산 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.find .tab .tab_detail .btn_wrap {
+    margin: 67px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
 
+@media screen and (max-width:1024px){
+    .find .tab .tab_detail ul li {
+        width: 210px;
+    }
+}
+@media screen and (max-width:768px){
+    .find {
+        padding: 31px 0 41px 0;
+    }
+    .find h2 {
+        font-size: 25px;
+        margin: 0 0 13px 0;
+    }
+    
+    .find .tab > ul > li .tab_menu {
+        font-size: 12px;
+        padding: 4px 10px 5px 10px;
+    }
+    .find .tab > ul > li.find01.on .tab_menu {
+        border-radius: 20px;
+    }
+    .find .tab > ul > li.find02.on .tab_menu {
+        border-radius: 20px;
+    }
+    .find .tab .tab_detail ul li {
+        width: 200px;
+    }
+    
+    .find .tab .tab_detail ul li a .photo {
+        border-radius: 20px;
+    }
+    .find .tab .tab_detail ul li a .tit {
+        margin: 8px 0 10px 0;
+        font-size: 17px;
+    }
+    .find .tab .tab_detail ul li a .tit strong {
+        width: 3em;
+        height: 1.4em;
+        line-height: 1.4em;
+        border-radius: 1em;
+    }
+    .find .tab .tab_detail .btn_wrap {
+        margin: 33px 0 0 0;
+    }
+    .find .tab .tab_detail .btn_wrap button {
+        display: none;
+    }
 
+    .find .tab > ul > li .tab_detail {
+        padding: 52px 0 0 0;
+    }
+
+}
+
+.find .tab .tab_detail .btn_wrap button {
+    width: 25px;
+    height: 25px;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 50%;
+    font-size: 0;
+    line-height: 0;
+    margin-right: 4px;
+    position: relative; /* before 정렬의 기준 */
+}
+
+/* 대게 오른쪽 > after
+            왼쪽 > before 로 함 */
+
+.find .tab .tab_detail .btn_wrap button::before {
+    position: absolute; /* button을 기준으로 정렬 */
+    /* transform까지 정렬의 기준이 되는 영역의 위아래, 좌우에 가운데 */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 15px;
+    content: "";
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.find .tab .tab_detail .btn_wrap button.prev::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.826' height='15' viewBox='0 0 7.826 15'%3E%3Cpath id='arrow_forward_ios_24dp_FILL0_wght200_GRAD0_opsz24' d='M296.731-832.5l-6.43-6.431a.6.6,0,0,1-.182-.443.612.612,0,0,1,.187-.443.6.6,0,0,1,.443-.184.6.6,0,0,1,.443.184l6.365,6.37a1.255,1.255,0,0,1,.295.45,1.411,1.411,0,0,1,.093.5,1.411,1.411,0,0,1-.093.5,1.256,1.256,0,0,1-.295.45l-6.37,6.37a.592.592,0,0,1-.441.182.609.609,0,0,1-.441-.187.6.6,0,0,1-.184-.443.6.6,0,0,1,.184-.443Z' transform='translate(297.944 -825) rotate(180)' fill='rgba(255,255,255,0.6)' opacity='0.8'/%3E%3C/svg%3E%0A");
+}
+.find .tab .tab_detail .btn_wrap button.next::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.826' height='15' viewBox='0 0 7.826 15'%3E%3Cpath id='arrow_forward_ios_24dp_FILL0_wght200_GRAD0_opsz24' d='M296.731-832.5l-6.43-6.431a.6.6,0,0,1-.182-.443.612.612,0,0,1,.187-.443.6.6,0,0,1,.443-.184.6.6,0,0,1,.443.184l6.365,6.37a1.255,1.255,0,0,1,.295.45,1.411,1.411,0,0,1,.093.5,1.411,1.411,0,0,1-.093.5,1.256,1.256,0,0,1-.295.45l-6.37,6.37a.592.592,0,0,1-.441.182.609.609,0,0,1-.441-.187.6.6,0,0,1-.184-.443.6.6,0,0,1,.184-.443Z' transform='translate(-290.118 840)' fill='rgba(255,255,255,0.6)' opacity='0.8'/%3E%3C/svg%3E%0A");
+}
+.find .tab .tab_detail .btn_wrap .more {
+    font-size: 13px;
+    width: 98px;
+    height: 25px;
+    /* 왼쪽 좌우 버튼이랑 높이를 동일하게 코딩하기 위해서
+       padding으로 높이를 맞추다가 브라우저 별로 높이가 맞지 않을 수가 있어서
+       안전하게 높이와 line-height를 같이 주는 것이 좋음 */
+    line-height: 23px; /* chrome에서 글씨가 살짝 아래에 있어서 줄임 */
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 13px;
+    padding: 0 0 0 14px;
+    position: relative;
+}
+.find .tab .tab_detail .btn_wrap .more::after {
+    position: absolute;
+    right: 12px;
+    top: 6px;
+    width: 11px;
+    height: 11px;
+    content: "";
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 11 11'%3E%3Cpath id='add_24dp_FILL0_wght100_GRAD0_opsz24' d='M257.162-702.162h-4.825a.327.327,0,0,1-.241-.1.328.328,0,0,1-.1-.241.325.325,0,0,1,.1-.24.328.328,0,0,1,.241-.1h4.825v-4.825a.326.326,0,0,1,.1-.241.327.327,0,0,1,.241-.1.325.325,0,0,1,.24.1.327.327,0,0,1,.1.241v4.825h4.825a.326.326,0,0,1,.241.1.328.328,0,0,1,.1.241.325.325,0,0,1-.1.24.328.328,0,0,1-.241.1h-4.825v4.825a.326.326,0,0,1-.1.241.328.328,0,0,1-.241.1.325.325,0,0,1-.24-.1.328.328,0,0,1-.1-.241Z' transform='translate(-252 708)' fill='%23fff' opacity='0.8'/%3E%3C/svg%3E%0A");
+}
+
+/* tab_menu 구현 - 하나의 li에만 on클래스가 들어가 있음 */
+
+.find .tab {
+    position: relative; /* tab_menu 정렬의 기준 */
+}
+.find .tab > ul > li .tab_menu {
+    position: absolute;
+    top: 0; /* left 값을 주지 않고 tab_detail의 padding 값을 줌. (border 맨 위 ~ li까지 */'
+}
+
+/* .find01,find02 .tab_menu 좌우 배치.
+    다양한 방법 중 과거 웹접근성에서 이런 코딩을 받아들였음 */
+.find .tab > ul > li.find01 .tab_menu {
+    right: 50%;
+}
+.find .tab > ul > li.find02 .tab_menu {
+    left: 50%;
+}
+.find .tab > ul > li .tab_detail {
+    display: none;
+    padding: 92px 0 0 0;
+}
+.find .tab > ul > li.on .tab_detail {
+    display: block;
+}
 
 
 
