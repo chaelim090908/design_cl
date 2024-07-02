@@ -30,7 +30,7 @@
                              하지만 class명은 숫자가 먼저 못옴 depth1 -->
                         <ul class="depth1">
                             <!-- 메뉴가 열리면 li에 on 클래스를 추가 (pc/mobile에서) -->
-                            <li>
+                            <li class="on">
                                 <a href="#n">찾습니다</a>
                                 <ul class="depth2">
                                     <li><a href="#n">분실신고</a></li>
@@ -115,7 +115,175 @@
                     </div>
                 </div>
             </section>
-            <section class="find"></section>
+            <section class="find">
+                <div class="wrapper">
+                    <h2>찾습니다</h2>
+                    <div class="tab">
+                        <!-- ul이 내부에도 중복존재하여 class 명과 언급을 확실하게 해야 함 -->
+                        <ul>
+                            <li class="find01">
+                                <button class="tab_menu">가족을</button>
+                                <div class="tab_detail">
+                                    <div class="swiper">
+                                        <!-- jquary에서 on클래스 추가 -->
+                                        <ul class="swiper-wrapper">
+                                            <li class="swiper-slide">
+                                                <a href="#n">
+                                                    <div class="photo"><img src="images/find1.png" alt="동물사진"></div>
+                                                    <div class="tit">
+                                                        <strong class="cate01">실종</strong>
+                                                        <h3>솜사탕이를 찾습니다</h3>
+                                                        <p>코리아쇼트헤어 / 암컷 / 2살<br>실종장소 : 경기도 안산시 상록구 본오로(CU안산 본오로점~오토아머 부근)</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <a href="#n">
+                                                    <div class="photo"><img src="images/find2.png" alt="동물사진"></div>
+                                                    <div class="tit">
+                                                        <strong class="cate01">실종</strong>
+                                                        <h3>반지를 찾습니다</h3>
+                                                        <p>기타견종 / 암컷 / 1살<br>실종장소 : 충청남도 천안시 동남구 풍세산업단지인근 태학산입구</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <a href="#n">
+                                                    <div class="photo"><img src="images/find3.png" alt="동물사진"></div>
+                                                    <div class="tit">
+                                                        <strong class="cate01">실종</strong>
+                                                        <h3>도도를 찾습니다</h3>
+                                                        <p>앵무새 / 성별모름 / 1살<br>실종장소 : 서울특별시 관악구 신림 동부아파트 105동</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <a href="#n">
+                                                    <div class="photo"><img src="images/find4.png" alt="동물사진"></div>
+                                                    <div class="tit">
+                                                        <strong class="cate02">종료</strong>
+                                                        <h3>호두를 찾습니다</h3>
+                                                        <p>시츄 / 수컷 / 2살<br>실종장소 : 충청남도 아산시 탕정면 단독주택 마당</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <a href="#n">
+                                                    <div class="photo"><img src="images/find5.png" alt="동물사진"></div>
+                                                    <div class="tit">
+                                                        <strong class="cate02">종료</strong>
+                                                        <h3>버디를 애타게 찾습니다</h3>
+                                                        <p>조류(앵무새 퀘이커 크리미) / 암컷 / 2살<br>실종장소 : 경상남도 사천시 선구동 중길치과 조이너스 중앙시장 앞</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <a href="#n">
+                                                    <div class="photo"><img src="images/find6.png" alt="동물사진"></div>
+                                                    <div class="tit">
+                                                        <strong class="cate01">실종</strong>
+                                                        <h3>탕이를 찾습니다</h3>
+                                                        <p>랙돌 / 암컷 / 1살<br>실종장소 : 경기도 오산시 아파트지하주차장</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <a href="#n">
+                                                    <div class="photo"><img src="images/find7.png" alt="동물사진"></div>
+                                                    <div class="tit">
+                                                        <strong class="cate01">실종</strong>
+                                                        <h3>별하를 찾습니다</h3>
+                                                        <p>코리아 쇼트 헤어 / 암컷 / 5살<br>실종장소 : 서울특별시 강남구 역삼로4길 16. 성우스타우스오피스텔부근</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div> <!--swiper-->
+                                    <div class="btn_wrap">
+                                        <button class="prev">이전 팝업보기</button>
+                                        <button class="next">다음 팝업보기</button>
+                                        <a href="#n" class="more">전체보기</a>
+                                    </div>
+                                </div> <!--tab_detail-->
+                            </li> <!--find01-->
+                            <li class="find02">
+                                <button class="tab_menu">주인을</button>
+                                <div class="tab_detail">
+                                    <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                                        <ul class="swiper-wrapper">
+                                            <li class="swiper-slide">
+                                                <a href="#n">
+                                                    <div class="photo"><img src="images/find_주인을_01.png" alt="동물사진"></div>
+                                                    <div class="tit">
+                                                        <strong class="cate03">목격</strong>
+                                                        <h3>경기도</h3>
+                                                        <p>골든 리트리버 / 수컷 / 2살<br>목격장소 : 경기도 광주시 오포읍 능평로 베르빌아파트부근</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <a href="#n">
+                                                    <div class="photo"><img src="images/find_주인을_02.png" alt="동물사진"></div>
+                                                    <div class="tit">
+                                                        <strong class="cate03">목격</strong>
+                                                        <h3>서울특별시</h3>
+                                                        <p>기타견종 / 성별모름 / 1살미만<br>목격장소 : 서울특별시 중구 명동성당 앞 골목</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <a href="#n">
+                                                    <div class="photo"><img src="images/find_주인을_03.png" alt="동물사진"></div>
+                                                    <div class="tit">
+                                                        <strong class="cate04">구조</strong>
+                                                        <h3>서울특별시</h3>
+                                                        <p>토끼 / 성별모름 / 나이모름<br>구조장소 : 서울특별시 강북구 형인 휴아름 주차장</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <a href="#n">
+                                                    <div class="photo"><img src="images/find_주인을_04.png" alt="동물사진"></div>
+                                                    <div class="tit">
+                                                        <strong class="cate03">목격</strong>
+                                                        <h3>대구광역시</h3>
+                                                        <p>기타묘종 / 성별모름 / 나이모름<br>목격장소 : 대구광역시 달서구 대구 달서구 감삼동 293-4</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <a href="#n">
+                                                    <div class="photo"><img src="images/find_주인을_05.png" alt="동물사진"></div>
+                                                    <div class="tit">
+                                                        <strong class="cate04">구조</strong>
+                                                        <h3>경기도</h3>
+                                                        <p>치즈 / 성별모름 / 나이모름<br>구조장소 : 경기도 광주시 오포읍 능평로 베르빌아파트부근</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <a href="#n">
+                                                    <div class="photo"><img src="images/find_주인을_06.png" alt="동물사진"></div>
+                                                    <div class="tit">
+                                                        <strong class="cate04">구조</strong>
+                                                        <h3>경기도</h3>
+                                                        <p>리트리버 / 암컷 / 1살미만<br>목격장소 : 경기도 남양주시 다산동 플루리움 아파트</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div> <!--swiper-->
+                                    <div class="btn_wrap">
+                                        <button class="prev">이전 팝업보기</button>
+                                        <button class="next">다음 팝업보기</button>
+                                        <a href="#n" class="more">전체보기</a>
+                                    </div>
+                                </div> <!--tab_detail-->
+                            </li> <!--find02-->
+                        </ul>
+                    </div>
+                </div>
+            </section>
             <section class="campaign"></section>
             <section class="family"></section>
         </div>

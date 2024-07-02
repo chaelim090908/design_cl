@@ -7,7 +7,7 @@ $(document).ready(function(){
    let window_w // 브라우저 넓이 저장
 
    function ressize_chk(){
-    window_w = $(window).window()
+    window_w = $(window).width()
     if(window_w > 1024){/* 1024보다 크면 - pc면 */
         pc_mobile = 'pc'
     }else{/* mobile이면 */
@@ -134,7 +134,56 @@ $(document).ready(function(){
             }
         })
 
-   
+
+   /* find swiper */
+
+   const find01_swiper = new Swiper('.find .tab .find01 .swiper', { /* 팝업을 감싼는 요소의 class명 */
+        slidesPerView: 1, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+        spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+        breakpoints: {
+            640: {    /* 640px 이상일때 적용 */
+                slidesPerView: 2,
+                spaceBetween: 16,
+            },
+            768: {    /* 768px 이상일때 적용 */
+                slidesPerView: 3,
+                spaceBetween: 24,
+            },
+            1024: {   /* 1024px 이상일때 적용 */
+                slidesPerView: 4,
+                spaceBetween: 24,
+            },
+        },
+        loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+        navigation: {
+            prevEl: '.find .tab .find01 .btn_wrap .prev',
+            nextEl: '.find .tab .find01 .btn_wrap .next',
+        },
+    }); // find01_swiper
+
+    const find02_swiper = new Swiper('.find .tab .find02 .swiper', { /* 팝업을 감싼는 요소의 class명 */
+        slidesPerView: 1, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+        spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+        breakpoints: {
+            640: {    /* 640px 이상일때 적용 */
+                slidesPerView: 2,
+                spaceBetween: 16,
+            },
+            768: {    /* 768px 이상일때 적용 */
+                slidesPerView: 3,
+                spaceBetween: 24,
+            },
+            1024: {   /* 1024px 이상일때 적용 */
+                slidesPerView: 4,
+                spaceBetween: 24,
+            },
+        },
+        loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+        navigation: {
+            prevEl: '.find .tab .find02 .btn_wrap .prev',
+            nextEl: '.find .tab .find02 .btn_wrap .next',
+        },
+    }); // find02_swiper
 
 
 

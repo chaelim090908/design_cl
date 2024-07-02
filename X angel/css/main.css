@@ -180,7 +180,7 @@ header .tnb .search .search_box label {
     display: none;
 }
 header .tnb .search .search_box input[type="text"] { /* [타입 선택자] */
-    width: calc(100% - 18px);
+    width: calc(100% - 20px);
     height: 21px;
     border: 0;
     background-color: transparent; /* 투명 */
@@ -545,6 +545,76 @@ header.fixed .tnb .link a {
         display: none;
     }
 }
+
+.find {
+    background-color: #1E1E1E;
+    color: rgba(255,255,255,0.8);
+    padding: 70px 0 95px 0;
+}
+.find h2 {
+    font-family: 'HS';
+    color: #fff;
+    font-size: 45px;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0 0 21px 0;
+}
+
+.find .tab > ul > li .tab_menu {
+    font-family: 'HS';
+    font-size: 18px;
+    color: #fff;
+    padding: 12px 23px 11px 23px;
+}
+
+.find .tab > ul > li.find01.on .tab_menu {
+    /* li의 find01이라는 클래스의 on클래스 (전부 포함) */
+    background-color: #F67B7B;
+    border-radius: 30px;
+}
+.find .tab > ul > li.find02.on .tab_menu {
+    /* li의 find01이라는 클래스의 on클래스 (전부 포함) */
+    background-color: #766BE1;
+    border-radius: 30px;
+}
+
+.find .tab .tab_detail ul li a { /* 꺽새 없음 (중간 swiper 있는데 무시해서) */
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 footer {
     margin-top: 1000px;
