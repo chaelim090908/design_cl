@@ -194,4 +194,50 @@ $(document).ready(function(){
         $(this).addClass('on')
     })
 
+    // family의 swiper
+
+    const family_swiper = new Swiper('.family .swiper', { /* 팝업을 감싼는 요소의 class명 */
+        slidesPerView: 'auto', /* li의 넓이 비율로 안함 - css에서 준 넓이대로 함 */
+        spaceBetween: 16, /* li와 li사이 - 제일 작은 여백 */
+        breakpoints: {
+            640: {  /* 640px 이상이 되면 적용 */
+                slidesPerView: '2',
+                spaceBetween: 0, 
+            },
+            768: {  /* 768px 이상이 되면 적용 */
+                slidesPerView: 'auto',
+                spaceBetween: 0, 
+            },
+            1024: {  /* 1024px 이상이 되면 적용 */
+                slidesPerView: 5,
+                spaceBetween: 0, 
+            },
+        },
+        centeredSlides: true, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
+        loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+        navigation: {
+            prevEl: '.family .btn_wrap .prev',
+            nextEl: '.family .btn_wrap .next',
+        },
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }) //document

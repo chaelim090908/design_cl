@@ -30,7 +30,7 @@
                              하지만 class명은 숫자가 먼저 못옴 depth1 -->
                         <ul class="depth1">
                             <!-- 메뉴가 열리면 li에 on 클래스를 추가 (pc/mobile에서) -->
-                            <li class="on">
+                            <li>
                                 <a href="#n">찾습니다</a>
                                 <ul class="depth2">
                                     <li><a href="#n">분실신고</a></li>
@@ -114,6 +114,7 @@
                         <button class="btn_play">다시시작</button>
                     </div>
                 </div>
+                <div class="slogan"><img src="images/slogan_w.svg" alt="동물보호센터"></div>
             </section>
             <section class="find">
                 <div class="wrapper">
@@ -121,7 +122,7 @@
                     <div class="tab">
                         <!-- ul이 내부에도 중복존재하여 class 명과 언급을 확실하게 해야 함 -->
                         <ul>
-                            <li class="find01">
+                            <li class="find01 on">
                                 <button class="tab_menu">가족을</button>
                                 <div class="tab_detail">
                                     <div class="swiper">
@@ -206,7 +207,7 @@
                                     </div>
                                 </div> <!--tab_detail-->
                             </li> <!--find01-->
-                            <li class="find02 on">
+                            <li class="find02">
                                 <button class="tab_menu">주인을</button>
                                 <div class="tab_detail">
                                     <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
@@ -284,8 +285,86 @@
                     </div>
                 </div>
             </section>
-            <section class="campaign"></section>
-            <section class="family"></section>
+            <section class="campaign">
+                <div class="wrapper">
+                    <h2>캠페인</h2> <!-- css에서 숨김. section에는 반드시 heading 태그가 있어야 해서 적음 -->
+                    <p>
+                        <span>버려진 동물을</span><span class="cam01"></span><span>발견하신다면</span><br>
+                        <span>반드시 시·군·구청·유기동물</span><br>
+                        <span>보호시설</span><span class="cam02"></span><span>에</span> <span>신고</span><span class="cam03"></span><span>해주세요.</span>
+                    </p>
+                </div>
+            </section>
+            <section class="family">
+                <h2><strong>가족</strong>이 되어주세요</h2>
+                <div class="list">
+                    <div class="swiper">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/family_4.png" alt="동물 사진"></div>
+                                    <strong class="cate01">분양</strong>
+                                    <h3>유나</h3>
+                                    <p>암컷 / 중성화 O / 5살 9개월</p>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/family_5.png" alt="동물 사진"></div>
+                                    <strong class="cate02">임보</strong>
+                                    <h3>마리</h3>
+                                    <p>암컷 / 중성화 O / 7살 11개월</p>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/family_6.png" alt="동물 사진"></div>
+                                    <strong class="cate02">임보</strong>
+                                    <h3>추추</h3>
+                                    <p>암컷 / 중성화 O / 12살 7개월</p>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/family_7.png" alt="동물 사진"></div>
+                                    <strong class="cate01">분양</strong>
+                                    <h3>애지</h3>
+                                    <p>암컷 / 중성화 O / 2살 11개월</p>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/family_1.png" alt="동물 사진"></div>
+                                    <strong class="cate01">분양</strong>
+                                    <h3>렉시</h3>
+                                    <p>수컷 / 중성화 O / 2살 5개월</p>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/family_2.png" alt="동물 사진"></div>
+                                    <strong class="cate02">임보</strong>
+                                    <h3>휴이</h3>
+                                    <p>수컷 / 중성화 O / 4살 11개월</p>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/family_3.png" alt="동물 사진"></div>
+                                    <strong class="cate01">분양</strong>
+                                    <h3>쥬시</h3>
+                                    <p>암컷 / 중성화 O / 5살 3개월</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div> <!--swiper-->
+                    <div class="btn_wrap">
+                        <button class="prev">이전 팝업보기</button>
+                        <button class="next">다음 팝업보기</button>
+                        <a href="#n" class="more">전체보기</a>
+                    </div>
+                </div>
+            </section>
         </div>
         <footer></footer>
     </div>
