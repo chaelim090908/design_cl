@@ -229,25 +229,8 @@ $(document).ready(function(){
     $('footer .family_site button.open').on('click', function(){
         $('footer .family_site').addClass('open')
     })
-    $('footer .family_site button.close를').on('click', function(){
+    $('footer .family_site button.close').on('click', function(){
         $('footer .family_site').removeClass('open')
     })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }) //document
