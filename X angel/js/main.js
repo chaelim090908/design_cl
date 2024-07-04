@@ -221,7 +221,17 @@ $(document).ready(function(){
         },
     });
 
-
+    /*
+        footer의 family_site 여닫기
+        footer .family_site.open button.open 를 click하면 family_site에 open 클래스 추가
+        footer .family_site.btn_open button.close를 click하면 family_site에 open 클래스 삭제
+    */
+    $('footer .family_site button.open').on('click', function(){
+        $('footer .family_site').addClass('open')
+    })
+    $('footer .family_site button.close를').on('click', function(){
+        $('footer .family_site').removeClass('open')
+    })
 
 
 
