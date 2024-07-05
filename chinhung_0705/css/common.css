@@ -1,0 +1,23 @@
+html, body {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #3d3d3d;
+    line-height: 1.4;
+    letter-spacing: -0.05em;
+    word-break: keep-all; /* 단어로 줄바꿈 */
+    word-wrap: break-word; /* 모바일에서 한 단어가 줄이 길게 들어갈 경우 강제로 줄바꿈하기 위해 사용 */
+}
+#wrap { /* id 불러올 때 = # */
+    min-width: 1300px; /* 가로스크롤바가 생겼을 때 이미지가 잘리는 등의 현상을 막아줌 */
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto; /* 위아래 여백은 없고 좌우의 여백이 1260px 보다 크면 반반 알아서 들어가라. 단, 1260px보다 아래로 내려가면 여백이 0으로 잡힘 */
+}
+
+@media screen and (max-width:1300px){ /* 왼쪽,오른쪽에 여백 20px씩 주기 때문에 1260px + 40px */
+    .wrapper {
+        margin: 0 20px; /*  */
+    }
+}
