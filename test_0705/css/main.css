@@ -1,0 +1,161 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+
+header {
+    position: absolute; /* visual 위로 올라가서 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100px; /* 디자인할 때 높이를 잡아준 것들은 전부 줌 */
+    color: #fff;
+}
+header .inner {
+    display: flex; /* logo와 nav를 같은 선상에 정렬
+                      logo 값이 아주 긴데, 옆 nav의 값을 주지 않아 길이가 길어서 함께 들어가는 것이기 때문 */
+    justify-content: space-between;
+    align-items: center; /* 위아래 가운데 값 설정 */
+    margin: 0 20px; /* wrapper -> inner로 태그를 바꾸고 좌우 여백 20px */
+}
+header .logo a {
+    width: 107px;
+    height: 54px;
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    position: relative; /* before 정렬의 기준 */
+}
+header .logo a::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%; /* 넓이와 높이가 들어가는 이유는 position : absolute 때문에 */
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='107' height='54' viewBox='0 0 107 54' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_10)'%3E%3Cpath d='M17.8365 18V0H0V18H17.8365Z' fill='url(%23paint0_linear_1_10)'/%3E%3Cpath d='M35.673 36V54H53.5094V36H35.673Z' fill='url(%23paint1_linear_1_10)'/%3E%3Cpath d='M17.8365 36H0V54H17.8365V36Z' fill='%23FF0046'/%3E%3Cpath d='M53.5094 0H35.673V18H0V36H53.5094V0Z' fill='url(%23paint2_linear_1_10)'/%3E%3Cpath d='M89.1635 18V54H71.3459V18H89.1635Z' fill='url(%23paint3_linear_1_10)'/%3E%3Cpath d='M107.019 0H53.5094V18H107.019V0Z' fill='url(%23paint4_linear_1_10)'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_1_10' x1='8.91824' y1='18' x2='8.91824' y2='-1.36855e-09' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FF0046' stop-opacity='0.7'/%3E%3Cstop offset='1' stop-color='%23FF0046' stop-opacity='0.3'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear_1_10' x1='44.5912' y1='36' x2='44.5912' y2='54' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FF0046' stop-opacity='0.7'/%3E%3Cstop offset='1' stop-color='%23FF0046' stop-opacity='0.3'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint2_linear_1_10' x1='53.5094' y1='18' x2='0' y2='18' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.2' stop-color='%23FF0046'/%3E%3Cstop offset='0.89' stop-color='%23FF0046' stop-opacity='0.3963'/%3E%3Cstop offset='1' stop-color='%23FF0046' stop-opacity='0.3'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint3_linear_1_10' x1='80.2547' y1='54' x2='80.2547' y2='18' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FF0046'/%3E%3Cstop offset='1' stop-color='%23FF0046' stop-opacity='0.3'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint4_linear_1_10' x1='107.019' y1='9' x2='53.5094' y2='9' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.2' stop-color='%23FF0046'/%3E%3Cstop offset='0.89' stop-color='%23FF0046' stop-opacity='0.3963'/%3E%3Cstop offset='1' stop-color='%23FF0046' stop-opacity='0.3'/%3E%3C/linearGradient%3E%3CclipPath id='clip0_1_10'%3E%3Crect width='107' height='54' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    content: "";
+}
+
+/* 메뉴가 열렸을 때 */
+header.menu_over {
+    color: #3d3d3d;
+}
+header.menu_over::before {
+    position: absolute; /* header를 기준으로 정렬 (이미 absolute 값이 적용되어 있음) */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 349px;
+    background-color: #fff;
+    content: "";
+    /* z-index: -1; */
+    /* 정렬의 기준요소의 모든 내부요소보다 아래에 배치
+       position 값이 없는 요소까지 포함해서 맨 아래 */
+}
+header.menu_over::after {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 1px;
+    background-color: #ededed;
+    content: "";
+}
+header.menu_over .logo a::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='107' height='54' viewBox='0 0 107 54' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_10)'%3E%3Cpath d='M17.8365 18V0H0V18H17.8365Z' fill='url(%23paint0_linear_1_10)'/%3E%3Cpath d='M35.673 36V54H53.5094V36H35.673Z' fill='url(%23paint1_linear_1_10)'/%3E%3Cpath d='M17.8365 36H0V54H17.8365V36Z' fill='%23FF0046'/%3E%3Cpath d='M53.5094 0H35.673V18H0V36H53.5094V0Z' fill='url(%23paint2_linear_1_10)'/%3E%3Cpath d='M89.1635 18V54H71.3459V18H89.1635Z' fill='url(%23paint3_linear_1_10)'/%3E%3Cpath d='M107.019 0H53.5094V18H107.019V0Z' fill='url(%23paint4_linear_1_10)'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_1_10' x1='8.91824' y1='18' x2='8.91824' y2='-1.36855e-09' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FF0046' stop-opacity='0.7'/%3E%3Cstop offset='1' stop-color='%23FF0046' stop-opacity='0.3'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear_1_10' x1='44.5912' y1='36' x2='44.5912' y2='54' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FF0046' stop-opacity='0.7'/%3E%3Cstop offset='1' stop-color='%23FF0046' stop-opacity='0.3'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint2_linear_1_10' x1='53.5094' y1='18' x2='0' y2='18' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.2' stop-color='%23FF0046'/%3E%3Cstop offset='0.89' stop-color='%23FF0046' stop-opacity='0.3963'/%3E%3Cstop offset='1' stop-color='%23FF0046' stop-opacity='0.3'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint3_linear_1_10' x1='80.2547' y1='54' x2='80.2547' y2='18' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FF0046'/%3E%3Cstop offset='1' stop-color='%23FF0046' stop-opacity='0.3'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint4_linear_1_10' x1='107.019' y1='9' x2='53.5094' y2='9' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.2' stop-color='%23FF0046'/%3E%3Cstop offset='0.89' stop-color='%23FF0046' stop-opacity='0.3963'/%3E%3Cstop offset='1' stop-color='%23FF0046' stop-opacity='0.3'/%3E%3C/linearGradient%3E%3CclipPath id='clip0_1_10'%3E%3Crect width='107' height='54' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+
+
+/*
+    1025까지는 상단에 메뉴가 모두 보임
+    1024~769까지는 header의 높이가 100px, 메뉴만 모바일 메뉴로 나타남
+    768 이하는 heaader의 높이가 45px이고 모바일 메뉴로 나타남
+*/
+
+@media screen and (min-width:1025px){ /* 1025px 이상일 때 - 메뉴가 열린 상태  */
+    header .gnb button {
+        display: none; /* 모바일에서만 보임 */
+    }
+    header .gnb .gnb_wrap ul.depth1 {
+        display: flex;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li { /* 자식 선택자 - depth1 바로 아래에 있는 li */
+        width: 160px;
+        text-align: center;
+        position: relative;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > a {
+        line-height: 100px; /* header의 높이와 동일 - 글자가 위아래 가운데에 들어가니까 */
+        display: block; /* li와 넓이를 동일하게 만듬 */
+        font-weight: 500;
+        font-size: 20px;
+        letter-spacing: -0.05em;
+    }
+    header .gnb .gnb_wrap ul.depth2 {
+        display: none; /* 2차메뉴는 안보임 - 마우스 오버했을 때만 보임 */
+        /* 2차 메뉴는 1차 메뉴 하단에 header 밖에 배치되기 때문에 무조건 absolute를 사용함 */
+        position: absolute;
+        left: 0;
+        top: 100px; /* 1차메뉴 a의 높이만큼 */
+        width: 100%; /* li와 넓이를 같게 + text-align: center 라서 가운데 정렬로 들어감 */
+        padding-top: 29px;
+        /* 1차메뉴 a와 2차메뉴 사이의 여백이 필요하면
+           반드시 2차메뉴 ul에 padding 으로 줌 (margin 값은 절대로 갖지 못함) */
+    }
+    header .gnb .gnb_wrap ul.depth2 > li > a {
+        display: block; /* depth2와 넓이가 같아짐 = 1차메뉴 a와 넓이가 같음 */
+        line-height: 3;
+    }
+    /* 메뉴가 열렸을 때 */
+    header .gnb .gnb_wrap ul.depth1 > li.on > a {
+        color: #E73555;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li.on > a span {
+        position: relative; /* after 정렬의 기준 */
+    }
+    header .gnb .gnb_wrap ul.depth1 > li.on > a span::after {
+        position: absolute;
+        left: 0;
+        bottom: -38px;
+        width: 100%; /* span 태그의 넓이 잡은 만큼만 */
+        height: 1px;
+        background-color: #E73555;
+        content: "";
+    }
+    header.menu_over .gnb .gnb_wrap ul.depth2 > li > a:hover {
+        color: #E73555;
+    }
+    header.menu_over .gnb .gnb_wrap ul.depth2 {
+        display: block;
+    }
+}
+
+ /*
+    상단에 메뉴 글자 크기와 넓이 변경 예시
+    - 가로스크롤바가 생겨서 gnb가 제대로 안보일 시 (1300 이하 ~ 1025까지)
+      > 그런데 해당 코딩은 실무에서 많이 쓰지 않음 (상속요소를 무시하고 전부 값을 줘야하기 때문)
+
+    @media screen and (min-width:1025px) and (max-width:1300px){
+        header .gnb .gnb_wrap ul.depth1 > li {
+            width: 140px;
+        }
+        header .gnb .gnb_wrap ul.depth1 > li > a {
+            font-size: 16px;
+        }
+    }
+*/
+
+
+
+
+
+.visual {
+    background: url(../images/visual.png) no-repeat center center / cover;
+    height: 100vh; /* 브라우저의 높이와 딱 맞게 */
+    margin-bottom: 100vh; /* header의 높이와 동일한 영역으로 잡음. test용 */
+}
+.visual h2 {
+    display: none;
+}

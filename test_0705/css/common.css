@@ -1,0 +1,51 @@
+/* common.css 는 공통요소가 들어감 */
+
+/* 글자 스타일은 상속받음. 기본 글자 스타일은 모든 태그를 감싸는 html과 body에 선언
+   (body에만 선언하면 되잖아 > 가끔 html에 태그해야 하는 경우가 있어서 한번에. */
+   html, body {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #3d3d3d; /* 글자 색상 */
+    letter-spacing: 0; /* 자간 */
+    line-height: 1.4; /* 배수 - 글자크기의 1.4배 */
+    word-break: keep-all; /* 단어별로 줄바꿈 */
+    word-wrap: break-word; /* 만약 단어가 너무 길면 줄바꿈 강제로 실행 */
+}
+
+#wrap {
+    min-width: 1260px;
+    overflow: hidden; /* book-list에 가로스크롤바 삭제 */
+}
+
+.wrapper { /* wrapper : 홈페이지의 넓이를 제한하고 가운데정렬 */
+    width: 1260px; /* 넓이 */
+    margin: 0 auto; /* 가운데정렬 */
+}
+
+/* 1260px (나의 wrapper의 넓이)에 좌우 여백 20px씩 추가한 사이즈부터 - 반응형 */
+@media screen and (max-width:1300px){
+    #wrap {
+        min-width: 100%; /* 가로 스크롤바가 생기지 X */
+    }
+    .wrapper {
+        width: auto; /* 가로 스크롤바가 생기지 X -2 */
+        margin: 0 20px; /* 좌우에 20px */
+    }
+} /* media */
+@media screen and (max-width:1024px){ /* 1024px 이하는 태블릿이라고 생각함 */
+    html, body {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:640px){ /* mobile 반응형 = break point */
+    html, body {
+        font-size: 13px;
+    }
+    /* wrap, wrapper 값은 위에서 상속받음 */
+} /* media */
+
+/* 모바일 반응형에서는 내가 최초에 디자인했던 것이
+   반응형에도 비율을 깨지 않도록 하는 게 가장 중요함
+   = pc 버전 코딩을 할 때 모바일 버전도 항상 유의하며,
+     모바일에서 바꿀 것이 최소한으로 들어가게끔 하는 것이 중요 */
