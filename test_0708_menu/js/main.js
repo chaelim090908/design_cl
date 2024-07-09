@@ -53,4 +53,41 @@ $(document).ready(function(){
                 $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('on')
             } //if
         })
+
+    /*
+        모바일에서 1차 메뉴를 클릭하면
+            - 1차 메뉴에 걸려있는 링크가 작동되면 X
+            - 하위메뉴가 열려있어야 함 (li에 open 클래스 추가)
+              > 닫힌 1차 메뉴를 클릭하면 열리고, 열린 1차 메뉴를 클릭하면 닫힘
+                (동시에 여러개의 1차메뉴가 열릴 수 있음)
+
+            반드시 a 태그에 줘야함
+    */  
+
+    $(" header .gnb .gnb_wrap ul.depth1 > li > a").on("click", function(e){
+        // 모바일일 때 a 태그를 클릭하면 href 값으로 이동하는 것을 멈춤
+        if(pc_mobile == 'mobile'){
+            e.preventDefault();		/* a 태그의 href를 작동 시키지 않음 */
+            // this = 당장 클릭한 a 값
+            $(this).parent().toggleClass('open') /*클래스가 없으면 추가하고, 있으면 삭제*/
+        }
+    });
+
+    /*
+        메뉴 열기를 클릭하면 header에 menu_open 클래스 추가
+        = 메뉴 닫기를 클릭하면 header에 menu_open 클래스 삭제
+        header.menu_open .gnb .gnb_open - 메뉴열기
+        header.menu_open .gnb .gnb_close - 메뉴닫기
+    */
+
+    $('header .gnb .gnb_open').on('click', function(){
+        $('header').addClass('menu_open')
+        $("html, body").css({overflow : "hidden", height : $(window).height()}).bind("scroll touchmove mousewheel", function(e){e.preventDefault();e.stopPropagation();return false;},function(){passive:false});
+    })
+    $('header .gnb .gnb_close').on('click', function(){
+        $('header').removeClass('menu_open')
+        $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
+    })
+
+    
 })
