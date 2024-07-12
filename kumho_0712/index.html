@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- swiper를 돌아가게 하는 파일 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <title>금호건설</title>
+</head>
+<body>
+    <div id="wrap">
+        <header></header>
+        <main class="container">
+            <section class="visual">
+                <h2>홍보 팝업</h2> <!-- 해당 section 전체를 설명하는 제목 (모바일에서 숨김) -->
+                <div class="swiper">
+                    <ul class="swiper-wrapper">
+                        <!-- mobile에서 br을 없앨 경우 br에 class를 줘도 됨 - 모바일에서 숨길 경우 주로 <br class="m_skip"> 이라고 줌 -->
+                        <li class="swiper-slide bg1">
+                            <h3>KUMHO E&C<br>ETHICAL<br>MANAGEMENT</h3>
+                            <p>아름다운 기업이 되어 아름다운 세상을 만들겠습니다.</p>
+                        </li>
+                        <li class="swiper-slide bg2">
+                            <h3>KUMHO E&C<br>THINK OF THE<br>PEOPLE AND NATURE</h3>
+                            <p>금호건설은 아름다운 미래를 건설합니다.</p>
+                        </li>
+                        <li class="swiper-slide bg3">
+                            <h3>KUMHO E&C<br>THINK OF THE PEOPLE<br> AND NATURE</h3>
+                            <p>사람과 자연이 어우러지는 건설철학을 펼쳐 나아갑니다.</p>
+                        </li>
+                    </ul>
+                    <!-- 만약 btn이 swiper 영역 밖에 있으면 swiper 밖으로 빼내야 함 -->
+                    <div class="btn_wrap">
+                        <div class="paging"></div>  <!-- 이번 홈페이지에서는 몇 페이지인지 나타내는 bar -->
+                        <button class="btn_prev">이전 팝업보기</button>
+                        <button class="btn_play">팝업 다시시작</button>
+                        <button class="btn_stop">팝업 일시정지</button>
+                        <button class="btn_next">다음 팝업보기</button>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <section class="biz"></section>
+            <section class="news"></section>
+            <section class="service"></section>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>
