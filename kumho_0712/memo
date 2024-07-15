@@ -1,0 +1,10 @@
+
+- 1.
+    메인 페이지와 서브 페이지 같이
+    header랑 footer 디자인이 페이지마다 동일 > 1개의 css로 제작
+
+    default.css - html 스타일 초기화
+    fonts.css - 글자
+    common - 공통요소 (글자스타일 / wrapper, wrap)
+    layout.css - header / footer 레이아웃 공통요소
+    
