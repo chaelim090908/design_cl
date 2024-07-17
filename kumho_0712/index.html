@@ -6,6 +6,7 @@
     <!-- swiper를 돌아가게 하는 파일 -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/common.js"></script>
@@ -122,8 +123,118 @@
                 </div>
                 </div>
             </section>
-            <section class="biz"></section>
-            <section class="news"></section>
+            <section class="biz">
+                <div class="tit">
+                    <div class="wrapper">
+                        <!-- 글자 주변에 특이 요소를 넣으면(ex - position:relative를 사용해야 하는 것 등) span 태그로 한번 감싸는 게 좋음  -->
+                        <h2><span>BUSINESS</span></h2>
+                        <p>WILL CHALLENGE,<br>THE WORLD'S BEST</p>
+                    </div>
+                </div>
+                <div class="list">
+                    <ul>
+                        <!-- jquery에서
+                             마우스를 오버한 li에는 on 클래스 추가
+                             마우스르 오버하지 않은 li에는 off 클래스 추가 -->
+                        <li class="biz1">
+                            <a href="#n">
+                                <!-- a 태그 안에서 세트로 위치가 변경되서 안전하게 한번 감싸줌 -->
+                                <div class="inner">
+                                    <strong>건축사업</strong>
+                                    <h3>Architecture</h3>
+                                    <p>뛰어난 시공능력과 친환경 건축기술로 건축분야의 선구자로 인정받고 있습니다.</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="biz2">
+                            <a href="#n">
+                                <div class="inner">
+                                    <strong>토목사업</strong>
+                                    <h3>Civil</h3>
+                                    <p>도시와 국토를 잇는 공간 예술로 국내 최고의 공항사업 강자로 확고히 자리잡고 있습니다.</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="biz3">
+                            <a href="#n">
+                                <div class="inner">
+                                    <strong>주택사업</strong>
+                                    <h3>Housing</h3>
+                                    <p>도시의 가치와 입주민의 품격을 높이며 브랜드 신뢰감을 구축해 왔습니다.</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="biz4">
+                            <a href="#n">
+                                <div class="inner">
+                                    <strong>플랜트 환경사업</strong>
+                                    <h3>Plant Environment</h3>
+                                    <p>새로운시장을 개척하여 플랜트/환경 사업의 전 분야에서 차별화된 경쟁력을 갖추어 나갈 것입니다.</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="news">
+                <div class="tit">
+                    <h2>NEWS</h2>
+                    <p>PUBLIC RELATIONS<br>PR CENTER</p>
+                </div>
+                <div class="list">
+                    <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                        <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <span class="date">2024 - 07 - 05</span>
+                                    <h3>금호건설 ‘청주테크노폴리스 아테라’ 청약 평균 47.4대1</h3>
+                                    <p>[이뉴스투데이 주다솔 기자] 금호건설 ‘청주테크노폴리스 아테라’ 청약이 평균 47.4 대 1을 기록한 것으로 나타났다.  4일 한국부동산원 청약홈에 따르면, 지난 3일 청주테크노폴리스 아테라 1순위 청약 접수를 받은 결과 521가구(특별공급 제외) 모집에 2만4692건이 접수되며 평균 47.4대1의 경쟁률을 나타냈다.</p>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <span class="date">2024 - 07 - 03</span>
+                                    <h3>금호건설, ‘아테라 익스테리어 디자인’ 개발</h3>
+                                    <p>금호건설이 신규 주거 브랜드 ‘아테라’(ARTERA)에 적용하기 위한 ‘아테라 익스테리어 디자인’ 개발을 완료했다고 3일 밝혔다.
+                                        아테라 익스테리어 디자인은 건물 외부 색채와 입면, 단지 출입구, 동 출입구, 지하주차장, 계단실, 엘리베이터실 디자인 등으로 구성했다.</p>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <span class="date">2024 - 06 - 13</span>
+                                    <h3>금호건설, 조경 특화 브랜드 '아트시스' 출시</h3>
+                                    <p>(서울=연합뉴스) 권혜진 기자 = 금호건설은 13일 자체 개발한 조경 특화 브랜드 '아트시스'를 선보이고 이달 분양하는 충북 청주시 '청주테크노폴리스 아테라'를 시작으로 금호건설이 시공하는 '아테라' 브랜드 전 사업장에 적용한다고 밝혔다. </p>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <span class="date">2024 - 06 - 05</span>
+                                    <h3>금호건설, 유튜브서 '아테라' 삼행시 댓글 경품 이벤트</h3>
+                                    <p>[서울=뉴시스]정진형 기자 = 지난달 새 주거 브랜드 '아테라'(ARTERA)를 선보인 금호건설이 고객들을 대상으로 한 아테라 삼행시 유튜브 댓글 이벤트를 진행한다고 5일 밝혔다.이번 이벤트는 금호건설 공식 유튜브 채널인 ‘금호건설TV’(Tube Vitamin)에서 진행된다.</p>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <span class="date">2024 - 05 - 30</span>
+                                    <h3>금호건설, 새 주거 브랜드 ‘아테라’ 공식 홈페이지 1일 공개</h3>
+                                    <p>금호건설이 20여년 만에 새롭게 선보인 주거 브랜드 ‘아테라’(ARTERA)의 공식 홈페이지를 오는 6월 1일 공개한다고 30일 밝혔다. 아테라 공식 홈페이지는 ‘당신의 삶을 비추는 아름다움’이라는 브랜드 슬로건처럼 아테라만의 우아하고 세련된 이미지를 담아 고객들을 맞이할 계획이다.</p>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <span class="date">2024 - 05 - 27</span>
+                                    <h3>금호건설 “하반기 ‘아테라’ 4500가구 공급…지난해 2배”</h3>
+                                    <p>[이코노미스트 이병희 기자] 금호건설이 올 하반기 전국에 총 4500여 가구를 공급할 예정이라고 27일 밝혔다. 해당 단지는 수도권 3곳 1669가구, 충청도 2곳 2029가구, 강원도 2곳 806가구 등이다. 지난해 같은 기간과 비교 하면 2배 수준이다.</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- swiper는 기본적으로 overflow가 들어가서 잘림 -->
+                    <div class="btn_wrap">
+                        <a href="#n" class="more">view more</a>
+                    </div>
+                </div>
+            </section>
             <section class="service"></section>
         </main>
         <footer></footer>

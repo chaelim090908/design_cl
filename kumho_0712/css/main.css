@@ -17,13 +17,13 @@
     text-align: center;
 }
 .visual ul li.bg1 {
-    background-image: url(../images/visual1.png);
+    background-image: url(../images/main/visual1.png);
 }
 .visual ul li.bg2 {
-    background-image: url(../images/visual2.png);
+    background-image: url(../images/main/visual2.png);
 }
 .visual ul li.bg3 {
-    background-image: url(../images/visual3.png);
+    background-image: url(../images/main/visual3.png);
 }
 .visual ul li h3 {
     font-weight: 500;
@@ -128,11 +128,11 @@
 }
 
 @media screen and (max-width:1300px){
-
+    .visual ul li h3 {
+        margin: 55vh 0 0 0;
+    }
 }
-@media screen and (max-width:1024px){
-
-}
+@media screen and (max-width:1024px){}
 @media screen and (max-width:768px){ /* mobile 디자인 적용 */
     .visual ul li {
         min-height: 500px; /* 브라우저의 최소 높이만큼
@@ -154,5 +154,195 @@
     .visual ul li h3 {
         font-size: 25px;
     }
-
 }
+
+.biz .tit h2 {
+    color: #E41B22;
+    margin: 177px 0 0 0;
+    line-height: 1.1;
+    font-weight: 500;
+}
+.biz .tit h2 span {
+    position: relative;
+}
+.biz .tit h2 span::after {
+    position: absolute;
+    right: -9px;
+    top: -5px;
+    width: 12px;
+    height: 12px;
+    content: "";
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 4.76923C0 4.93514 0.024129 5.10709 0.0904941 5.26998C0.383103 5.99397 1.1282 6.44042 2.07541 6.06335C2.30166 5.97285 8.56712 3.44796 8.56712 3.44796C8.56712 3.44796 6.09954 9.70437 6.00603 9.93665C5.64706 10.8326 6.07843 11.644 6.81146 11.9155C6.97436 11.9759 7.14329 12.006 7.3092 12.003C7.9095 12 8.4374 11.6471 8.69683 10.9412C8.73604 10.8356 11.822 2.36199 11.8884 2.15988C11.9276 2.03922 12 1.75566 12 1.55958C12 1.14027 11.8462 0.745098 11.5475 0.446456C11.2549 0.15083 10.8627 0 10.4495 0C10.2474 0 10.0845 0.0361991 9.8371 0.11463C9.68929 0.162896 1.73454 3.12217 1.05581 3.37557C0.377074 3.62896 -1.657e-06 4.17195 0.00301493 4.76923' fill='%23ED1C24'/%3E%3C/svg%3E%0A");
+}
+.biz .tit p {
+    color: #1d1d1d;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin: 5px 0 43px 0;
+}
+.biz .list ul {
+    display: flex;
+}
+.biz .list ul li {
+    width: 25%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgba(255,255,255,0.8);
+    position: relative; /* before 정렬의 기준 */
+    transition: 0.5s;
+}
+.biz .list ul li::before {
+    /* 위에 덮은 검은 면 */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.2;
+    content: "";
+}
+.biz .list ul li.biz1 {
+    background-image: url(../images/main/biz1.png);
+}
+.biz .list ul li.biz2 {
+    background-image: url(../images/main/biz2.png);
+}
+.biz .list ul li.biz3 {
+    background-image: url(../images/main/biz3.png);
+}
+.biz .list ul li.biz4 {
+    background-image: url(../images/main/biz4.png);
+}
+.biz .list ul li a {
+    /* width는 li에, 높이는 a에게만 줌
+       a에게 넓이를 줄 시, li 넓이의 25%로 인식함
+       a는 어딜 누르든 클릭이 되어야 하기 때문에 height를 a에게 줌 */
+    display: block;
+    height: 690px;
+    /*
+        <li>
+            ::before  -- li의 before (position 값 있음 == a보다 더 위로 올라감)
+            <a></a>
+        </li>
+
+        li::before 가 position 값이 있기 때문에 맨 위로 올라와서 글자까지 덮는데
+        이것을 방지하려면 a에게 position 값을 주어 영향을 받지 않도록 함
+    */
+    position: relative;
+    z-index: 10;
+}
+.biz .list ul li a .inner {
+    /* 마우스오버 시 공간이 움직이면서 버벅거리게 되는데
+       그것을 저지하고 부드럽게 들어가기 위해 position : absolute; 값으로 줌 */
+    margin: 0 40px;
+    position: absolute; /* a를 기준으로 정렬 */
+    left: 0;
+    bottom: 44px;
+    width: calc(100% - 80px); /* 100% - 양 사이드의 여백 (글씨가 영역 밖으로 튀어나가거나 두 줄로 바뀌는 것 등을 막음) */
+    transition: 0.5s;
+}
+.biz .list ul li a .inner strong {
+    font-weight: 500;
+    line-height: 1.1;
+    display: block; /* strong 태그는 inline 태그임 */
+}
+.biz .list ul li a .inner h3 {
+    color: #fff;
+    font-weight: 500;
+    font-size: 38px;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin: 1px 0 11px 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.biz .list ul li a .inner p {
+    opacity: 0;
+    transition: 0.5s;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* 하나의 li에 오버했을 때 */
+.biz .list ul li.on::before {
+    opacity: 0;
+}
+.biz .list ul li.on {
+    width: 75%;
+}
+.biz .list ul li.on a .inner {
+    bottom: 72px;
+}
+.biz .list ul li.off::before {
+    opacity: 0.5;
+}
+.biz .list ul li.off {
+    /* width: 16%; */
+    /*on클래스 width : 52% + off 클래스 width : 16%
+      52 + (16*3) = 100% */
+}
+.biz .list ul li.off a {
+    opacity: 0.4; /* a 안에 있는 모든 요소에 opacity 값 적용 */
+}
+.biz .list ul li.on a .inner p {
+    opacity: 1;
+}
+
+@media screen and (max-width:1300px){
+    .biz .tit p {
+        font-size: 35px;
+    }
+    .biz .list ul li a .inner {
+        width: calc(100% - 40px);
+    }
+    .biz .list ul li a .inner h3 {
+        font-size: 33px;
+        margin: 1px 0 11px 0;
+    }
+}
+@media screen and (max-width:1024px){
+    .biz .list {
+        overflow-x: auto;
+        /* list의 넓이보다 ul의 넓이가 더 넓으면
+           가로 스크롤바를 생성 - 스크롤 허용 */
+        margin: 0 20px;
+    }
+    .biz .list ul {
+        gap: 16px;
+        width: 996px;
+        /*
+            ul의 넓이 안에서 li를 무조건 한줄로 표현 - flex
+            flex로 좌우로 배치 - 하지만 반드시 li의 넓이를 유지하려면 ul의 넓이를 늘림
+            li 한개 넓이가 237px * 4 = 948px
+            사이 여백 16px * 3 = 48px
+            전체 넓이 : 948 + 48 = 996px
+        */
+
+    }
+    .biz .list ul li {
+        width: 237px;
+    }
+    .biz .list ul li a {
+        height: 351px;
+    }
+    .biz .list ul li a .inner p {
+        display: none;
+    }
+    .biz .list ul li a .inner h3 {
+        font-size: 28px;
+        margin: 1px 0 11px 0;
+    }
+    .biz .list ul li a .inner {
+        margin: 0 20px;
+    }
+}
+@media screen and (max-width:768px){}
+@media screen and (max-width:480px){}

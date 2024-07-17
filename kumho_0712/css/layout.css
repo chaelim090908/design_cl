@@ -446,7 +446,7 @@ header .logo a::before {
         display: none;
         position: absolute;
         left: 20px;
-        top: 40px;
+        top: 14px;
         color: #3d3d3d;
     }
     header .tnb .lang {
@@ -502,6 +502,7 @@ header .logo a::before {
     }
     header.menu_open .tnb {
         display: flex;
+        align-items: center;
     }
 }
 @media screen and (max-width:768px){
