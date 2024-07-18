@@ -177,65 +177,109 @@
                 </div>
             </section>
             <section class="news">
-                <div class="tit">
-                    <h2>NEWS</h2>
-                    <p>PUBLIC RELATIONS<br>PR CENTER</p>
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2><span>NEWS</span></h2>
+                        <p>PUBLIC RELATIONS<br>PR CENTER</p>
+                    </div>
+                    <div class="list">
+                        <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                            <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="date">2024 - 07 - 05</span>
+                                        <h3>금호건설 ‘청주테크노폴리스 아테라’ 청약 평균 47.4대1</h3>
+                                        <p>[이뉴스투데이 주다솔 기자] 금호건설 ‘청주테크노폴리스 아테라’ 청약이 평균 47.4 대 1을 기록한 것으로 나타났다.  4일 한국부동산원 청약홈에 따르면, 지난 3일 청주테크노폴리스 아테라 1순위 청약 접수를 받은 결과 521가구(특별공급 제외) 모집에 2만4692건이 접수되며 평균 47.4대1의 경쟁률을 나타냈다.</p>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="date">2024 - 07 - 03</span>
+                                        <h3>금호건설, ‘아테라 익스테리어 디자인’ 개발</h3>
+                                        <p>금호건설이 신규 주거 브랜드 ‘아테라’(ARTERA)에 적용하기 위한 ‘아테라 익스테리어 디자인’ 개발을 완료했다고 3일 밝혔다.
+                                            아테라 익스테리어 디자인은 건물 외부 색채와 입면, 단지 출입구, 동 출입구, 지하주차장, 계단실, 엘리베이터실 디자인 등으로 구성했다.</p>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="date">2024 - 06 - 13</span>
+                                        <h3>금호건설, 조경 특화 브랜드 '아트시스' 출시</h3>
+                                        <p>(서울=연합뉴스) 권혜진 기자 = 금호건설은 13일 자체 개발한 조경 특화 브랜드 '아트시스'를 선보이고 이달 분양하는 충북 청주시 '청주테크노폴리스 아테라'를 시작으로 금호건설이 시공하는 '아테라' 브랜드 전 사업장에 적용한다고 밝혔다. </p>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="date">2024 - 06 - 05</span>
+                                        <h3>금호건설, 유튜브서 '아테라' 삼행시 댓글 경품 이벤트</h3>
+                                        <p>[서울=뉴시스]정진형 기자 = 지난달 새 주거 브랜드 '아테라'(ARTERA)를 선보인 금호건설이 고객들을 대상으로 한 아테라 삼행시 유튜브 댓글 이벤트를 진행한다고 5일 밝혔다.이번 이벤트는 금호건설 공식 유튜브 채널인 ‘금호건설TV’(Tube Vitamin)에서 진행된다.</p>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="date">2024 - 05 - 30</span>
+                                        <h3>금호건설, 새 주거 브랜드 ‘아테라’ 공식 홈페이지 1일 공개</h3>
+                                        <p>금호건설이 20여년 만에 새롭게 선보인 주거 브랜드 ‘아테라’(ARTERA)의 공식 홈페이지를 오는 6월 1일 공개한다고 30일 밝혔다. 아테라 공식 홈페이지는 ‘당신의 삶을 비추는 아름다움’이라는 브랜드 슬로건처럼 아테라만의 우아하고 세련된 이미지를 담아 고객들을 맞이할 계획이다.</p>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="date">2024 - 05 - 27</span>
+                                        <h3>금호건설 “하반기 ‘아테라’ 4500가구 공급…지난해 2배”</h3>
+                                        <p>[이코노미스트 이병희 기자] 금호건설이 올 하반기 전국에 총 4500여 가구를 공급할 예정이라고 27일 밝혔다. 해당 단지는 수도권 3곳 1669가구, 충청도 2곳 2029가구, 강원도 2곳 806가구 등이다. 지난해 같은 기간과 비교 하면 2배 수준이다.</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- swiper는 기본적으로 overflow가 들어가서 잘림 -->
+                        <div class="ctrl_bar">
+                            <div class="btn_wrap">
+                                <button class="btn_prev">팝업 이전보기</button>
+                                <button class="btn_next">팝업 이전보기</button>
+                                <a href="#n" class="more">view more</a>
+                            </div>
+                            <!-- 기본적으로 absolute가 세게 들어가있어서 제어가 안되기 때문에
+                           div로 한번 더 감싸줌 -->
+                            <div class="scroll"><div class="swiper-scrollbar"></div></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="list">
-                    <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
-                        <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
-                            <li class="swiper-slide">
+            </section>
+            <section class="service">
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2><span>KUMHO</span></h2>
+                        <p>A SECURE INVERSTMENT<br>KUMHO E&C</p>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li class="esg">
                                 <a href="#n">
-                                    <span class="date">2024 - 07 - 05</span>
-                                    <h3>금호건설 ‘청주테크노폴리스 아테라’ 청약 평균 47.4대1</h3>
-                                    <p>[이뉴스투데이 주다솔 기자] 금호건설 ‘청주테크노폴리스 아테라’ 청약이 평균 47.4 대 1을 기록한 것으로 나타났다.  4일 한국부동산원 청약홈에 따르면, 지난 3일 청주테크노폴리스 아테라 1순위 청약 접수를 받은 결과 521가구(특별공급 제외) 모집에 2만4692건이 접수되며 평균 47.4대1의 경쟁률을 나타냈다.</p>
+                                    <div class="inner">
+                                        <strong>지속가능경영</strong>
+                                        <h3>윤리경영을 토대로 아름다운 세상을 만들겠습니다.</h3>
+                                    </div>
                                 </a>
                             </li>
-                            <li class="swiper-slide">
+                            <li class="inv">
                                 <a href="#n">
-                                    <span class="date">2024 - 07 - 03</span>
-                                    <h3>금호건설, ‘아테라 익스테리어 디자인’ 개발</h3>
-                                    <p>금호건설이 신규 주거 브랜드 ‘아테라’(ARTERA)에 적용하기 위한 ‘아테라 익스테리어 디자인’ 개발을 완료했다고 3일 밝혔다.
-                                        아테라 익스테리어 디자인은 건물 외부 색채와 입면, 단지 출입구, 동 출입구, 지하주차장, 계단실, 엘리베이터실 디자인 등으로 구성했다.</p>
+                                    <div class="inner">
+                                        <strong>투자정보</strong>
+                                        <h3>소중한 자산, 투명경영으로 보답하겠습니다.</h3>
+                                    </div>
                                 </a>
                             </li>
-                            <li class="swiper-slide">
+                            <li lang="rec">
                                 <a href="#n">
-                                    <span class="date">2024 - 06 - 13</span>
-                                    <h3>금호건설, 조경 특화 브랜드 '아트시스' 출시</h3>
-                                    <p>(서울=연합뉴스) 권혜진 기자 = 금호건설은 13일 자체 개발한 조경 특화 브랜드 '아트시스'를 선보이고 이달 분양하는 충북 청주시 '청주테크노폴리스 아테라'를 시작으로 금호건설이 시공하는 '아테라' 브랜드 전 사업장에 적용한다고 밝혔다. </p>
-                                </a>
-                            </li>
-                            <li class="swiper-slide">
-                                <a href="#n">
-                                    <span class="date">2024 - 06 - 05</span>
-                                    <h3>금호건설, 유튜브서 '아테라' 삼행시 댓글 경품 이벤트</h3>
-                                    <p>[서울=뉴시스]정진형 기자 = 지난달 새 주거 브랜드 '아테라'(ARTERA)를 선보인 금호건설이 고객들을 대상으로 한 아테라 삼행시 유튜브 댓글 이벤트를 진행한다고 5일 밝혔다.이번 이벤트는 금호건설 공식 유튜브 채널인 ‘금호건설TV’(Tube Vitamin)에서 진행된다.</p>
-                                </a>
-                            </li>
-                            <li class="swiper-slide">
-                                <a href="#n">
-                                    <span class="date">2024 - 05 - 30</span>
-                                    <h3>금호건설, 새 주거 브랜드 ‘아테라’ 공식 홈페이지 1일 공개</h3>
-                                    <p>금호건설이 20여년 만에 새롭게 선보인 주거 브랜드 ‘아테라’(ARTERA)의 공식 홈페이지를 오는 6월 1일 공개한다고 30일 밝혔다. 아테라 공식 홈페이지는 ‘당신의 삶을 비추는 아름다움’이라는 브랜드 슬로건처럼 아테라만의 우아하고 세련된 이미지를 담아 고객들을 맞이할 계획이다.</p>
-                                </a>
-                            </li>
-                            <li class="swiper-slide">
-                                <a href="#n">
-                                    <span class="date">2024 - 05 - 27</span>
-                                    <h3>금호건설 “하반기 ‘아테라’ 4500가구 공급…지난해 2배”</h3>
-                                    <p>[이코노미스트 이병희 기자] 금호건설이 올 하반기 전국에 총 4500여 가구를 공급할 예정이라고 27일 밝혔다. 해당 단지는 수도권 3곳 1669가구, 충청도 2곳 2029가구, 강원도 2곳 806가구 등이다. 지난해 같은 기간과 비교 하면 2배 수준이다.</p>
+                                    <div class="inner">
+                                        <strong>인재채용</strong>
+                                        <h3>구성원의 열정과 더 큰 성장을 위해 노력하고 있습니다.</h3>
+                                    </div>
                                 </a>
                             </li>
                         </ul>
                     </div>
-                    <!-- swiper는 기본적으로 overflow가 들어가서 잘림 -->
-                    <div class="btn_wrap">
-                        <a href="#n" class="more">view more</a>
-                    </div>
                 </div>
             </section>
-            <section class="service"></section>
         </main>
         <footer></footer>
     </div>
