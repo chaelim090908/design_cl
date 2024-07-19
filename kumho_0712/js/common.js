@@ -100,4 +100,23 @@ $(document).ready(function(){
     $('header').removeClass('menu_open')
     $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
     })
+
+    /*
+        footer .family_site .family_open 을 클릭하면
+        1. footer .family_site 에 open 클래스 추가
+        2. footer .family_site ul 을 열어줌
+
+        footer .family_site .family_close 를 클릭하면
+        1. footer .family_site 에 open 클래스 삭제
+        2. footer .family_site ul 을 닫음
+    */
+    $('footer .family_site .family_open').on('click', function(){
+        $('footer .family_site').addClass('open')
+        $('footer .family_site ul').slideDown()
+    })
+    $('footer .family_site .family_close').on('click', function(){
+        $('footer .family_site').removeClass('open')
+        $('footer .family_site ul').slideUp()
+    })
+
 });

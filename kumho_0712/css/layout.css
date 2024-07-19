@@ -527,9 +527,206 @@ header .logo a::before {
 
 }
 
-
-
-
 footer {
-    height: 200vh;
+    background-color: #0C0C0C;
+    color: rgba(255,255,255,0.8);
+    padding: 62px 0 94px 0;
+}
+
+
+footer .f_nav ul {
+    display: flex;
+}
+footer .wrapper {
+    position: relative; /* family_site와 youtube 정렬의 기준 */
+}
+footer .youtube {
+    position: absolute;
+    right: 0;
+    top: -98px;
+}
+footer .youtube a {
+    display: block;
+    width: 77px;
+    height: 77px;
+    padding-top: 38px;
+    border-radius: 50%;
+    background-color: #E41919;
+    text-align: center;
+    line-height: 1.1;
+    font-size: 12px;
+    position: relative;
+}
+footer .youtube a::before {
+    position: absolute;
+    left: 50%;
+    top: 14px;
+    transform: translate(-50%, 0);
+    width: 29px;
+    height: 18px;
+    content: "";
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='29' height='18' viewBox='0 0 29 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='29' height='18' rx='2' fill='white'/%3E%3Cpath d='M21 9L10.5 15.0622L10.5 2.93782L21 9Z' fill='%23E41919'/%3E%3C/svg%3E%0A");
+}
+footer .family_site {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 182px;
+}
+footer .family_site button {
+    width: 100%;
+    height: 32px;
+    background-color: #0D0D0D;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    text-align: left;
+    padding-left: 21px;
+    position: relative;
+}
+footer .family_site button::after {
+    position: absolute;
+    right: 19px;
+    top: 10px;
+    width: 10px;
+    height: 6px;
+    content: "";
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='11' height='6' viewBox='0 0 11 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.75071 1.44972L1.50446 5.69572C1.41096 5.78939 1.29621 5.83939 1.16021 5.84572C1.02437 5.85222 0.903289 5.80222 0.796956 5.69572C0.690456 5.58939 0.637207 5.47147 0.637207 5.34197C0.637207 5.21247 0.690456 5.09455 0.796956 4.98822L5.18521 0.599718C5.27254 0.512552 5.36171 0.451302 5.45271 0.415969C5.54371 0.380802 5.64304 0.363218 5.75071 0.363218C5.85837 0.363218 5.95771 0.380802 6.04871 0.415969C6.13971 0.451302 6.22887 0.512552 6.31621 0.599718L10.7045 4.98822C10.7981 5.08172 10.8481 5.19647 10.8545 5.33247C10.861 5.4683 10.811 5.58938 10.7045 5.69572C10.5981 5.80222 10.4802 5.85547 10.3507 5.85547C10.2212 5.85547 10.1033 5.80222 9.99696 5.69572L5.75071 1.44972Z' fill='white' fill-opacity='0.8'/%3E%3C/svg%3E%0A");
+}
+footer .family_site button.family_close::after {
+    top: 13px;
+    transform: rotate(180deg);
+}
+footer .family_site ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 32px;
+    width: 100%;
+    background-color: #0D0D0D;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 23px 21px;
+}
+footer .family_site ul li a {
+    display: block;
+    line-height: 2;
+}
+
+footer .family_site .family_close {
+    display: none;
+}
+footer .family_site.open .family_open {
+    display: none;
+}
+footer .family_site.open .family_close {
+    display: block;
+}
+
+footer .f_nav ul li {
+    margin-right: 26px;
+    position: relative;
+}
+footer .f_nav ul li::after {
+    position: absolute;
+    right: -14px;
+    top: 4px;
+    width: 1px;
+    height: 10px;
+    content: "";
+    background-color: rgba(255,255,255,0.1);
+}
+footer .f_nav ul li:last-child:after {
+    display: none;
+}
+footer .copyright {
+    margin-top: 60px;
+    color: rgba(255,255,255,0.6);
+}
+
+
+@media screen and (min-width:1300px){}
+@media screen and (max-width:1024px){
+    footer {
+        padding: 0 0 48px 0;
+    }
+    footer .f_nav ul {
+        display: flex;
+    }
+    footer .wrapper {
+        position: relative; /* family_site와 youtube 정렬의 기준 */
+    }
+    footer .youtube {
+        position: relative;
+        right: auto;
+        top: -38px;
+        text-align: center;
+    }
+    footer .youtube a {
+        width: 68px;
+        height: 68px;
+        padding-top: 33px;
+        font-size: 10px;
+        display: inline-block;
+    }
+    footer .youtube a::before {
+        top: 12px;
+        width: 26px;
+        height: 16px;
+        background-image: url("data:image/svg+xml,%3Csvg width='26' height='16' viewBox='0 0 26 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='26' height='16' rx='2' fill='white'/%3E%3Cpath d='M19 8L9.25 13.1962L9.25 2.80385L19 8Z' fill='%23E41919'/%3E%3C/svg%3E%0A");
+    }
+
+    footer .family_site {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 182px;
+        margin: 0 auto; /* 가운데 정렬 */
+    }
+    footer .family_site button {
+        width: 100%;
+        height: 32px;
+        background-color: #0D0D0D;
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 20px;
+        text-align: left;
+        padding-left: 21px;
+        position: relative;
+    }
+    footer .family_site button::after {
+        position: absolute;
+        right: 19px;
+        top: 10px;
+        width: 10px;
+        height: 6px;
+        content: "";
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg width='11' height='6' viewBox='0 0 11 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.75071 1.44972L1.50446 5.69572C1.41096 5.78939 1.29621 5.83939 1.16021 5.84572C1.02437 5.85222 0.903289 5.80222 0.796956 5.69572C0.690456 5.58939 0.637207 5.47147 0.637207 5.34197C0.637207 5.21247 0.690456 5.09455 0.796956 4.98822L5.18521 0.599718C5.27254 0.512552 5.36171 0.451302 5.45271 0.415969C5.54371 0.380802 5.64304 0.363218 5.75071 0.363218C5.85837 0.363218 5.95771 0.380802 6.04871 0.415969C6.13971 0.451302 6.22887 0.512552 6.31621 0.599718L10.7045 4.98822C10.7981 5.08172 10.8481 5.19647 10.8545 5.33247C10.861 5.4683 10.811 5.58938 10.7045 5.69572C10.5981 5.80222 10.4802 5.85547 10.3507 5.85547C10.2212 5.85547 10.1033 5.80222 9.99696 5.69572L5.75071 1.44972Z' fill='white' fill-opacity='0.8'/%3E%3C/svg%3E%0A");
+    }
+
+    footer .f_nav {
+        margin: 41px 0 0 0;
+    }
+    footer .f_nav ul li {
+        margin-right: 26px;
+    }
+    footer .copyright {
+        margin-top: 22px;
+    }
+
+}
+@media screen and (max-width:500px){
+    footer .f_nav ul {
+        flex-wrap: wrap;
+    }
+    footer .f_nav ul li {
+        margin: 0 26px 5px 0;
+    }
 }
