@@ -33,6 +33,15 @@ $(document).ready(function(){
         resize_chk()
     })
 
+
+
+
+    (여기 뭔가 있음)
+
+
+
+
+    
     $('header').on('mouseenter', function(){
         $(this).addClass('fixed')
     })
@@ -56,14 +65,22 @@ $(document).ready(function(){
         scroll_chk()
     })
 
-    $('header .gnb .gnb_wrap .depth1 > li').on('mouseenter', function(){
+    $('header .gnb .gnb_wrap .depth1 > li').on('mouseenter focusin', function(){
         if(pc_mobile == 'pc'){ // == -> 같다 / = -> 대입 연산자 ('B'를 A에게 넣음)
             $('header').addClass('menu_over')
             $('header .gnb .gnb_wrap .depth1 > li').removeClass('on')
             $(this).addClass('on')
         }
     })
+
+
     $('header').on('mouseleave', function(){
+        if(pc_mobile == 'pc'){
+            $('header').removeClass('menu_over')
+            $('header .gnb .gnb_wrap .depth1 > li').removeClass('on')
+        }
+    })
+    $('header .gnb .gnb_wrap .depth1 > li:last-child > ul.depth2 > li:last-child a').on('focusout', function(){
         if(pc_mobile == 'pc'){
             $('header').removeClass('menu_over')
             $('header .gnb .gnb_wrap .depth1 > li').removeClass('on')
