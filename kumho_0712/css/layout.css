@@ -755,3 +755,135 @@ footer .copyright {
         margin: 0 26px 5px 0;
     }
 }
+
+/* 서브페이지 레이아웃 코딩 */
+
+.sub_visual {
+    height: 473px;
+    background: url(../images/common/sub_visual01.png) no-repeat center center / cover;
+    color: #fff;
+}
+/* 1차 메뉴마다 배경이 다른 이미지가 적용
+   bg1 - 회사소개
+   bg2 - esg
+   bg3 - 사업분야
+   bg4 - ir
+   bg5 - 홍보센터
+   기본적으로 하나의 이미지는 class가 없어도 하나의 이미지가 들어가게 하는 것이 좋음 (미리 적용) */
+.sub_visual.bg1 {
+    background-image: url(../images/common/sub_visual01.png);
+}
+.sub_visual.bg2 {
+    background-image: url(../images/common/sub_visual02.png);
+}
+.sub_visual.bg3 {
+    background-image: url(../images/common/sub_visual03.png);
+}
+.sub_visual.bg4 {
+    background-image: url(../images/common/sub_visual04.png);
+}
+.sub_visual.bg5 {
+    background-image: url(../images/common/sub_visual05.png);
+}
+.sub_visual heading {
+    display: block;
+    font-size: 45px;
+    line-height: 1.1;
+    padding: 324px 0 10px 0;
+}
+.sub_menu {
+    background-color: #fff;
+    color: #1d1d1d;
+    height: 80px;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+.sub_menu .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.sub_menu .lnb ul {
+    display: flex;
+}
+.sub_menu .lnb ul li a {
+    display: block;
+    line-height: 80px;
+    padding: 0 15px;
+    font-size: 17px;
+}
+.sub_menu .lnb ul li a:first-child {
+    padding-left: 0;
+}
+.sub_menu .lnb ul li.active a,
+.sub_menu .lnb ul li a:hover {
+    font-weight: 500;
+    color: #ED1C24;
+    position: relative;
+}
+.sub_menu .lnb ul li.active a::after,
+.sub_menu .lnb ul li a:hover::after {
+    position: absolute;
+    right: 8px;
+    top: 25px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    content: "";
+    background-color: #ED1C24;
+
+}
+.sub_menu .Breadcrumb ol { /* ol - 순서를 따지는 구조 */
+    display: flex;
+    color: #666;
+}
+.sub_menu .Breadcrumb ol li {
+    margin-right: 18px;
+    position: relative; /* after 정렬의 기준 */
+}
+.sub_menu .Breadcrumb ol li::after {
+    position: absolute;
+    right: -17px;
+    top: 33px;
+    width: 15px;
+    height: 15px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_137_110' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='15' height='15'%3E%3Crect width='15' height='15' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_137_110)'%3E%3Cpath d='M9.49154 7.5L4.66951 2.67781C4.57733 2.58573 4.53186 2.475 4.53311 2.34562C4.53425 2.21615 4.58092 2.10536 4.67311 2.01328C4.76519 1.92109 4.87597 1.875 5.00545 1.875C5.13483 1.875 5.24561 1.92109 5.33779 2.01328L10.1106 6.78969C10.2115 6.89062 10.2852 7.00318 10.3317 7.12734C10.3782 7.25161 10.4014 7.37583 10.4014 7.5C10.4014 7.62417 10.3782 7.74839 10.3317 7.87266C10.2852 7.99682 10.2115 8.10938 10.1106 8.21031L5.33404 12.9867C5.24196 13.0789 5.1318 13.1244 5.00358 13.1231C4.87535 13.122 4.76519 13.0753 4.67311 12.9831C4.58092 12.891 4.53483 12.7803 4.53483 12.6508C4.53483 12.5214 4.58092 12.4106 4.67311 12.3184L9.49154 7.5Z' fill='%23666666'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+.sub_menu .Breadcrumb ol li:last-child {
+    margin-right: 0;
+}
+.sub_menu .Breadcrumb ol li:last-child::after {
+    display: none;
+}
+.sub_menu .Breadcrumb ol li a {
+    display: block;
+    line-height: 80px;
+}
+.sub_menu .Breadcrumb ol li.now a {
+    position: relative;
+}
+.sub_menu .Breadcrumb ol li.now a::after {
+    position: absolute;
+    left: 1px;
+    bottom: 29px;
+    width: 69px;
+    height: 1px;
+    background-color: #666;
+    content: "";
+}
+
+.sub_contents .sub_title h2 {
+    color: #ED1C24;
+    line-height: 1.1;
+    font-weight: 500;
+    margin: 73px 0 7px 0;
+}
+.sub_contents .sub_title p {
+    color: #1d1d1d;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}

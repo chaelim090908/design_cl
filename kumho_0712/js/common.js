@@ -34,13 +34,7 @@ $(document).ready(function(){
     })
 
 
-
-
-    (여기 뭔가 있음)
-
-
-
-
+    
     
     $('header').on('mouseenter', function(){
         $(this).addClass('fixed')
