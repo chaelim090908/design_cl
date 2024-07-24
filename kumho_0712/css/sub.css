@@ -3,4 +3,34 @@
 @import url(common.css);
 @import url(layout.css);
 
+/*
+    각각의 서브 콘텐츠 페이지의 콘텐츠 내용을 코딩함
+    제일 중요한 것은 절대 이름이 겹치면 안된다는 것!!
+    규칙 cts_(페이지명) 으로 감싸서 절대 다른 페이지와 이름이 겹치지 않도록 하기
+*/
+
+/* 회사소개 - CEO인사말 */
+
+.cts_ceo {
+    margin: 67px 0 155px 0;
+}
+.cts_ceo .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.cts_ceo .photo {
+    overflow-y: hidden;
+    font-size: 0;
+    line-height: 0;
+    border-radius: 20px;
+}
+.cts_ceo .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cts_ceo .txt {
+    width: 50.7%;
+}
+
 @media screen and (max-width:1024px){}

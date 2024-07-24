@@ -886,7 +886,7 @@ footer .copyright {
     position: absolute;
     left: 1px;
     bottom: 29px;
-    width: 69px;
+    width: 100%;
     height: 1px;
     background-color: #666;
     content: "";
