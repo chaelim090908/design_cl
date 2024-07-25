@@ -118,7 +118,7 @@
                         <ol>
                             <li class="home"><a href="../index.html">HOME</a></li>
                             <li><a href="info.html">회사소개</a></li>
-                            <li class="now"><a href="ceo.html">연혁</a></li>
+                            <li class="now"><a href="history.html">연혁</a></li>
                         </ol>
                     </div> <!--Breadcrumb-->
                 </div> <!-- wrapper -->
@@ -128,17 +128,30 @@
                 <div class="sub_title">
                     <div class="wrapper">
                         <h2>연혁</h2>
-                        <p>History</p>
+                        <p>KUMHO E&C History</p>
                     </div>
                 </div>
-                <div class="cts_ceo">
+                <div class="cts_history">
                     <!-- 각 페이지의 콘텐츠 클래스 네이밍 규칙
                          cts_페이지html파일명 (cts - contents 약자) -->
-                    
-                </div>
+                    <div class="wrapper">
+                        <div class="tab_area">
+                            <div class="tab_btn">
+                                <ul role="tablist"> <!-- role : tab list의 역할을 함 -->
+                                    <li id="tab_01" aria-selected="true" aria-controls="panel_01" class="active"><button><span>현재 - 2011</span></button></li>
+                                    <li id="tab_02" aria-selected="false" aria-controls="panel_02"><button type="button" class="btn-tab">기관 회원 로그인</button></li>
+                                </ul>
+                            </div><!-- tab_btn -->
+                            <div class="tab_cnt">
+                                <div id="panel_01" role="tabpanel" aria-labelledby="tab_01">
+
+                                </div>
+                            </div><!-- tab_cnt -->
+                        </div>
+                    </div>
+                </div><!-- cts_history -->
            </div>
         </main>
-
         <footer>
             <div class="wrapper">
                 <div class="youtube"><a href="https://www.youtube.com/@kumhoenc" target="_blank" title="새창열림">금호건설<br>TV</a></div>
