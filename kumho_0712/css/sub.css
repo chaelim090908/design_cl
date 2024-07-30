@@ -164,6 +164,12 @@
     text-align: center;
     margin: 76px 0 0 0;
 }
+.cts_history .tab_area .tab_cnt div[role="tabpanel"] {
+    display: none; /* 숨김 */
+}
+.cts_history .tab_area .tab_cnt div[role="tabpanel"].active {
+    display: block; /* 위 중 active 클래스가 있는 요소만 보임 */
+}
 .cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit.bg1 {
     background-image: url(../images/contents/history_tit_bg1.png);
 }
