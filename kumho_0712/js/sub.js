@@ -26,9 +26,9 @@ $(document).ready(function(){
         $(this).attr('aria-selected', 'true')
         tab_name = $(this).attr('aria-controls')
         tab_name = '#' + tab_name // id 선택자를 추가로 삽입 ( + => 뒤에 붙여!)
+                                     // = # 뒤에 id 선택자인 tab_name 을 붙임
         console.log(tab_name)
         tab_cnt.removeClass('active')
         tab_cnt_parent.find(tab_name).addClass('active')
-        
     })
 }) //$(document).ready
