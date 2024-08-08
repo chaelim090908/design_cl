@@ -3,9 +3,41 @@
 @import url(common.css);
 @import url(layout.css);
 
-h1 {
-    font-size: var(--tit-size);
+.visual_popup .popup .popup_item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-p {
-    font-size: 3.333rem;
+.visual_popup .popup .popup_item img.mo {
+    display: none;
+}
+.visual_popup .popup .slick-dots {
+    position: absolute; /* popup을 기준으로 정렬 - slick이 relative 값 줌 */
+    bottom: 21px;
+    left: 50%;
+    transform: translate(-50%, 0); /* 좌우에 가운데 */
+    display: flex;
+    gap: 6px;
+}
+.visual_popup .popup .slick-dots li button {
+    /* 버튼을 눌러서 다음 팝업을 보기 때문에 button 태그에 스타일을 줘야 함 */
+    font-size: 0;
+    line-height: 0;
+    width: 22px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: var(--txt-color-w50);
+}
+.visual_popup .popup .slick-dots li.slick-active button {
+    width: 40px;
+    background-color: var(--txt-color-white);
+}
+@media screen and (max-width:768px){
+    .visual_popup .popup .popup_item img.pc {
+        display: none;
+    }
+    .visual_popup .popup .popup_item img.mo {
+        display: block;
+        
+    }
 }

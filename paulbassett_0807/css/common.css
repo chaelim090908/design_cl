@@ -40,7 +40,7 @@ html, body {
         font-size: 14px;
     }
 }
-@media screen and (max-width:640px){ /* 모바일 반응형 */
+@media screen and (max-width:768px){ /* 모바일 반응형 */
     html, body {
         font-size: 13px;
     }
@@ -59,10 +59,12 @@ html, body {
     20px - 1.333rem
     18px - 1.200rem
     15px - 1rem
+    13px - 0.867rem
 
 */
 
 :root { /* 변수 - 어디에서나 적용되는 것 */
+    --txt-color-headertop : #666;
     --txt-color-tit : #240c0c;
     --txt-color-tit-sub : rgba(36,12,12,0.8);
     --txt-color-black : #1d1d1d;
@@ -70,12 +72,12 @@ html, body {
     --txt-color-white : #fff;
     --txt-color-w80 : rgba(255,255,255,0.8);
     --txt-color-w60 : rgba(255,255,255,0.6);
+    --txt-color-w50 : rgba(255,255,255,0.5);
     --txt-quick-color-w40 : rgba(255,255,255,0.4);
     --quick-color-bg1 : #0e0909;
     --quick-color-bg2 : #2d1a1a;
     --quick-color-btn : #5b3214;
     --txt-size-tit : 4.800rem;
-
 }
 
 
