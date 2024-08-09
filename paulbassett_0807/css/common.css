@@ -66,6 +66,7 @@ html, body {
 :root { /* 변수 - 어디에서나 적용되는 것 */
     --txt-color-headertop : #666;
     --txt-color-tit : #240c0c;
+    --txt-color-main : #E41B22;
     --txt-color-tit-sub : rgba(36,12,12,0.8);
     --txt-color-black : #1d1d1d;
     --txt-color-b80: rgba(29,29,29,0.8);
