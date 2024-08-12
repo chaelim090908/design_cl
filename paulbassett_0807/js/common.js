@@ -56,7 +56,7 @@ $(document).ready(function(){
     })
 
     $('header .header_sub .gnb .gnb_wrap ul.depth1 > li').on('mouseenter focusin', function(){
-        if(pc_mobile = 'pc'){
+        if(pc_mobile == 'pc'){ // == <- 2개. 하나만 있을 시 계속 작동됨
             $('header').addClass('menu_over')
             $('header .header_sub .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
             $(this).addClass('over')
@@ -71,4 +71,31 @@ $(document).ready(function(){
         $('header .header_sub .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
     })
     
+    /*
+        모바일 메뉴
+        header .header_sub .gnb .gnb_wrap .depth1 > li > a 를 클릭했을 때
+
+        1차 메뉴 a의 href 값을 무력화 (즉, 클릭해도 해당 페이지로 이동 되지 X)
+        li에 open 클래스를 줘야함
+        열려있는 메뉴를 클릭하면 닫히고, 닫힌 메뉴를 클릭하면 열림
+        (= 동시에 여러개의 메뉴가 열릴 수 있음)
+    */
+
+    $('header .header_sub .gnb .gnb_wrap .depth1 > li > a').on('click', function(e){
+        if(pc_mobile == 'mo'){ /* mobile에서만 적용, 항상 감시함 */
+            e.preventDefault();	/* event : a 태그의 href를 작동 시키지 않음 */
+            $(this).parent().toggleClass('open') /* toggle : 하나의 버튼으로 on/off가 되는 것 */
+        }
+    })
+    $('header .header_sub .gnb .gnb_open').on('click', function(){
+        $('header').addClass('menu_open')
+        /* 하단 컨텐츠 스크롤 금지 */
+        $("html, body").css({overflow : "hidden", height : $(window).height()}).bind("scroll touchmove mousewheel", function(e){e.preventDefault();e.stopPropagation();return false;},function(){passive:false});
+    })
+    $('header .header_sub .gnb .gnb_close').on('click', function(){
+        $('header').removeClass('menu_open')
+        /* 하단 콘텐츠 스크롤 금지 해제 */
+        $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
+    })
+
 })

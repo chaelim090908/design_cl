@@ -41,3 +41,93 @@
         
     }
 }
+
+.menu .tit {
+    text-align: center;
+    margin: 105px 0 61px 0;
+}
+.menu .tit h2 {
+    font-family: "rena";
+    margin: 0 0 18px 0;
+    font-size: 4.800rem;
+    line-height: 1.2;
+    color: var(--txt-color-tit);
+}
+.menu .list .popup .popup_item {
+    margin: 0 12px;
+    height: 429px;
+    text-align: center;
+    position: relative;
+    width: auto;
+}
+.menu .list .popup .popup_item::before {
+    position: absolute;
+    left: 0;
+    top: 99px;
+    z-index: -1;
+    width: 100%;
+    height: calc(100% - 103px);
+    border: 2px solid var(--txt-color-black);
+    background-color: #f8f5ee;
+    content: "";
+}
+.menu .list .popup .popup_item .photo {
+    overflow: hidden;
+    margin: 0 5%;
+}
+.menu .list .popup .popup_item .photo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* 이미지를 자르지 않고 모두 보이도록 */
+}
+.menu .list .popup .popup_item h3 {
+    font-weight: 700;
+    font-size: 1.333rem;
+    color: var(--txt-color-black);
+    line-height: 1.2;
+    height: 2.4em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 25px 0 4px 0;
+    padding: 0 5%;
+}
+.menu .list .popup .popup_item span {
+    margin: 0 0 30px 0;
+}
+@media screen and (max-width:1024px){
+    .menu .list .popup .popup_item {
+        margin: 0 6px;
+        height: calc(100% + 50px);
+    }
+    .menu .list .popup .popup_item::before {
+        height: calc(100% - 82px);
+    }
+    .menu .list .popup .popup_item h3 {
+        font-weight: 700;
+        font-size: 1.333rem;
+        color: var(--txt-color-black);
+        line-height: 1.2;
+        height: auto;
+        margin: 10px 0 4px 0;
+        padding: 0 5%;
+    }
+}
+@media screen and (max-width:768px){
+    .menu .list .popup .popup_item {
+        margin: 0 6px;
+        height: calc(100% + 30px);
+    }
+    .menu .list .popup .popup_item::before {
+        height: calc(100% - 111px);
+    }
+    .menu .list .popup .popup_item h3 {
+        font-weight: 700;
+        font-size: 1.333rem;
+        color: var(--txt-color-black);
+        line-height: 1.2;
+        height: auto;
+        margin: 10px 0 4px 0;
+        padding: 0 5%;
+    }
+    
+}
