@@ -98,4 +98,18 @@ $(document).ready(function(){
         $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
     })
 
+
+    $('.quick .open').on('click', function(){
+        $('.quick').addClass('open')
+    })
+    $('.quick .close').on('click', function(){
+        $('.quick').removeClass('open')
+    })
+
+    $('.quick .top').on('click', function(){
+        $('html, body').animate({
+            scrollTop : 0
+        }, 500)
+    })
 })
+
