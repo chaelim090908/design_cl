@@ -1,0 +1,349 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+@import url(layout.css);
+
+.visual_popup .popup .popup_item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.visual_popup .popup .popup_item img.mo {
+    display: none;
+}
+.visual_popup .popup .slick-dots {
+    position: absolute; /* popup을 기준으로 정렬 - slick이 relative 값 줌 */
+    bottom: 21px;
+    left: 50%;
+    transform: translate(-50%, 0); /* 좌우에 가운데 */
+    display: flex;
+    gap: 6px;
+}
+.visual_popup .popup .slick-dots li button {
+    /* 버튼을 눌러서 다음 팝업을 보기 때문에 button 태그에 스타일을 줘야 함 */
+    font-size: 0;
+    line-height: 0;
+    width: 22px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: var(--txt-color-w50);
+}
+.visual_popup .popup .slick-dots li.slick-active button {
+    width: 40px;
+    background-color: var(--txt-color-white);
+}
+@media screen and (max-width:768px){
+    .visual_popup .popup .popup_item img.pc {
+        display: none;
+    }
+    .visual_popup .popup .popup_item img.mo {
+        display: block;
+        
+    }
+}
+
+.menu .tit {
+    text-align: center;
+    margin: var(--margin-tit);
+}
+.menu .tit h2 {
+    font-family: "rena";
+    margin: 0 0 18px 0;
+    font-size: 4.800rem;
+    line-height: 1.2;
+    color: var(--txt-color-tit);
+}
+.menu .list .popup .popup_item {
+    margin: 0 12px;
+    padding-bottom: 30px;
+    text-align: center;
+    position: relative;
+    width: 297px;
+}
+.menu .list .popup .popup_item::before {
+    position: absolute;
+    left: 0;
+    top: 99px;
+    z-index: -1;
+    width: 100%;
+    height: calc(100% - 104px);
+    border: 2px solid var(--txt-color-black);
+    background-color: #f8f5ee;
+    content: "";
+}
+.menu .list .popup .popup_item .photo {
+    overflow: hidden;
+    margin: 0 15%;
+}
+.menu .list .popup .popup_item .photo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* 이미지를 자르지 않고 모두 보이도록 */
+}
+.menu .list .popup .popup_item h3 {
+    font-weight: 700;
+    font-size: 1.333rem;
+    color: var(--txt-color-black);
+    line-height: 1.2;
+    height: 2.4em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 25px 0 4px 0;
+    padding: 0 5%;
+}
+.menu .list .popup .popup_item span {
+    margin: 0 0 30px 0;
+}
+@media screen and (max-width:1024px){
+    .menu .list .popup .popup_item {
+        margin: 0 6px;
+        height: calc(100% + 50px);
+    }
+    .menu .list .popup .popup_item::before {
+        height: calc(100% - 111px);
+    }
+    .menu .list .popup .popup_item h3 {
+        font-weight: 700;
+        font-size: 1.333rem;
+        color: var(--txt-color-black);
+        line-height: 1.2;
+        height: auto;
+        margin: 10px 0 4px 0;
+        padding: 0 5%;
+    }
+}
+@media screen and (max-width:768px){
+    .menu .list .popup .popup_item {
+        margin: 0 6px;
+        height: calc(100% + 30px);
+    }
+    .menu .list .popup .popup_item::before {
+        height: calc(100% - 104px);
+    }
+    .menu .list .popup .popup_item h3 {
+        font-weight: 700;
+        font-size: 1.333rem;
+        color: var(--txt-color-black);
+        line-height: 1.2;
+        height: auto;
+        margin: 10px 0 4px 0;
+        padding: 0 5%;
+    }
+    .menu .tit {
+        margin: 50px 0 21px 0;
+    }
+    .menu .tit h2 {
+        margin: 0 0 9px 0;
+        font-size: 2.133rem;
+    }
+    .menu .tit p {
+        display: none;
+    }
+    .menu .list .popup .popup_item {
+        margin: 0 8px;
+        width: 156px;
+    }
+    
+}
+
+.brand {
+    margin: var(--margin-tit);
+}
+.brand .inner {
+    background: url(../images/main/brand_bg.png) no-repeat center center / cover;
+    height: 586px;
+    color: rgba(255,255,255,0.8);
+    text-align: right;
+    padding: 65px 0 0 0;
+}
+.brand .inner h2 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 1.1;
+    margin: 0 0 15px 0;
+}
+
+/* loop 애니메이션을 줄 때 주의사항
+   <div> -- 감싸는 요소
+        <span></span> --움직일 요소
+   </div>
+   - 반드시 움직일 요소는 white-space: nowrap;으로 한줄
+   - 넓이가 온전하게 인식이 되어야 함
+   - 브라우저 크기를 초과하는 넓이가 온전히 인식되어야 함
+   --- 넓이가 온전히 인식되지 않는 경우, position: absolute; 를 줘야함
+   */
+.brand .loop {
+    background-color: #0c0103;
+    padding: 1.100rem 0;
+    height: 6.467rem;
+    font-size: 3.333rem;
+    font-weight: 700;
+    margin: -1px 0 0 0;
+    position: relative;
+}
+.brand .loop span {
+    color: #0c0103;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--txt-quick-color-w20);
+    position: absolute;
+    left: 0;
+    top: 13px;
+    white-space: nowrap; /* 줄바꿈 금지 */
+    animation-name: brand_loop;
+    animation-duration: 50s;
+    animation-iteration-count: infinite; /* 무한반복 */
+    animation-timing-function: linear; /* 가속도 삭제 */
+}
+@keyframes brand_loop {
+    0% {transform: translate(0, 0);}
+    100% {transform: translate(-50.05%, 0); /* 첫글자가 다시 맨 앞으로 도달한 값 */
+    }
+}
+@media screen and (max-width:768px){
+    .brand .inner {
+        height: 350px;
+        padding: 175px 0 0 0;
+    }
+    .brand .inner h2 {
+        font-size: 2rem;
+        margin: 0 0 8px 0;
+    }
+    .brand .inner p {
+        text-align: right;
+    }
+    .brand .inner p br {
+        display: none;
+    }
+    .brand .inner p span {
+        display: none;
+    }
+}
+
+.md .tit {
+    text-align: center;
+    margin: var(--margin-tit);
+}
+.md .tit h2 {
+    font-family: "rena";
+    margin: 0 0 18px 0;
+    font-size: 4.800rem;
+    line-height: 1.2;
+    color: var(--txt-color-tit);
+}
+
+.md .list .popup .popup_item {
+    margin: 0 12px;
+    width: 297px;
+    text-align: center;
+}
+.md .list .popup .popup_item .photo {
+    overflow: hidden;
+    padding: 0 0 30px 63px;
+}
+.md .list .popup .popup_item .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.md .list .popup .popup_item h3 {
+    margin-top: 33px 0 0 0;
+    font-weight: 700;
+    font-size: 1.333rem;
+    color: var(--txt-color-black);
+}
+@media screen and (max-width:768px){
+    .md .tit h2 {
+        margin: 0 0 36px 0;
+        font-size: 2.667rem;
+    }
+    .md .tit p {
+        display: none;
+    }
+    .md .list .popup .popup_item {
+        margin: 0 8px;
+        width: 200px;
+    }
+    .md .list .popup .popup_item h3 {
+        font-size: 1rem;
+    }
+}
+
+.event .tit {
+    text-align: center;
+    margin: var(--margin-tit);
+}
+.event .tit h2 {
+    font-family: "rena";
+    margin: 0 0 18px 0;
+    font-size: 4.800rem;
+    line-height: 1.2;
+    color: var(--txt-color-tit);
+}
+.event .list2 .sns ul {
+    display: flex;
+    justify-content: flex-end; /* 오른쪽 */
+    position: relative;
+}
+.event .list2 .sns ul::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: calc(100% - 166px);
+    height: 1px;
+    background-color: #ededed;
+    content: "";
+}
+.event .list2 .sns ul li a {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    width: 34px;
+    height: 34px;
+    margin-right: 14px;
+    position: relative;
+}
+.event .list2 .sns ul li a::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+.event .list2 .sns ul li.facebook a::before {
+    width: 34px;
+    height: 34px;
+    background-image: url(../images/main/sns_icon01.png);
+}
+.event .list2 .sns ul li.insta a::before {
+    width: 34px;
+    height: 34px;
+    background-image: url(../images/main/sns_icon02.png);
+}
+.event .list2 .sns ul li.youtube a::before {
+    width: 34px;
+    height: 34px;
+    background-image: url(../images/main/sns_icon03.png);
+}
+
+.event .list .popup .popup_item {
+    margin: 30px 12px;
+    width: 297px;
+}
+.event .list .popup .popup_item a .photo {
+    display: block;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.event .list .popup .popup_item a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+@media screen and (max-width:1024px){
+    .event .tit {
+        margin: 100px 0 30px 0;
+    }
+}
