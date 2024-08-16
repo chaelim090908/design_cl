@@ -1,105 +1,65 @@
 $(document).ready(function(){
 
-	$('.visual_popup .popup').slick({
-		autoplay: true, //팝업 자동 실행
-		autoplaySpeed: 3000, //팝업이 머무는 시간
-		speed: 500, //팝업 전환 속도
-		//fade: true,  //페이드 효과 적용
-		dots: true, //하단 페이지 버튼 (true, false)
-		arrows: false,  //다음, 이전팝업 (true, false)
-		//pauseOnHover: true, //마우스호버시 일시정지
-		infinite: true, //무한반복
-	});
+	let boost_top
+	let life_top
+	let hanwha_top
+	let nature_top
+	let paper_top
+	let window_h
+	let scrolling
+	let life_w
+	let nature_h2
 
-	$('.menu .list .popup').slick({
-		dots: false, //하단 페이지 버튼 (true, false)
-		arrows: false,  //다음, 이전팝업 (true, false)
-		slidesToShow: 6, //한번에 보일 팝업 수
-		swipeToSlide: true, //드래그한만큼 슬라이드 움직이기
-		centerMode: true, //가운데정렬(가운데가 1번) > 양사이드가 잘림
-		variableWidth: true, //넓이를 자유롭게 설정
-		responsive: [
-			{
-			  breakpoint: 1300, //1300px 이하
-			  settings: {
-				slidesToShow: 4
-			  }
-			},
-			{
-			  breakpoint: 1024,
-			  settings: {
-				slidesToShow: 3
-			  }
-			},
-			{
-			  breakpoint: 768,
-			  settings: {
-				slidesToShow: 2
-			  }
-			},
-			{
-			  breakpoint: 375,
-			  settings: {
-				slidesToShow: 1
-			  }
-			},
-		]
-	})
+	function scroll_chk(){
+		window_h = $(window).height() //브라우저 높이
+		scrolling = $(window).scrollTop() //스크롤된 값
+		boost_top = $('.boost').offset().top
+		life_top = $('.life').offset().top
+		hanwha_top = $('.hanwha').offset().top
+		nature_top = $('.nature').offset().top
+		paper_top = $('.paper').offset().top
+		// console.log(window_h, scrolling, life_top)
 
-	$('.md .list .popup').slick({
-		slidesToShow: 4, //한번에 보일 팝업 수
-		slidesToScroll: 4, //한번 드래그에 움직이는 슬라이드 제한
-		dots: false, //하단 페이지 버튼 (true, false)
-		arrows: false,  //다음, 이전팝업 (true, false)
-		variableWidth: true, //넓이를 자유롭게 설정
-		responsive: [
-			{
-			  breakpoint: 1024,
-			  settings: {
-				slidesToShow: 3,
-				slidesToScroll: 3
-			  }
-			},
-			{
-			  breakpoint: 768,
-			  settings: {
-				slidesToShow: 2,
-				slidesToScroll: 2
-			  }
-			},
-			{
-			  breakpoint: 375,
-			  settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1
-			  }
-			},
-		]
+		if(scrolling > (boost_top - window_h + (window_h / 3))){
+			$('.boost').addClass('active')
+		}
+		if(scrolling > (life_top - window_h + (window_h / 5))){
+			life_w = (scrolling - (life_top - window_h)) * 1.7 + 404
+			// 넓이가 브라우저 넓이를 초과하지 않게
+			if(life_w > $(window).width()){
+				life_w = $(window).width()
+				$('.life').addClass('end')
+			}
+			// console.log(life_w)
+			$('.life .photo_wrap .photo').width(life_w)
+		}
+		if(scrolling > (hanwha_top - window_h + (window_h / 5))){
+			$('body').addClass('black_bg')
+		}else{
+			$('body').removeClass('black_bg')
+		}
+		if(scrolling > (hanwha_top - window_h + (window_h / 2))){
+			$('.hanwha').addClass('active')
+		}
+		if(scrolling > (nature_top - window_h + (window_h / 5))){
+			$('.nature').addClass('active')
+			nature_h2 = (scrolling - (nature_top - window_h))*0.19
+			//css = css 속성을 다이렉트로 선언
+			$('.nature h2').css('transform', 'translateY(-'+nature_h2+'%)')
+			console.log(nature_h2)
+			// transform: translateY(0);
+			// .nature h2
+		}
+		if(scrolling > (paper_top - window_h + (window_h / 3))){
+			$('.paper').addClass('active')
+		}
+	}
+	scroll_chk() //브라우저가 로딩 되자마자 1번
+	$(window).scroll(function(){ // 브라우저가 스크롤 될 때마다
+		scroll_chk()
+		
 	})
-	$('.event .list .popup').slick({
-		dots: false, //하단 페이지 버튼 (true, false)
-		arrows: false,  //다음, 이전팝업 (true, false)
-		slidesToShow: 6, //한번에 보일 팝업 수
-		swipeToSlide: true, //드래그한만큼 슬라이드 움직이기
-		responsive: [
-			{
-			  breakpoint: 1300, //1300px 이하
-			  settings: {
-				slidesToShow: 4
-			  }
-			},
-			{
-			  breakpoint: 768,
-			  settings: {
-				slidesToShow: 2
-			  }
-			},
-			{
-			  breakpoint: 375,
-			  settings: {
-				slidesToShow: 1
-			  }
-			},
-		]
+	$(window).resize(function(){ // 브라우저가 리사이징 될 때마다
+		scroll_chk()
 	})
-}) //$(document).ready
+})

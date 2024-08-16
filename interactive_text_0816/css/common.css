@@ -5,7 +5,7 @@
    ex) 영문만 지원하는 폰트를 1순위로 쓰고 2순위 한글이 지원되는 서체를 선언
        영문, 숫자, 특수문자는 영문 폰트가 적용됨 */
 html, body {
-    font-family: "Nanumr", "Malgun Gothic", "맑은 고딕", Dotum, 돋움, Helvetica, "Apple SD Gothic Neo", "애플 SD 산돌고딕 Neo", sans-serif;
+    font-family: "Pretendard", "Malgun Gothic", "맑은 고딕", Dotum, 돋움, Helvetica, "Apple SD Gothic Neo", "애플 SD 산돌고딕 Neo", sans-serif;
     font-weight: 400;
     font-size: 15px;
     letter-spacing: 0; /* 자간 */
@@ -25,85 +25,3 @@ html, body {
     width: 1260px; 
     margin: 0 auto; /* 가운데정렬 */
 }
-/* 1260px 나의 wrapper의 넓이에 좌우 여백 20px씩 추가한 사이즈부터 반응형 */
-@media screen and (max-width:1300px){
-    #wrap {
-        min-width: 100%;
-    }
-    .wrapper {
-        width: auto;
-        margin: 0 20px; /* 좌우에 20px */
-    }
-}/* media */
-@media screen and (max-width:1024px){
-    html, body {
-        font-size: 14px;
-    }
-}
-@media screen and (max-width:768px){ /* 모바일 반응형 */
-    html, body {
-        font-size: 13px;
-    }
-}/* media */
-
-::selection {
-    background-color: #C4004A;
-    color: #fff;
-}
-
-/*
-    기본 15px 일 때
-    72px - 4.800rem
-    60px - 4rem
-    50px - 3.333rem
-    20px - 1.333rem
-    18px - 1.200rem
-    15px - 1rem
-    13px - 0.867rem
-
-*/
-
-:root { /* 변수 - 어디에서나 적용되는 것 */
-    --txt-color-headertop : #666;
-    --txt-color-tit : #240c0c;
-    --txt-color-main : #E41B22;
-    --txt-color-tit-sub : rgba(36,12,12,0.8);
-    --txt-color-black : #1d1d1d;
-    --txt-color-b80: rgba(29,29,29,0.8);
-    --txt-color-white : #fff;
-    --txt-color-w80 : rgba(255,255,255,0.8);
-    --txt-color-w60 : rgba(255,255,255,0.6);
-    --txt-color-w50 : rgba(255,255,255,0.5);
-    --txt-quick-color-w40 : rgba(255,255,255,0.4);
-    --txt-quick-color-w20 : rgba(255,255,255,0.2);
-    --quick-color-bg1 : #0e0909;
-    --quick-color-bg2 : #2d1a1a;
-    --quick-color-btn : #5b3214;
-    --txt-size-tit : 4.800rem;
-    --margin-tit : 105px 0 61px 0;
-}
-
-@media screen and (max-width:1300px){
-    :root {
-        --txt-size-tit : 4.333rem;
-        --margin-tit : 90px 0 50px 0;
-    }
-}
-@media screen and (max-width:1024px){
-    :root {
-        --txt-size-tit : 3rem;
-        --margin-tit : 80px 0 40px 0;
-    }
-}
-@media screen and (max-width:768px){
-    :root {
-        --txt-size-tit : 1.667rem;
-        --margin-tit : 50px 0 30px 0;
-    }
-}
-
-/* 클릭하는 요소 - a, button > focus가 되었을 때 스타일 변경
-a:focus,
-button:focus {
-    outline: 3px dashed #E41B22;
-} */
