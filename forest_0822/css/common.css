@@ -1,0 +1,108 @@
+
+/* 글자의 스타일은 상속받음. 기본글자의 스타일은 
+   모든 태그를 감싸는 html body에 선언
+   폰트를 여러개를 선언 - 첫번째 폰트를 1순위로 적용하고 만약 지원이 안되면 2순위 폰트를 적용
+   ex) 영문만 지원하는 폰트를 1순위로 쓰고 2순위 한글이 지원되는 서체를 선언
+       영문, 숫자, 특수문자는 영문 폰트가 적용됨 */
+html, body {
+    font-family: "notosanskr", "Malgun Gothic", "맑은 고딕", Dotum, 돋움, Helvetica, "Apple SD Gothic Neo", "애플 SD 산돌고딕 Neo", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0; /* 자간 */
+    line-height: 1.4; /* 배수 - 글자크기에 1.4배 */
+    color: #0D264B; /* 글자 색상 */
+    word-break: keep-all; /* 단어별로 줄바꿈 */
+    word-wrap: break-word; /* 만약 단어가 엄청 길면 강제로 줄바꿈 실행 */
+}
+/* 홈페이지 전체를 감싸는 요소 - 
+   가로스크롤바가 생겼을때 배경이 짤리는 현상을 막음 */
+#wrap {
+    min-width: 1260px;
+    overflow: hidden;
+}
+/* 홈페이지의 넓이를 제한하고 가운데정렬 */
+.wrapper {
+    width: 1260px; 
+    margin: 0 auto; /* 가운데정렬 */
+}
+/* 1260px 나의 wrapper의 넓이에 좌우 여백 20px씩 추가한 사이즈부터 반응형 */
+@media screen and (max-width:1300px){
+    #wrap {
+        min-width: 100%;
+    }
+    .wrapper {
+        width: auto;
+        margin: 0 20px; /* 좌우에 20px */
+    }
+}/* media */
+@media screen and (max-width:1024px){
+    html, body {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:768px){ /* 모바일 반응형 */
+    html, body {
+        font-size: 13px;
+    }
+}/* media */
+
+::selection {
+    background-color: #083983;
+    color: #A0E274;
+}
+
+/*
+    기본 15px 일 때
+    72px - 4.800rem
+    60px - 4rem
+    50px - 3.333rem
+    20px - 1.333rem
+    18px - 1.200rem
+    15px - 1rem
+    13px - 0.867rem
+
+*/
+
+:root { /* 변수 - 어디에서나 적용되는 것 */
+    --txt-color-main : #239E6D;
+    --txt-color-sub : #0D264B;
+    --txt-color-p: rgba(13,38,75,0.8);
+    --txt-color-p60 : rgba(13,38,75,0.6);
+    --txt-color-black : #1d1d1d;
+    --txt-color-white : #fff;
+    --txt-color-icon : #3A4F6D;
+    
+    --txt-color-w50 : rgba(255,255,255,0.5);
+    --txt-quick-color-w40 : rgba(255,255,255,0.4);
+    --txt-quick-color-w20 : rgba(255,255,255,0.2);
+    --quick-color-bg1 : #0e0909;
+    --quick-color-bg2 : #2d1a1a;
+    --quick-color-btn : #5b3214;
+    --txt-size-tit : 3.333rem;
+    --margin-tit : 105px 0 61px 0;
+}
+
+@media screen and (max-width:1300px){
+    :root {
+        --txt-size-tit : 4.333rem;
+        --margin-tit : 90px 0 50px 0;
+    }
+}
+@media screen and (max-width:1024px){
+    :root {
+        --txt-size-tit : 3rem;
+        --margin-tit : 80px 0 40px 0;
+    }
+}
+@media screen and (max-width:768px){
+    :root {
+        --txt-size-tit : 1.667rem;
+        --margin-tit : 50px 0 30px 0;
+    }
+}
+
+/* 클릭하는 요소 - a, button > focus가 되었을 때 스타일 변경
+a:focus,
+button:focus {
+    outline: 3px dashed #E41B22;
+} */
