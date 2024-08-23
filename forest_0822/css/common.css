@@ -66,14 +66,15 @@ html, body {
 :root { /* 변수 - 어디에서나 적용되는 것 */
     --txt-color-main : #239E6D;
     --txt-color-sub : #0D264B;
-    --txt-color-p: rgba(13,38,75,0.8);
+    --txt-color-p80: rgba(13,38,75,0.8);
     --txt-color-p60 : rgba(13,38,75,0.6);
     --txt-color-black : #1d1d1d;
     --txt-color-white : #fff;
     --txt-color-icon : #3A4F6D;
+    --txt-quick-color-w80 : rgba(255,255,255,0.8);
+    --txt-color-w60 : rgba(255,255,255,0.6);
+
     
-    --txt-color-w50 : rgba(255,255,255,0.5);
-    --txt-quick-color-w40 : rgba(255,255,255,0.4);
     --txt-quick-color-w20 : rgba(255,255,255,0.2);
     --quick-color-bg1 : #0e0909;
     --quick-color-bg2 : #2d1a1a;
