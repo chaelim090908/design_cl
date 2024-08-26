@@ -30,10 +30,6 @@ html, body {
     #wrap {
         min-width: 100%;
     }
-    .wrapper {
-        width: auto;
-        margin: 0 20px; /* 좌우에 20px */
-    }
 }/* media */
 @media screen and (max-width:1024px){
     html, body {
@@ -88,11 +84,22 @@ html, body {
         --txt-size-tit : 4.333rem;
         --margin-tit : 90px 0 50px 0;
     }
+    
+}
+@media screen and (min-width:1280px){
+    .wrapper {
+        width: auto;
+        margin: 0 200px;
+    }
 }
 @media screen and (max-width:1024px){
     :root {
         --txt-size-tit : 3rem;
         --margin-tit : 80px 0 40px 0;
+    }
+    .wrapper {
+        width: auto;
+        margin: 0 20px; /* 좌우에 20px */
     }
 }
 @media screen and (max-width:768px){

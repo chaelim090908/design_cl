@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/fullpage.min.js"></script> <!-- fullpage js -->
     <link rel="stylesheet" href="css/fullpage.css"> <!-- fullpage css -->
     <script src="js/swiper-bundle.min.js"></script> <!-- swiper -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css"> <!-- swiper -->
+    <script src="js/counter.js"></script> <!-- 숫자를 증가시키는 함수. 꼭 main.js 위에 있어야 함(아니면 오류남) -->
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <title>생명의숲</title>
@@ -90,9 +92,96 @@
                 <div class="paging"></div>
             </div>
         </section>
-        <section class="section fp-auto-height-responsive tree">tree</section>
-        <section class="section fp-auto-height-responsive forest">forest</section>
-        <section class="section fp-auto-height-responsive story">story</section>
+        <section class="section fp-auto-height-responsive tree">
+            <div class="wrapper">
+                <div class="count"><span class="counter" data-start="0" data-end="89272">0</span></div> <!--89,272-->
+                <h2>2023 심은 나무</h2>
+                <p>숲을 통해 건강한 도시생태계를 만들고자 합니다.<br>도시의 생활환경을 개선하기 위해 시민과 함께 숲을 가꿉니다.</p>
+            </div>
+        </section>
+        <section class="section fp-auto-height-responsive forest">
+            <div class="wrapper">
+                <div class="tit">
+                    <h2>Forest for Life<br>생명의 숲</h2>
+                    <p>아이들이 푸른 자연의 공간에서 건강하게 자랄 수 있도록<br>아이들, 교사, 학부모, 지역주민이 함께 학교 내에<br>나무를 심고 숲을 가꿉니다.</p>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li class="forest1"><a href="#n"><span>도시숲</span></a></li>
+                        <li class="forest2"><a href="#n"><span>숲길</span></a></li>
+                        <li class="forest3"><a href="#n"><span>사회복지숲</span></a></li>
+                        <li class="forest4"><a href="#n"><span>공존숲</span></a></li>
+                        <li class="forest5"><a href="#n"><span>숲환경교육</span></a></li>
+                        <li class="forest6"><a href="#n"><span>나무심기</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="section fp-auto-height-responsive story">
+            <div class="wrapper">
+                <div class="tit">
+                    <h2>생명의숲 이야기</h2>
+                    <p>도시숲, 학교숲, 숲환경교육, 사회복지숲 등의 시민과 함께한 다양한 활동 이야기입니다.</p>
+                </div>
+                <div class="list">
+                    <div class="swiper">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <h3>이사기록 : 쨍하고 해 뜬 날 이사했어요!</h3>
+                                    <p>생명의숲은 지난 봄부터 "Make Us Green in Forest - FOREST CREW" 캠페인을 전국에서 실행하고 있습니다. 이 캠페인은 카카오메이커스의 후원을 통해 강원영동, 경북, 부산, 대전충남, 울산에서 활발히 진행되고 있습니다. 이 글을 통해 캠페인의 시작과 그동안의 성과, 그리고 앞으로의 계획을 나누고자 합니다. FOREST CREW는 이 캠페인에 참여한 그리고 참여할 모든 분들을 뜻합니다.</p>
+                                    <span class="date">2024.07.23</span>
+                                    <div class="photo"><img src="images/main/story01.png" alt=""></div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <h3>[산불대응] 다시 숲에 싹을 틔운 2년의 시간, 함께 만나보세요!</h3>
+                                    <p>오늘은 2024년 상반기 동안 생명의숲과 함께 공익연계 마케팅(CRM - Cause-Related Marketing)을 한 기업 몇 곳을 이야기 하려 합니다. 공익연계 마케팅은 '기업이 경영활동과 사회적 활동을 연계하여 실시하는 마케팅'입니다.</p>
+                                    <span class="date">2024.04.18</span>
+                                    <div class="photo"><img src="images/main/story02.png" alt=""></div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <h3>서울마이트리, 시민과 함께 만드는 도시정원</h3>
+                                    <p>사무처 이전이 결정된 후 각 팀의 활동가들이 참여하여 사무처 이전 TF를 구성했습니다. 새로운 사무공간은 2023년 리모델링을 마친 공간이었고, 아무것도 없던 공간에 생명의숲만의 공간을 구성해야 했습니다. 사물함, 테이블 크기, 선반, 창고 등 크고 작은 부분까지 의견을 내고 조율하는 과정이 있었습니다. 출근일에는 숲센터와 새 공간을 오가며 진행 상황을 체크하기도 했고, 필요한 물품은 직접 구매하며 사무처 이전을 준비했습니다.</p>
+                                    <span class="date">2024.04.11</span>
+                                    <div class="photo"><img src="images/main/story03.png" alt=""></div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <h3>우리의 숲, 함께 가꾸는 이야기 - Chapter1. FOREST</h3>
+                                    <p>서로배움학교는 생명의숲 활동가 역량강화의 일환으로 진행되는 스터디 그룹 프로그램입니다. ‘일 기반 학습, 일을 통한 성장' 범위 내에서 주최자가 주제를 선정하고, 공감하는 활동가(3~5인)가 참여하여, 모든 구성원이 서로 배움의 주체가 되어 경계없이 생각을 나눕니다. 2024년 서로배움학교로 선정된 숲문화쌀롱은 숲과 관련된 다양한 주제를 다루는 문화콘텐츠를 매개로 하여 시민과 공감대를 확장할 수 있는 주제에 관해 이야기하고, 생명의숲 활동 주제에 대해서 좀 더 폭넓은 시각에서 생각을 나누고 학습하는 프로그램입니다.</p>
+                                    <span class="date">2024.04.09</span>
+                                    <div class="photo"><img src="images/main/story04.png" alt=""></div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <h3>다시 생명이 자랄 이 땅, 오늘은 숲을 위한 행동 - Reforest For Life</h3>
+                                    <p>생명의숲은 2024년 카카오메이커스와 make us green in forest 캠페인을 함께하고 있습니다. 이 캠페인은 전국 방방곡곡에 있는 지역 생명의숲과 함께 하고 있는데요. 강원영동생명의숲이 운영하는 오늘은 숲을 위한 행동 - Reforest for Life 캠페인 - 산불피해지 복구 시민참여 나무 심기가 4월 5~7일까지 3일 동안, 2022년 동해 산불 피해지(동해시 초구동 산24)에서 진행되었습니다.</p>
+                                    <span class="date">2024.03.18</span>
+                                    <div class="photo"><img src="images/main/story05.png" alt=""></div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <h3>[카드뉴스] 2024 청주 가드닝 페스티벌에서 생명의숲을 만나요~!</h3>
+                                    <p>청주 가드닝 페스티벌은? 생활 속 정원문화를 확산하고 공공시설 이용 활성화를 위해 청주시에서 2018년부터 진행을 해왔습니다. 3일동안 진행되는 페스티벌에서 여러분에게 가까운 숲을 조성하고, 모두가 공원과 문화 예술 공간을 누릴 수 있도록 노력하였습니다. 리그린 파크! 과연 어떤 모습의 정원이 될까요? 궁금하시다면 2024년 청주 가드닝 페스티벌에서 리그린 파크를 만나보세요</p>
+                                    <span class="date">2024.03.15</span>
+                                    <div class="photo"><img src="images/main/story06.png" alt=""></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="more">
+                    <a href="#n">전체보기</a>
+                </div>
+            </div>
+        </section>
         <footer class="section fp-auto-height-responsive fp-auto-height">footer</footer>
     </div>
 
