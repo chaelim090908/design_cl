@@ -672,7 +672,7 @@ body #fp-nav .fp-sr-only {
     }
     .forest .list ul li a {
         height: 160px;
-        font-size: 20px;
+        font-size: 18px;
         border-radius: 13px;
         padding: 105px 0 0 27px;
     }
@@ -775,12 +775,16 @@ body #fp-nav .fp-sr-only {
     }
 }
 
+
+.story {
+    margin: 255px 0 20px 0;
+}
 .story .tit h2 {
     font-family: "PTAnboR";
     font-size: var(--txt-size-tit);
     line-height: 1.1;
     color: var(--txt-color-sub);
-    margin:214px 0 7px 0;
+    margin: 0 0 7px 0;
 }
 .story .tit p {
     color: var(--txt-color-p80);
@@ -788,10 +792,13 @@ body #fp-nav .fp-sr-only {
 }
 .story .list ul li {
     width: 297px;
+    overflow: hidden;
 }
 .story .list ul li a {
     display: block;
     position: relative; /* before 정렬의 기준. 애니메이션을 넣으려면 before, after로 그려야 함 */
+    padding-top: 4%;
+    transition: 0.5s;
 }
 .story .list ul li a h3 {
     font-size: 18px;
@@ -800,8 +807,8 @@ body #fp-nav .fp-sr-only {
     margin-top: 26px;
     margin-bottom: 11px;
     /* 2줄 제한 */
-    line-height: 1.1;
-    height: 2.1em;
+    line-height: 1.2;
+    height: 2.4em;
     overflow: hidden;
 
     /*
@@ -814,7 +821,7 @@ body #fp-nav .fp-sr-only {
 .story .list ul li a p {
     color: var(--txt-color-p80);
     line-height: 1.1;
-    height: 2.1em;
+    height: 2.2em;
     overflow: hidden;
     margin-bottom: 21px;
 }
@@ -822,7 +829,7 @@ body #fp-nav .fp-sr-only {
 .story .list ul li a::before {
     position: absolute;
     left: 0;
-    top: -26px;
+    top: 0;
     width: 100%;
     height: 1px;
     background-color: var(--txt-color-p80);
@@ -835,11 +842,55 @@ body #fp-nav .fp-sr-only {
 }
 .story .list ul li a .photo {
     overflow: hidden;
+    font-size: 0;
+    line-height: 0;
 }
 .story .list ul li a .photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+/* a한테 마우스 오버 */
+.story .list ul li:hover a {
+    padding: 5%;
+}
+.story .list ul li:hover a h3 {
+    position: relative;
+    z-index: 10;
+    color: var(--txt-color-white);
+    overflow: hidden;
+}
+.story .list ul li:hover a p {
+    position: relative;
+    z-index: 10;
+    color: var(--txt-quick-color-w80);
+}
+.story .list ul li:hover a::before {
+    display: none;
+}
+.story .list ul li:hover a::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--txt-color-main);
+    content: "";
+}
+.story .list ul li:hover a .date {
+    position: relative;
+    z-index: 10;
+    color: var(--txt-color-white);
+}
+
+.story .list ul li:hover a .photo {
+    opacity: 0; /* display: none; 으로 줄 시, 영역이 사라져서 높이가 바뀜 */
+}
+
+
+.story .more {
+    text-align: center;
+    margin-top: 48px;
 }
 
 .story .more a {
@@ -847,12 +898,12 @@ body #fp-nav .fp-sr-only {
     padding: 9px 61px 9px 36px;
     background-color: var(--txt-color-main);
     color: var(--txt-color-white);
+    border: 2px solid var(--txt-color-main);
     border-radius: 107px;
-    left: 50%;
-    bottom: -51px;
-    transform: translate(-50%, 0);
+    transition: 0.5s;
+    
 }
-.story .more a::before {
+.story .more a::after {
     position: absolute;
     right: 27px;
     top: 7px;
@@ -863,18 +914,150 @@ body #fp-nav .fp-sr-only {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.25 12.75H6.25C6.0375 12.75 5.85942 12.6781 5.71575 12.5342C5.57192 12.3904 5.5 12.2122 5.5 11.9997C5.5 11.7871 5.57192 11.609 5.71575 11.4655C5.85942 11.3218 6.0375 11.25 6.25 11.25H11.25V6.25C11.25 6.0375 11.3219 5.85942 11.4658 5.71575C11.6096 5.57192 11.7878 5.5 12.0003 5.5C12.2129 5.5 12.391 5.57192 12.5345 5.71575C12.6782 5.85942 12.75 6.0375 12.75 6.25V11.25H17.75C17.9625 11.25 18.1406 11.3219 18.2843 11.4658C18.4281 11.6096 18.5 11.7878 18.5 12.0003C18.5 12.2129 18.4281 12.391 18.2843 12.5345C18.1406 12.6782 17.9625 12.75 17.75 12.75H12.75V17.75C12.75 17.9625 12.6781 18.1406 12.5342 18.2843C12.3904 18.4281 12.2122 18.5 11.9997 18.5C11.7871 18.5 11.609 18.4281 11.4655 18.2843C11.3218 18.1406 11.25 17.9625 11.25 17.75V12.75Z' fill='white'/%3E%3C/svg%3E%0A");
+    transition: 0.5s;
 }
 
+.story .more a:hover {
+    position: relative;
+    padding: 9px 61px 9px 36px;
+    background-color: var(--txt-color-white);
+    color: var(--txt-color-main);
+    border-radius: 107px;
+    border: 2px solid var(--txt-color-main);
+    font-weight: 600;
+}
+.story .more a:hover::after {
+    transform: rotate(360deg);
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.25 12.75H6.25C6.0375 12.75 5.85942 12.6781 5.71575 12.5342C5.57192 12.3904 5.5 12.2122 5.5 11.9997C5.5 11.7871 5.57192 11.609 5.71575 11.4655C5.85942 11.3218 6.0375 11.25 6.25 11.25H11.25V6.25C11.25 6.0375 11.3219 5.85942 11.4658 5.71575C11.6096 5.57192 11.7878 5.5 12.0003 5.5C12.2129 5.5 12.391 5.57192 12.5345 5.71575C12.6782 5.85942 12.75 6.0375 12.75 6.25V11.25H17.75C17.9625 11.25 18.1406 11.3219 18.2843 11.4658C18.4281 11.6096 18.5 11.7878 18.5 12.0003C18.5 12.2129 18.4281 12.391 18.2843 12.5345C18.1406 12.6782 17.9625 12.75 17.75 12.75H12.75V17.75C12.75 17.9625 12.6781 18.1406 12.5342 18.2843C12.3904 18.4281 12.2122 18.5 11.9997 18.5C11.7871 18.5 11.609 18.4281 11.4655 18.2843C11.3218 18.1406 11.25 17.9625 11.25 17.75V12.75Z' fill='%2332C7A1'/%3E%3C/svg%3E%0A");
 
+    /* 영원히 돌기
+    animation-name: story_more;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    */
+}
+/* 영원히 도는 애니메이션 (out에 대한 애니메이션이 존재하지 않음)
+@keyframes story_more {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
+*/
 
+@media screen and (max-width:1280px){
+    .story {
+        margin: 100px 0 80px 0;
+    }
+    .story .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+    .story .tit h2 {
+        font-size: 35px;
+        margin: 0 0 5px 0;
+    }
+    .story .tit p {
+        margin-bottom: 40px;
+    }
+    .story .list ul li {
+        width: none;
+    }
+    .story .list ul li a {
+        padding-top: 5%;
+    }
+    .story .list ul li a h3 {
+        font-size: 17px;
+        margin-top: 15px;
+        margin-bottom: 8px;
+    }
+    .story .list ul li a p {
+        margin-bottom: 15px;
+    }
+    .story .list ul li a .date {
+        margin-bottom: 10px;
+    }
+    .story .more a::after {
+        position: absolute;
+        right: 27px;
+        top: 6px;
+        width: 24px;
+        height: 24px;
+        content: "";
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.25 12.75H6.25C6.0375 12.75 5.85942 12.6781 5.71575 12.5342C5.57192 12.3904 5.5 12.2122 5.5 11.9997C5.5 11.7871 5.57192 11.609 5.71575 11.4655C5.85942 11.3218 6.0375 11.25 6.25 11.25H11.25V6.25C11.25 6.0375 11.3219 5.85942 11.4658 5.71575C11.6096 5.57192 11.7878 5.5 12.0003 5.5C12.2129 5.5 12.391 5.57192 12.5345 5.71575C12.6782 5.85942 12.75 6.0375 12.75 6.25V11.25H17.75C17.9625 11.25 18.1406 11.3219 18.2843 11.4658C18.4281 11.6096 18.5 11.7878 18.5 12.0003C18.5 12.2129 18.4281 12.391 18.2843 12.5345C18.1406 12.6782 17.9625 12.75 17.75 12.75H12.75V17.75C12.75 17.9625 12.6781 18.1406 12.5342 18.2843C12.3904 18.4281 12.2122 18.5 11.9997 18.5C11.7871 18.5 11.609 18.4281 11.4655 18.2843C11.3218 18.1406 11.25 17.9625 11.25 17.75V12.75Z' fill='white'/%3E%3C/svg%3E%0A");
+        transition: 0.5s;
+    }
 
+    /* li한테 마우스 오버 */
+    .story .list ul li:hover a p {
+        height: 2.3em;
+    }
+    
+    .story .more a {
+        padding: 7px 55px 7px 30px;
+        
+    }
+    
+    .story .more a:hover {
+        padding: 7px 55px 7px 30px;
+    }
+}
+@media screen and (max-width:768px){
+    .story {
+        margin: 50px 0 40px 0;
+    }
+    .story .tit h2 {
+        font-size: 25px;
+        margin: 0 0 3px 0;
+    }
+    .story .tit p {
+        margin-bottom: 25px;
+    }
+    .story .list ul li a {
+        padding-top: 3%;
+    }
+    .story .list ul li a h3 {
+        font-size: 15px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+    .story .list ul li a p {
+        margin-bottom: 10px;
+    }
+    .story .list ul li a .date {
+        margin-bottom: 8px;
+    }
 
-
-
-
-
-footer {
-    background-color: var(--quick-color-bg1);
-    color: var(--txt-color-white);
-    height: 300px;
+    /* li한테 마우스 오버 */
+    .story .list ul li:hover a h3 {
+        line-height: 1.2;
+        height: 2.5em;
+        overflow: hidden;
+    }
+    .story .list ul li:hover a p {
+        height: 2.2em;
+    }
+    
+    .story .more a {
+        padding: 6px 50px 6px 25px;   
+    }
+    .story .more a::after {
+        position: absolute;
+        right: 21px;
+        top: 3px;
+        width: 24px;
+        height: 24px;
+        content: "";
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.25 12.75H6.25C6.0375 12.75 5.85942 12.6781 5.71575 12.5342C5.57192 12.3904 5.5 12.2122 5.5 11.9997C5.5 11.7871 5.57192 11.609 5.71575 11.4655C5.85942 11.3218 6.0375 11.25 6.25 11.25H11.25V6.25C11.25 6.0375 11.3219 5.85942 11.4658 5.71575C11.6096 5.57192 11.7878 5.5 12.0003 5.5C12.2129 5.5 12.391 5.57192 12.5345 5.71575C12.6782 5.85942 12.75 6.0375 12.75 6.25V11.25H17.75C17.9625 11.25 18.1406 11.3219 18.2843 11.4658C18.4281 11.6096 18.5 11.7878 18.5 12.0003C18.5 12.2129 18.4281 12.391 18.2843 12.5345C18.1406 12.6782 17.9625 12.75 17.75 12.75H12.75V17.75C12.75 17.9625 12.6781 18.1406 12.5342 18.2843C12.3904 18.4281 12.2122 18.5 11.9997 18.5C11.7871 18.5 11.609 18.4281 11.4655 18.2843C11.3218 18.1406 11.25 17.9625 11.25 17.75V12.75Z' fill='white'/%3E%3C/svg%3E%0A");
+        transition: 0.5s;
+    }
+    
+    .story .more a:hover {
+        padding: 6px 50px 6px 25px;
+    }
 }

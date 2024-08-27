@@ -102,7 +102,7 @@ html, body {
         margin: 0 20px; /* 좌우에 20px */
     }
 }
-@media screen and (max-width:768px){
+    @media screen and (max-width:768px){
     :root {
         --txt-size-tit : 1.667rem;
         --margin-tit : 50px 0 30px 0;

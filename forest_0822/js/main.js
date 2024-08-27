@@ -6,6 +6,7 @@ $(document).ready(function(){
 		navigationTooltips: ['Main', '2023 나무', '활동소개', '활동 이야기'], /* 툴팁 */
 		showActiveTooltip: true, /* 현재 활성화된 페이지의 툴팁에 특정 클래스 주기 */
 	
+		lockAnchors: true,
 		anchors: ['visual', 'tree', 'forest', 'story'], /* href="#link1" 이렇게 코딩하면 해당 링크명으로 이동 */
 
 		autoScrolling:true, /* 한페이지씩 스크롤 */
@@ -58,15 +59,15 @@ $(document).ready(function(){
 		spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
 		breakpoints: {
 			640: {    /* 640px 이상일때 적용 */
-				slidesPerView: 3,
-				spaceBetween: 20,
+				slidesPerView: 2,
+				spaceBetween: 16,
 			},
 			768: {    /* 768px 이상일때 적용 */
-				slidesPerView: 4,
-				spaceBetween: 30,
+				slidesPerView: 3,
+				spaceBetween: 16,
 			},
 			1024: {   /* 1024px 이상일때 적용 */
-				slidesPerView: 4,
+				slidesPerView: 3,
 				spaceBetween: 24,
 			},
 			1280: {    /* 1280px 이상일때 적용 */
@@ -74,7 +75,7 @@ $(document).ready(function(){
 				spaceBetween: 24,
 			},
 		},
-		centeredSlides: true, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
+		centeredSlides: false, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
 		loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
 		// autoplay: {  /* 팝업 자동 실행 */
 		// 	delay: 2500,
