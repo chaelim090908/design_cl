@@ -1,0 +1,113 @@
+html, body {
+    font-family: "Pre_Regul", "Malgun Gothic", "맑은 고딕", Dotum, 돋움, Helvetica, "Apple SD Gothic Neo", "애플 SD 산돌고딕 Neo", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: 1.4;
+    color: #111;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+#wrap {
+    min-width: 1576px;
+    overflow: hidden;
+}
+.wrapper {
+    width: 1576px; 
+    margin: 0 auto;
+}
+
+@media screen and (max-width:1300px){
+    #wrap {
+        min-width: 100%;
+    }
+    .wrapper {
+        min-width: 1260px;
+        margin: 0 20px; /* 좌우에 20px */
+    }
+}
+@media screen and (max-width:1024px){
+    html, body {
+        font-size: 14px;
+    }
+    #wrap {
+        min-width: 1300px;
+    }
+    .wrapper {
+        min-width: 1300px;
+        margin: 0 20px; /* 좌우에 20px */
+    }
+}
+@media screen and (max-width:768px){ /* 모바일 반응형 */
+    html, body {
+        font-size: 13px;
+    }
+    #wrap {
+        min-width: 100%; /* 브라우저 넓이에 꽉차게 */
+    }
+    .wrapper {
+        width: auto;
+    }
+}/* media */
+
+
+::selection {
+    background-color: #7C6C5D;
+    color: #fff;
+}
+
+/*
+    기본 15px 일 때
+    70px - 4.667rem
+    50px - 3.333rem
+    36px - 2.4rem
+    15px - 1rem
+    13px - 0.867rem
+
+    mobile
+    35px - 2.692rem
+    25px - 1.923rem
+    18px - 1.385rem
+    15px - 1.154rem
+    13px - 1rem
+    11px - 0.846rem
+    8px - 0.615rem
+
+*/
+
+:root { /* 변수 - 어디에서나 적용되는 것 */
+    --color-main : #7C6C5D;
+    --txt-main : #111;
+    --color-white : #fff;
+    --color-w80 : rgba(255,255,255,0.8);
+    --color-w60 : rgba(255,255,255,0.6);
+    --color-w40 : rgba(255,255,255,0.4);
+    --color-w20 : rgba(255,255,255,0.2);
+    --pc-size-tit : 4.667rem;
+    --mo-size-tit : 4.667rem;
+}
+
+@media screen and (max-width:1300px){
+    :root {
+        --txt-size-tit : 4.333rem;
+    }
+    
+}
+@media screen and (max-width:1024px){
+    :root {
+    }
+    .wrapper {
+        width: auto;
+        margin: 0 20px; /* 좌우에 20px */
+    }
+}
+    @media screen and (max-width:768px){
+    :root {
+    }
+}
+
+/* 클릭하는 요소 - a, button > focus가 되었을 때 스타일 변경
+a:focus,
+button:focus {
+    outline: 3px dashed #E41B22;
+} */
