@@ -83,20 +83,18 @@
     }
     header .gnb .gnb_wrap .depth1 {
         display: flex;
+        justify-content: center;
+        margin-top: 23px;
 
     }
     header .gnb .gnb_wrap .depth1 > li {
-        
+        font-size: 1.333rem;
+        line-height: 1.2;
     }
-    header .gnb .gnb_wrap .depth1 li {
+    header .gnb .gnb_wrap .depth1 li a {
         padding: 0 50px;
     }
-    header .gnb
-    
-    
-    
-    
-    
+    /* depth2 */
     header .gnb .gnb_wrap ul.depth2 {
         display: none;
     }
