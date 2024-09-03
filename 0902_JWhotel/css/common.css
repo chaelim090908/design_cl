@@ -62,6 +62,8 @@ html, body {
     50px - 3.333rem
     36px - 2.4rem
     20px - 1.333rem
+    18px - 1.2rem
+    17px - 1.133rem
     15px - 1rem
     13px - 0.867rem
 
@@ -79,11 +81,13 @@ html, body {
 :root { /* 변수 - 어디에서나 적용되는 것 */
     --color-main : #7C6C5D;
     --txt-main : #111;
+    --txt-main-20 : rgba(17,17,17,0.2);
     --color-white : #fff;
     --color-w80 : rgba(255,255,255,0.8);
     --color-w60 : rgba(255,255,255,0.6);
     --color-w40 : rgba(255,255,255,0.4);
     --color-w20 : rgba(255,255,255,0.2);
+    --color-g80 : rgba(102,102,102,0.8);
     --pc-size-tit : 4.667rem;
     --mo-size-tit : 4.667rem;
 }

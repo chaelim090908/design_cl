@@ -7,20 +7,89 @@
     .visual {
         background: url(../images/visual_bg.png) no-repeat center center / cover;
         height: 1000px;
+    }
+    .visual .tit {
         text-align: center;
         color: var(--color-white);
     }
-    
-    .visual h2 {
+    .visual .tit h2 {
         font-family: "Antic Didone", serif;
         font-size: 4.667rem;
         line-height: 1.2;
         padding-top: 50vh;
     }
-    .visual p {
+    .visual .tit p {
         color: var(--color-w80);
     }
-    
+
+    .visual .reservation {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 1080px;
+        height: 80px;
+        z-index: 99;
+        display: flex;
+        background-color: var(--color-white);
+        color: var(--txt-main);
+        font-family: "Pre_Bold";
+    }
+    .visual .reservation a {
+        display: block;
+        width: 180px;
+        position: relative;
+        cursor: pointer;
+    }
+    .visual .reservation a::after {
+        position: absolute;
+        right: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        content: "";
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 12.6L16.6 8L18 9.4L12 15.4L6 9.4L7.4 8L12 12.6Z' fill='%23111111'/%3E%3C/svg%3E%0A");
+    }
+    .visual .reservation a::before {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 1px;
+        height: 80px;
+        content: "";
+        background-color: var(--txt-main-20);
+    }
+    .visual .reservation a:last-child::before {
+        display: none;
+    }
+    .visual .reservation a h2 {
+        font-weight: 700;
+        font-size: 1.133rem;
+        color: var(--txt-main);
+        padding: 15px 0 0 18px;
+        margin-bottom: 8px;
+        line-height: 1.2;
+    }
+    .visual .reservation a strong {
+        font-family: "Pre_Regul";
+        font-weight: 400;
+        color: var(--color-g80);
+        padding: 0 0 0 18px;
+        font-weight: 400;
+    }
+    .visual .reservation button {
+        display: block;
+        width: 180px;
+        background-color: var(--txt-main);
+    }
+    .visual .reservation button span {
+        color: var(--color-white);
+        font-size: 1.333rem;
+    }
     
     
     
@@ -57,7 +126,54 @@
     .pack .tit p {
         margin: 37px 0 0 25px;
         color: var(--color-main);
+        position: relative;
     }
+    .pack .tit p::before {
+        position: absolute;
+        right: -12px;
+        top: 2px;
+        width: 1px;
+        height: 15px;
+        content: "";
+        background-color: var(--color-main);
+    }
+    .pack .tit p:last-child::before {
+        display: none;
+    }
+    .pack .more a {
+        display: block;
+        position: relative;
+        font-size: 0;
+        line-height: 0;
+    }
+    .pack .more a::before {
+        position: absolute;
+        right: 0;
+        top: -58px;
+        width: 46px;
+        height: 46px;
+        content: "";
+        transition: 0.2s;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg width='46' height='46' viewBox='0 0 46 46' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='45' height='45' rx='22.5' stroke='%237C6C5D'/%3E%3Cpath d='M24.6 23L20 18.4L21.4 17L27.4 23L21.4 29L20 27.6L24.6 23Z' fill='%237C6C5D'/%3E%3C/svg%3E%0A");
+    }
+    .pack .more a:hover::before {
+        position: absolute;
+        right: 0;
+        top: -58px;
+        width: 46px;
+        height: 46px;
+        content: "";
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg width='46' height='46' viewBox='0 0 46 46' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='45' height='45' rx='22.5' fill='%237C6C5D' stroke='%237C6C5D'/%3E%3Cpath d='M24.6 23L20 18.4L21.4 17L27.4 23L21.4 29L20 27.6L24.6 23Z' fill='white'/%3E%3C/svg%3E%0A");
+    }
+
+
+
     .pack .list ul {
         display: flex;
         height: 531px;
@@ -98,7 +214,6 @@
         overflow: hidden;
         text-overflow: ellipsis;
      }
-    
     .pack .list ul li.on {
         width: 95%;
     }
@@ -124,7 +239,7 @@
     }
 
     .exp {
-        margin-top: 128px;
+        margin-top: 372px;
         background-color: var(--color-main);
         height: 585px;
     }
@@ -160,12 +275,25 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-image: url("data:image/svg+xml,%3Csvg width='46' height='46' viewBox='0 0 46 46' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='45' height='45' rx='22.5' stroke='white' stroke-opacity='0.6'/%3E%3Cpath d='M24.6 23L20 18.4L21.4 17L27.4 23L21.4 29L20 27.6L24.6 23Z' fill='white' fill-opacity='0.6'/%3E%3C/svg%3E%0A");
+        transition: 0.2s;
+    }
+    .exp .more a:hover::before {
+        position: absolute;
+        left: 0;
+        top: 40px;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("data:image/svg+xml,%3Csvg width='46' height='46' viewBox='0 0 46 46' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='45' height='45' rx='22.5' fill='white' stroke='white'/%3E%3Cpath d='M24.6 23L20 18.4L21.4 17L27.4 23L21.4 29L20 27.6L24.6 23Z' fill='%237C6C5D'/%3E%3C/svg%3E%0A");
     }
 
     .exp .wrapper {
         position: relative;
     }
-    .exp .tab ul {
+    .exp .tab > ul {
         position: absolute;
         left: 308px;
         top: 272px;
@@ -174,29 +302,32 @@
         content: "";
     }
     .exp .tab ul li {
-        padding-bottom: 23px;
         color: var(--color-w40);
-        position: relative;
     }
     .exp .tab ul li.on {
         color: var(--color-white);
     }
-    .exp .tab ul li.on::before {
+    .exp .tab ul li button {
+        display: block;
+        padding: 11.5px 0;
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        position: relative;
+    }
+    .exp .tab ul li.on button::after {
         position: absolute;
         left: -3px;
-        bottom: 18px;
+        bottom: 0px;
         width: 279px;
         height: 1px;
         content: "";
         background-color: var(--color-white);
     }
-    .exp .tab ul li button span {
-        display: block;
-    }
-    .exp .tab ul li button span::before {
+    .exp .tab ul li button::before {
         position: absolute;
         right: 6px;
-        top: -2px;
+        top: 5px;
         width: 24px;
         height: 24px;
         content: "";
@@ -208,7 +339,7 @@
     .exp .tab ul li.on button span::before {
         position: absolute;
         right: 6px;
-        top: -2px;
+        top: 5px;
         width: 24px;
         height: 24px;
         content: "";
@@ -217,24 +348,32 @@
         background-size: cover;
         background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6 12L8 7.4L9.4 6L15.4 12L9.4 18L8 16.6L12.6 12Z' fill='white'/%3E%3C/svg%3E%0A");
     }
-    .exp .tab ul li a .photo {
+
+    .exp .tab ul li .tab_detail {
         display: none;
     }
-    .exp .tab ul li.on a .photo {
+    .exp .tab ul li.on .tab_detail {
         display: block;
         position: absolute;
-        right: 0;
-        top: 0;
+        right: -936px;
+        bottom: -62px;
         z-index: 1;
-        width: 100%;
-        height: 100%;
+        width: 910px;
+        height: 653px;
         content: "";
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
     }
-    .exp .tab ul li.on a .photo img {
-        
+    .exp .tab ul li.on .tab_detail ul li a .photo {
+        font-size: 0;
+        line-height: 0;
+        overflow: hidden;
+    }
+    .exp .tab ul li.on .tab_detail a .photo img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
     }
 }
 
