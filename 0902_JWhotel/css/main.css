@@ -25,7 +25,7 @@
     .visual .reservation {
         position: absolute;
         left: 50%;
-        bottom: 0;
+        top: 821px;
         transform: translateX(-50%);
         width: 1080px;
         height: 80px;
@@ -90,9 +90,191 @@
         color: var(--color-white);
         font-size: 1.333rem;
     }
+
+    .rest {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: 317px;
+        background-color: var(--color-main);
+        color: var(--color-white);
+        width: 100%;
+        height: 581px;
+    }
+    .rest .txt {
+        width: 33%;
+        margin: 0 3%;
+    }
+    .rest .txt .tit {
+        padding: 48px 0 50px 0;
+    }
+    .rest .tit h2 {
+        font-family: "Antic Didone", serif;
+        font-size: 3.333rem;
+        margin-bottom: 5px;
+    }
+    .rest .tit p {
+        color: var(--color-w80);
+    }
+    .rest .txt .more a {
+        display: block;
+        font-size: 0;
+        line-height: 0;
+        width: 46px;
+        height: 46px;
+        position: relative;
+        left: 0;
+        bottom: -173px;
+    }
+    .rest .txt .tab_txt {
+        display: flex;
+    }
+    .rest .txt .tab_txt {
+        margin-bottom: 16px;
+    }
+    .rest .txt .tab_txt button {
+        margin-right: 0 24px;
+    }
+    .rest .txt .more a::before {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("data:image/svg+xml,%3Csvg width='46' height='46' viewBox='0 0 46 46' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='45' height='45' rx='22.5' stroke='white' stroke-opacity='0.6'/%3E%3Cpath d='M24.6 23L20 18.4L21.4 17L27.4 23L21.4 29L20 27.6L24.6 23Z' fill='white' fill-opacity='0.6'/%3E%3C/svg%3E%0A");
+        transition: 0.2s;
+    }
+    .rest .txt .more a:hover::before {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("data:image/svg+xml,%3Csvg width='46' height='46' viewBox='0 0 46 46' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='45' height='45' rx='22.5' fill='white' stroke='white'/%3E%3Cpath d='M24.6 23L20 18.4L21.4 17L27.4 23L21.4 29L20 27.6L24.6 23Z' fill='%237C6C5D'/%3E%3C/svg%3E%0A");
+    }
+    .rest button.tab_menu span {
+        font-family: "Pre_Regul";
+        font-weight: 400;
+        color: var(--color-w40);
+    }
+    .rest button.tab_menu.on span:hover {
+        color: var(--color-white);
+        font-weight: 700;
+    }
+    .rest .txt strong {
+        color: var(--color-w40);
+    }
+    .rest .list {
+        width: 73%;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* .rest .tab > ul {
+        left: 0;
+        top: 0;
+        display: flex;
+        
+    }
+    .rest .tab ul li {
+        color: var(--color-w40);
+    }
+    .rest .tab ul li.on button span {
+        color: var(--color-white);
+    }
+    .rest .tab ul li button {
+        display: block;
+        margin-right: 24px;
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        position: relative;
+    }
+    .rest .tab ul li.on .tab_detail {
+        display: block;
+        position: absolute;
+        left: -1003px;
+        bottom: -180px;
+        z-index: 1;
+        width: 948px;
+        height: 545px;
+        content: "";
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .rest .tab ul li .tab_detail button.rest-prev::after {
+        position: absolute;
+        left: 2%;
+        top: -349px;
+        width: 82px;
+        height: 82px;
+        z-index: 5;
+        content: "";
+        border-radius: 50%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg width='82' height='82' viewBox='0 0 82 82' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='41' cy='41' r='41' fill='white' fill-opacity='0.2'/%3E%3Cpath d='M71 46H12L29.7683 28' stroke='white' stroke-opacity='0.6' stroke-width='2'/%3E%3C/svg%3E%0A");
+    }
+    .rest .tab ul li .tab_detail button.rest-next::before {
+        position: absolute;
+        right: 2%;
+        top: -349px;
+        width: 82px;
+        height: 82px;
+        z-index: 5;
+        content: "";
+        border-radius: 50%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg width='82' height='82' viewBox='0 0 82 82' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='41' cy='41' r='41' fill='white' fill-opacity='0.2'/%3E%3Cpath d='M12 46H71L53.2317 28' stroke='white' stroke-opacity='0.6' stroke-width='2'/%3E%3C/svg%3E%0A");
+    }
+    .rest .tab ul li.on .tab_detail ul li a .photo {
+        font-size: 0;
+        line-height: 0;
+        overflow: hidden;
+    }
+    .rest .tab ul li.on .tab_detail a .photo img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
     
-    
-    
+     */
+
+
+
+
+
+
+
+
+
+
     
     
     

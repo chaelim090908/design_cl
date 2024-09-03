@@ -1,5 +1,40 @@
 $(document).ready(function(){
-    
+
+
+
+    /* .rest .txt .tab_txt button hover 시 button에 on클래스 추가
+	   .rest .tab ul li.on .tab_detail ul li a photo img가 바뀜
+	*/
+    $('.rest .txt .tab_txt button').on('mouseenter', function(){
+        $('.rest .txt .tab_txt button').removeClass('on')
+        $(this).addClass('on')
+    })
+	$('.rest .txt .tab_txt button').on('mouseleave', function(){
+        $(this).addClass('on')
+    })
+	
+	const rest_swiper = new Swiper('.rest .swiper', {
+
+		effect: "fade",
+	
+		autoplay: {
+			disableOnInteraction: false,
+		},
+	
+		loop: true,
+	
+		pagination: {
+			el: '.tab .tab_detail .swiper .li ',
+			clickable: true,
+			type: 'fraction',
+		},
+	
+		navigation: {
+			nextEl: '.rest-next',
+			prevEl: '.rest-prev',  
+		},
+	
+	});
 	
 	
 	
