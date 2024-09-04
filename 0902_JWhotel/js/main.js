@@ -1,46 +1,18 @@
 $(document).ready(function(){
 
-
-
-    /* .rest .txt .tab_txt button hover 시 button에 on클래스 추가
-	   .rest .tab ul li.on .tab_detail ul li a photo img가 바뀜
+    /* .rest .txt button.tab_menu 마우스오버 시
+	   (각각 class : guest, lounge, biz)button에 on클래스 추가
+	   .rest .list ul li에 해당 클래스 추가
+	   .rest .list ul li.(해당클래스) a에 on클래스 추가
 	*/
-    $('.rest .txt .tab_txt button').on('mouseenter', function(){
-        $('.rest .txt .tab_txt button').removeClass('on')
-        $(this).addClass('on')
-    })
-	$('.rest .txt .tab_txt button').on('mouseleave', function(){
-        $(this).addClass('on')
-    })
-	
-	const rest_swiper = new Swiper('.rest .swiper', {
-
+	const rest_list_swiper = new Swiper('.rest .list .swiper', {
 		effect: "fade",
-	
-		autoplay: {
-			disableOnInteraction: false,
-		},
-	
 		loop: true,
-	
-		pagination: {
-			el: '.tab .tab_detail .swiper .li ',
-			clickable: true,
-			type: 'fraction',
-		},
-	
 		navigation: {
-			nextEl: '.rest-next',
-			prevEl: '.rest-prev',  
+			nextEl: '.rest .list .swiper .rest-next',
+			prevEl: '.rest .list .swiper .rest-prev', 
 		},
-	
 	});
-	
-	
-	
-	
-	
-	
 	
 	// .pack .list ul li 마우스 오버 시 on 클래스 추가
     $('.pack .list ul li').on('mouseenter', function(){
@@ -56,11 +28,41 @@ $(document).ready(function(){
 		$('.pack .list ul li').removeClass('off')
 	})
 
-	/* .exp .tab ul li button click 시 li에 on클래스 추가
-	   .exp .tab ul li.on .tab_detail ul li a photo img가 바뀜
+
+	const time_list_swiper = new Swiper('.time .list .swiper', {
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: true,
+		},
+		loop: true,
+		pagination: {
+			el: '.time .list .paging',
+			clickable: true, 
+			renderBullet: function (index, className) {   /* paging에 특정 코드 넣기 */
+				return '<span class="item' + (index + 1) + ' ' + className + '"></span>';
+			},
+		},
+	});
+
+	/* .exp .txt .tab_txt button (class : spa, fitn, pool) click 시 li에 on클래스 추가
+	   .exp .tab ul li class가 on으로 바뀜
 	*/
-    $('.exp .tab ul li').on('mouseenter', function(){
-        $('.exp .tab ul li').removeClass('on')
+    $('.exp .txt .tab_txt button.spa').on('mouseenter', function(){
+        $('.exp .txt .tab_txt button').removeClass('on')
         $(this).addClass('on')
+		$('.exp .tab ul li').removeClass('on')
+		$('.exp .tab ul li.spa').addClass('on')
+    })
+	$('.exp .txt .tab_txt button.fitn').on('mouseenter', function(){
+        $('.exp .txt .tab_txt button').removeClass('on')
+        $(this).addClass('on')
+		$('.exp .tab ul li').removeClass('on')
+		$('.exp .tab ul li.fitn').addClass('on')
+    })
+	$('.exp .txt .tab_txt button.pool').on('mouseenter', function(){
+        $('.exp .txt .tab_txt button').removeClass('on')
+        $(this).addClass('on')
+		$('.exp .tab ul li').removeClass('on')
+		$('.exp .tab ul li.pool').addClass('on')
     })
 })

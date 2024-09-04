@@ -13,8 +13,8 @@ html, body {
     overflow: hidden;
 }
 .wrapper {
-    width: 1576px; 
-    margin: 0 20px;
+    width: 1536px; 
+    margin: 0 auto;
 }
 
 @media screen and (max-width:1650px){

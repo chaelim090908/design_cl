@@ -118,7 +118,7 @@
                         <p>최고의 휴식을 선사하겠습니다.</p>
                     </div>
                     <div class="tab_txt">
-                        <button class="tab_menu.on guest"><span>게스트 룸</span></button>
+                        <button class="tab_menu guest on"><span class="guest on">게스트 룸</span></button>
                         <button class="tab_menu lounge"><span>이그제큐티브 라운지 이용</span></button>
                         <button class="tab_menu biz"><span>비즈니스 스위트 킹</span></button>
                     </div>
@@ -128,32 +128,28 @@
                 <div class="list">
                     <div class="swiper">
                         <!-- jquary에서 li에 on클래스 추가 -->
-                        <ul class="swiper-wrapper guest">
-                            <li class="swiper-slide on">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide guest">
                                 <a href="#n">
-                                    <div class="photo"><img src="images/rest01.png" alt="게스트룸 사진"></div>
+                                    <div class="photo"><img src="images/main/rest01.png" alt="게스트룸 사진"></div>
                                 </a>
                             </li>
-                            <li class="swiper-slide on">
+                            <li class="swiper-slide guest">
                                 <a href="#n">
-                                    <div class="photo"><img src="images/rest01-1.png" alt="게스트룸 사진"></div>
+                                    <div class="photo"><img src="images/main/rest01-1.png" alt="게스트룸 사진"></div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide lounge">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/main/rest02.png" alt="이그제큐티브 라운지 사진"></div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide biz">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/main/rest03.png" alt="비즈니스 스위트 킹 사진"></div>
                                 </a>
                             </li>
                         </ul>
-                        <!-- <ul class="swiper-wrapper lounge">
-                            <li class="swiper-slide">
-                                <a href="#n">
-                                    <div class="photo"><img src="images/rest02.png" alt="이그제큐티브 라운지 사진"></div>
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="swiper-wrapper biz">
-                            <li class="swiper-slide">
-                                <a href="#n">
-                                    <div class="photo"><img src="images/rest03.png" alt="비즈니스 스위트 킹 사진"></div>
-                                </a>
-                            </li>
-                        </ul> -->
                         <button class="rest-prev">이전</button>
                         <button class="rest-next">다음</button>
                     </div> <!--swiper-->
@@ -166,28 +162,23 @@
                         <p>Meeting hall</p>
                         <p>Wedding hall</p>
                         <p>Dining restaurant</p>
-                </div>
-                <div class="more"><a href="#n">전체보기</a></div>
+                    </div>
+                    <div class="more"><a href="#n">전체보기</a></div>
                     <div class="list">
                         <div class="swiper">
                             <ul class="swiper-wrapper">
-                                <li class="swiper-slide popup1">
-                                    <div class="inner">
-                                        <h3>Meeting hall</h3>
-                                    </div>
+                                <li class="swiper-slide">
+                                    <div class="photo"><img src="images/main/time01.png"></div>
                                 </li>
-                                <li class="swiper-slide popup2">
-                                    <div class="inner">
-                                        <h3>Wedding hall</h3>
-                                    </div>
+                                <li class="swiper-slide">
+                                    <div class="photo"><img src="images/main/time02.png"></div>
                                 </li>
-                                <li class="swiper-slide popup3">
-                                    <div class="inner">
-                                        <h3>Dining restaurant</h3>
-                                    </div>
+                                <li class="swiper-slide">
+                                    <div class="photo"><img src="images/main/time03.png"></div>
                                 </li>
                             </ul>
                         </div>
+                        <div class="paging"></div>
                     </div>
                 </div>
             </section>
@@ -246,56 +237,32 @@
                             <button class="tab_menu pool"><span>수영</span></button>
                         </div>
                     </div>
-                    
-                    
                     <div class="tab">
-                        <ul>
-                            <li class="spa on">
-                                <div class="tab_detail">
-                                    <div class="swiper">
-                                        <!-- jquary에서 li에 on클래스 추가 -->
-                                        <ul class="swiper-wrapper">
-                                            <li class="swiper-slide">
-                                                <a href="#n">
-                                                    <div class="photo"><img src="images/exp01.png" alt="스파 사진"></div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div> <!--swiper-->
-                                </div> <!--tab_detail-->
-                            </li> <!--spa-->
-                            <li class="fitn">
-                                <div class="tab_detail">
-                                    <div class="swiper">
-                                        <ul class="swiper-wrapper">
-                                            <li class="swiper-slide">
-                                                <a href="#n">
-                                                    <div class="photo"><img src="images/exp02.png" alt="피트니스 사진"></div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div> <!--swiper-->
-                                </div> <!--tab_detail-->
-                            </li> <!--fitn-->
-                            <li class="pool">
-                                <div class="tab_detail">
-                                    <div class="swiper">
-                                        <ul class="swiper-wrapper">
-                                            <li class="swiper-slide">
-                                                <a href="#n">
-                                                    <div class="photo"><img src="images/exp03.png" alt="수영장 사진"></div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div> <!--swiper-->
-                                </div> <!--tab_detail-->
-                            </li> <!--pool-->
-                        </ul>
+                        <div class="swiper">
+                            <!-- jquary에서 li에 on클래스 추가 -->
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide spa on">
+                                    <a href="#n">
+                                        <div class="photo"><img src="images/main/exp01.png" alt="스파 사진"></div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide fitn">
+                                    <a href="#n">
+                                        <div class="photo"><img src="images/main/exp02.png" alt="피트니스 사진"></div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide pool">
+                                    <a href="#n">
+                                        <div class="photo"><img src="images/main/exp03.png" alt="수영장 사진"></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div> <!--swiper-->
                     </div>
                 </div>
             </section>
         </main>
-        <!-- <footer>
+        <footer>
             <div class="wrapper">
                 <div class="sns">
                     <ul>
@@ -328,7 +295,7 @@
                     <span>© 1996-2024 메리어트 인터내셔널 ALL RIGHTS RESERVED. </span>
                 </div>
             </div>
-        </footer> -->
+        </footer>
     </div>
 </body>
 </html>

@@ -4,7 +4,7 @@
 @import url(layout.css);
 
 .visual {
-    background: url(../images/visual_bg.png) no-repeat center center / cover;
+    background: url(../images/main/visual_bg.png) no-repeat center center / cover;
     height: 1000px;
 }
 .visual .tit {
@@ -16,6 +16,7 @@
     font-size: 4.667rem;
     line-height: 1.2;
     padding-top: 50vh;
+    margin-bottom: 12px;
 }
 .visual .tit p {
     color: var(--color-w80);
@@ -117,7 +118,7 @@
 .rest .tit h2 {
     font-family: "Antic Didone", serif;
     font-size: 3.333rem;
-    margin: 30% 0 0 -7px;
+    margin: 220px 0 0 -7px;
 }
 .rest .tit p {
     color: var(--color-w80);
@@ -130,7 +131,7 @@
     height: 46px;
     position: relative;
     left: 0;
-    bottom: -150px;
+    bottom: -10vh;
 }
 .rest .txt .tab_txt {
     display: flex;
@@ -166,12 +167,15 @@
     background-size: cover;
     background-image: url("data:image/svg+xml,%3Csvg width='46' height='46' viewBox='0 0 46 46' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='45' height='45' rx='22.5' fill='white' stroke='white'/%3E%3Cpath d='M24.6 23L20 18.4L21.4 17L27.4 23L21.4 29L20 27.6L24.6 23Z' fill='%237C6C5D'/%3E%3C/svg%3E%0A");
 }
-.rest button.tab_menu span {
+.rest .txt button.tab_menu span {
     font-family: "Pre_Regul";
     font-weight: 400;
     color: var(--color-w40);
 }
-.rest button.tab_menu.on span:hover {
+.rest .txt button.on span {
+    color: var(--color-white);
+}
+.rest .txt button span:hover {
     color: var(--color-white);
 }
 .rest .txt strong {
@@ -180,16 +184,16 @@
 .rest .list {
     width: 60%;
 }
-.rest .list .swiper ul li a {
+.rest .list .swiper ul li a.on {
     display: block;
 }
-.rest .list .swiper ul li a .photo {
+.rest .list .swiper ul li a.on .photo {
     font-size: 0;
     line-height: 0;
     overflow: hidden;
 }
-.rest .list .swiper ul li a .photo img {
-    object-fit: contain;
+.rest .list .swiper ul li a.on .photo img {
+    object-fit: cover;
     width: 100%;
     height: 100%;
 }
@@ -226,6 +230,9 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url("data:image/svg+xml,%3Csvg width='82' height='82' viewBox='0 0 82 82' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='41' cy='41' r='41' fill='white' fill-opacity='0.2'/%3E%3Cpath d='M12 46H71L53.2317 28' stroke='white' stroke-opacity='0.6' stroke-width='2'/%3E%3C/svg%3E%0A");
+}
+.rest .list ul li a {
+    display: block;
 }
 
 
@@ -297,6 +304,62 @@
     background-size: contain;
     background-image: url("data:image/svg+xml,%3Csvg width='46' height='46' viewBox='0 0 46 46' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='45' height='45' rx='22.5' fill='%237C6C5D' stroke='%237C6C5D'/%3E%3Cpath d='M24.6 23L20 18.4L21.4 17L27.4 23L21.4 29L20 27.6L24.6 23Z' fill='white'/%3E%3C/svg%3E%0A");
 }
+.time .list {
+    position: relative;
+}
+.time .list .paging {
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    width: 1146px;
+    height: 36px;
+    content: "";
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+}
+.time .list .paging span {
+    background-color: transparent;
+    width: 336px;
+    color: var(--color-white);
+}
+.time .list .paging::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    content: "";
+    background-color: var(--color-w20);
+}
+.time .list .paging span.item1::after {
+    content: "Meeting hall";
+}
+.time .list .paging span.item2::after {
+    content: "Wedding hall";
+}
+.time .list .paging span.item3::after {
+    content: "Dining restaurant";
+}
+.time .list ul li .popup1 {
+    background-image: url(../images/main/time01.png);
+}
+.time .list ul li .popup2 {
+    background-image: url(../images/main/time02.png);
+}
+.time .list ul li .popup3 {
+    background-image: url(../images/main/time03.png);
+}
+.time .list ul li .photo {
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+.time .list ul li .photo img {
+    object-fit: cover;
+}
+
 
 
 
@@ -402,13 +465,13 @@
     content: "";
 }
 .pack .list ul li.pack1 {
-    background-image: url(../images/pack01.png); 
+    background-image: url(../images/main/pack01.png); 
 }
 .pack .list ul li.pack2 {
-    background-image: url(../images/pack02.png);
+    background-image: url(../images/main/pack02.png);
 }
 .pack .list ul li.pack3 {
-    background-image: url(../images/pack03.png);
+    background-image: url(../images/main/pack03.png);
 }
 .pack .list ul li a {
     display: block;
@@ -444,28 +507,7 @@
 .pack .list ul li.on a .inner p {
     padding: 20px 0 0 9px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .exp {
-    display: flex;
     margin-top: 183px;
     position: relative;
 }
@@ -479,17 +521,21 @@
     background-color: var(--color-main);
     z-index: -1;
 }
+.exp .wrapper {
+    display: flex;
+}
 .exp .txt {
     width: 40%;
+    height: 585px;
 }
 .exp .txt .tit {
-    padding-top: 58px;
     color: var(--color-white);
 }
 .exp .txt .tit h2 {
     font-family: "Antic Didone", serif;
     font-size: 3.333rem;
     line-height: 1.2;
+    padding-top: 242px;
 }
 .exp .txt .tit p {
     margin: 17px 0 0 0;
@@ -579,42 +625,34 @@
     background-size: cover;
     background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6 12L8 7.4L9.4 6L15.4 12L9.4 18L8 16.6L12.6 12Z' fill='white'/%3E%3C/svg%3E%0A");
 }
-
-
-
-
 .exp .tab {
-    margin-bottom: 196px;
+    width: 60%;
+    height: 653px;
+    margin-bottom: 121px;
 }
-.exp .tab > ul {
-    margin: 136px 0 0 308px;
-    
-}
-
-
-.exp .tab ul li .tab_detail {
+.exp .tab ul li {
     display: none;
 }
-.exp .tab ul li.on .tab_detail {
-    width: 910px;
-    height: 653px;
+.exp .tab ul li.on {
+    display: block;
+}
+.exp .tab ul li.on a {
+    display: block;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.exp .tab ul li.on .tab_detail ul li a {
-    display: block;
-}
-.exp .tab ul li.on .tab_detail ul li a .photo {
+.exp .tab ul li.on a .photo {
     font-size: 0;
     line-height: 0;
     overflow: hidden;
 }
-.exp .tab ul li.on .tab_detail a .photo img {
+.exp .tab ul li.on a .photo img {
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
+
 
 @media screen and (max-width:1300px){
 
