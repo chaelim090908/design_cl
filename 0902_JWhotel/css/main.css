@@ -323,23 +323,46 @@
     background-color: transparent;
     width: 336px;
     color: var(--color-white);
+    text-align: center;
 }
-.time .list .paging::before {
+
+
+
+
+.time .list .paging span.item1::after {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
+    width: 366px;
     height: 2px;
     content: "";
     background-color: var(--color-w20);
 }
-.time .list .paging span.item1::after {
-    content: "Meeting hall";
-}
 .time .list .paging span.item2::after {
-    content: "Wedding hall";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 366px;
+    height: 2px;
+    content: "";
+    background-color: var(--color-w20);
 }
 .time .list .paging span.item3::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 366px;
+    height: 2px;
+    content: "";
+    background-color: var(--color-w20);
+}
+.time .list .paging span.item1::before {
+    content: "Meeting hall";
+}
+.time .list .paging span.item2::before {
+    content: "Wedding hall";
+}
+.time .list .paging span.item3::before {
     content: "Dining restaurant";
 }
 .time .list ul li .popup1 {
@@ -654,6 +677,7 @@
 }
 
 
-@media screen and (max-width:1300px){
+@media screen and (max-width:1650px){
+    
 
 }

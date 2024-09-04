@@ -259,4 +259,14 @@ footer .copy {
     color: var(--color-w60);
 }
 
-@media screen and (max-width:1300px){}
+@media screen and (max-width:1650px){
+    header.menu_over::before {
+        height: 450px;
+    }
+    footer {
+        padding-bottom: 150px;
+    }
+}
+@media screen and (max-width:1300){
+
+}
