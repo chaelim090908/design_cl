@@ -14,16 +14,16 @@ html, body {
 }
 .wrapper {
     width: 1576px; 
-    margin: 0 auto;
+    margin: 0 20px;
 }
 
-@media screen and (max-width:1300px){
+@media screen and (max-width:1650px){
     #wrap {
         min-width: 100%;
     }
     .wrapper {
-        min-width: 1260px;
-        margin: 0 20px; /* 좌우에 20px */
+        width: 1260px;
+        margin: 0 auto;
     }
 }
 @media screen and (max-width:1024px){
@@ -31,10 +31,10 @@ html, body {
         font-size: 14px;
     }
     #wrap {
-        min-width: 1300px;
+        min-width: 100%;
     }
     .wrapper {
-        min-width: 1300px;
+        width: auto;
         margin: 0 20px; /* 좌우에 20px */
     }
 }
@@ -43,10 +43,11 @@ html, body {
         font-size: 13px;
     }
     #wrap {
-        min-width: 100%; /* 브라우저 넓이에 꽉차게 */
+        min-width: 100%;
     }
     .wrapper {
         width: auto;
+        margin: 0 20px;
     }
 }/* media */
 
@@ -97,18 +98,6 @@ html, body {
         --txt-size-tit : 4.333rem;
     }
     
-}
-@media screen and (max-width:1024px){
-    :root {
-    }
-    .wrapper {
-        width: auto;
-        margin: 0 20px; /* 좌우에 20px */
-    }
-}
-    @media screen and (max-width:768px){
-    :root {
-    }
 }
 
 /* 클릭하는 요소 - a, button > focus가 되었을 때 스타일 변경
