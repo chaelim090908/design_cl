@@ -193,6 +193,7 @@ footer .sns {
 }
 footer .sns ul {
     display: flex;
+    align-items: center;
 }
 footer .sns ul li {
     margin-left: 25px;
@@ -449,11 +450,6 @@ footer .copy {
         margin-right: 31px;
     }
 }
-
-
-
-
-
 @media screen and (max-width:768px){
     header {
         height: 50px;
@@ -494,73 +490,71 @@ footer .copy {
         background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 18V16H21V18H3ZM3 13V11H21V13H3ZM3 8V6H21V8H3Z' fill='white'/%3E%3C/svg%3E%0A");
         content: "";
     }
-    
-
-
-
-
-    /*    아직 안함     */
-
     footer {
         padding-bottom: 80px;
     }
     footer::before {
-        top: 120px;
+        top: 130px;
     }
     footer .sns {
-        position: absolute;
-        right: 30%;
-        left: 30%;
-        top: 34px;
-        transform: translateX(-10%);
+        position: relative;
+        right: 0;
+        left: -50%;
+        top: 23px;
+        transform: translateX(0);
+        text-align: center;
+        float: right;
     }
     footer .sns ul {
         display: flex;
-        justify-content: space-between
+        justify-content: center;
+        align-items: center;
+        float: left;
+        position: relative;
+        left: 50%;
     }
     footer .sns ul li {
-        margin: 0 0;
+        margin: 0 12px;
     }
     footer .sns ul li a.face::before {
-        width: 15px;
-        height: 24px;
+        width: 9px;
+        height: 17px;
     }
     footer .sns ul li a.insta::before {
-        width: 24px;
-        height: 24px;
+        width: 17px;
+        height: 17px;
     }
     footer .sns ul li a.x::before {
-        width: 25px;
-        height: 24px;
+        width: 17px;
+        height: 16px;
     }
     footer .sns ul li a.youtube::before {
-        width: 32px;
-        height: 24px;
+        width: 22px;
+        height: 15px;
     }
     footer .sns ul li a.naver::before {
-        width: 26px;
-        height: 24px;
+        width: 17px;
+        height: 15px;
     }
     footer .sns ul li a.kakao::before {
-        width: 26px;
-        height: 24px;
+        width: 22px;
+        height: 20px;
     }
     footer .f_nav ul {
         display: flex;
         flex-wrap: wrap;
+        width: 100%;
+        padding-top: 43px;
     }
     footer .f_nav ul li {
-        padding: 10px 0;
-        margin: 80px 20px 0 0;
+        padding: 2px 0;
+        margin: 0 16px 0 0;
     }
-
-
     footer .f_info {
         line-height: 2;
-        margin: 22px 0 31px 0;
+        margin: 60px 0 40px 0;
     }
     footer .f_info address {
-        display: inline-block;
-        margin-right: 31px;
+        display: block;
     }
 }

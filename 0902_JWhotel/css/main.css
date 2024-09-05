@@ -842,6 +842,11 @@
         top: 3px;
         height: 11px;
     }
+    .time .list ul li .photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
     .time .list .paging {
         width: 90%;
     }
@@ -1059,11 +1064,6 @@
         line-height: 0;
         overflow: hidden;
     }
-    .time .list ul li .photo img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
     .pack {
         margin-top: 70px;
     }
@@ -1200,9 +1200,6 @@
     }
 }
 
-
-
-
 @media screen and (max-width:768px){
     .visual {
         height: 467px;
@@ -1264,11 +1261,6 @@
     .rest .list .swiper .rest-next {
         display: none;
     }
-
-
-
-
-
     .time {
         margin-top: 88px;
     }
@@ -1336,11 +1328,6 @@
         font-size: 11px;
         padding: 0 0 0 0;
     }
-
-
-
-
-    
     .exp::before {
         height: 312px;
     }
@@ -1352,7 +1339,7 @@
         font-size: 25px;
     }
     .exp .txt .tit p {
-        margin: 2px 0 0 0;
+        margin: 7px 0 0 0;
     }
     .exp .txt .more a {
         top: -41px;
@@ -1384,6 +1371,4 @@
         object-fit: cover;
 
     }
-}
-
 }
