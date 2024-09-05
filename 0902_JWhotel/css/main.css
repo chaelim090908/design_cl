@@ -24,6 +24,9 @@
 .visual .tit p {
     color: var(--color-w80);
 }
+.visual .tit p br {
+    display: none;
+}
 
 .visual .reservation {
     position: absolute;
@@ -105,9 +108,9 @@
 .rest::before {
     position: absolute;
     left: 0;
-    bottom: -55px;
+    bottom: -25px;
     width: 100%;
-    height: 581px;
+    height: 550px;
     content: "";
     background-color: var(--color-main);
     z-index: -1;
@@ -123,7 +126,7 @@
 .rest .tit h2 {
     font-family: "Antic Didone", serif;
     font-size: 3.333rem;
-    margin: 180px 0 0 -7px;
+    margin: 259px 0 0 -7px;
 }
 .rest .tit p {
     color: var(--color-w80);
@@ -647,8 +650,6 @@
     width: 100%;
     height: 100%;
 }
-
-
 @media screen and (max-width:1650px){
     .visual {
         height: 900px;
@@ -853,9 +854,6 @@
     .time .list .paging span::before {
         font-size: 18px;
     }
-
-
-
     .pack .tit {
         margin-bottom: 9px;
     }
@@ -892,37 +890,500 @@
     .pack .list ul li.on a .inner p {
         padding: 3px 0 0 0px;
     }
-
-    
-
-
-
-
-
-
     .exp::before {
         height: 400px;
     }
     .exp .txt {
-        width: 35%;
+        width: 45%;
         height: 400px;
     }
     .exp .txt .tit h2 {
         font-size: 40px;
-        padding-top: 179px;
+        padding-top: 125px;
     }
     .exp .txt .tit p {
         margin: 6px 0 0 0;
     }
     .exp .txt .tab_txt {
         margin: 11px 0 0 160px;
+        width: 200px;
     }
     .exp .txt .tab_txt button {
         padding: 10px 0;
     }
     .exp .tab {
-        width: 65%;
-        height: 532px;
-        margin-bottom: 12px;
+        width: 587px;
+        height: 450px;
+        margin-bottom: 45px;
     }
+    .exp .txt .tab_txt button.on::after {
+        position: absolute;
+        left: -6px;
+        bottom: 0px;
+        width: 200px;
+        height: 1px;
+        content: "";
+        background-color: var(--color-white);
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .visual {
+        height: 600px;
+    }
+    .visual .tit h2 {
+        font-size: 40px;
+        padding-top: 189px;
+        margin-bottom: 5px;
+    }
+    .visual .tit p {
+        color: var(--color-w80);
+    }
+    .visual .tit p br {
+        display: block;
+    }
+    .visual .reservation {
+        top: 473px;
+        width: 150px;
+        height: 55px;
+    }
+    .visual .reservation a {
+        display: none;
+    }
+    .visual .reservation button {
+        display: block;
+        width: 150px;
+        background-color: var(--txt-main);
+    }
+    .visual .reservation button span {
+        color: var(--color-white);
+        font-size: 23px;
+    }
+    .rest {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        margin-top: 70px;
+    }
+    .rest::before {
+        bottom: -55px;
+        height: 485px;
+    }
+    .rest .txt {
+        width: 100%;
+        padding: 0 4%;
+        color: var(--color-white);
+    }
+    .rest .txt .tit {
+        padding: 0 0 27px 0;
+    }
+    .rest .tit h2 {
+        font-family: "Antic Didone", serif;
+        font-size: 35px;
+        margin: 9px 0 0 -2px;
+    }
+    .rest .txt .more a {
+        display: block;
+        font-size: 0;
+        line-height: 0;
+        width: 35px;
+        height: 35px;
+        position: relative;
+        left: 0;
+        top: -143px;
+        bottom: 0;
+        float: right;
+    }
+    .rest .txt .tab_txt {
+        display: flex;
+    }
+    .rest .txt .tab_txt {
+        margin-bottom: 16px;
+    }
+    .rest .txt .tab_txt button {
+        margin-right: 20px;
+    }
+    .rest .list {
+        width: 90%;
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+    .rest .list .swiper .rest-prev {
+        display: none;
+    }
+    .rest .list .swiper .rest-next {
+        display: none;
+    }
+    .time {
+        margin-top: 110px;
+    }
+    .time .wrapper {
+        margin: 0 0;
+    }
+    .time .tit {
+        margin: 37px 20px 9px 20px;
+    }
+    .time .tit h2 {
+        font-size: 35px;
+    }
+    .time .tit p {
+        display: none;
+    }
+    .time .more a::before {
+        right: 20px;
+        top: -43px;
+        width: 35px;
+        height: 35px;
+    }
+    .time .more a:hover::before {
+        top: -43px;
+        width: 35px;
+        height: 35px;
+    }
+    .time .list .paging {
+        bottom: 30px;
+        width: 90%;
+    }
+    .time .list .paging span.swiper-pagination-bullet {
+        width: 100%;
+    }
+    .time .list .paging .swiper-pagination-bullet-active::after {
+        width: 100%;
+    }
+    .time .list .paging span::before {
+        font-size: 17px;
+    }
+    .time .list ul li .photo {
+        font-size: 0;
+        line-height: 0;
+        overflow: hidden;
+    }
+    .time .list ul li .photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .pack {
+        margin-top: 70px;
+    }
+    .pack .tit {
+        margin: 37px 0 9px 0;
+    }
+    .pack .tit h2 {
+        font-size: 35px;
+    }
+    .pack .tit p {
+        display: none;
+    }
+    .pack .more a::before {
+        top: -43px;
+        width: 35px;
+        height: 35px;
+    }
+    .pack .more a:hover::before {
+        top: -43px;
+        width: 35px;
+        height: 35px;
+    }
+    .pack .list ul {
+        display: flex;
+        height: 278px;
+    }
+    .pack .list ul li a {
+        display: block;
+        height: 278px;
+    }
+    .pack .list ul li.on a .inner {
+        position: absolute;
+        bottom: 21px;
+        left: 30px;
+        opacity: 1;
+        display: block;
+        color: var(--color-white);
+    }
+    .pack .list ul li.on a .inner h3 {
+        font-size: 17px;
+    }
+    .pack .list ul li.on a .inner p {
+        font-size: 13px;
+        padding: 2px 0 0 0;
+    }
+    .exp {
+        margin-top: 70px;
+    }
+    .exp::before {
+        height: 485px;
+    }
+    .exp .wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .exp .txt {
+        width: 100%;
+        height: 311px;
+    }
+    .exp .txt .tit {
+        color: var(--color-white);
+    }
+    .exp .txt .tit h2 {
+        font-family: "Antic Didone", serif;
+        font-size: 3.333rem;
+        line-height: 1.2;
+        padding-top: 9px;
+    }
+    .exp .txt .tit p {
+        margin: 9px 0 0 0;
+        color: var(--color-w80);
+    }
+    .exp .txt .more a {
+        width: 35px;
+        height: 35px;
+        right: 0;
+        top: -64px;
+        float: right;
+    }
+    .exp .txt .tab_txt {
+        color: var(--color-w40);
+        margin: 0 0 0 0;
+        width: 100%;
+    }
+    .exp .txt .tab_txt button {
+        padding: 9.5px 0;
+        width: 100%;
+        height: 100%;
+        font-size: 15px;
+    }
+    .exp .txt .tab_txt button.on::after {
+        position: absolute;
+        left: -3px;
+        bottom: 0px;
+        width: 100%;
+        height: 1px;
+        content: "";
+        background-color: var(--color-white);
+    }
+    .exp .txt .tab_txt button::before {
+        position: absolute;
+        right: 6px;
+        top: 5px;
+        width: 24px;
+        height: 24px;
+        content: "";
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6 12L8 7.4L9.4 6L15.4 12L9.4 18L8 16.6L12.6 12Z' fill='white' fill-opacity='0.4'/%3E%3C/svg%3E%0A");
+    }
+    .exp .txt .tab_txt button.on span::before {
+        position: absolute;
+        right: 6px;
+        top: 5px;
+        width: 24px;
+        height: 24px;
+    }
+    .exp .tab {
+        width: 100%;
+        height: 400px;
+        margin-bottom: 0;
+    }
+    .exp .swiper-wrapper {
+        height: 400px; 
+    }
+    .exp .tab ul li.on a .photo {
+        width: 100%;
+        height: 400px;
+    }
+    .exp .tab ul li.on a .photo img {
+        object-fit: cover;
+
+    }
+}
+
+
+
+
+@media screen and (max-width:768px){
+    .visual {
+        height: 467px;
+    }
+    .visual .tit h2 {
+        font-size: 35px;
+        line-height: 1.2;
+        padding-top: 73px;
+        margin-bottom: 4px;
+    }
+    .visual .reservation {
+        top: 396px;
+        width: 128px;
+        height: 34px;
+    }
+    .visual .reservation button {
+        width: 128px;
+    }
+    .visual .reservation button span {
+        font-size: 18px;
+    }
+    .rest {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        margin-top: 70px;
+    }
+    .rest::before {
+        bottom: -18px;
+        height: 313px;
+    }
+    .rest .txt .tit {
+        padding: 0 0 19px 0;
+    }
+    .rest .tit h2 {
+        font-size: 25px;
+    }
+    .rest .txt .more a {
+        top: -119px;
+    }
+    .rest .txt .tab_txt {
+        margin-bottom: 16px;
+    }
+    .rest .txt .tab_txt button {
+        margin-right: 18px;
+    }
+    .rest .txt .tab_txt button:last-child {
+        margin-right: 0;
+    }
+    .rest .list {
+        width: 90%;
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+    .rest .list .swiper .rest-prev {
+        display: none;
+    }
+    .rest .list .swiper .rest-next {
+        display: none;
+    }
+
+
+
+
+
+    .time {
+        margin-top: 88px;
+    }
+    .time .wrapper {
+        margin: 0 0;
+    }
+    .time .tit {
+        margin: 0 20px 9px 20px;
+    }
+    .time .tit h2 {
+        font-size: 25px;
+    }
+    .time .more a::before {
+        right: 20px;
+        top: -35px;
+        width: 25px;
+        height: 25px;
+    }
+    .time .more a:hover::before {
+        top: -35px;
+        width: 25px;
+        height: 25px;
+    }
+    .time .list .paging {
+        bottom: 15px;
+        width: 90%;
+    }
+    .time .list .paging span::before {
+        font-size: 11px;
+        height: 30px;
+        overflow: hidden;
+    }
+    .pack .tit {
+        margin: 20px 0 9px 0;
+    }
+    .pack .tit h2 {
+        font-size: 25px;
+    }
+    .pack .more a::before {
+        top: -35px;
+        width: 25px;
+        height: 25px;
+    }
+    .pack .more a:hover::before {
+        top: -35px;
+        width: 25px;
+        height: 25px;
+    }
+    .pack .list ul {
+        display: flex;
+        height: 119px;
+    }
+    .pack .list ul li a {
+        display: block;
+        height: 119px;
+    }
+    .pack .list ul li.on a .inner {
+        bottom: 10px;
+        left: 6px;
+    }
+    .pack .list ul li.on a .inner h3 {
+        font-size: 15px;
+    }
+    .pack .list ul li.on a .inner p {
+        font-size: 11px;
+        padding: 0 0 0 0;
+    }
+
+
+
+
+    
+    .exp::before {
+        height: 312px;
+    }
+    .exp .txt {
+        width: 100%;
+        height: 205px;
+    }
+    .exp .txt .tit h2 {
+        font-size: 25px;
+    }
+    .exp .txt .tit p {
+        margin: 2px 0 0 0;
+    }
+    .exp .txt .more a {
+        top: -41px;
+    }
+    .exp .txt .tab_txt {
+        color: var(--color-w40);
+        margin: 0 0 0 0;
+        width: 100%;
+        height: 31px;
+    }
+    .exp .txt .tab_txt button {
+        padding: 5px 0;
+    }
+    .exp .txt .tab_txt button.on::after {
+        width: 98%;
+    }
+    .exp .tab {
+        width: 100%;
+        height: 149px;
+        margin-bottom: 0;
+    }
+    .exp .swiper-wrapper {
+        height: 149px; 
+    }
+    .exp .tab ul li.on a .photo {
+        height: 149px;
+    }
+    .exp .tab ul li.on a .photo img {
+        object-fit: cover;
+
+    }
+}
+
 }

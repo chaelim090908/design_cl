@@ -109,7 +109,6 @@ header .gnb .gnb_close {
 header .gnb .gnb_wrap .depth1 {
     display: flex;
     justify-content: center;
-    
 }
 header .gnb .gnb_wrap .depth1 > li {
     font-size: 1.333rem;
@@ -260,6 +259,9 @@ footer .copy {
 }
 
 @media screen and (max-width:1650px){
+    header .tnb .logo a {
+        left: 0;
+    }
     header.menu_over::before {
         height: 450px;
     }
@@ -267,6 +269,298 @@ footer .copy {
         padding-bottom: 150px;
     }
 }
-@media screen and (max-width:1300){
+@media screen and (max-width:1300px){
+    header {
+        height: 80px;
+    }
+    header.menu_over::before {
+        height: 350px;
+    }
+    header .tnb .logo a {
+        width: 106.664px;
+        height: 80px;
+    }
+    header .tnb .left,
+    header .tnb .right {
+        margin-bottom: 10px;
+    }
+    header .tnb .left a,
+    header .tnb .right a,
+    header .tnb .right .tnb_menu{
+        margin: 0 20px;
+    }
+    header .tnb .right .lang::before {
+        right: -18px;
+        width: 20px;
+        height: 20px;
+    }
+    header .tnb .right .tnb_menu {
+        margin: 0 0 0 30px;
+        font-size: 0;
+        line-height: 0;
+        position: relative;
+    }
+    header .gnb .gnb_wrap .depth1 > li {
+        font-size: 1.2rem;
+    }
+    header .gnb .gnb_wrap .depth1 > li > a {
+        padding: 0 40px;
+        line-height: 3;
+    }
+    header .gnb .gnb_wrap .depth1 > li > a.black {
+        padding: 4px 20px;
+        font-size: 16px;
+        margin-top: 11px;
+    }
+    header.menu_over .gnb .gnb_wrap .depth1 > li > a.black {
+        padding: 4px 20px;
+        font-size: 16px;
+        margin-top: 11px;
+    }
+    header.menu_over .gnb .gnb_wrap .depth1 > li > ul.depth2 > li > a {
+        font-size: 1.1rem;
+    }
+    footer {
+        padding-bottom: 111px;
+    }
+    footer::before {
+        position: absolute;
+        left: 0;
+        top: 79.59px;
+        width: 100%;
+        height: 1px;
+        content: "";
+        background-color: rgba(255,255,255,0.1);
+    }
+    footer .sns {
+        top: 136px;
+    }
+    footer .sns ul li {
+        margin-left: 23px;
+    }
+    footer .f_nav ul li {
+        padding: 30px 0;
+        margin-right: 25px;
+    }
+    footer .f_info {
+        line-height: 2;
+        margin: 28px 0 42px 0;
+    }
+    footer .f_info address {
+        display: inline-block;
+        margin-right: 25px;
+    }
+}
 
+@media screen and (max-width: 1024px){
+    header .tnb .logo a {
+        left: 50%;
+    }
+    header .tnb .left,
+    header .tnb .right {
+        display: none;
+    }
+    header .gnb .gnb_wrap .depth1 {
+        display: none;
+    }
+    header .gnb .gnb_open {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 96px;
+        height: 80px;
+        font-size: 0;
+        line-height: 0;
+        margin: 0 20px;
+        content: "";
+    }
+    header .gnb .gnb_open::before {
+        position: absolute;
+        right: 50%;
+        top: 8%;
+        transform: translate(50%, 50%);
+        width: 35px;
+        height: 35px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 18V16H21V18H3ZM3 13V11H21V13H3ZM3 8V6H21V8H3Z' fill='white'/%3E%3C/svg%3E%0A");
+        content: "";
+    }
+    footer {
+        padding-bottom: 80px;
+    }
+    footer::before {
+        top: 120px;
+    }
+    footer .sns {
+        position: absolute;
+        right: 30%;
+        left: 30%;
+        top: 34px;
+        transform: translateX(-10%);
+    }
+    footer .sns ul {
+        display: flex;
+        justify-content: space-between
+    }
+    footer .sns ul li {
+        margin: 0 0;
+    }
+    footer .sns ul li a.face::before {
+        width: 15px;
+        height: 24px;
+    }
+    footer .sns ul li a.insta::before {
+        width: 24px;
+        height: 24px;
+    }
+    footer .sns ul li a.x::before {
+        width: 25px;
+        height: 24px;
+    }
+    footer .sns ul li a.youtube::before {
+        width: 32px;
+        height: 24px;
+    }
+    footer .sns ul li a.naver::before {
+        width: 26px;
+        height: 24px;
+    }
+    footer .sns ul li a.kakao::before {
+        width: 26px;
+        height: 24px;
+    }
+    footer .f_nav ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    footer .f_nav ul li {
+        padding: 10px 0;
+        margin: 80px 20px 0 0;
+    }
+    footer .f_info {
+        line-height: 2;
+        margin: 22px 0 31px 0;
+    }
+    footer .f_info address {
+        display: inline-block;
+        margin-right: 31px;
+    }
+}
+
+
+
+
+
+@media screen and (max-width:768px){
+    header {
+        height: 50px;
+    }
+    header .wrapper {
+        margin: 0 0;
+    }
+    header .tnb .logo a {
+        width: 66.67px;
+        height: 50px;
+        left: 60%;
+    }
+    header .tnb::before {
+        display: none;
+    }
+    header .gnb .gnb_open {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 60px;
+        height: 50px;
+        font-size: 0;
+        line-height: 0;
+        margin: 0 0;
+        content: "";
+    }
+    header .gnb .gnb_open::before {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 35px;
+        height: 35px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 18V16H21V18H3ZM3 13V11H21V13H3ZM3 8V6H21V8H3Z' fill='white'/%3E%3C/svg%3E%0A");
+        content: "";
+    }
+    
+
+
+
+
+    /*    아직 안함     */
+
+    footer {
+        padding-bottom: 80px;
+    }
+    footer::before {
+        top: 120px;
+    }
+    footer .sns {
+        position: absolute;
+        right: 30%;
+        left: 30%;
+        top: 34px;
+        transform: translateX(-10%);
+    }
+    footer .sns ul {
+        display: flex;
+        justify-content: space-between
+    }
+    footer .sns ul li {
+        margin: 0 0;
+    }
+    footer .sns ul li a.face::before {
+        width: 15px;
+        height: 24px;
+    }
+    footer .sns ul li a.insta::before {
+        width: 24px;
+        height: 24px;
+    }
+    footer .sns ul li a.x::before {
+        width: 25px;
+        height: 24px;
+    }
+    footer .sns ul li a.youtube::before {
+        width: 32px;
+        height: 24px;
+    }
+    footer .sns ul li a.naver::before {
+        width: 26px;
+        height: 24px;
+    }
+    footer .sns ul li a.kakao::before {
+        width: 26px;
+        height: 24px;
+    }
+    footer .f_nav ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    footer .f_nav ul li {
+        padding: 10px 0;
+        margin: 80px 20px 0 0;
+    }
+
+
+    footer .f_info {
+        line-height: 2;
+        margin: 22px 0 31px 0;
+    }
+    footer .f_info address {
+        display: inline-block;
+        margin-right: 31px;
+    }
 }
