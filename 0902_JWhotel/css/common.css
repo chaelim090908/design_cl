@@ -35,10 +35,22 @@ html, body {
     }
     .wrapper {
         width: auto;
-        margin: 0 20px; /* 좌우에 20px */
+        margin: 0 40px;
     }
 }
-@media screen and (max-width:768px){ /* 모바일 반응형 */
+@media screen and (max-width: 1024px){ /* 모바일 반응형 */
+    html, body {
+        font-size: 14px;
+    }
+    #wrap {
+        min-width: 100%;
+    }
+    .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+}
+@media screen and (max-width:768px){
     html, body {
         font-size: 13px;
     }
@@ -87,6 +99,7 @@ html, body {
     --color-w80 : rgba(255,255,255,0.8);
     --color-w60 : rgba(255,255,255,0.6);
     --color-w40 : rgba(255,255,255,0.4);
+    --color-w30 : rgba(255,255,255,0.3);
     --color-w20 : rgba(255,255,255,0.2);
     --color-g80 : rgba(102,102,102,0.8);
     --pc-size-tit : 4.667rem;

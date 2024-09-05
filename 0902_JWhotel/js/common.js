@@ -6,22 +6,28 @@ $(document).ready(function(){
         ---> pc에서만 구현
     */
 
-    let win_w
-    let pc_mobile
-    let scrolling
+    // let win_w
+    // let pc_mobile
+    // let scrolling
+    let resize_chk
+    
 
-    function resize_chk(){
-        win_w = $(window).width()
-        if(win_w > 1024){
-            pc_mobile = 'pc'
-        }else{
-            pc_mobile = 'mobile'
-        }
-    }
+
     resize_chk()
     $(window).resize(function(){
         resize_chk()
     })
+
+
+
+
+
+
+
+
+
+
+
 
     $('header').on('mouseenter focusin', function(){
         if(pc_mobile == 'pc'){

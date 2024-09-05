@@ -1,4 +1,17 @@
 $(document).ready(function(){
+	let reser_top
+	let window_h
+	let scrolling
+
+	function scroll_chk(){
+		window_h = $(window).height()
+		scrolling = $(window).scrollTop()
+		reser_top = $('.reservation').offset().top
+	}
+	if(scrolling > (reser_top - window_h + (window_h / 3))){
+		$('.reservation').addClass('active')
+	}
+
 
     /* .rest .txt button.tab_menu 마우스오버 시
 	   (각각 class : guest, lounge, biz)button에 on클래스 추가

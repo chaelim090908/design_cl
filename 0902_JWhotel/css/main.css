@@ -7,6 +7,9 @@
     background: url(../images/main/visual_bg.png) no-repeat center center / cover;
     height: 1000px;
 }
+.visual .wrapper {
+    position: relative;
+}
 .visual .tit {
     text-align: center;
     color: var(--color-white);
@@ -26,7 +29,8 @@
     position: absolute;
     left: 50%;
     top: 821px;
-    transform: translateX(-50%);
+    transform: translate(-50%, 0);
+    margin: auto;
     width: 1080px;
     height: 80px;
     z-index: 99;
@@ -35,6 +39,7 @@
     color: var(--txt-main);
     font-family: "Pre_Bold";
 }
+
 .visual .reservation a {
     display: block;
     width: 180px;
@@ -113,12 +118,12 @@
     color: var(--color-white);
 }
 .rest .txt .tit {
-    padding: 48px 0 50px 0;
+    padding: 0 0 50px 0;
 }
 .rest .tit h2 {
     font-family: "Antic Didone", serif;
     font-size: 3.333rem;
-    margin: 220px 0 0 -7px;
+    margin: 180px 0 0 -7px;
 }
 .rest .tit p {
     color: var(--color-w80);
@@ -184,15 +189,12 @@
 .rest .list {
     width: 60%;
 }
-.rest .list .swiper ul li a.on {
-    display: block;
-}
-.rest .list .swiper ul li a.on .photo {
+.rest .list .swiper ul li a .photo {
     font-size: 0;
     line-height: 0;
     overflow: hidden;
 }
-.rest .list .swiper ul li a.on .photo img {
+.rest .list .swiper ul li a .photo img {
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -231,18 +233,6 @@
     background-size: contain;
     background-image: url("data:image/svg+xml,%3Csvg width='82' height='82' viewBox='0 0 82 82' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='41' cy='41' r='41' fill='white' fill-opacity='0.2'/%3E%3Cpath d='M12 46H71L53.2317 28' stroke='white' stroke-opacity='0.6' stroke-width='2'/%3E%3C/svg%3E%0A");
 }
-.rest .list ul li a {
-    display: block;
-}
-
-
-
-
-
-
-
-
-
 .time {
     margin-top: 183px;
 }
@@ -319,42 +309,41 @@
     display: flex;
     justify-content: space-between;
 }
-.time .list .paging span {
-    background-color: transparent;
+.time .list .paging span.swiper-pagination-bullet {
+    background-color: var(--color-w20);
+    opacity: 1;
     width: 336px;
-    color: var(--color-white);
+    height: 2px;
+    color: var(--color-w30);
     text-align: center;
+    position: relative;
 }
-
-
-
-
-.time .list .paging span.item1::after {
+.time .list .paging .swiper-pagination-bullet-active::after {
     position: absolute;
     left: 0;
     top: 0;
-    width: 366px;
+    width: 336px;
     height: 2px;
+    background-color: #fff;
     content: "";
-    background-color: var(--color-w20);
+    animation-name: time_count;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
 }
-.time .list .paging span.item2::after {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 366px;
-    height: 2px;
-    content: "";
-    background-color: var(--color-w20);
+@keyframes time_count {
+    0% { width: 0; }
+    100% { width: 100%; }
 }
-.time .list .paging span.item3::after {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 366px;
-    height: 2px;
-    content: "";
-    background-color: var(--color-w20);
+.time .list .paging span::before {
+    display: block;
+    line-height: 3.5rem;
+    font-family: "Pre_Bold";
+    font-size: 20px;
+}
+.time .list .paging span.swiper-pagination-bullet-active::before {
+    color: var(--color-white);
 }
 .time .list .paging span.item1::before {
     content: "Meeting hall";
@@ -382,27 +371,6 @@
 .time .list ul li .photo img {
     object-fit: cover;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .pack {
     margin-top: 128px;
 }
@@ -501,12 +469,14 @@
     height: 531px;
 }
 .pack .list ul li a .inner {
+    font-size: 0;
+    line-height: 0;
     opacity: 0;
     transition: 0.5s;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    }
+}
 .pack .list ul li.on {
     width: 95%;
 }
@@ -528,6 +498,8 @@
     line-height: 1.2;
 }
 .pack .list ul li.on a .inner p {
+    font-size: 15px;
+    line-height: 1.4;
     padding: 20px 0 0 9px;
 }
 .exp {
@@ -678,6 +650,279 @@
 
 
 @media screen and (max-width:1650px){
+    .visual {
+        height: 900px;
+    }
+    .visual .tit h2 {
+        font-size: 60px;
+        padding-top: 45vh;
+        margin-bottom: 5px;
+    }
+    
+    .visual .reservation {
+        left: 50%;
+        top: 80%;
+        width: 900px;
+        transform: translateX(-50%);
+    }
+    .visual .reservation a {
+        width: 150px;
+    }
+    .visual .reservation a::after {
+        right: 12px;
+    }
+    .visual .reservation a h2 {
+        font-size: 1.2rem;
+        padding: 14px 0 0 13px;
+        margin-bottom: 8px;
+        line-height: 1.2;
+    }
+    .visual .reservation a strong {
+        padding: 0 0 0 13px;
+    }
+    .visual .reservation button {
+        width: 150px;
+    }
+    .rest::before {
+        bottom: -45px;
+        height: 450px;
+    }
+    .rest .txt {
+        width: 45%;
+    }
+    .rest .txt .tit {
+        padding: 0 0 43px 0;
+    }
+    .rest .tit h2 {
+        font-size: 45px;
+        margin: 30% 0 0 -7px;
+    }
+    .rest .txt .more a {
+        display: block;
+        font-size: 0;
+        line-height: 0;
+        width: 46px;
+        height: 46px;
+        position: relative;
+        left: 0;
+        bottom: -8vh;
+    }
+    .rest .list {
+        width: 55%;
+    }
+    .time .tit {
+        margin-bottom: 16px;
+    }
+    .time .tit h2 {
+        font-size: 45px;
+    }
+    .time .tit p {
+        margin: 29px 0 0 18px;
+    }
+    .time .tit p::before {
+        right: -10px;
+        top: 4px;
+        height: 12px;
+    }
+
+    .pack .tit {
+        margin-bottom: 16px;
+    }
+    .pack .tit h2 {
+        font-size: 45px;
+    }
+    .pack .tit p {
+        margin: 29px 0 0 18px;
+    }
+    .pack .tit p::before {
+        right: -10px;
+        top: 4px;
+        height: 12px;
+    }
+    .pack .list ul li a {
+        display: block;
+        height: 531px;
+    }
+    .pack .list ul li a .inner {
+        opacity: 0;
+        transition: 0.5s;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .pack .list ul li.on {
+        width: 95%;
+    }
+    .pack .list ul li.on::before {
+        opacity: 0;
+    }
+    .pack .list ul li.on a .inner h3 {
+        font-size: 30px;
+    }
+    .pack .list ul li.on a .inner p {
+        padding: 15px 0 0 7px;
+    }
+
+    .exp::before {
+        height: 450px;
+    }
+    .exp .txt {
+        width: 45%;
+        height: 450px;
+    }
+    .exp .txt .tit h2 {
+        font-size: 45px;
+        padding-top: 196px;
+    }
+    .exp .txt .tit p {
+        margin: 10px 0 0 0;
+    }
+    .exp .txt .tab_txt {
+        margin: 26px 0 0 259px;
+    }
+    .exp .txt .tab_txt button {
+        padding: 10px 0;
+    }
+    .exp .tab {
+        width: 55%;
+        height: 585px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width:1300px){
+    .visual {
+        height: 800px;
+    }
+    .visual .tit h2 {
+        font-size: 57px;
+        padding-top: 40vh;
+        margin-bottom: 0;
+    }
+    .visual .reservation {
+        top: 70%;
+    }
+    .visual .reservation a h2 {
+        padding: 16px 0 0 13px;
+    }
+    .rest::before {
+        bottom: -60px;
+        height: 400px;
+    }
+    .rest .txt .tit {
+        padding: 0 0 34px 0;
+    }
+    .rest .tit h2 {
+        font-size: 40px;
+        margin: 25% 0 0 -7px;
+    }
+    .rest .txt .more a {
+        bottom: -5vh;
+    }
+    .rest .list .swiper .rest-prev {
+        width: 70px;
+        height: 70px;
+    }
+    .rest .list .swiper .rest-next {
+        width: 70px;
+        height: 70px;
+    }
+    .time .tit {
+        margin-bottom: 9px;
+    }
+    .time .tit h2 {
+        font-size: 40px;
+    }
+    .time .tit p {
+        margin: 28px 0 0 12px;
+    }
+    .time .tit p::before {
+        right: -7px;
+        top: 3px;
+        height: 11px;
+    }
+    .time .list .paging {
+        width: 90%;
+    }
+    .time .list .paging span.swiper-pagination-bullet {
+        width: 100%;
+    }
+    .time .list .paging .swiper-pagination-bullet-active::after {
+        width: 100%;
+    }
+    .time .list .paging span::before {
+        font-size: 18px;
+    }
+
+
+
+    .pack .tit {
+        margin-bottom: 9px;
+    }
+    .pack .tit h2 {
+        font-size: 40px;
+    }
+    .pack .tit p {
+        margin: 28px 0 0 12px;
+    }
+    .pack .tit p::before {
+        right: -7px;
+        top: 3px;
+        height: 11px;
+    }
+    .pack .list ul li a {
+        display: block;
+        height: 531px;
+    }
+    .pack .list ul li a .inner {
+        opacity: 0;
+        transition: 0.5s;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .pack .list ul li.on a .inner {
+        display: block;
+        bottom: 34px;
+        left: 35px;
+    }
+    .pack .list ul li.on a .inner h3 {
+        font-size: 28px;
+    }
+    .pack .list ul li.on a .inner p {
+        padding: 3px 0 0 0px;
+    }
+
     
 
+
+
+
+
+
+    .exp::before {
+        height: 400px;
+    }
+    .exp .txt {
+        width: 35%;
+        height: 400px;
+    }
+    .exp .txt .tit h2 {
+        font-size: 40px;
+        padding-top: 179px;
+    }
+    .exp .txt .tit p {
+        margin: 6px 0 0 0;
+    }
+    .exp .txt .tab_txt {
+        margin: 11px 0 0 160px;
+    }
+    .exp .txt .tab_txt button {
+        padding: 10px 0;
+    }
+    .exp .tab {
+        width: 65%;
+        height: 532px;
+        margin-bottom: 12px;
+    }
 }
