@@ -26,7 +26,6 @@ $(document).ready(function(){
         if(pc_mobile == 'pc'){
             $('header').addClass('menu_over')
             $('header .gnb .gnb_wrap .depth1 > li').removeClass('on')
-            $(this).addClass('on')
         }
     })
     $('header').on('mouseleave', function(){

@@ -6,6 +6,7 @@
 .visual {
     background: url(../images/main/visual_bg.png) no-repeat center center / cover;
     height: 1000px;
+    position: relative;
 }
 .visual .wrapper {
     position: relative;
@@ -30,26 +31,29 @@
 
 .visual .reservation {
     position: absolute;
-    left: 50%;
-    top: 821px;
-    transform: translate(-50%, 0);
+    left: 0;
+    bottom: 99px;
     margin: auto;
-    width: 1080px;
-    height: 80px;
     z-index: 99;
     display: flex;
-    background-color: var(--color-white);
-    color: var(--txt-main);
-    font-family: "Pre_Bold";
+    justify-content: center;
+    width: 100%;
+}
+.visual .reservation h2 {
+    display: none;
 }
 
-.visual .reservation a {
+.visual .reservation .res {
     display: block;
     width: 180px;
     position: relative;
     cursor: pointer;
+    background-color: var(--color-white);
+    color: var(--txt-main);
+    font-family: "Pre_Bold";
+    height: 80px;
 }
-.visual .reservation a::after {
+.visual .reservation .res::after {
     position: absolute;
     right: 18px;
     top: 50%;
@@ -62,7 +66,7 @@
     background-size: contain;
     background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 12.6L16.6 8L18 9.4L12 15.4L6 9.4L7.4 8L12 12.6Z' fill='%23111111'/%3E%3C/svg%3E%0A");
 }
-.visual .reservation a::before {
+.visual .reservation .res::before {
     position: absolute;
     right: 0;
     top: 0;
@@ -71,10 +75,11 @@
     content: "";
     background-color: var(--txt-main-20);
 }
-.visual .reservation a:last-child::before {
+.visual .reservation .res:last-child::before {
     display: none;
 }
-.visual .reservation a h2 {
+.visual .reservation .res strong {
+    display: block;
     font-weight: 700;
     font-size: 1.133rem;
     color: var(--txt-main);
@@ -82,7 +87,7 @@
     margin-bottom: 8px;
     line-height: 1.2;
 }
-.visual .reservation a strong {
+.visual .reservation .res span {
     font-family: "Pre_Regul";
     font-weight: 400;
     color: var(--color-g80);
@@ -101,7 +106,6 @@
 
 .rest {
     display: flex;
-    flex-direction: row-reverse;
     margin-top: 98px;
     position: relative;
 }
@@ -117,8 +121,10 @@
 }
 .rest .txt {
     width: 40%;
-    padding: 0 2%;
+    padding: 0 48px;
     color: var(--color-white);
+    margin: 300px 0 0 0;
+    position: relative;
 }
 .rest .txt .tit {
     padding: 0 0 50px 0;
@@ -126,29 +132,24 @@
 .rest .tit h2 {
     font-family: "Antic Didone", serif;
     font-size: 3.333rem;
-    margin: 259px 0 0 -7px;
+    margin: 0 0 0 -7px;
 }
 .rest .tit p {
     color: var(--color-w80);
 }
+.rest .txt .more {
+    position: absolute;
+    left: 48px;
+    bottom: 29px;
+    
+}
 .rest .txt .more a {
-    display: block;
+    display: inline-block;
     font-size: 0;
     line-height: 0;
     width: 46px;
     height: 46px;
     position: relative;
-    left: 0;
-    bottom: -10vh;
-}
-.rest .txt .tab_txt {
-    display: flex;
-}
-.rest .txt .tab_txt {
-    margin-bottom: 16px;
-}
-.rest .txt .tab_txt button {
-    margin-right: 24px;
 }
 .rest .txt .more a::before {
     position: absolute;
@@ -164,16 +165,16 @@
     transition: 0.2s;
 }
 .rest .txt .more a:hover::before {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    content: "";
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
     background-image: url("data:image/svg+xml,%3Csvg width='46' height='46' viewBox='0 0 46 46' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='45' height='45' rx='22.5' fill='white' stroke='white'/%3E%3Cpath d='M24.6 23L20 18.4L21.4 17L27.4 23L21.4 29L20 27.6L24.6 23Z' fill='%237C6C5D'/%3E%3C/svg%3E%0A");
+}
+.rest .txt .tab_txt {
+    display: flex;
+}
+.rest .txt .tab_txt {
+    margin-bottom: 16px;
+}
+.rest .txt .tab_txt button {
+    margin-right: 24px;
 }
 .rest .txt button.tab_menu span {
     font-family: "Pre_Regul";
@@ -196,6 +197,7 @@
     font-size: 0;
     line-height: 0;
     overflow: hidden;
+    height: 745px;
 }
 .rest .list .swiper ul li a .photo img {
     object-fit: cover;
@@ -239,6 +241,9 @@
 .time {
     margin-top: 183px;
 }
+.time .wrapper {
+    position: relative;
+}
 .time .tit {
     display: flex;
     margin-bottom: 21px;
@@ -249,12 +254,15 @@
     font-size: 3.333rem;
     line-height: 1.2;
 }
-.time .tit p {
+.time .tit ul {
+    display: flex;
+}
+.time .tit ul li {
     margin: 37px 0 0 25px;
     color: var(--color-main);
     position: relative;
 }
-.time .tit p::before {
+.time .tit ul li::before {
     position: absolute;
     right: -12px;
     top: 2px;
@@ -263,21 +271,29 @@
     content: "";
     background-color: var(--color-main);
 }
-.time .tit p:last-child::before {
+.time .tit ul li:last-child::before {
     display: none;
+}
+.time .more {
+    position: absolute;
+    right: 0;
+    top: 22px;
+    width: 46px;
+    height: 46px;
 }
 .time .more a {
     display: block;
-    position: relative;
+    width: 100%;
+    height: 100%;
     font-size: 0;
     line-height: 0;
 }
 .time .more a::before {
     position: absolute;
     right: 0;
-    top: -58px;
-    width: 46px;
-    height: 46px;
+    top: 0;
+    width: 100%;
+    height: 100%;
     content: "";
     transition: 0.2s;
     background-position: center center;
@@ -286,15 +302,6 @@
     background-image: url("data:image/svg+xml,%3Csvg width='46' height='46' viewBox='0 0 46 46' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='45' height='45' rx='22.5' stroke='%237C6C5D'/%3E%3Cpath d='M24.6 23L20 18.4L21.4 17L27.4 23L21.4 29L20 27.6L24.6 23Z' fill='%237C6C5D'/%3E%3C/svg%3E%0A");
 }
 .time .more a:hover::before {
-    position: absolute;
-    right: 0;
-    top: -58px;
-    width: 46px;
-    height: 46px;
-    content: "";
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
     background-image: url("data:image/svg+xml,%3Csvg width='46' height='46' viewBox='0 0 46 46' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='45' height='45' rx='22.5' fill='%237C6C5D' stroke='%237C6C5D'/%3E%3Cpath d='M24.6 23L20 18.4L21.4 17L27.4 23L21.4 29L20 27.6L24.6 23Z' fill='white'/%3E%3C/svg%3E%0A");
 }
 .time .list {
@@ -373,9 +380,14 @@
 }
 .time .list ul li .photo img {
     object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 .pack {
     margin-top: 128px;
+}
+.pack .wrapper {
+    position: relative;
 }
 .pack .tit {
     display: flex;
@@ -387,12 +399,15 @@
     font-size: 3.333rem;
     line-height: 1.2;
 }
-.pack .tit p {
+.pack .tit ul {
+    display: flex;
+}
+.pack .tit ul li {
     margin: 37px 0 0 25px;
     color: var(--color-main);
     position: relative;
 }
-.pack .tit p::before {
+.pack .tit ul li::before {
     position: absolute;
     right: -12px;
     top: 2px;
@@ -401,21 +416,29 @@
     content: "";
     background-color: var(--color-main);
 }
-.pack .tit p:last-child::before {
+.pack .tit ul li:last-child::before {
     display: none;
+}
+.pack .more {
+    position: absolute;
+    right: 0;
+    top: 22px;
+    width: 46px;
+    height: 46px;
 }
 .pack .more a {
     display: block;
-    position: relative;
     font-size: 0;
     line-height: 0;
+    width: 100%;
+    height: 100%;
 }
 .pack .more a::before {
     position: absolute;
     right: 0;
-    top: -58px;
-    width: 46px;
-    height: 46px;
+    top: 0;
+    width: 100%;
+    height: 100%;
     content: "";
     transition: 0.2s;
     background-position: center center;
@@ -424,15 +447,6 @@
     background-image: url("data:image/svg+xml,%3Csvg width='46' height='46' viewBox='0 0 46 46' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='45' height='45' rx='22.5' stroke='%237C6C5D'/%3E%3Cpath d='M24.6 23L20 18.4L21.4 17L27.4 23L21.4 29L20 27.6L24.6 23Z' fill='%237C6C5D'/%3E%3C/svg%3E%0A");
 }
 .pack .more a:hover::before {
-    position: absolute;
-    right: 0;
-    top: -58px;
-    width: 46px;
-    height: 46px;
-    content: "";
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
     background-image: url("data:image/svg+xml,%3Csvg width='46' height='46' viewBox='0 0 46 46' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='45' height='45' rx='22.5' fill='%237C6C5D' stroke='%237C6C5D'/%3E%3Cpath d='M24.6 23L20 18.4L21.4 17L27.4 23L21.4 29L20 27.6L24.6 23Z' fill='white'/%3E%3C/svg%3E%0A");
 }
 .pack .list ul {
@@ -521,6 +535,7 @@
 }
 .exp .wrapper {
     display: flex;
+    position: relative;
 }
 .exp .txt {
     width: 40%;
@@ -539,17 +554,21 @@
     margin: 17px 0 0 0;
     color: var(--color-w80);
 }
-.exp .txt .more a {
+.exp .more {
+    position: absolute;
+    left: 0;
+    top: 365px;
+    width: 46px;
+    height: 46px;
+}
+.exp .more a {
     display: block;
     font-size: 0;
     line-height: 0;
-    width: 46px;
-    height: 46px;
-    position: relative;
-    left: 0;
-    top: 40px;
+    width: 100%;
+    height: 100%;
 }
-.exp .txt .more a::before {
+.exp .more a::before {
     position: absolute;
     left: 0;
     top: 0;
@@ -562,16 +581,7 @@
     background-image: url("data:image/svg+xml,%3Csvg width='46' height='46' viewBox='0 0 46 46' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='45' height='45' rx='22.5' stroke='white' stroke-opacity='0.6'/%3E%3Cpath d='M24.6 23L20 18.4L21.4 17L27.4 23L21.4 29L20 27.6L24.6 23Z' fill='white' fill-opacity='0.6'/%3E%3C/svg%3E%0A");
     transition: 0.2s;
 }
-.exp .txt .more a:hover::before {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    content: "";
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.exp .more a:hover::before {
     background-image: url("data:image/svg+xml,%3Csvg width='46' height='46' viewBox='0 0 46 46' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='45' height='45' rx='22.5' fill='white' stroke='white'/%3E%3Cpath d='M24.6 23L20 18.4L21.4 17L27.4 23L21.4 29L20 27.6L24.6 23Z' fill='%237C6C5D'/%3E%3C/svg%3E%0A");
 }
 .exp .txt .tab_txt {
@@ -662,23 +672,22 @@
     
     .visual .reservation {
         left: 50%;
-        top: 80%;
         width: 900px;
         transform: translateX(-50%);
     }
-    .visual .reservation a {
+    .visual .reservation .res {
         width: 150px;
     }
-    .visual .reservation a::after {
+    .visual .reservation .res::after {
         right: 12px;
     }
-    .visual .reservation a h2 {
+    .visual .reservation .res strong {
         font-size: 1.2rem;
         padding: 14px 0 0 13px;
         margin-bottom: 8px;
         line-height: 1.2;
     }
-    .visual .reservation a strong {
+    .visual .reservation .res span {
         padding: 0 0 0 13px;
     }
     .visual .reservation button {
@@ -690,26 +699,23 @@
     }
     .rest .txt {
         width: 45%;
+        padding: 0 40px;
+        color: var(--color-white);
+        margin: 250px 0 0 0;
+        position: relative;
     }
     .rest .txt .tit {
         padding: 0 0 43px 0;
     }
     .rest .tit h2 {
         font-size: 45px;
-        margin: 30% 0 0 -7px;
-    }
-    .rest .txt .more a {
-        display: block;
-        font-size: 0;
-        line-height: 0;
-        width: 46px;
-        height: 46px;
-        position: relative;
-        left: 0;
-        bottom: -8vh;
+        margin: 0 0 0 -7px;
     }
     .rest .list {
         width: 55%;
+    }
+    .rest .list .swiper ul li a .photo {
+        height: 600px;
     }
     .time .tit {
         margin-bottom: 16px;
@@ -717,25 +723,27 @@
     .time .tit h2 {
         font-size: 45px;
     }
-    .time .tit p {
+    .time .tit ul li {
         margin: 29px 0 0 18px;
     }
-    .time .tit p::before {
+    .time .tit ul li::before {
         right: -10px;
         top: 4px;
         height: 12px;
     }
-
+    .time .more {
+        top: 4px;
+    }
     .pack .tit {
         margin-bottom: 16px;
     }
     .pack .tit h2 {
         font-size: 45px;
     }
-    .pack .tit p {
+    .pack .tit ul li {
         margin: 29px 0 0 18px;
     }
-    .pack .tit p::before {
+    .pack .tit ul li::before {
         right: -10px;
         top: 4px;
         height: 12px;
@@ -763,6 +771,9 @@
     .pack .list ul li.on a .inner p {
         padding: 15px 0 0 7px;
     }
+    .pack .more {
+        top: 8px;
+    }
 
     .exp::before {
         height: 450px;
@@ -779,7 +790,7 @@
         margin: 10px 0 0 0;
     }
     .exp .txt .tab_txt {
-        margin: 26px 0 0 259px;
+        margin: 70px 0 0 259px;
     }
     .exp .txt .tab_txt button {
         padding: 10px 0;
@@ -788,6 +799,9 @@
         width: 55%;
         height: 585px;
         margin-bottom: 20px;
+    }
+    .exp .more {
+        top: 300px;
     }
 }
 
@@ -800,25 +814,30 @@
         padding-top: 40vh;
         margin-bottom: 0;
     }
-    .visual .reservation {
-        top: 70%;
-    }
-    .visual .reservation a h2 {
+    .visual .reservation .res h2 {
         padding: 16px 0 0 13px;
     }
     .rest::before {
         bottom: -60px;
         height: 400px;
     }
+    .rest .txt {
+        padding: 0 20px;
+        margin: 200px 0 0 0;
+    }
     .rest .txt .tit {
-        padding: 0 0 34px 0;
+        margin: 0 0 0 0;
+        padding: 0 0 30px 0;
     }
     .rest .tit h2 {
         font-size: 40px;
-        margin: 25% 0 0 -7px;
+        margin: 0 0 5px -7px;
     }
-    .rest .txt .more a {
-        bottom: -5vh;
+    .rest .txt .more {
+        left: 20px;
+    }
+    .rest .list .swiper ul li a .photo {
+        height: 500px;
     }
     .rest .list .swiper .rest-prev {
         width: 70px;
@@ -834,17 +853,15 @@
     .time .tit h2 {
         font-size: 40px;
     }
-    .time .tit p {
+    .time .tit ul li {
         margin: 28px 0 0 12px;
     }
-    .time .tit p::before {
+    .time .tit ul li::before {
         right: -7px;
         top: 3px;
         height: 11px;
     }
     .time .list ul li .photo img {
-        width: 100%;
-        height: 100%;
         object-fit: contain;
     }
     .time .list .paging {
@@ -865,13 +882,16 @@
     .pack .tit h2 {
         font-size: 40px;
     }
-    .pack .tit p {
+    .pack .tit ul li {
         margin: 28px 0 0 12px;
     }
-    .pack .tit p::before {
+    .pack .tit ul li::before {
         right: -7px;
         top: 3px;
         height: 11px;
+    }
+    .pack .more {
+        top: 4px;
     }
     .pack .list ul li a {
         display: block;
@@ -910,7 +930,7 @@
         margin: 6px 0 0 0;
     }
     .exp .txt .tab_txt {
-        margin: 11px 0 0 160px;
+        margin: 55px 0 0 216px;
         width: 200px;
     }
     .exp .txt .tab_txt button {
@@ -930,6 +950,12 @@
         content: "";
         background-color: var(--color-white);
     }
+    .exp .tab {
+        margin-bottom: 25px;
+    }
+    .exp .more {
+        top: 223px;
+    }
 }
 
 @media screen and (max-width: 1024px){
@@ -948,11 +974,10 @@
         display: block;
     }
     .visual .reservation {
-        top: 473px;
         width: 150px;
         height: 55px;
     }
-    .visual .reservation a {
+    .visual .reservation .res {
         display: none;
     }
     .visual .reservation button {
@@ -965,10 +990,9 @@
         font-size: 23px;
     }
     .rest {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column-reverse;
         margin-top: 70px;
+        display: block;
+        padding-bottom: 30px;
     }
     .rest::before {
         bottom: -55px;
@@ -976,8 +1000,8 @@
     }
     .rest .txt {
         width: 100%;
-        padding: 0 4%;
-        color: var(--color-white);
+        padding: 0 20px;
+        margin: 15px 0 0 0;
     }
     .rest .txt .tit {
         padding: 0 0 27px 0;
@@ -987,17 +1011,15 @@
         font-size: 35px;
         margin: 9px 0 0 -2px;
     }
+    .rest .txt .more {
+        left: auto;
+        right: 20px;
+        top: 0;
+        bottom: auto;
+    }
     .rest .txt .more a {
-        display: block;
-        font-size: 0;
-        line-height: 0;
         width: 35px;
         height: 35px;
-        position: relative;
-        left: 0;
-        top: -143px;
-        bottom: 0;
-        float: right;
     }
     .rest .txt .tab_txt {
         display: flex;
@@ -1014,6 +1036,9 @@
         left: 0;
         top: 0;
     }
+    .rest .list .swiper ul li a .photo {
+        height: 450px;
+    }
     .rest .list .swiper .rest-prev {
         display: none;
     }
@@ -1023,28 +1048,27 @@
     .time {
         margin-top: 110px;
     }
-    .time .wrapper {
-        margin: 0 0;
-    }
     .time .tit {
-        margin: 37px 20px 9px 20px;
+        margin: 37px 0 9px 0;
     }
     .time .tit h2 {
         font-size: 35px;
     }
-    .time .tit p {
+    .time .tit ul {
         display: none;
     }
-    .time .more a::before {
-        right: 20px;
-        top: -43px;
+    .time .more {
         width: 35px;
         height: 35px;
+        top: 7px;
     }
-    .time .more a:hover::before {
-        top: -43px;
-        width: 35px;
-        height: 35px;
+    .time .more a {
+        width: 100%;
+        height: 100%;
+    }
+    .time .more a::before {
+        right: 0;
+        top: 0;
     }
     .time .list .paging {
         bottom: 30px;
@@ -1073,18 +1097,13 @@
     .pack .tit h2 {
         font-size: 35px;
     }
-    .pack .tit p {
+    .pack .tit ul li {
         display: none;
     }
-    .pack .more a::before {
-        top: -43px;
+    .pack .more {
         width: 35px;
         height: 35px;
-    }
-    .pack .more a:hover::before {
-        top: -43px;
-        width: 35px;
-        height: 35px;
+        top: 7px;
     }
     .pack .list ul {
         display: flex;
@@ -1136,16 +1155,18 @@
         margin: 9px 0 0 0;
         color: var(--color-w80);
     }
-    .exp .txt .more a {
+    .exp .more {
         width: 35px;
         height: 35px;
+        left: auto;
         right: 0;
-        top: -64px;
-        float: right;
+        top: 162px;
+    }
+    .exp .more a {
     }
     .exp .txt .tab_txt {
         color: var(--color-w40);
-        margin: 0 0 0 0;
+        margin: 40px 0 0 0;
         width: 100%;
     }
     .exp .txt .tab_txt button {
@@ -1196,7 +1217,6 @@
     }
     .exp .tab ul li.on a .photo img {
         object-fit: cover;
-
     }
 }
 
@@ -1211,7 +1231,6 @@
         margin-bottom: 4px;
     }
     .visual .reservation {
-        top: 396px;
         width: 128px;
         height: 34px;
     }
@@ -1220,12 +1239,6 @@
     }
     .visual .reservation button span {
         font-size: 18px;
-    }
-    .rest {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column-reverse;
-        margin-top: 70px;
     }
     .rest::before {
         bottom: -18px;
@@ -1236,9 +1249,6 @@
     }
     .rest .tit h2 {
         font-size: 25px;
-    }
-    .rest .txt .more a {
-        top: -119px;
     }
     .rest .txt .tab_txt {
         margin-bottom: 16px;
@@ -1264,25 +1274,19 @@
     .time {
         margin-top: 88px;
     }
-    .time .wrapper {
-        margin: 0 0;
-    }
     .time .tit {
-        margin: 0 20px 9px 20px;
+        margin: 0 0 9px 0;
     }
     .time .tit h2 {
         font-size: 25px;
     }
-    .time .more a::before {
-        right: 20px;
-        top: -35px;
+    .time .more {
         width: 25px;
         height: 25px;
     }
-    .time .more a:hover::before {
-        top: -35px;
-        width: 25px;
-        height: 25px;
+    .time .more a::before {
+        right: 0;
+        top: 0;
     }
     .time .list .paging {
         bottom: 15px;
@@ -1299,15 +1303,10 @@
     .pack .tit h2 {
         font-size: 25px;
     }
-    .pack .more a::before {
-        top: -35px;
+    .pack .more {
         width: 25px;
         height: 25px;
-    }
-    .pack .more a:hover::before {
-        top: -35px;
-        width: 25px;
-        height: 25px;
+        top: 7px;
     }
     .pack .list ul {
         display: flex;
@@ -1328,6 +1327,9 @@
         font-size: 11px;
         padding: 0 0 0 0;
     }
+    .exp {
+        padding-bottom: 40px;
+    }
     .exp::before {
         height: 312px;
     }
@@ -1341,14 +1343,13 @@
     .exp .txt .tit p {
         margin: 7px 0 0 0;
     }
-    .exp .txt .more a {
+    .exp .more a {
         top: -41px;
     }
     .exp .txt .tab_txt {
         color: var(--color-w40);
-        margin: 0 0 0 0;
+        margin: 31px 0 0 0;
         width: 100%;
-        height: 31px;
     }
     .exp .txt .tab_txt button {
         padding: 5px 0;
@@ -1360,9 +1361,6 @@
         width: 100%;
         height: 149px;
         margin-bottom: 0;
-    }
-    .exp .swiper-wrapper {
-        height: 149px; 
     }
     .exp .tab ul li.on a .photo {
         height: 149px;

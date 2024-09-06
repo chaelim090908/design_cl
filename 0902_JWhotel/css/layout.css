@@ -3,7 +3,7 @@ header {
     left: 0;
     top: 0;
     width: 100%;
-    height: 100px;
+    height: 150px;
     z-index: 100;
     color: var(--color-white);
 }
@@ -23,6 +23,7 @@ header .tnb {
     justify-content: space-between;
     align-items: flex-end;
     position: relative;
+    height: 100px;
 }
 header .tnb::before {
     position: absolute;
@@ -33,15 +34,19 @@ header .tnb::before {
     background-color: var(--color-w20);
     content: "";
 }
+header .tnb .logo {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
 header .tnb .logo a {
     display: block;
-    width: 133.33px;
+    width: 133px;
     height: 100px;
     font-size: 0;
     line-height: 0;
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
 }
 header .tnb .logo a::before {
     position: absolute;
@@ -354,8 +359,17 @@ footer .copy {
 }
 
 @media screen and (max-width: 1024px){
+    header .tnb {
+        height: 80px;
+    }
+    header .tnb .logo {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translateX(0);
+    }
     header .tnb .logo a {
-        left: 50%;
+        left: 0;
     }
     header .tnb .left,
     header .tnb .right {

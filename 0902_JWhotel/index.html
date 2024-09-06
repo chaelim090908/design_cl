@@ -18,7 +18,7 @@
 </head>
 <body>
     <div id="wrap">
-        <header class="">    
+        <header>    
             <div class="wrapper">
                 <div class="tnb">
                     <div class="left">
@@ -88,43 +88,31 @@
                     </div>
                 </div>
                 <div class="reservation">
-                    <a class="reservation-date checkin">
-                        <h2>Check-in</h2>
-                        <strong>날짜선택</strong>
-                    </a>
-                    <a class="reservation-date checkout">
-                        <h2>Check-out</h2>
-                        <strong>날짜선택</strong>
-                    </a>
-                    <a class="reservation-select select-medium room">
-                        <h2>Room</h2>
-                        <strong>게스트룸 1개</strong>
-                    </a>
-                    <a class="reservation-select select-medium">
-                        <h2>Children</h2>
-                        <strong>0명</strong>
-                    </a>
-                    <a class="reservation-select select-medium">
-                        <h2>Adult</h2>
-                        <strong>0명</strong>
-                    </a>
+                    <h2>예약하기</h2>
+                    <div class="reservation-date res checkin">
+                        <strong>Check-in</strong>
+                        <span>날짜선택</span>
+                    </div>
+                    <div class="reservation-date res checkout">
+                        <strong>Check-out</strong>
+                        <span>날짜선택</span>
+                    </div>
+                    <div class="reservation-select res select-medium room">
+                        <strong>Room</strong>
+                        <span>게스트룸 1개</span>
+                    </div>
+                    <div class="reservation-select res select-medium">
+                        <strong>Children</strong>
+                        <span>0명</span>
+                    </div>
+                    <div class="reservation-select res select-medium">
+                        <strong>Adult</strong>
+                        <span>0명</span>
+                    </div>
                     <button class="reservation-button"><span>예약하기</span></button>
                 </div>
             </section>
             <section class="rest">
-                <div class="txt">
-                    <div class="tit">
-                        <h2>The best rest</h2>
-                        <p>최고의 휴식을 선사하겠습니다.</p>
-                    </div>
-                    <div class="tab_txt">
-                        <button class="tab_menu guest on"><span class="guest on">게스트 룸</span></button>
-                        <button class="tab_menu lounge"><span>이그제큐티브 라운지 이용</span></button>
-                        <button class="tab_menu biz"><span>비즈니스 스위트 킹</span></button>
-                    </div>
-                    <strong>※ 1킹베드룸은 장애인 고객용 객실입니다.</strong>
-                    <div class="more"><a href="#n">전체보기</a></div>
-                </div>
                 <div class="list">
                     <div class="swiper">
                         <!-- jquary에서 li에 on클래스 추가 -->
@@ -154,16 +142,30 @@
                         <button class="rest-next">다음</button>
                     </div> <!--swiper-->
                 </div>
+                <div class="txt">
+                    <div class="tit">
+                        <h2>The best rest</h2>
+                        <p>최고의 휴식을 선사하겠습니다.</p>
+                    </div>
+                    <div class="tab_txt">
+                        <button class="tab_menu guest on"><span class="guest on">게스트 룸</span></button>
+                        <button class="tab_menu lounge"><span>이그제큐티브 라운지 이용</span></button>
+                        <button class="tab_menu biz"><span>비즈니스 스위트 킹</span></button>
+                    </div>
+                    <strong>※ 1킹베드룸은 장애인 고객용 객실입니다.</strong>
+                    <div class="more"><a href="#n">전체보기</a></div>
+                </div>
             </section>
             <section class="time">
                 <div class="wrapper">
                     <div class="tit">
                         <h2>At a special time</h2>
-                        <p>Meeting hall</p>
-                        <p>Wedding hall</p>
-                        <p>Dining restaurant</p>
+                        <ul>
+                            <li>Meeting hall</li>
+                            <li>Wedding hall</li>
+                            <li>Dining restaurant</li>
+                        </ul>
                     </div>
-                    <div class="more"><a href="#n">전체보기</a></div>
                     <div class="list">
                         <div class="swiper">
                             <ul class="swiper-wrapper">
@@ -180,17 +182,19 @@
                         </div>
                         <div class="paging"></div>
                     </div>
+                    <div class="more"><a href="#n">전체보기</a></div>
                 </div>
             </section>
             <section class="pack">
                 <div class="wrapper">
                     <div class="tit">
                             <h2>Promotion · Package</h2>
-                            <p>썸머 블리스 패키지</p>
-                            <p>메리어트 본보이 전용 특별 요금</p>
-                            <p>어텀 블리스 피크닉 패키지</p>
+                            <ul>
+                                <li>썸머 블리스 패키지</li>
+                                <li>메리어트 본보이 전용 특별 요금</li>
+                                <li>어텀 블리스 피크닉 패키지</li>
+                            </ul>
                     </div>
-                    <div class="more"><a href="#n">전체보기</a></div>
                     <div class="list">
                         <ul>
                             <!-- 마우스를 오버한 li에는 on 클래스 추가
@@ -221,6 +225,7 @@
                             </li>
                         </ul>
                     </div>
+                    <div class="more"><a href="#n">전체보기</a></div>
                 </div>
             </section>
             <section class="exp">
@@ -230,7 +235,6 @@
                             <h2>Experience</h2>
                             <p>지친 일상에 보양이 되겠습니다.</p>
                         </div>
-                        <div class="more"><a href="#n">전체보기</a></div>
                         <div class="tab_txt">
                             <button class="tab_menu.on spa on"><span>스파</span></button>
                             <button class="tab_menu fitn"><span>피트니스</span></button>
@@ -259,6 +263,7 @@
                             </ul>
                         </div> <!--swiper-->
                     </div>
+                    <div class="more"><a href="#n">전체보기</a></div>
                 </div>
             </section>
         </main>
