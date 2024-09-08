@@ -1367,6 +1367,8 @@
     }
     .exp .tab ul li.on a .photo img {
         object-fit: cover;
-
+    }
+    .exp .swiper-wrapper {
+        height: 149px;
     }
 }
