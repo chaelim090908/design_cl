@@ -60,19 +60,19 @@ $(document).ready(function(){
 	/* .exp .txt .tab_txt button (class : spa, fitn, pool) click 시 li에 on클래스 추가
 	   .exp .tab ul li class가 on으로 바뀜
 	*/
-    $('.exp .txt .tab_txt button.spa').on('mouseenter, click', function(){
+    $('.exp .txt .tab_txt button.spa').on('mouseenter click', function(){
         $('.exp .txt .tab_txt button').removeClass('on')
         $(this).addClass('on')
 		$('.exp .tab ul li').removeClass('on')
 		$('.exp .tab ul li.spa').addClass('on')
     })
-	$('.exp .txt .tab_txt button.fitn').on('mouseenter, click', function(){
+	$('.exp .txt .tab_txt button.fitn').on('mouseenter click', function(){
         $('.exp .txt .tab_txt button').removeClass('on')
         $(this).addClass('on')
 		$('.exp .tab ul li').removeClass('on')
 		$('.exp .tab ul li.fitn').addClass('on')
     })
-	$('.exp .txt .tab_txt button.pool').on('mouseenter, click', function(){
+	$('.exp .txt .tab_txt button.pool').on('mouseenter click', function(){
         $('.exp .txt .tab_txt button').removeClass('on')
         $(this).addClass('on')
 		$('.exp .tab ul li').removeClass('on')
