@@ -3,6 +3,8 @@
 @import url(common.css);
 @import url(layout.css);
 
+/* .biz button :: prev, next 어떻게 하면 되는지 */
+
 .biz::before {
     position: absolute;
     left: 0;
@@ -13,9 +15,12 @@
     background: url(../images/main/visual_bg.png) no-repeat center center / cover;
 }
 .biz .list {
-    width: 90vw;
+    width: 100%;
     margin: 100px auto 0 auto;
     position: relative;
+}
+.biz .swiper {
+    width: 90vw;
 }
 .biz .swiper ul {
     height:747px;
@@ -86,34 +91,48 @@
 }
 .biz .list button.biz-prev,
 .biz .list button.biz-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 56px;
+    z-index: 5;
+    content: "";
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
     font-size: 0;
     line-height: 0;
 }
-.biz .list button.biz-prev::before {
-    position: absolute;
+.biz .list button.biz-prev {
     left: -3.5%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 28px;
-    height: 56px;
-    z-index: 5;
-    content: "";
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
     background-image: url("data:image/svg+xml,%3Csvg width='30' height='58' viewBox='0 0 30 58' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M29 1L1 29' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M29 57L1 29' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 }
-.biz .list button.biz-next::before {
-    position: absolute;
+.biz .list button.biz-next {
     right: -3.5%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 28px;
-    height: 56px;
-    z-index: 5;
-    content: "";
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
     background-image: url("data:image/svg+xml,%3Csvg width='30' height='58' viewBox='0 0 30 58' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L29 29' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M1 57L29 29' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+
+
+
+
+
+.ass .tit {
+    margin: 175px 0 42px 0;
+}
+.ass .tit h2 {
+    font-family: "Pre_Bold";
+    font-size: var(--pc-tit);
+    margin-bottom: 5px;
+}
+.ass .tit p {
+    color: var(--txt-main80);
+}
+.ass .list ul {
+    display: flex;
+    width: 80vw;
+}
+.ass .list ul li {
+    height: 397px;
+    width: 25%;
 }
