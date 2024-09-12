@@ -39,3 +39,5 @@ legend {
 fieldset {
     border: 0;
 }
+
+video::-webkit-media-controls { display:none !important;}

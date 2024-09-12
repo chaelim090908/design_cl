@@ -1,3 +1,125 @@
 header {
+    position: absolute;
+    left: 5vw;
+    top: 0;
+    width: 90vw;
+    height: 100px;
+    content: "";
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-white);
+}
+header .logo {
+    width: 180px;
+    height: 40px;
+    position: relative;
+}
+header .logo a {
+    display: block;
+    width: 180px;
+    height: 40px;
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+header .logo a::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: url(../images/common/logo_center.png) no-repeat center center / contain;
+}
+header .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+header .right {
+    display: flex;
+    align-items: center;
+    font-family: "Pre_Bold";
+    height: 100%;
+}
+header .right .gnb .gnb_open,
+header .right .gnb .gnb_close {
     display: none;
+}
+header .right .gnb ul.depth1 {
+    display: flex;
+    font-size: 1.25rem;
+}
+header .right .gnb ul.depth1 > li > a {
+    display: block;
+    line-height: 100px;
+    padding: 0 50px;
+}
+
+
+header .right .gnb ul.depth1 > li > ul.depth2 {
+    display: none;
+}
+
+header .right .tnb {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    font-size: 1.063rem;
+}
+header .right .tnb a {
+    display: block;
+}
+header .right .tnb a.lang {
+    position: relative;
+}
+header .right .tnb a.lang::before {
+    position: absolute;
+    right: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 12.6L15.9 8.69999C16.0833 8.51665 16.3167 8.42499 16.6 8.42499C16.8833 8.42499 17.1167 8.51665 17.3 8.69999C17.4833 8.88332 17.575 9.11665 17.575 9.39999C17.575 9.68332 17.4833 9.91665 17.3 10.1L12.7 14.7C12.6 14.8 12.4917 14.8708 12.375 14.9125C12.2583 14.9542 12.1333 14.975 12 14.975C11.8667 14.975 11.7417 14.9542 11.625 14.9125C11.5083 14.8708 11.4 14.8 11.3 14.7L6.7 10.1C6.51666 9.91665 6.425 9.68332 6.425 9.39999C6.425 9.11665 6.51666 8.88332 6.7 8.69999C6.88333 8.51665 7.11666 8.42499 7.4 8.42499C7.68333 8.42499 7.91666 8.51665 8.1 8.69999L12 12.6Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+header .right .tnb a.pla {
+    margin-left: 50px;
+    padding: 5px 16px;
+    border-radius: 20px;
+    background-color: var(--color-white);
+    color: var(--txt-main);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    margin-top: 1000px;
 }

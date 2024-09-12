@@ -3,3 +3,117 @@
 @import url(common.css);
 @import url(layout.css);
 
+.biz::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 590px;
+    content: "";
+    background: url(../images/main/visual_bg.png) no-repeat center center / cover;
+}
+.biz .list {
+    width: 90vw;
+    margin: 100px auto 0 auto;
+    position: relative;
+}
+.biz .swiper ul {
+    height:747px;
+    overflow: hidden;
+}
+.biz .swiper ul li {
+    width:100%;
+    height:100%;
+}
+.biz .list .paging {
+    position: absolute;
+    left: 172px;
+    bottom: 182px;
+    width: 346px;
+    height: 2px;
+    content: "";
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+}
+.biz .list .swiper-pagination-bullet {
+    width: 170px;
+    height: 2px;
+    opacity: 1;
+    content: "";
+    background-color: var(--color-w20);
+    position: relative;
+}
+.biz .list .paging .swiper-pagination-bullet-active::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 170px;
+    height: 2px;
+    background-color: #fff;
+    content: "";
+    animation-name: biz_count;
+    animation-duration: 13s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+@keyframes biz_count {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+.biz .swiper ul li video {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.biz ul li.popup2 {
+    background: url(../images/main/visual_main.png) no-repeat center center / cover;
+}
+.biz .swiper ul li .tit {
+    padding: 394px 0 0 172px;
+    color: var(--color-w80);
+}
+.biz .swiper ul li .tit h2 {
+    font-family: "Pre_Bold";
+    font-size: 3.125rem;
+    color: var(--color-white);
+    margin-bottom: 11px;
+}
+.biz .swiper ul li .tit p {
+    font-size: 1.469rem;
+    margin-left: 5px;
+}
+.biz .list button.biz-prev,
+.biz .list button.biz-next {
+    font-size: 0;
+    line-height: 0;
+}
+.biz .list button.biz-prev::before {
+    position: absolute;
+    left: -3.5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 56px;
+    z-index: 5;
+    content: "";
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='58' viewBox='0 0 30 58' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M29 1L1 29' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M29 57L1 29' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+.biz .list button.biz-next::before {
+    position: absolute;
+    right: -3.5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 56px;
+    z-index: 5;
+    content: "";
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='58' viewBox='0 0 30 58' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L29 29' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M1 57L29 29' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}

@@ -12,7 +12,7 @@
 }
 @font-face {
     font-family: 'noto';
-    font-weight: 300;
+    font-weight: 400;
     font-display: swap;
     src: local('NotoSans-Regular'), url(../fonts/NotoSans-Regular.woff2) format('woff2'), url(../fonts/NotoSans-Regular.woff) format('woff');
 }
