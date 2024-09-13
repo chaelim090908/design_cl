@@ -21,4 +21,12 @@ $(document).ready(function(){
 		},
 	
 	});
+
+	$(window).on('scroll mousemove', function(e){  /* html cursor가 마우스 포인터를 따라다니게 하는 값 */
+		$('.cursor').css('left', e.pageX + 'px');
+		$('.cursor').css('top', e.pageY + 'px');
+	});
+	$('.res .list ul li a .photo').hover(function(){
+		$('.cursor').toggleClass('on');
+	});
 })

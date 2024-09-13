@@ -63,6 +63,7 @@ html, body {
     40px - 2.5rem
     35px - 2.188rem
     30px - 1.875rem
+    24px - 1.5rem
     23.5px - 1.469rem
     22px - 1.375rem
     20px - 1.25rem
@@ -83,6 +84,7 @@ html, body {
     --color-main : #4863EA;
     --txt-main : #0F1012;
     --txt-main80 : rgba(15,16,18,0.8);
+    --txt-main60 : rgba(15,16,18,0.6);
     --color-white : #fff;
     --color-w80 : rgba(255,255,255,0.8);
     --color-w60 : rgba(255,255,255,0.6);
