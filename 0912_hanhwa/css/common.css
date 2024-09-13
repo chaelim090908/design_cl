@@ -9,8 +9,7 @@ html, body {
     word-wrap: break-word;
 }
 #wrap {
-    min-width: 1300px;
-    overflow: hidden;
+    min-width: 1260px;
 }
 .wrapper {
     width: 1260px; 
@@ -89,6 +88,7 @@ html, body {
     --color-w80 : rgba(255,255,255,0.8);
     --color-w60 : rgba(255,255,255,0.6);
     --color-w50 : rgba(255,255,255,0.5);
+    --color-w40 : rgba(255,255,255,0.4);
     --color-w20 : rgba(255,255,255,0.2);
     --pc-tit : 2.5rem;
     --mo-tit : 1.429rem;

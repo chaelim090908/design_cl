@@ -9,14 +9,20 @@
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>한화생물연구센터</title>
 </head>
 <body>
+    <div class="skipnav">
+        <a href="#skip_contents">본문 바로가기</a>
+        <a href="#skip_menu">대메뉴 바로가기</a>
+    </div>
     <div id="wrap">
         <header>
             <h1 class="logo"><a href="#n">한화생물연구센터</a></h1>
             <div class="right">
-                <nav class="gnb">
+                <nav class="gnb" id="skip_menu">
                     <!--
                         gnb에 마우스오버하면 open class 추가 > depth2 나옴
                     -->
@@ -98,11 +104,11 @@
             <div class="ass">
                 <div class="wrapper">
                     <div class="tit">
-                        <h2>연구과제</h2>
-                        <p>전시생물의 복지와 보전을 위한 다양한 연구를 합니다.</p>
+                        <h2 data-aos="fade-up">연구과제</h2>
+                        <p data-aos="fade-up" data-aos-delay="300">전시생물의 복지와 보전을 위한 다양한 연구를 합니다.</p>
                     </div>
                 </div>
-                <div class="list">
+                <div class="list" data-aos="fade-up" data-aos-delay="1000">
                     <ul>
                         <li class="stu">
                             <a href="#n">
@@ -138,15 +144,15 @@
             <div class="res">
                 <div class="wrapper">
                     <div class="subject">
-                        <h2>구조 · 치료활동</h2>
-                        <p>아쿠아플라넷은 해양수산부로부터
+                        <h2 data-aos="fade-up">구조 · 치료활동</h2>
+                        <p data-aos="fade-up" data-aos-delay="300">아쿠아플라넷은 해양수산부로부터
                             해양동물전문구조·치료기관으로
                             지정되어 활동 중입니다.</p>
-                        <a href="#n">전체 구조 실적보기</a>
+                        <a href="#n" data-aos="fade-up" data-aos-delay="500">전체 구조 실적보기</a>
                     </div>
                     <div class="list">
                         <ul>
-                            <li>
+                            <li data-aos="fade-up" data-aos-delay="1000">
                                 <a href="#n">
                                     <div class="sub">
                                         <h3>뱀머리 돌고래 외상 응급조치 후 이송 치료</h3>
@@ -177,7 +183,7 @@
                                     <div class="photo"><img src="images/main/res01.png" alt="뱀머리돌고래 사진"></div>
                                 </a>
                             </li>
-                            <li>
+                            <li data-aos="fade-up" data-aos-delay="1000">
                                 <a href="#n">
                                     <div class="sub">
                                         <h3>3일간 그물 안에 있던 잔점박이물범 신체검사 진행</h3>
@@ -211,10 +217,12 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="photo"><img src="images/main/res02.png" alt="잔점박이물범 사진"></div>
+                                    <div class="photo">
+                                            <img src="images/main/res02.png" alt="잔점박이물범 사진">
+                                    </div>
                                 </a>
                             </li>
-                            <li>
+                            <li data-aos="fade-up" data-aos-delay="1000">
                                 <a href="#n">
                                     <div class="sub">
                                         <h3>다리에 이물이 있는 붉은바다거북 소독치료</h3>
@@ -245,7 +253,7 @@
                                     <div class="photo"><img src="images/main/res03.png" alt="붉은바다거북 사진"></div>
                                 </a>
                             </li>
-                            <li>
+                            <li data-aos="fade-up" data-aos-delay="1000">
                                 <a href="#n">
                                     <div class="sub">
                                         <h3>고래상어 그물망에 긁힌 일부 상처 치료 후 즉시 방류</h3>
@@ -276,7 +284,7 @@
                                     <div class="photo"><img src="images/main/res04.png" alt="고래상어 사진"></div>
                                 </a>
                             </li>
-                            <li>
+                            <li data-aos="fade-up" data-aos-delay="1000">
                                 <a href="#n">
                                     <div class="sub">
                                         <h3>정치망 내에 들어온 남방큰돌고래 다시 바다로</h3>
@@ -312,9 +320,98 @@
                 </div>
                 <div class="cursor"> more<br>view </div>
             </div>
-            <div class="ani"></div>
+            <div class="ani">
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2 data-aos="fade-up">대상동물</h2>
+                        <p data-aos="fade-up" data-aos-delay="300">아쿠아플라넷 여수, 제주, 일산, 63은 전시만이 아닌 생물의 복지와 보존을 위하여 노력하고 있습니다.</p>
+                    </div>
+                    <div class="list">
+                        <ul data-aos="fade-up" data-aos-delay="500">
+                            <li>
+                                <i class="whale">고래</i>
+                                <strong>고래류</strong>
+                            </li>
+                            <li>
+                                <i class="pin">기각류</i>
+                                <strong>기각류</strong>
+                            </li>
+                            <li>
+                                <i class="otter">수달</i>
+                                <strong>수달</strong>
+                            </li>
+                            <li>
+                                <i class="penguin">펭귄</i>
+                                <strong>펭귄류</strong>
+                            </li>
+                            <li>
+                                <i class="turtle">바다거북</i>
+                                <strong>바다거북</strong>
+                            </li>
+                            <li>
+                                <i class="horses">해마와 해룡</i>
+                                <strong>해마와 해룡</strong>
+                            </li>
+                            <li>
+                                <i class="shark">상어</i>
+                                <strong>상어류</strong>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </main>
-        <footer></footer>
+        <footer>
+            <div class="wrapper">
+                <!-- family site 클릭하면 family에 open 클래스 추가 -->
+                <div class="family">
+                    <button class="family_open">FAMILY SITE</button>
+                    <ul class="">
+                        <li>
+                            <a href="#n" target="_blank" title="open new window">아쿠아플라넷</a>
+                        </li>
+                        <li>
+                            <a href="#n" target="_blank" title="open new window">한화그룹</a>
+                        </li>
+                        <li>
+                            <a href="#n" target="_blank" title="open new window">한화호텔&리조트㈜</a>
+                        </li>
+                        <li>
+                            <a href="#n" target="_blank" title="open new window">한화리조트</a>
+                        </li>
+                        <li>
+                            <a href="#n" target="_blank" title="open new window">플라자CC</a>
+                        </li>
+                    </ul>
+                    <button class="family_close">FAMILY SITE</button>
+                </div>
+                <div class="f_logo">
+                    <img src="images/common/logo_center.png" alt="로고 이미지">
+                </div>
+                <div class="f_nav">
+                    <ul>
+                        <li><a href="#n">이메일무단수집거부</a></li>
+                        <li><a href="#n">개인정보처리방침</a></li>
+                        <li><a href="#n">영상정보처리기기운영·처리방침</a></li>
+                        <li><a href="#n">이용약관</a></li>
+                    </ul>
+                </div>
+                <div class="f_info">
+                    <address>경기도 수원시 영통구 광교호수공원로 300 갤러리아 광교 파사쥬</address>
+                    <address>경기도 고양시 일산서구 한류월드로 282 (대화동 2606-1)</address>
+                    <address>전라남도 여수시 오동도로 61-11</address>
+                    <address>제주특별자치도 서귀포시 성산읍 섭지코지로 95 서울특별시 영등포구 63로 36, 리버타워</address>
+                </div>
+                <div class="copy">ⓒ marine biology research center. All Rights Reserved.</div>
+            </div>
+        </footer>
     </div>
+    <script>
+        AOS.init({
+        offset: 200,
+        duration: 500,
+        easing: 'ease',
+        });
+    </script>
 </body>
 </html>
