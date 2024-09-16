@@ -304,8 +304,14 @@
     justify-content: space-between;
     height: 404px;
 }
+.res .list ul li:nth-child(odd) a .sub {
+    margin-right: 24px;
+}
 .res .list ul li:nth-child(even) a {
     flex-direction: row-reverse;
+}
+.res .list ul li:nth-child(even) a .sub {
+    margin-left: 24px;
 }
 .res .list ul li a .sub {
     padding: 30px 30px 0 30px;
@@ -362,23 +368,24 @@
 	z-index: 1000;
 	transform: translate(0, 0);
 	display:none;
-}
-.cursor.on {
-	display: block;
-    cursor: none;
-    width: 116px;
-    height: 116px;
-    background-color: var(--color-w50);
-    backdrop-filter: blur(5px);
-    color: var(--color-main);
     font-family: "Pre_med";
     line-height: 1.2;
     letter-spacing: -0.03em;
     text-align: center;
     font-size: 1.5rem;
+    color: var(--color-main);
+    border-radius: 50%;
+}
+.cursor.on {
+    cursor: none;
+	display: block;
+    width: 116px;
+    height: 116px;
+    background-color: var(--color-w50);
+    backdrop-filter: blur(5px);
     padding: 29px 0;
     border: 1px solid var(--color-white);
-    border-radius: 50%;
+    
 }
 
 .ani {
