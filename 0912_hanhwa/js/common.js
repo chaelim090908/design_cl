@@ -33,11 +33,11 @@ $(document).ready(function(){
         2. footer .family ul 을 닫음
     */
         $('footer .family .family_open').on('click', function(){
-            $('footer .family_site').addClass('open')
-            $('footer .family_site ul').slideDown()
+            $('footer .family').addClass('open')
+            $('footer .family ul').slideDown()
         })
-        $('footer .family_site .family_close').on('click', function(){
-            $('footer .family_site').removeClass('open')
-            $('footer .family_site ul').slideUp()
+        $('footer .family_close').on('click', function(){
+            $('footer .family').removeClass('open')
+            $('footer .family ul').slideUp()
         })
 })
