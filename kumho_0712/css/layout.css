@@ -371,7 +371,7 @@ header .logo a::before {
     }
 }
 @media screen and (max-width:1024px){
-    /* 11024px 이하  - 모바일 버전 */
+    /* 1024px 이하  - 모바일 버전 */
     header .gnb .gnb_open {
         position: absolute; /* header를 기준으로 정렬 */
         right: 0;
