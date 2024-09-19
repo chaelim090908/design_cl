@@ -73,7 +73,7 @@ header .logo a::before {
 
     header .gnb .gnb_wrap .depth1 > li {
         width: 156px;
-        position: relative; /* .depth2 wjdfufdml rlwns */
+        position: relative; /* .depth2 정렬의 기준 */
     }
     header .gnb .gnb_wrap .depth1 > li > a {
         display: block; /* li와 사이즈 동일 */

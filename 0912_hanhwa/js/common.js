@@ -4,24 +4,37 @@ $(document).ready(function(){
 
     function resize_chk(){
         win_w = $(window).width()
-            if(win_w > 1024){
+            if(win_w > 1199){
                 pc_mobile = 'pc'
             }else{
                 pc_mobile = 'mobile'
             }
     }
-
     resize_chk()
     $(window).resize(function(){
         resize_chk()
     })
 
+    $('header').on('mouseenter focusin', function(){
+        if(pc_mobile == 'pc'){
+            $('header').addClass('menu_over')
+            $('header .right .gnb ul.depth1 > li').removeClass('on')
+            $(this).addClass('on')
+        }
+    })
 
-
-
-
-
-
+    $('header').on('mouseleave', function(){
+        if(pc_mobile == 'pc'){
+            $('header').removeClass('menu_over')
+            $('header .right .gnb ul.depth1 > li').removeClass('on')
+        }
+    })
+    $('header .gnb .gnb_wrap .depth1 > li:last-child > ul.depth2 > li:last-child a').on('focusout', function(){
+        if(pc_mobile == 'pc'){
+            $('header').removeClass('menu_over')
+            $('header .gnb .gnb_wrap .depth1 > li').removeClass('on')
+        }
+    })
 
     /*
         footer .family .family_open을 클릭하면
