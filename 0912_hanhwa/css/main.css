@@ -1111,9 +1111,6 @@
     .ass .list ul li a h3 {
         padding-top: 10px;
     }
-
-
-
     .res {
         margin-top: 70px;
         padding-bottom: 72px;
@@ -1148,7 +1145,7 @@
     }
     .res .list ul li a .sub .detail ul li {
         margin-bottom: 5px;
-        font-size: 0.714rem;
+        font-size: 0.821rem;
     }
     .res .list ul li a .sub .detail ul li span {
         display: none;
@@ -1156,64 +1153,55 @@
     .res .list ul li a .sub .detail ul li.checkup {
         display: none;
     }
-
-
-
-
-
     .ani {
-        height: 440px;
+        height: 400px;
     }
     .ani .tit {
-        padding: 55px 0 30px 0;
+        padding: 28px 0 25px 0;
     }
     .ani .tit h2 {
-        font-size: 1.7rem;
-        margin-bottom: 0;
-    }
-    .ani .tit p {
-        display: none;
+        font-size: 1.429rem;
     }
     .ani .list ul {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 16px;
+        gap: 13px;
     }
     .ani .list ul li i {
-        width: 100px;
-        height: 100px;
-        margin: 0 0 16px 0;
+        width: 70px;
+        height: 70px;
+        margin: 0 0 10px 0;
     }
     .ani .list ul li i.whale::before {
-        width: 84px;
-        height: 84px;
+        width: 54px;
+        height: 54px;
     }
     .ani .list ul li i.pin::before {
-        width: 64px;
-        height: 64px;
+        width: 54px;
+        height: 54px;
     }
     .ani .list ul li i.otter::before {
-        width: 74px;
-        height: 75px;
+        width: 54px;
+        height: 55px;
     }
     .ani .list ul li i.penguin::before {
-        width: 74px;
-        height: 75px;
+        width: 54px;
+        height: 55px;
     }
     .ani .list ul li i.turtle::before {
-        width: 74px;
-        height: 74px;
+        width: 54px;
+        height: 54px;
     }
     .ani .list ul li i.horses::before {
-        width: 74px;
-        height: 74px;
+        width: 54px;
+        height: 54px;
     }
     .ani .list ul li i.shark::before {
-        width: 75px;
-        height: 74px;
+        width: 55px;
+        height: 54px;
     }
     .ani .list ul li strong {
-        font-size: 1.2rem;
+        font-size: 0.929rem;
     }
 }
