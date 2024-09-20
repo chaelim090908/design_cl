@@ -24,21 +24,18 @@ header {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
+    width: 90%;
     height: 100px;
-    content: "";
     z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: var(--color-white);
+    margin: 0 5%;
 }
 header .logo {
     width: 180px;
     height: 40px;
-    position: relative;
-    left: 5vw;
-    top: 0;
 }
 header .logo a {
     display: block;
@@ -46,9 +43,7 @@ header .logo a {
     height: 40px;
     font-size: 0;
     line-height: 0;
-    position: absolute;
-    left: 0;
-    top: 0;
+    position: relative;
 }
 header .logo a::after {
     position: absolute;
@@ -68,9 +63,6 @@ header .right {
     display: flex;
     align-items: center;
     font-family: "Pre_Bold";
-    height: 100%;
-    position: relative;
-    right: 5vw;
 }
 header .right .gnb .gnb_open,
 header .right .gnb .gnb_close {
@@ -150,11 +142,19 @@ header .right .tnb a.pla {
     background-color: var(--color-white);
     color: var(--txt-main);
 }
+header.menu_over .right .tnb a.pla {
+    margin-left: 50px;
+    padding: 5px 16px;
+    border-radius: 20px;
+    background-color: var(--color-main);
+    color: var(--color-white);
+    z-index: 1;
+}
 header.menu_over::before {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
+    width: 110%;
     height: 450px;
     content: "";
     display: flex;
@@ -164,7 +164,7 @@ header.menu_over::before {
 }
 header.menu_over::after {
     position: absolute;
-    left: 0;
+    left: -5%;
     top: 0;
     width: 37vw;
     height: 450px;
@@ -190,14 +190,6 @@ header .right .gnb ul.depth1 > li.on {
 }
 header.menu_over .right .tnb a.lang::before {
     background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 12.6L15.9 8.69999C16.0833 8.51665 16.3166 8.42499 16.6 8.42499C16.8833 8.42499 17.1166 8.51665 17.3 8.69999C17.4833 8.88332 17.575 9.11665 17.575 9.39999C17.575 9.68332 17.4833 9.91665 17.3 10.1L12.7 14.7C12.6 14.8 12.4916 14.8708 12.375 14.9125C12.2583 14.9542 12.1333 14.975 12 14.975C11.8666 14.975 11.7416 14.9542 11.625 14.9125C11.5083 14.8708 11.4 14.8 11.3 14.7L6.69995 10.1C6.51662 9.91665 6.42495 9.68332 6.42495 9.39999C6.42495 9.11665 6.51662 8.88332 6.69995 8.69999C6.88328 8.51665 7.11662 8.42499 7.39995 8.42499C7.68328 8.42499 7.91662 8.51665 8.09995 8.69999L12 12.6Z' fill='%230F1012'/%3E%3C/svg%3E%0A");
-}
-header.menu_over .right .tnb a.pla {
-    border: 1px solid var(--color-main);
-    color: var(--color-main);
-}
-header.menu_over .right .tnb a.pla:hover {
-    background-color: var(--color-main);
-    color: var(--color-white);
 }
 header.menu_over .right .tnb a.lang:hover {
     color: var(--color-main);
@@ -379,12 +371,13 @@ footer .copy {
 }
 @media screen and (max-width:1200px){
     header {
+        width: 98%;
         height: 45px;
+        margin: 0 0 0 2%;
     }
     header .logo {
         width: 120px;
         height: 26px;
-        left: 2vw;
     }
     header .logo a {
         width: 120px;
@@ -394,8 +387,8 @@ footer .copy {
         display: none;
     }
     header .right {
-        right: 0;
         width: 100%;
+        margin-right: 2vw;
     }
     header .right .gnb .gnb_open {
         display: block;
@@ -644,9 +637,6 @@ footer .copy {
     }
 }
 @media screen and (max-width:768px){
-    header .logo {
-        left: 3vw;
-    }
     footer .wrapper {
         position: relative;
     }
