@@ -1169,37 +1169,37 @@
         gap: 13px;
     }
     .ani .list ul li i {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
         margin: 0 0 10px 0;
     }
     .ani .list ul li i.whale::before {
-        width: 54px;
-        height: 54px;
+        width: 49px;
+        height: 49px;
     }
     .ani .list ul li i.pin::before {
-        width: 54px;
-        height: 54px;
+        width: 49px;
+        height: 49px;
     }
     .ani .list ul li i.otter::before {
-        width: 54px;
-        height: 55px;
+        width: 49px;
+        height: 50px;
     }
     .ani .list ul li i.penguin::before {
-        width: 54px;
-        height: 55px;
+        width: 49px;
+        height: 50px;
     }
     .ani .list ul li i.turtle::before {
-        width: 54px;
-        height: 54px;
+        width: 49px;
+        height: 49px;
     }
     .ani .list ul li i.horses::before {
-        width: 54px;
-        height: 54px;
+        width: 49px;
+        height: 49px;
     }
     .ani .list ul li i.shark::before {
-        width: 55px;
-        height: 54px;
+        width: 50px;
+        height: 49px;
     }
     .ani .list ul li strong {
         font-size: 0.929rem;

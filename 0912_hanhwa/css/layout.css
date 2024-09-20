@@ -657,7 +657,7 @@ footer .copy {
         transform: translateX(50%);
     }
     footer .family button {
-        padding: 5px 54px 5px 15px;
+        padding: 5px 52px 5px 15px;
     }
     footer .family button::before {
         position: absolute;
