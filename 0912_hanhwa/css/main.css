@@ -86,8 +86,9 @@
     margin-bottom: 11px;
 }
 .biz .swiper ul li .tit p {
+    font-family: "Pre_med";
     font-size: 1.469rem;
-    margin-left: 5px;
+    margin-left: 9px;
 }
 .biz .list button.biz-prev,
 .biz .list button.biz-next {
@@ -548,7 +549,7 @@
     .ass .list ul li a::before {
         position: absolute;
         left: 50%;
-        bottom: 73px;
+        bottom: 62px;
         transform: translateX(-50%);
         width: 48px;
         height: 48px;
@@ -690,120 +691,223 @@
         font-size: 1.25rem;
     }
 }
-
-
-
-
-
-
-
 @media screen and (max-width:1300px){
     .biz::before {
-        height: 540px;
-    }
-    .biz .swiper {
-        width: 90vw;
+        height: 400px;
     }
     .biz .swiper ul {
-        height:600px;
+        height:480px;
     }
     .biz .swiper ul li {
         width:100%;
         height:100%;
     }
     .biz .list .paging {
-        position: absolute;
-        left: 99px;
-        bottom: 100px;
-        width: 276px;
+        left: 60px;
+        bottom: 80px;
     }
     .biz .list .swiper-pagination-bullet {
         width: 126px;
+    }
+    .biz .swiper ul li .tit {
+        padding: 260px 0 0 60px;
+    }
+    .ass .tit {
+        margin: 145px 0 30px 0;
+    }
+    .ass .tit h2 {
+        font-size: 1.875rem;
+        margin-bottom: 2px;
+    }
+    .ass .list::before {
+        right: -400px;
+        bottom: -46px;
+        height: 267px;
+    }
+    .ass .list ul {
+        width: calc(100% - 180px);
+    }
+    .ass .list ul li a {
+        height: 270px;
+    }
+    .ass .list ul li a::before {
+        bottom: 45px;
+        width: 35px;
+        height: 35px;
+    }
+    .ass .list ul li a strong,
+    .ass .list ul li a h3 {
+        font-size: 1.7rem;
+    }
+    .ass .list ul li a strong {
+        padding: 48px 0 0 0;
+    }
+    .ass .list ul li a h3 {
+        padding: 10px 20px 0 20px;
+    }
+    .res {
+        margin-top: 180px;
+        padding-bottom: 120px;
+    }
+    .res::before {
+        height: 200px;
+    }
+    .res .subject {
+        width: 336px;
+        padding: 0 20px 0 0;
+    }
+    .res .subject h2 {
+        font-size: 1.875rem;
+        margin-bottom: 2px;
+    }
+    .res .subject a::before {
+        right: -32px;
+        width: 22px;
+        height: 22px;
+    }
+    .res .list {
+        width: 784px;
+    }
+    .res .list > ul > li {
+        padding: 30px 15px 0 15px;
+    }
+    .res .list ul li a {
+        height: 335px;
+    }
+    .res .list ul li a .sub {
+        width: 48%;
+    }
+    .res .list ul li a .sub .detail ul li {
+        margin-bottom: 7px;
+    }
+    .res .list ul li a .sub .detail ul li p {
+        margin-right: 7px;
+    }
+    .res .list ul li a .photo {
+        width: 48%;
+    }
+    .res .list ul li a:hover .photo {
+        filter: drop-shadow(0 0 25px rgba(72,99,234,0.3));
+    }
+    .cursor {
+        font-size: 1.125rem;
+    }
+    .cursor.on {
+        padding: 21px 0;
+        width: 90px;
+        height: 90px;
+    }
+    .ani {
+        height: 550px;
+    }
+    .ani .tit {
+        padding: 120px 0 55px 0;
+    }
+    .ani .tit h2 {
+        font-size: 1.875rem;
+        margin-bottom: 2px;
+    }
+    .ani .list ul li strong {
+        font-size: 1.125rem;
+    }
+}
+@media screen and (max-width:1200px){
+    .biz::before {
+        height: 420px;
+    }
+    .biz .list {
+        margin: 45px auto 0 auto;
+    }
+    .biz .swiper {
+        width: 95vw;
+    }
+    .biz .swiper ul {
+        height: 500px;
+    }
+    .biz .list .paging {
+        position: absolute;
+        left: 60px;
+        bottom: 100px;
+        width: 260px;
+    }
+    .biz .list .swiper-pagination-bullet {
+        width: 122px;
     }
     .biz .list .paging .swiper-pagination-bullet-active::after {
         width: 170px;
     }
     .biz .swiper ul li .tit {
-        padding: 371px 0 0 99px;
-        display: inline-block;
+        padding: 278px 0 0 60px;
     }
     .biz .swiper ul li .tit h2 {
         font-size: 2.5rem;
-        margin-bottom: 6px;
+        margin-bottom: 5px;
     }
     .biz .swiper ul li .tit p {
-        font-size: 1.25rem;
-        margin-left: 1px;
+        font-size: 1.2rem;
+        margin-left: 7px;
     }
     .biz .list button.biz-prev,
     .biz .list button.biz-next {
-        width: 24px;
-        height: 52px;
-    }
-    .biz .list button.biz-prev {
-        left: 1.2%;
-    }
-    .biz .list button.biz-next {
-        right: 1.2%;
+        display: none;
     }
     .ass .tit {
-        margin: 175px 0 42px 0;
+        margin: 135px 0 30px 0;
     }
     .ass .tit h2 {
-        font-size: 2.188rem;
-        margin-bottom: 3px;
+        font-size: 1.7rem;
+        margin-bottom: 0;
+    }
+    .ass .tit p {
+        display: none;
     }
     .ass .list::before {
-        position: absolute;
-        right: -481px;
-        bottom: -73px;
-        width: 100vw;
-        height: 320px;
-        content: "";
-        background: url(../images/main/ass_bg.png) no-repeat center center / cover;
+        display: none;
     }
     .ass .list ul {
-        width: calc(100% - 200px);
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
     }
     .ass .list ul li {
-        width: 25%;
+        width: 50%;
     }
     .ass .list ul li a {
-        height: 320px;
+        display: block;
+        width: 100%;
+        height: 350px;
+        text-align: center;
+        color: var(--color-w50);
+        position: relative;
+        transition: 0.3s;
     }
     .ass .list ul li a::before {
-        position: absolute;
-        left: 50%;
-        bottom: 73px;
-        transform: translateX(-50%);
-        width: 48px;
-        height: 48px;
-        content: "";
-        transition: 0.3s;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-image: url("data:image/svg+xml,%3Csvg width='54' height='54' viewBox='0 0 54 54' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='27' cy='27' r='27' fill='%234863EA'/%3E%3Cpath d='M17 26C16.4477 26 16 26.4477 16 27C16 27.5523 16.4477 28 17 28L17 26ZM37.7071 27.7071C38.0976 27.3166 38.0976 26.6834 37.7071 26.2929L31.3431 19.9289C30.9526 19.5384 30.3195 19.5384 29.9289 19.9289C29.5384 20.3195 29.5384 20.9526 29.9289 21.3431L35.5858 27L29.9289 32.6569C29.5384 33.0474 29.5384 33.6805 29.9289 34.0711C30.3195 34.4616 30.9526 34.4616 31.3431 34.0711L37.7071 27.7071ZM17 28L37 28L37 26L17 26L17 28Z' fill='white'/%3E%3C/svg%3E%0A");
+        bottom: 53px;
+        width: 50px;
+        height: 50px;
     }
     .ass .list ul li a strong,
     .ass .list ul li a h3 {
-        font-family: "Pre_Bold";
-        font-size: 1.875rem;
-        color: var(--color-white);
+        font-size: 1.8rem;
     }
     .ass .list ul li a strong {
         display: block;
-        padding: 48px 0 0 0;
+        padding: 58px 0 6px 0;
     }
     .ass .list ul li a span {
-        display: none;
+        display: block;
+        font-family: "Pre_med";
+        line-height: 1.2;
+        letter-spacing: -0.03em;
     }
     .ass .list ul li a h3 {
-        padding: 16px 20px 0 20px;
+        padding-top: 27px;
     }
     .res {
-        margin-top: 280px;
+        margin-top: 333px;
         padding-bottom: 151px;
+        position: relative;
     }
     .res::before {
         position: absolute;
@@ -815,104 +919,301 @@
         opacity: 0.2;
         content: "";
     }
+    .res .wrapper {
+        display: block;
+        gap: 0;
+        position: relative;
+    }
     .res .subject {
-        width: 30%;
+        position: relative;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     .res .subject h2 {
-        font-size: 2.188rem;
-        margin-bottom: 3px;
+        font-size: 1.7rem;
+        margin-bottom: 0;
+    }
+    .res .subject p {
+        display: none;
     }
     .res .subject a {
-        top: 130px;
+        display: block;
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-right: 27px;
     }
     .res .subject a::before {
+        right: -38px;
         width: 26px;
         height: 26px;
     }
     .res .list {
-        width: 70%;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .res .list > ul::before {
+        display: none;
     }
     .res .list > ul > li {
-        padding: 50px 30px 0 30px;
+        padding: 50px 0 0 0;
         width: 100%;
     }
     .res .list ul li a {
-        height: 380px;
+        height: 500px;
+    }
+    .res .list ul li:nth-child(odd) a .sub {
+        margin-right: 16px;
+    }
+    .res .list ul li:nth-child(even) a .sub {
+        margin-left: 16px;
     }
     .res .list ul li a .sub {
-        width: 48%;
+        width: 50%;
     }
     .res .list ul li a .sub h3 {
-        font-size: 1.5rem;
-        margin-bottom: 20px;
+        font-size: 1.8rem;
+        margin-bottom: 25px;
     }
     .res .list ul li a .sub .detail ul li {
         margin-bottom: 10px;
     }
     .res .list ul li a .sub .detail ul li p {
-        margin-right: 8px;
+        display: none;
     }
-    .res .list ul li a .photo {
-        width: 48%;
-    }
-    .res .list ul li a:hover .photo {
-        filter: drop-shadow(0 0 30px rgba(72,99,234,0.3));
-        outline-offset: 7px;
-    }
-    .cursor {
-        font-size: 1.25rem;
-    }
-    .cursor.on {
-        padding: 18px 0;
+    .res .list ul li a .sub .detail ul li span {
+        margin-left: 3px;
     }
     .ani {
-        height: 550px;
+        height: 440px;
     }
     .ani .tit {
-        padding: 110px 0 65px 0;
+        padding: 55px 0 30px 0;
     }
     .ani .tit h2 {
-        font-size: 2.188rem;
-        margin-bottom: 3px;
+        font-size: 1.7rem;
+        margin-bottom: 0;
+    }
+    .ani .tit p {
+        display: none;
     }
     .ani .list ul {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
     }
     .ani .list ul li i {
-        width: 110px;
-        height: 110px;
-        margin: 0 15px 24px 15px;
+        width: 100px;
+        height: 100px;
+        margin: 0 0 16px 0;
     }
     .ani .list ul li i.whale::before {
-        width: 94px;
-        height: 94px;
+        width: 84px;
+        height: 84px;
     }
     .ani .list ul li i.pin::before {
+        width: 64px;
+        height: 64px;
+    }
+    .ani .list ul li i.otter::before {
+        width: 74px;
+        height: 75px;
+    }
+    .ani .list ul li i.penguin::before {
+        width: 74px;
+        height: 75px;
+    }
+    .ani .list ul li i.turtle::before {
         width: 74px;
         height: 74px;
     }
-    .ani .list ul li i.otter::before {
-        width: 84px;
-        height: 85px;
-    }
-    .ani .list ul li i.penguin::before {
-        width: 84px;
-        height: 85px;
-    }
-    .ani .list ul li i.turtle::before {
-        width: 84px;
-        height: 84px;
-    }
     .ani .list ul li i.horses::before {
-        width: 84px;
-        height: 84px;
+        width: 74px;
+        height: 74px;
     }
     .ani .list ul li i.shark::before {
-        width: 85px;
-        height: 84px;
+        width: 75px;
+        height: 74px;
     }
     .ani .list ul li strong {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
+    }
+}
+
+
+
+
+
+@media screen and (max-width:768px){
+    .biz::before {
+        height: 274px;
+    }
+    .biz .list {
+        margin: 45px auto 0 auto;
+    }
+    .biz .swiper {
+        width: 90vw;
+    }
+    .biz .swiper ul {
+        height: 277px;
+    }
+    .biz .list .paging {
+        left: 21px;
+        bottom: 35px;
+        width: 173px;
+    }
+    .biz .list .swiper-pagination-bullet {
+        width: 85px;
+    }
+    .biz .list .paging .swiper-pagination-bullet-active::after {
+        width: 85px;
+    }
+    .biz .swiper ul li .tit {
+        padding: 178px 0 0 21px;
+    }
+    .biz .swiper ul li .tit h2 {
+        font-size: 1.786rem;
+        margin-bottom: 3px;
+    }
+    .biz .swiper ul li .tit p {
+        font-size: 0.821rem;
+        margin-left: 13px;
+    }
+    .ass .tit {
+        margin: 70px 0 20px 0;
+    }
+    .ass .tit h2 {
+        font-size: 1.429rem;
+    }
+    .ass .list ul li a {
+        height: 180px;
+    }
+    .ass .list ul li a::before {
+        bottom: 29px;
+        width: 30px;
+        height: 30px;
+    }
+    .ass .list ul li a strong,
+    .ass .list ul li a h3 {
+        font-size: 1.429rem;
+    }
+    .ass .list ul li a strong {
+        display: block;
+        padding: 22px 0 0 0;
+    }
+    .ass .list ul li a span {
+        display: none;
+    }
+    .ass .list ul li a h3 {
+        padding-top: 10px;
+    }
+
+
+
+    .res {
+        margin-top: 70px;
+        padding-bottom: 72px;
+    }
+    .res::before {
+        display: none;
+    }
+    .res .subject h2 {
+        font-size: 1.429rem;
+    }
+    .res .subject a {
+        margin-right: 10px;
+    }
+    .res .subject a::before {
+        right: -27px;
+        width: 20px;
+        height: 20px;
+    }
+    .res .list > ul > li {
+        padding: 42px 0 0 0;
+    }
+    .res .list ul li a {
+        height: 160px;
+    }
+    .res .list ul li a .sub {
+        padding: 10px 10px 0 10px;
+        width: 50%;
+    }
+    .res .list ul li a .sub h3 {
+        font-size: 1rem;
+        margin-bottom: 13px;
+    }
+    .res .list ul li a .sub .detail ul li {
+        margin-bottom: 5px;
+        font-size: 0.714rem;
+    }
+    .res .list ul li a .sub .detail ul li span {
+        display: none;
+    }
+    .res .list ul li a .sub .detail ul li.checkup {
+        display: none;
+    }
+
+
+
+
+
+    .ani {
+        height: 440px;
+    }
+    .ani .tit {
+        padding: 55px 0 30px 0;
+    }
+    .ani .tit h2 {
+        font-size: 1.7rem;
+        margin-bottom: 0;
+    }
+    .ani .tit p {
+        display: none;
+    }
+    .ani .list ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    .ani .list ul li i {
+        width: 100px;
+        height: 100px;
+        margin: 0 0 16px 0;
+    }
+    .ani .list ul li i.whale::before {
+        width: 84px;
+        height: 84px;
+    }
+    .ani .list ul li i.pin::before {
+        width: 64px;
+        height: 64px;
+    }
+    .ani .list ul li i.otter::before {
+        width: 74px;
+        height: 75px;
+    }
+    .ani .list ul li i.penguin::before {
+        width: 74px;
+        height: 75px;
+    }
+    .ani .list ul li i.turtle::before {
+        width: 74px;
+        height: 74px;
+    }
+    .ani .list ul li i.horses::before {
+        width: 74px;
+        height: 74px;
+    }
+    .ani .list ul li i.shark::before {
+        width: 75px;
+        height: 74px;
+    }
+    .ani .list ul li strong {
+        font-size: 1.2rem;
     }
 }

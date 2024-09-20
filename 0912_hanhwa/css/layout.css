@@ -644,6 +644,9 @@ footer .copy {
     }
 }
 @media screen and (max-width:768px){
+    header .logo {
+        left: 3vw;
+    }
     footer .wrapper {
         position: relative;
     }
