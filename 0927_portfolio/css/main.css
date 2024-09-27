@@ -28,14 +28,43 @@ section {
 .sec_port .photo {
     text-align: center;
     line-height: 100vh;
+    height: 662px;
 }
 .sec_port .photo img {
     vertical-align:middle
 }
 
+.sec_pro {
+    background-color: var(--color-pro);
+}
 
 
 
+
+
+
+.sec_fir {
+    background: url(../images/main/first_bg.png) no-repeat center center / cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sec_sec {
+    background: url(../images/main/second_bg.png) no-repeat center center / cover;
+}
+.sec_thi {
+    background: url(../images/main/third_bg.png) no-repeat center center / cover;
+}
 
 
 

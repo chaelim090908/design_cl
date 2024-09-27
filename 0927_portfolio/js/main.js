@@ -55,22 +55,22 @@ $(document).ready(function(){
 		}
 	});
 
-    $('.page a').on('click', function(){
+    $('.page a[data-href="portfolio"]').on('click', function(){
 		col_swiper.slideTo(0, 500);
 	});
-	// $('.page a[data-href="profile"]').on('click', function(){
-	// 	col_swiper.slideTo(1, 500);
-	// });
-	// $('.page a[data-href="1st"]').on('click', function(){
-	// 	col_swiper.slideTo(2, 500);
-	// 	row_swiper.slideTo(0, 500);
-	// });
-	// $('.page a[data-href="2nd"]').on('click', function(){
-	// 	col_swiper.slideTo(2, 500);
-	// 	row_swiper.slideTo(1, 500);
-	// });
-	// $('.page a[data-href="3rd"]').on('click', function(){
-	// 	col_swiper.slideTo(2, 500);
-	// 	row_swiper.slideTo(2, 500);
-	// });
+	$('.page a[data-href="profile"]').on('click', function(){
+		col_swiper.slideTo(1, 500);
+	});
+	$('.page a[data-href="1st"]').on('click', function(){
+		col_swiper.slideTo(2, 500);
+		row_swiper.slideTo(0, 500);
+	});
+	$('.page a[data-href="2nd"]').on('click', function(){
+		col_swiper.slideTo(2, 500);
+		row_swiper.slideTo(1, 500);
+	});
+	$('.page a[data-href="3rd"]').on('click', function(){
+		col_swiper.slideTo(2, 500);
+		row_swiper.slideTo(2, 500);
+	});
 })
