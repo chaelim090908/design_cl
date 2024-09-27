@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <title>스위퍼 풀페이지 테스트</title>
+</head>
+<body>
+  <div id="wrap">
+    <!-- Swiper -->
+    <div class="swiper SwiperV">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <h3>1</h3>
+        </div>
+        <div class="swiper-slide">
+          <h3>2</h3>
+        </div>
+        <div class="swiper-slide">
+          <h3>3</h3>
+        </div>
+        <div class="swiper-slide">
+          <h3>4</h3>
+        </div>
+        <div class="swiper-slide">
+          <h5>5</h5>
+        </div>
+      </div>
+    </div>
+    <div class="page">
+      <ul>
+        <!-- 해당 swiper가 active되면 li에 active클래스 -->
+          <li><a href="#n" data-href="portfolio"><span>Portfolio</span></a></li>
+          <li><a href="#n" data-href="profile"><span>Profile</span></a></li>
+          <li><a href="#n" data-href="1st"><span>1st portfolio</span></a></li>
+          <li><a href="#n" data-href="2nd"><span>2nd portfolio</span></a></li>
+          <li><a href="#n" data-href="3rd"><span>3rd portfolio</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    AOS.init({
+    offset: 150, // 해당 콘텐츠가 하단에서 몇 px 위로 올라와에 나타나는 효과가 나타날지 셋팅하는 값
+    duration: 800, // 애니메이션 효과가 작동되는 시간
+    easing: 'ease', // 가속도
+    });
+    </script>
+</body>
+</html>

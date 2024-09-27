@@ -1,0 +1,35 @@
+.caramel-regular {
+    font-family: "Caramel", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "ExtraBold";
+    font-weight: 700;
+    font-display: swap;
+    src: local('Pretendard ExtraBold'), url(../fonts/Pretendard-ExtraBold.woff2) format('woff2'), url(../fonts/Pretendard-ExtraBold.woff) format('woff');
+}
+@font-face {
+    font-family: "Bold";
+    font-weight: 700;
+    font-display: swap;
+    src: local('Pretendard Regular'), url(../fonts/Pretendard-Bold.woff2) format('woff2'), url(../fonts/Pretendard-Bold.woff) format('woff');
+}
+@font-face {
+    font-family: "SemiBold";
+    font-weight: 700;
+    font-display: swap;
+    src: local('Pretendard SemiBold'), url(../fonts/Pretendard-SemiBold.woff2) format('woff2'), url(../fonts/Pretendard-SemiBold.woff) format('woff');
+}
+@font-face {
+    font-family: "Medium";
+    font-weight: 500;
+    font-display: swap;
+    src: local('Pretendard Medium'), url(../fonts/Pretendard-Medium.woff2) format('woff2'), url(../fonts/Pretendard-Medium.woff) format('woff');
+}
+@font-face {
+    font-family: "Regular";
+    font-weight: 500;
+    font-display: swap;
+    src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
+}
