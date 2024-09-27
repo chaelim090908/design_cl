@@ -1,0 +1,52 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+@import url(layout.css);
+.swiper {
+    width: 100%;
+    height: 100%; 
+}
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+}
+
+.section_port {
+    background-color: var(--color-main);
+    height: 100vh;
+}
+.section_port h2 {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.page {
+    position: fixed;
+    right: 20px;
+    bottom: 50%;
+    z-index: 9999;
+    color: #fff;
+    text-align: right;
+}

@@ -1,0 +1,105 @@
+html, body {
+    font-family: "noto", "Malgun Gothic", "맑은 고딕", Dotum, 돋움, Helvetica, "Apple SD Gothic Neo", "애플 SD 산돌고딕 Neo", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: -0.05em;
+    line-height: 1.4;
+    color: #0F1012;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+#wrap {
+    min-width: 1260px;
+}
+.wrapper {
+    width: 1260px; 
+    margin: 0 auto;
+}
+
+@media screen and (max-width:1500px){
+    #wrap {
+        min-width: 100%;
+    }
+    .wrapper {
+        width: 1260px;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width:1300px){
+    #wrap {
+        min-width: 100%;
+    }
+    .wrapper {
+        width: 1120px;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width:1200px){ /* 모바일 반응형 */
+    html, body {
+        font-size: 15px;
+    }
+    #wrap {
+        min-width: 100%;
+    }
+    .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+}
+@media screen and (max-width:768px){
+    html, body {
+        font-size: 14px;
+    }
+    #wrap {
+        min-width: 100%;
+    }
+    .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+}/* media */
+
+
+::selection {
+    background-color: #4863EA;
+    color: #fff;
+}
+
+/*
+    기본 16px 일 때
+    50px - 3.125rem
+    40px - 2.5rem
+    35px - 2.188rem
+    30px - 1.875rem
+    24px - 1.5rem
+    23.5px - 1.469rem
+    22px - 1.375rem
+    20px - 1.25rem
+    18px - 1.125rem
+    17px - 1.063rem
+    16px - 1rem
+
+    mobile
+    25px - 1.786rem
+    20px - 1.429rem
+    14px - 1rem
+    13px - 0.929rem
+    11.5px - 0.821rem
+    10px - 0.714rem
+
+*/
+
+:root {
+    --color-main : #4863EA;
+    --txt-main : #0F1012;
+    --txt-main80 : rgba(15,16,18,0.8);
+    --txt-main60 : rgba(15,16,18,0.6);
+    --color-white : #fff;
+    --color-w80 : rgba(255,255,255,0.8);
+    --color-w60 : rgba(255,255,255,0.6);
+    --color-w50 : rgba(255,255,255,0.5);
+    --color-w40 : rgba(255,255,255,0.4);
+    --color-w20 : rgba(255,255,255,0.2);
+    --pc-tit : 2.5rem;
+    --mo-tit : 1.429rem;
+}
