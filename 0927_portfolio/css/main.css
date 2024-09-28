@@ -323,6 +323,215 @@ section {
     .sec_port .photo img {
         vertical-align:middle
     }
+
+
+
+
+
+    
+    .deco .star1 {
+        width: 56px;
+        height: 56px;
+        left: 30%;
+        top: 14%;
+        animation-name : star1 3s;
+        animation-timing-function : linear;
+        animation-iteration-count : infinite;
+        animation-direction : normal;
+        -moz-animation: star1 3s;
+        -moz-animation-timing-function : linear;
+        -moz-animation-iteration-count : infinite;
+        -moz-animation-direction : normal;
+        -webkit-animation: star1 3s;
+        -webkit-animation-timing-function : linear;
+        -webkit-animation-iteration-count : infinite;
+        -webkit-animation-direction : normal;
+        -o-animation: star1 3s;
+        -o-animation-timing-function : linear;
+        -o-animation-iteration-count : infinite;
+        -o-animation-direction : normal;
+    }
+    .deco .star2 {
+        width: 47px;
+        height: 47px;
+        left: 20%;
+        top: 55%;
+        animation-name : star2 3s;
+        animation-timing-function : linear;
+        animation-iteration-count : infinite;
+        animation-direction : normal;
+        -moz-animation: star2 3s;
+        -moz-animation-timing-function : linear;
+        -moz-animation-iteration-count : infinite;
+        -moz-animation-direction : normal;
+        -webkit-animation: star2 3s;
+        -webkit-animation-timing-function : linear;
+        -webkit-animation-iteration-count : infinite;
+        -webkit-animation-direction : normal;
+        -o-animation: star2 3s;
+        -o-animation-timing-function : linear;
+        -o-animation-iteration-count : infinite;
+        -o-animation-direction : normal;
+    }
+    .deco .star3 {
+        width: 58px;
+        height: 58px;
+        left: 24%;
+        bottom: 15%;
+        animation-name : star3 3s;
+        animation-timing-function : linear;
+        animation-iteration-count : infinite;
+        animation-direction : normal;
+        -moz-animation: star3 3s;
+        -moz-animation-timing-function : linear;
+        -moz-animation-iteration-count : infinite;
+        -moz-animation-direction : normal;
+        -webkit-animation: star3 3s;
+        -webkit-animation-timing-function : linear;
+        -webkit-animation-iteration-count : infinite;
+        -webkit-animation-direction : normal;
+        -o-animation: star3 3s;
+        -o-animation-timing-function : linear;
+        -o-animation-iteration-count : infinite;
+        -o-animation-direction : normal;
+    }
+    .deco .star4 {
+        width: 58px;
+        height: 58px;
+        right: 17%;
+        top: 9%;
+        animation-name : star4 3s;
+        animation-timing-function : linear;
+        animation-iteration-count : infinite;
+        animation-direction : normal;
+        -moz-animation: star4 3s;
+        -moz-animation-timing-function : linear;
+        -moz-animation-iteration-count : infinite;
+        -moz-animation-direction : normal;
+        -webkit-animation: star4 3s;
+        -webkit-animation-timing-function : linear;
+        -webkit-animation-iteration-count : infinite;
+        -webkit-animation-direction : normal;
+        -o-animation: star4 3s;
+        -o-animation-timing-function : linear;
+        -o-animation-iteration-count : infinite;
+        -o-animation-direction : normal;
+    }
+    .deco .star5 {
+        width: 56px;
+        height: 56px;
+        right: 28%;
+        bottom: 27%;
+        animation-name : star5 3s;
+        animation-timing-function : linear;
+        animation-iteration-count : infinite;
+        animation-direction : normal;
+        -moz-animation: star5 3s;
+        -moz-animation-timing-function : linear;
+        -moz-animation-iteration-count : infinite;
+        -moz-animation-direction : normal;
+        -webkit-animation: star5 3s;
+        -webkit-animation-timing-function : linear;
+        -webkit-animation-iteration-count : infinite;
+        -webkit-animation-direction : normal;
+        -o-animation: star5 3s;
+        -o-animation-timing-function : linear;
+        -o-animation-iteration-count : infinite;
+        -o-animation-direction : normal;
+    }
+    .deco .cir {
+        border-radius: 50%;
+        background-color: #fff;
+        position: absolute;
+    }
+    .deco .cir1 {
+        width: 16px;
+        height: 16px;
+        left: 25%;
+        top: 40%;
+        animation-name : cir1 5s;
+        animation-timing-function : linear;
+        animation-iteration-count : infinite;
+        animation-direction : normal;
+        -moz-animation: cir1 5s;
+        -moz-animation-timing-function : linear;
+        -moz-animation-iteration-count : infinite;
+        -moz-animation-direction : normal;
+        -webkit-animation: cir1 5s;
+        -webkit-animation-timing-function : linear;
+        -webkit-animation-iteration-count : infinite;
+        -webkit-animation-direction : normal;
+        -o-animation: cir1 5s;
+        -o-animation-timing-function : linear;
+        -o-animation-iteration-count : infinite;
+        -o-animation-direction : normal;
+    }
+    .deco .cir2 {
+        width: 11px;
+        height: 11px;
+        left: 10%;
+        top: 25%;
+        animation-name : cir2 5s;
+        animation-timing-function : linear;
+        animation-iteration-count : infinite;
+        animation-direction : normal;
+        -moz-animation: cir2 5s;
+        -moz-animation-timing-function : linear;
+        -moz-animation-iteration-count : infinite;
+        -moz-animation-direction : normal;
+        -webkit-animation: cir2 5s;
+        -webkit-animation-timing-function : linear;
+        -webkit-animation-iteration-count : infinite;
+        -webkit-animation-direction : normal;
+        -o-animation: cir2 5s;
+        -o-animation-timing-function : linear;
+        -o-animation-iteration-count : infinite;
+        -o-animation-direction : normal;
+    }
+    .deco .cir3 {
+        width: 11px;
+        height: 11px;
+        right: 25%;
+        top: 48%;
+        animation-name : cir3 5s;
+        animation-timing-function : linear;
+        animation-iteration-count : infinite;
+        animation-direction : normal;
+        -moz-animation: cir3 5s;
+        -moz-animation-timing-function : linear;
+        -moz-animation-iteration-count : infinite;
+        -moz-animation-direction : normal;
+        -webkit-animation: cir3 5s;
+        -webkit-animation-timing-function : linear;
+        -webkit-animation-iteration-count : infinite;
+        -webkit-animation-direction : normal;
+        -o-animation: cir3 5s;
+        -o-animation-timing-function : linear;
+        -o-animation-iteration-count : infinite;
+        -o-animation-direction : normal;
+    }
+    .deco .cir4 {
+        width: 16px;
+        height: 16px;
+        right: 18%;
+        bottom: 20%;
+        animation-name : cir4 5s;
+        animation-timing-function : linear;
+        animation-iteration-count : infinite;
+        animation-direction : normal;
+        -moz-animation: cir4 5s;
+        -moz-animation-timing-function : linear;
+        -moz-animation-iteration-count : infinite;
+        -moz-animation-direction : normal;
+        -webkit-animation: cir4 5s;
+        -webkit-animation-timing-function : linear;
+        -webkit-animation-iteration-count : infinite;
+        -webkit-animation-direction : normal;
+        -o-animation: cir4 5s;
+        -o-animation-timing-function : linear;
+        -o-animation-iteration-count : infinite;
+        -o-animation-direction : normal;
+    }
 }
 
 
