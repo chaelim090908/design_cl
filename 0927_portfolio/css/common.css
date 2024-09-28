@@ -25,7 +25,15 @@ body {
     width: 1600px;
     margin: 0 auto;
 }
-
+@media screen and (max-width:1599px){
+    #wrap {
+        min-width: 100%;
+    }
+    .wrapper {
+        width: 1260px;
+        margin: 0 auto;
+    }
+}
 
 ::selection {
     background-color: transparent;
@@ -34,6 +42,7 @@ body {
 
 /*
     기본 20px 일 때
+    48px - 2.4rem
     20px - 1rem
 */
 
@@ -47,30 +56,3 @@ body {
     --color-w15 : rgba(255,255,255,0.15);
     --color-w10 : rgba(255,255,255,0.1);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* html, body {
-    
-}
-
-@media screen and (max-width:1599px){
-    #wrap {
-        min-width: 100%;
-    }
-    .wrapper {
-        width: 1260px;
-        margin: 0 auto;
-    }
-}
-/*

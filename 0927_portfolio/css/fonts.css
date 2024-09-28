@@ -5,7 +5,7 @@
   }
   @font-face {
     font-family: "ExtraBold";
-    font-weight: 700;
+    font-weight: 800;
     font-display: swap;
     src: local('Pretendard ExtraBold'), url(../fonts/Pretendard-ExtraBold.woff2) format('woff2'), url(../fonts/Pretendard-ExtraBold.woff) format('woff');
 }
@@ -17,7 +17,7 @@
 }
 @font-face {
     font-family: "SemiBold";
-    font-weight: 700;
+    font-weight: 600;
     font-display: swap;
     src: local('Pretendard SemiBold'), url(../fonts/Pretendard-SemiBold.woff2) format('woff2'), url(../fonts/Pretendard-SemiBold.woff) format('woff');
 }
@@ -29,7 +29,13 @@
 }
 @font-face {
     font-family: "Regular";
-    font-weight: 500;
+    font-weight: 400;
     font-display: swap;
     src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: "light";
+    font-weight: 300;
+    font-display: swap;
+    src: local('Pretendard Light'), url(../fonts/Pretendard-Light.woff2) format('woff2'), url(../fonts/Pretendard-Light.woff) format('woff');
 }

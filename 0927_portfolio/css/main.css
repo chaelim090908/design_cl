@@ -37,6 +37,57 @@ section {
 .sec_pro {
     background-color: var(--color-pro);
 }
+.sec_pro .wrapper {
+    display: flex;
+}
+.sec_pro .me {
+    width: 392px;
+    text-align: center;
+}
+@media screen and (max-width:1599px){
+    .sec_pro .me {
+        width: 314px;
+    }
+}
+.sec_pro .me .photo {
+    width: 313px;
+    height: 349px;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    margin-bottom: 28px;
+}
+.sec_pro .me .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.sec_pro .me .name {
+    font-family: "ExtraBold";
+    font-size: 2.4rem;
+    line-height: 1;
+    margin-bottom: 9px;
+}
+.sec_pro .me span {
+    display: block;
+    font-family: "light";
+    color: var(--color-w80);
+}
+.sec_pro .me strong {
+    display: block;
+    line-height: 1;
+    font-family: "Medium";
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+.sec_pro .me strong.birth {
+    margin-top: 48px;
+}
+
+
+
+
+
 
 
 
