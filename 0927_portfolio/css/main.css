@@ -7,7 +7,6 @@
     height: 100%; 
 }
 .swiper-wrapper {
-    position: relative;
     width: 100%;
     height: 100%;
     z-index: 1;
@@ -26,64 +25,391 @@ section {
     display: none;
 }
 .sec_port .photo {
-    text-align: center;
-    line-height: 100vh;
-    height: 662px;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    width: 590px;
+    height: 265px;
+    animation-name : fadein 1s;
+    animation-timing-function : linear;
+    -moz-animation: fadein 1s; /* Firefox */
+    -webkit-animation: fadein 1s; /* Safari and Chrome */
+    -o-animation: fadein 1s; /* Opera */
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadein {
+    0% {opacity: 0; position: absolute; left: 50%; top: 55%; transform: translate(-50%, -45%);}
+    100% {opacity: 100%; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
 }
 .sec_port .photo img {
-    vertical-align:middle
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
+
+.deco {
+    font-size: 0;
+    line-height: 0;
+    width: 100%;
+    height: 100%;
+}
+.deco .star {
+    background: url(../images/main/port_glitter.png) no-repeat center center / cover;
+    position: absolute;
+}
+.deco .star1 {
+    width: 56px;
+    height: 56px;
+    left: 30%;
+    top: 14%;
+    animation-name : star1 3s;
+    animation-timing-function : linear;
+    animation-iteration-count : infinite;
+    animation-direction : normal;
+    -moz-animation: star1 3s;
+    -moz-animation-timing-function : linear;
+    -moz-animation-iteration-count : infinite;
+    -moz-animation-direction : normal;
+    -webkit-animation: star1 3s;
+    -webkit-animation-timing-function : linear;
+    -webkit-animation-iteration-count : infinite;
+    -webkit-animation-direction : normal;
+    -o-animation: star1 3s;
+    -o-animation-timing-function : linear;
+    -o-animation-iteration-count : infinite;
+    -o-animation-direction : normal;
+}
+@keyframes star1 {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+.deco .star2 {
+    width: 47px;
+    height: 47px;
+    left: 20%;
+    top: 55%;
+    animation-name : star2 3s;
+    animation-timing-function : linear;
+    animation-iteration-count : infinite;
+    animation-direction : normal;
+    -moz-animation: star2 3s;
+    -moz-animation-timing-function : linear;
+    -moz-animation-iteration-count : infinite;
+    -moz-animation-direction : normal;
+    -webkit-animation: star2 3s;
+    -webkit-animation-timing-function : linear;
+    -webkit-animation-iteration-count : infinite;
+    -webkit-animation-direction : normal;
+    -o-animation: star2 3s;
+    -o-animation-timing-function : linear;
+    -o-animation-iteration-count : infinite;
+    -o-animation-direction : normal;
+}
+@keyframes star2 {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.deco .star3 {
+    width: 58px;
+    height: 58px;
+    left: 24%;
+    bottom: 15%;
+    animation-name : star3 3s;
+    animation-timing-function : linear;
+    animation-iteration-count : infinite;
+    animation-direction : normal;
+    -moz-animation: star3 3s;
+    -moz-animation-timing-function : linear;
+    -moz-animation-iteration-count : infinite;
+    -moz-animation-direction : normal;
+    -webkit-animation: star3 3s;
+    -webkit-animation-timing-function : linear;
+    -webkit-animation-iteration-count : infinite;
+    -webkit-animation-direction : normal;
+    -o-animation: star3 3s;
+    -o-animation-timing-function : linear;
+    -o-animation-iteration-count : infinite;
+    -o-animation-direction : normal;
+}
+@keyframes star3 {
+    0% {opacity: 0.25;}
+    25% {opacity: 0;}
+    50% {opacity: 0.5;}
+    70% {opacity: 1;}
+    100% {opacity: 0.25;}
+}
+.deco .star4 {
+    width: 58px;
+    height: 58px;
+    right: 17%;
+    top: 9%;
+    animation-name : star4 3s;
+    animation-timing-function : linear;
+    animation-iteration-count : infinite;
+    animation-direction : normal;
+    -moz-animation: star4 3s;
+    -moz-animation-timing-function : linear;
+    -moz-animation-iteration-count : infinite;
+    -moz-animation-direction : normal;
+    -webkit-animation: star4 3s;
+    -webkit-animation-timing-function : linear;
+    -webkit-animation-iteration-count : infinite;
+    -webkit-animation-direction : normal;
+    -o-animation: star4 3s;
+    -o-animation-timing-function : linear;
+    -o-animation-iteration-count : infinite;
+    -o-animation-direction : normal;
+}
+@keyframes star4 {
+    0% {opacity: 0.3;}
+    25% {opacity: 0;}
+    50% {opacity: 0.6;}
+    70% {opacity: 1;}
+    100% {opacity: 0.3;}
+}
+.deco .star5 {
+    width: 56px;
+    height: 56px;
+    right: 28%;
+    bottom: 27%;
+    animation-name : star5 3s;
+    animation-timing-function : linear;
+    animation-iteration-count : infinite;
+    animation-direction : normal;
+    -moz-animation: star5 3s;
+    -moz-animation-timing-function : linear;
+    -moz-animation-iteration-count : infinite;
+    -moz-animation-direction : normal;
+    -webkit-animation: star5 3s;
+    -webkit-animation-timing-function : linear;
+    -webkit-animation-iteration-count : infinite;
+    -webkit-animation-direction : normal;
+    -o-animation: star5 3s;
+    -o-animation-timing-function : linear;
+    -o-animation-iteration-count : infinite;
+    -o-animation-direction : normal;
+}
+@keyframes star5 {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+.deco .cir {
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+}
+.deco .cir1 {
+    width: 16px;
+    height: 16px;
+    left: 25%;
+    top: 40%;
+    animation-name : cir1 5s;
+    animation-timing-function : linear;
+    animation-iteration-count : infinite;
+    animation-direction : normal;
+    -moz-animation: cir1 5s;
+    -moz-animation-timing-function : linear;
+    -moz-animation-iteration-count : infinite;
+    -moz-animation-direction : normal;
+    -webkit-animation: cir1 5s;
+    -webkit-animation-timing-function : linear;
+    -webkit-animation-iteration-count : infinite;
+    -webkit-animation-direction : normal;
+    -o-animation: cir1 5s;
+    -o-animation-timing-function : linear;
+    -o-animation-iteration-count : infinite;
+    -o-animation-direction : normal;
+}
+@keyframes cir1 {
+    0% {opacity: 0.5;}
+    25% {opacity: 0;}
+    75% {opacity: 0.9;}
+    100% {opacity: 0.5;}
+}
+.deco .cir2 {
+    width: 11px;
+    height: 11px;
+    left: 10%;
+    top: 25%;
+    animation-name : cir2 5s;
+    animation-timing-function : linear;
+    animation-iteration-count : infinite;
+    animation-direction : normal;
+    -moz-animation: cir2 5s;
+    -moz-animation-timing-function : linear;
+    -moz-animation-iteration-count : infinite;
+    -moz-animation-direction : normal;
+    -webkit-animation: cir2 5s;
+    -webkit-animation-timing-function : linear;
+    -webkit-animation-iteration-count : infinite;
+    -webkit-animation-direction : normal;
+    -o-animation: cir2 5s;
+    -o-animation-timing-function : linear;
+    -o-animation-iteration-count : infinite;
+    -o-animation-direction : normal;
+}
+@keyframes cir2 {
+    0% {opacity: 0;}
+    25% {opacity: 0.3;}
+    75% {opacity: 0.7;}
+    100% {opacity: 0;}
+}
+.deco .cir3 {
+    width: 11px;
+    height: 11px;
+    right: 25%;
+    top: 48%;
+    animation-name : cir3 5s;
+    animation-timing-function : linear;
+    animation-iteration-count : infinite;
+    animation-direction : normal;
+    -moz-animation: cir3 5s;
+    -moz-animation-timing-function : linear;
+    -moz-animation-iteration-count : infinite;
+    -moz-animation-direction : normal;
+    -webkit-animation: cir3 5s;
+    -webkit-animation-timing-function : linear;
+    -webkit-animation-iteration-count : infinite;
+    -webkit-animation-direction : normal;
+    -o-animation: cir3 5s;
+    -o-animation-timing-function : linear;
+    -o-animation-iteration-count : infinite;
+    -o-animation-direction : normal;
+}
+@keyframes cir3 {
+    0% {opacity: 0.7;}
+    25% {opacity: 1;}
+    75% {opacity: 0;}
+    100% {opacity: 0.7;}
+}
+.deco .cir4 {
+    width: 16px;
+    height: 16px;
+    right: 18%;
+    bottom: 20%;
+    animation-name : cir4 5s;
+    animation-timing-function : linear;
+    animation-iteration-count : infinite;
+    animation-direction : normal;
+    -moz-animation: cir4 5s;
+    -moz-animation-timing-function : linear;
+    -moz-animation-iteration-count : infinite;
+    -moz-animation-direction : normal;
+    -webkit-animation: cir4 5s;
+    -webkit-animation-timing-function : linear;
+    -webkit-animation-iteration-count : infinite;
+    -webkit-animation-direction : normal;
+    -o-animation: cir4 5s;
+    -o-animation-timing-function : linear;
+    -o-animation-iteration-count : infinite;
+    -o-animation-direction : normal;
+}
+@keyframes cir4 {
+    0% {opacity: 0;}
+    25% {opacity: 0.9;}
+    75% {opacity: 0.25;}
+    100% {opacity: 0;}
+}
+
+
+@media screen and (max-width:1599px){
+    .sec_port .photo {
+        height: 521px;
+    }
+    .sec_port .photo img {
+        vertical-align:middle
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .sec_pro {
     background-color: var(--color-pro);
 }
 .sec_pro .wrapper {
     display: flex;
+    padding-top: 5%;
 }
 .sec_pro .me {
-    width: 392px;
+    width: 509px;
     text-align: center;
 }
-@media screen and (max-width:1599px){
-    .sec_pro .me {
-        width: 314px;
-    }
+.sec_pro .me .cnt {
+    width: 392px;
 }
-.sec_pro .me .photo {
-    width: 313px;
-    height: 349px;
+.sec_pro .me .cnt .photo {
+    width: 392px;
+    height: 437px;
     font-size: 0;
     line-height: 0;
     overflow: hidden;
     margin-bottom: 28px;
 }
-.sec_pro .me .photo img {
+.sec_pro .me .cnt .photo img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
-.sec_pro .me .name {
+.sec_pro .me .cnt .name {
     font-family: "ExtraBold";
     font-size: 2.4rem;
     line-height: 1;
     margin-bottom: 9px;
 }
-.sec_pro .me span {
+.sec_pro .me .cnt span {
     display: block;
     font-family: "light";
     color: var(--color-w80);
 }
-.sec_pro .me strong {
+.sec_pro .me .cnt strong {
     display: block;
     line-height: 1;
     font-family: "Medium";
     font-size: 1.6rem;
     margin-bottom: 15px;
 }
-.sec_pro .me strong.birth {
+.sec_pro .me .cnt strong.birth {
     margin-top: 48px;
 }
-
+@media screen and (max-width:1599px){
+    .sec_pro .me {
+        width: 314px;
+    }
+    .sec_pro .me .cnt .photo {
+        width: 313px;
+        height: 349px;
+    }
+}
 
 
 

@@ -21,15 +21,26 @@
         <div class="swiper-slide">
           <section id="portfolio" class="sec_port">
               <h2>portfolio</h2>
-              <div class="photo" data-aos="fade-up"><img src="images/main/port_txt.png" alt="포트폴리오 글귀"></div>
+              <div class="photo"><img src="images/main/port_txt.png" alt="포트폴리오 글귀"></div>
+              <div class="deco">
+                <div class="star1 star">1</div>
+                <div class="star2 star">2</div>
+                <div class="star3 star">3</div>
+                <div class="star4 star">4</div>
+                <div class="star5 star">5</div>
+                <div class="cir1 cir">1</div>
+                <div class="cir2 cir">2</div>
+                <div class="cir3 cir">3</div>
+                <div class="cir4 cir">4</div>
+              </div>  
           </section>
         </div>
         <div class="swiper-slide">
           <section id="profile" class="sec_pro">
             <div class="wrapper">
               <div class="me">
-                <div class="photo"><img src="images/main/pro_my.png"></div>
-                <div class="pro">
+                <div class="cnt">
+                  <div class="photo"><img src="images/main/pro_my.png" alt="신채림 사진"></div>
                   <h2 class="name">신채림</h2>
                   <span>Shin chaelim</span>
                   <strong class="birth">1999.05.25</strong>
@@ -109,3 +120,46 @@
     </script>
 </body>
 </html>
+
+<!--
+  animation-name : @keyframes 이름 (예제에서는 fadeOut 을 사용)
+  animation-duratuion : 타임 프레임의 길이, 키프레임이 동작하는 시간을 설정할 때 사용
+  animation-timing-function : 애니메이션 속도 조절 / 그래프 ( linear / ease / ease-in / ease-out / ease-in-out / cubic-bezier )
+  animation-delay : 애니메이션을 시작하기 전 지연시간 설정
+  animation-iteration-count : 반복 횟수 지정
+  animation-direction : 반복 방향 설정 ( 정방향 / 역방향 / 번갈아가며)
+  animation-fill-mode : 애니메이션 시작 / 끝 상태 제어 ( none / forwords / backwords / both )
+
+  @keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+  @-moz-keyframes fadein { /* Firefox */
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
+  @-webkit-keyframes fadein { /* Safari and Chrome */
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
+  @-o-keyframes fadein { /* Opera */
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
+-->
