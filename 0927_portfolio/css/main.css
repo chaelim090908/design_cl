@@ -64,7 +64,8 @@ section {
     height: 56px;
     left: 30%;
     top: 14%;
-    animation-name : star1 3s;
+    animation-name : star1;
+    animation-duration: 5s;
     animation-timing-function : linear;
     animation-iteration-count : infinite;
     animation-direction : normal;
@@ -91,7 +92,8 @@ section {
     height: 47px;
     left: 20%;
     top: 55%;
-    animation-name : star2 3s;
+    animation-name : star2;
+    animation-duration: 5s;
     animation-timing-function : linear;
     animation-iteration-count : infinite;
     animation-direction : normal;
@@ -118,7 +120,8 @@ section {
     height: 58px;
     left: 24%;
     bottom: 15%;
-    animation-name : star3 3s;
+    animation-name : star3;
+    animation-duration: 5s;
     animation-timing-function : linear;
     animation-iteration-count : infinite;
     animation-direction : normal;
@@ -147,7 +150,8 @@ section {
     height: 58px;
     right: 17%;
     top: 9%;
-    animation-name : star4 3s;
+    animation-name : star4;
+    animation-duration: 5s;
     animation-timing-function : linear;
     animation-iteration-count : infinite;
     animation-direction : normal;
@@ -176,7 +180,8 @@ section {
     height: 56px;
     right: 28%;
     bottom: 27%;
-    animation-name : star5 3s;
+    animation-name : star5;
+    animation-duration: 5s;
     animation-timing-function : linear;
     animation-iteration-count : infinite;
     animation-direction : normal;
@@ -208,7 +213,8 @@ section {
     height: 16px;
     left: 25%;
     top: 40%;
-    animation-name : cir1 5s;
+    animation-name : cir1;
+    animation-duration: 5s;
     animation-timing-function : linear;
     animation-iteration-count : infinite;
     animation-direction : normal;
@@ -236,7 +242,8 @@ section {
     height: 11px;
     left: 10%;
     top: 25%;
-    animation-name : cir2 5s;
+    animation-name : cir2;
+    animation-duration: 5s;
     animation-timing-function : linear;
     animation-iteration-count : infinite;
     animation-direction : normal;
@@ -264,7 +271,8 @@ section {
     height: 11px;
     right: 25%;
     top: 48%;
-    animation-name : cir3 5s;
+    animation-name : cir3;
+    animation-duration: 5s;
     animation-timing-function : linear;
     animation-iteration-count : infinite;
     animation-direction : normal;
@@ -292,7 +300,8 @@ section {
     height: 16px;
     right: 18%;
     bottom: 20%;
-    animation-name : cir4 5s;
+    animation-name : cir4;
+    animation-duration: 5s;
     animation-timing-function : linear;
     animation-iteration-count : infinite;
     animation-direction : normal;
@@ -403,8 +412,8 @@ section {
 .sec_pro .me::before {
     position: absolute;
     right: 0;
-    top: 50%;
-    transform: translateY(-47%);
+    top: 0;
+    margin-top: 60px;
     width: 1px;
     height: 829px;
     background-color: #fff;
