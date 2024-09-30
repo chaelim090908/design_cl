@@ -2,7 +2,7 @@
 @import url(fonts.css);
 @import url(common.css);
 @import url(layout.css);
-.swiper {
+/* .swiper {
     width: 100%;
     height: 100%; 
 }
@@ -14,9 +14,16 @@
     display: flex;
     transition-property: transform;
     box-sizing: content-box;
-}
+} */
+.sec_fir,
+.sec_sec,
+.sec_thi {
+    background-color: #3218CA;
+ }
 section {
     height: 100vh;
+    font-size: 100px;
+    text-align: center;
 }
 .sec_port {
     position: relative;
@@ -408,7 +415,7 @@ section {
         width: 9px;
         height: 9px;
         right: 15%;
-        top: 15%;
+        top: 22%;
     }
     .deco .cir4 {
         width: 13px;
@@ -421,6 +428,7 @@ section {
 
 .sec_pro {
     background-color: var(--color-pro);
+    width: 100vw;
 }
 .sec_pro .wrapper {
     display: flex;
@@ -433,7 +441,7 @@ section {
 .sec_pro .me::after {
     position: absolute;
     right: -5px;
-    top: 6%;
+    top: 5%;
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -566,15 +574,73 @@ section {
     border-radius: 50%;
     content: "";
 }
-
+@media screen and (max-width:1599px){
+    .sec_pro .me {
+        width: 359px;
+    }
+    .sec_pro .me::before {
+        margin-top: 50px;
+        height: 733px;
+    }
+    .sec_pro .me .about {
+        width: 300px;
+    }
+    .sec_pro .me .about .photo {
+        width: 300px;
+        height: 336px;
+        font-size: 0;
+        line-height: 0;
+        overflow: hidden;
+        margin: 50px 0 20px 0;
+    }
+    .sec_pro .me .about .name {
+        font-size: 2.4rem;
+        margin-bottom: 5px;
+    }
+    .sec_pro .me .about strong {
+        font-size: 1.5rem;
+    }
+    .sec_pro .me .about strong.birth {
+        margin-top: 30px;
+    }
+    .sec_pro .my {
+        margin: 5% 0 0 53px;
+    }
+    .sec_pro .my h3 {
+        font-size: 2.3rem;
+        margin-bottom: 14px;
+    }
+    .sec_pro .my ul {
+        margin: 0 0 46px 15px;
+    }
+    .sec_pro .my ul li {
+        margin-bottom: 14px;
+    }
+    .sec_pro .my ul li strong {
+        margin-right: 20px;
+    }
+    .sec_pro .my .ski ul {
+        margin: 0 40px 0 0;
+    }
+    .sec_pro .my .ski ul li h4 {
+        font-size: 1.4rem;
+        margin-bottom: 16px;
+    }
+}
 .sec_fir {
+    width: 100vw;
     height: 100vh;
 }
 .sec_fir .wrapper {
     position: relative;
 }
-.sec_fir .tit .photo {
+.sec_fir .tit .photo_tit {
     margin-bottom: 32px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.sec_fir .tit .photo_tit img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -584,12 +650,12 @@ section {
     left: -190px;
     top: 194px;
 }
-.sec_fir .right .mockup .photo {
+.sec_fir .right .mockup a .photo {
     width: 978px;
     height: 780px;
     overflow: hidden;
 }
-.sec_fir .right .mockup .photo img {
+.sec_fir .right .mockup a .photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -681,65 +747,119 @@ section {
 .sec_fir .right .exp p:first-child {
     margin-bottom: 8px;
 }
-
-
-
-
-
-
-
-
+@media screen and (max-width:1599px){
+    .sec_fir .tit .photo_tit {
+        margin-bottom: 16px;
+        width: 1000px;
+    }
+    .sec_fir .right .mockup {
+        left: -155px;
+    }
+    .sec_fir .right .mockup a .photo {
+        width: 678px;
+        height: 541px;
+    }
+    .sec_fir .right {
+        width: 418px;
+        font-size: 16px;
+        margin-left: 565px;
+    }
+    .sec_fir .right .tit h3 {
+        font-size: 35px;
+        margin-right: 10px;
+    }
+    .sec_fir .right .menu {
+        margin-bottom: 30px;
+    }
+    .sec_fir .right .menu li {
+        margin-right: 13px;
+    }
+    .sec_fir .right .menu li a {
+        padding: 6px 37px 6px 23px;
+        font-size: 16px;
+    }
+    .sec_fir .right .menu li a:hover {
+        color: #fff;
+        background-color: #0F0F0F;
+    }
+    .sec_fir .right .menu li a span::before {
+        right: -15px;
+        top: 1px;
+        width: 14px;
+        height: 14px;
+    }
+    .sec_fir .right .read {
+        margin-bottom: 32px;
+    }
+    .sec_fir .right .read li {
+        display: flex;
+        margin-bottom: 15px;
+    }
+    .sec_fir .right .read li h4 {
+        width: 90px;
+        margin-right: 15px;
+    }
+    .sec_fir .right .exp p:first-child {
+        margin-bottom: 5px;
+    } 
+}
 .sec_sec {
+    width: 100vw;
     height: 100vh;
 }
 .sec_sec .wrapper {
     position: relative;
 }
-.sec_sec .tit .photo {
+.sec_sec .tit .photo_tit {
     margin-bottom: 32px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.sec_sec .tit .photo_tit img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.sec_sec .right {
+.sec_sec .left {
     width: 528px;
     font-size: 20px;
 }
-.sec_sec .right .tit {
+.sec_sec .left .tit {
     display: flex;
     align-items: flex-end;
     margin-bottom: 22px;
 }
-.sec_sec .right .tit h3 {
+.sec_sec .left .tit h3 {
     font-family: "ExtraBold";
     font-size: 40px;
     line-height: 1;
     margin-right: 10px;
 }
-.sec_sec .right .menu {
+.sec_sec .left .menu {
     display: flex;
     margin-bottom: 36px;
 }
-.sec_sec .right .menu li {
+.sec_sec .left .menu li {
     margin-right: 19px;
 }
-.sec_sec .right .menu li a {
+.sec_sec .left .menu li a {
     padding: 8px 48px 7px 29px;
+    font-size: 16px;
     background-color: var(--color-white);
     border-radius: 50px;
     color: #3E26CD;
     font-family: "Bold";
-    font-size: 20px;
     transition: 0.2s;
 }
-.sec_sec .right .menu li a:hover {
+.sec_sec .left .menu li a:hover {
     color: #fff;
     background-color: #0F0F0F;
 }
-.sec_sec .right .menu li a span {
+.sec_sec .left .menu li a span {
     position: relative;
 }
-.sec_sec .right .menu li a span::before {
+.sec_sec .left .menu li a span::before {
     position: absolute;
     right: -17px;
     top: 1px;
@@ -751,27 +871,27 @@ section {
     background-size: contain;
     background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.33333 14C2.96667 14 2.65278 13.8694 2.39167 13.6083C2.13056 13.3472 2 13.0333 2 12.6667V3.33333C2 2.96667 2.13056 2.65278 2.39167 2.39167C2.65278 2.13056 2.96667 2 3.33333 2H8V3.33333H3.33333V12.6667H12.6667V8H14V12.6667C14 13.0333 13.8694 13.3472 13.6083 13.6083C13.3472 13.8694 13.0333 14 12.6667 14H3.33333ZM6.46667 10.4667L5.53333 9.53333L11.7333 3.33333H9.33333V2H14V6.66667H12.6667V4.26667L6.46667 10.4667Z' fill='%233E26CD'/%3E%3C/svg%3E%0A");
 }
-.sec_sec .right .menu li a:hover span::before {
+.sec_sec .left .menu li a:hover span::before {
     background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.33333 14C2.96667 14 2.65278 13.8694 2.39167 13.6083C2.13056 13.3472 2 13.0333 2 12.6667V3.33333C2 2.96667 2.13056 2.65278 2.39167 2.39167C2.65278 2.13056 2.96667 2 3.33333 2H8V3.33333H3.33333V12.6667H12.6667V8H14V12.6667C14 13.0333 13.8694 13.3472 13.6083 13.6083C13.3472 13.8694 13.0333 14 12.6667 14H3.33333ZM6.46667 10.4667L5.53333 9.53333L11.7333 3.33333H9.33333V2H14V6.66667H12.6667V4.26667L6.46667 10.4667Z' fill='white'/%3E%3C/svg%3E%0A");
 }
-.sec_sec .right .read {
+.sec_sec .left .read {
     padding-left: 21px;
     margin-bottom: 44px;
 }
-.sec_sec .right .read li {
+.sec_sec .left .read li {
     display: flex;
     margin-bottom: 15px;
 }
-.sec_sec .right .read li:last-child {
+.sec_sec .left .read li:last-child {
     margin-bottom: 0;
 }
-.sec_sec .right .read li h4 {
+.sec_sec .left .read li h4 {
     font-family: "Bold";
     width: 109px;
     position: relative;
     margin-right: 18px;
 }
-.sec_sec .right .read li h4::after {
+.sec_sec .left .read li h4::after {
     position: absolute;
     left: -21px;
     top: 10px;
@@ -781,10 +901,10 @@ section {
     border-radius: 50%;
     content: "";
 }
-.sec_sec .right .exp p {
+.sec_sec .left .exp p {
     line-height: 1.4;
 }
-.sec_sec .right .exp p:first-child {
+.sec_sec .left .exp p:first-child {
     margin-bottom: 8px;
 }
 .sec_sec .mockup {
@@ -792,27 +912,296 @@ section {
     right: -45px;
     top: 248px;
 }
-.sec_sec .mockup .photo {
+.sec_sec .mockup a .photo {
     width: 925px;
     height: 598px;
     overflow: hidden;
 }
-.sec_sec .mockup .photo img {
+.sec_sec .mockup a .photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+@media screen and (max-width:1599px){
+    .sec_sec .tit .photo_tit {
+        margin-bottom: 16px;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .sec_sec .tit .photo_tit img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .sec_sec .mockup {
+        position: absolute;
+        right: 20px;
+        top: 292px;
+    }
+    .sec_sec .tit .mockup a .photo {
+        width: 625px;
+        height: 407px;
+    }
+    .sec_sec .left {
+        width: 436px;
+        font-size: 16px;
+        margin-left: 0;
+    }
+    .sec_sec .left .tit h3 {
+        font-size: 35px;
+        margin-right: 10px;
+    }
+    .sec_sec .left .menu {
+        margin-bottom: 30px;
+    }
+    .sec_sec .left .menu li {
+        margin-right: 13px;
+    }
+    .sec_sec .left .menu li a {
+        padding: 6px 37px 6px 23px;
+        font-size: 16px;
+    }
+    .sec_sec .left .menu li a span::before {
+        right: -15px;
+        top: 1px;
+        width: 14px;
+        height: 14px;
+    }
+    .sec_sec .left .read {
+        margin-bottom: 32px;
+    }
+    .sec_sec .left .read li {
+        display: flex;
+        margin-bottom: 15px;
+    }
+    .sec_sec .left .read li h4 {
+        width: 90px;
+        margin-right: 15px;
+    }
+    .sec_sec .left .exp p:first-child {
+        margin-bottom: 5px;
+    } 
+}
 
-
-
-
-
-
-
-
-
-
-
+.sec_thi {
+    width: 100vw;
+    height: 100vh;
+}
+.sec_thi .wrapper {
+    position: relative;
+}
+.sec_thi .tit .photo_tit {
+    margin-bottom: 16px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.sec_thi .tit .photo_tit img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sec_thi .right .mockup {
+    position: absolute;
+    left: -106px;
+    top: 194px;
+}
+.sec_thi .right .mockup a .photo {
+    width: 868px;
+    height: 827px;
+    overflow: hidden;
+}
+.sec_thi .right .mockup a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sec_thi .right {
+    width: 493px;
+    font-size: 20px;
+    margin-left: 845px;
+}
+.sec_thi .right .tit {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 22px;
+}
+.sec_thi .right .tit h3 {
+    font-family: "ExtraBold";
+    font-size: 40px;
+    line-height: 1;
+    margin-right: 10px;
+}
+.sec_thi .right .menu {
+    display: flex;
+    margin-bottom: 36px;
+}
+.sec_thi .right .menu li {
+    margin-right: 19px;
+}
+.sec_thi .right .menu li a {
+    padding: 8px 48px 7px 29px;
+    background-color: var(--color-white);
+    border-radius: 50px;
+    color: #3E26CD;
+    font-family: "Bold";
+    font-size: 20px;
+    transition: 0.2s;
+}
+.sec_thi .right .menu li a:hover {
+    color: #fff;
+    background-color: #0F0F0F;
+}
+.sec_thi .right .menu li a span {
+    position: relative;
+}
+.sec_thi .right .menu li a span::before {
+    position: absolute;
+    right: -17px;
+    top: 1px;
+    width: 16px;
+    height: 16px;
+    content: "";
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.33333 14C2.96667 14 2.65278 13.8694 2.39167 13.6083C2.13056 13.3472 2 13.0333 2 12.6667V3.33333C2 2.96667 2.13056 2.65278 2.39167 2.39167C2.65278 2.13056 2.96667 2 3.33333 2H8V3.33333H3.33333V12.6667H12.6667V8H14V12.6667C14 13.0333 13.8694 13.3472 13.6083 13.6083C13.3472 13.8694 13.0333 14 12.6667 14H3.33333ZM6.46667 10.4667L5.53333 9.53333L11.7333 3.33333H9.33333V2H14V6.66667H12.6667V4.26667L6.46667 10.4667Z' fill='%233E26CD'/%3E%3C/svg%3E%0A");
+}
+.sec_thi .right .menu li a:hover span::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.33333 14C2.96667 14 2.65278 13.8694 2.39167 13.6083C2.13056 13.3472 2 13.0333 2 12.6667V3.33333C2 2.96667 2.13056 2.65278 2.39167 2.39167C2.65278 2.13056 2.96667 2 3.33333 2H8V3.33333H3.33333V12.6667H12.6667V8H14V12.6667C14 13.0333 13.8694 13.3472 13.6083 13.6083C13.3472 13.8694 13.0333 14 12.6667 14H3.33333ZM6.46667 10.4667L5.53333 9.53333L11.7333 3.33333H9.33333V2H14V6.66667H12.6667V4.26667L6.46667 10.4667Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+.sec_thi .right .read {
+    padding-left: 21px;
+    margin-bottom: 44px;
+}
+.sec_thi .right .read li {
+    display: flex;
+    margin-bottom: 15px;
+}
+.sec_thi .right .read li:last-child {
+    margin-bottom: 0;
+}
+.sec_thi .right .read li h4 {
+    font-family: "Bold";
+    width: 109px;
+    position: relative;
+    margin-right: 18px;
+}
+.sec_thi .right .read li h4::after {
+    position: absolute;
+    left: -21px;
+    top: 10px;
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    content: "";
+}
+.sec_thi .right .exp p {
+    line-height: 1.4;
+}
+.sec_thi .right .exp p:first-child {
+    margin-bottom: 8px;
+}
+@media screen and (max-width:1599px){
+    .sec_thi .tit .photo_tit {
+        margin-bottom: 16px;
+    }
+    .sec_thi .right .mockup {
+        left: -155px;
+    }
+    .sec_thi .right .mockup a .photo {
+        width: 678px;
+        height: 541px;
+    }
+    .sec_thi .right {
+        width: 418px;
+        font-size: 16px;
+        margin-left: 565px;
+    }
+    .sec_thi .right .tit h3 {
+        font-size: 35px;
+        margin-right: 10px;
+    }
+    .sec_thi .right .menu {
+        margin-bottom: 30px;
+    }
+    .sec_thi .right .menu li {
+        margin-right: 13px;
+    }
+    .sec_thi .right .menu li a {
+        padding: 6px 37px 6px 23px;
+        font-size: 16px;
+    }
+    .sec_thi .right .menu li a:hover {
+        color: #fff;
+        background-color: #0F0F0F;
+    }
+    .sec_thi .right .menu li a span::before {
+        right: -15px;
+        top: 1px;
+        width: 14px;
+        height: 14px;
+    }
+    .sec_thi .right .read {
+        margin-bottom: 32px;
+    }
+    .sec_thi .right .read li {
+        display: flex;
+        margin-bottom: 15px;
+    }
+    .sec_thi .right .read li h4 {
+        width: 90px;
+        margin-right: 15px;
+    }
+    .sec_thi .right .exp p:first-child {
+        margin-bottom: 5px;
+    } 
+}
+.sec_end {
+    width: 100vw;
+    position: relative;
+    background: url(../images/main/portfolio_bg.png) no-repeat center center / cover;
+}
+.sec_end h2 {
+    display: none;
+}
+.sec_end .photo {
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    width: 590px;
+    height: 265px;
+    animation-name : fadein;
+    animation-duration: 1s;
+    animation-timing-function : linear;
+    -moz-animation-name: fadein;
+    -moz-animation-duration: 1s;
+    -webkit-animation: fadein;
+    -webkit-animation-duration: 1s;
+    -o-animation: fadein;
+    -o-animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadein {
+    0% {opacity: 0; position: absolute; left: 50%; top: 45%; transform: translate(-50%, -65%);}
+    100% {opacity: 100%; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+}
+.sec_end .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+@media screen and (max-width:1599px){
+    .sec_port .photo {
+        height: 521px;
+    }
+    .sec_port .photo img {
+        vertical-align:middle
+    }
+}
 
 
 
@@ -857,28 +1246,7 @@ animation-direction : normal;
 
 
 
-.sec_fir {
-   background-color: #3218CA;
-}
 
-
-
-
-
-
-
-
-
-
-
-
-
-.sec_sec {
-    background-color: #3218CA;
-}
-.sec_thi {
-    background-color: #3218CA;
-}
 
 
 
@@ -896,7 +1264,7 @@ animation-direction : normal;
 
 .page {
     position: fixed;
-    right: 74px;
+    right: 40px;
     bottom: 27%;
     z-index: 9999;
     color: #fff;
@@ -914,11 +1282,10 @@ animation-direction : normal;
     margin-bottom: 0;
 }
 .page ul li a:hover,
-.page ul li.active a {
+.page ul li.on a {
     font-family: "SemiBold";
     color: var(--color-white);
 }
-
 .page ul li a::after {
     position: absolute;
     right: 5px;
