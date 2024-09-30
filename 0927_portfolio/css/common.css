@@ -22,7 +22,7 @@ body {
     height: 100%;
 }
 .wrapper {
-    width: 1600px;
+    width: 1352px;
     margin: 0 auto;
 }
 @media screen and (max-width:1599px){
@@ -36,17 +36,17 @@ body {
 }
 
 ::selection {
-    background-color: transparent;
+    background-color: #111;
     color: #fff;
 }
 
 /*
     기본 20px 일 때
-    48px - 2.4rem
-    32px - 1.6rem
-    20px - 1rem
+    48px - 3rem
+    32px - 2rem
+    24px - 1.5rem
+    16px - 1rem
 */
-
 :root {
     --color-main : #3327E8;
     --color-pro : #352AD4;
