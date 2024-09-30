@@ -31,7 +31,8 @@ section {
     overflow: hidden;
     width: 590px;
     height: 265px;
-    animation-name : fadein 1s;
+    animation-name : fadein;
+    animation-duration: 1s;
     animation-timing-function : linear;
     -moz-animation: fadein 1s; /* Firefox */
     -webkit-animation: fadein 1s; /* Safari and Chrome */
@@ -486,7 +487,7 @@ section {
 
 
 .sec_fir {
-    background: url(../images/main/first_bg.png) no-repeat center center / cover;
+   background-color: #3218CA;
 }
 
 
@@ -502,10 +503,10 @@ section {
 
 
 .sec_sec {
-    background: url(../images/main/second_bg.png) no-repeat center center / cover;
+    background-color: #3218CA;
 }
 .sec_thi {
-    background: url(../images/main/third_bg.png) no-repeat center center / cover;
+    background-color: #3218CA;
 }
 
 
