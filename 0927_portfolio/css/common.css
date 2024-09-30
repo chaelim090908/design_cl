@@ -2,7 +2,7 @@
 
 html,
 body {
-    background: #fff;
+    background: #3327E8;
     margin: 0;
     padding: 0;
     font-family: "Regular", "Malgun Gothic", "맑은 고딕", Dotum, 돋움, Helvetica, "Apple SD Gothic Neo", "애플 SD 산돌고딕 Neo", sans-serif;
@@ -50,7 +50,7 @@ body {
 :root {
     --color-main : #3327E8;
     --color-pro : #352AD4;
-    --color-end : #5118C3;
+    --color-end : #3319D2;
     --color-white : #fff;
     --color-w80 : rgba(255,255,255,0.8);
     --color-w50 : rgba(255,255,255,0.5);
