@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <title>청주한국병원</title>
 </head>
@@ -34,7 +37,8 @@
         </div>
     </div>
     <div id="wrap">
-        <header>
+        <!-- gnb에 마우스 오버 시 header에 menu_over 클래스 추가 -->
+        <header class="">
             <div class="header_top">
                 <div class="wrapper">
                     <div class="util_left">
@@ -57,81 +61,82 @@
             <div class="header_sub">
                 <div class="wrapper">
                     <h1 class="logo"><a href="index.html">한국병원</a></h1>
+                    <!-- 메뉴가 열리면 li에 on클래스 추가(pc/mobile)-->
                     <nav class="gnb">
                         <button class="gnb_open">메뉴열기</button>
                         <div class="gnb_wrap">
                             <ul class="depth1">
-                                <li>
+                                <li class="">
                                     <a href="#n">
-                                        병원안내
+                                        <span>병원안내</span>
                                     </a>
                                     <ul class="depth2">
-                                        <li><a href="#n">인사말</a></li>
-                                        <li><a href="#n">병원연혁</a></li>
-                                        <li><a href="#n">미션 및 비전</a></li>
-                                        <li><a href="#n">HI</a></li>
-                                        <li><a href="#n">조직도</a></li>
-                                        <li><a href="#n">발전후원회</a></li>
-                                        <li><a href="#n">전화번호안내</a></li>
-                                        <li><a href="#n">병원둘러보기</a></li>
-                                        <li><a href="#n">오시는길</a></li>
-                                        <li><a href="#n">공지사항</a></li>
-                                        <li><a href="#n">언론보도</a></li>
-                                        <li><a href="#n">채용안내</a></li>
-                                        <li><a href="#n">홍보동영상</a></li>
+                                        <li><a href="#n"><span>인사말</span></a></li>
+                                        <li><a href="#n"><span>병원연혁</span></a></li>
+                                        <li><a href="#n"><span>미션 및 비전</span></a></li>
+                                        <li><a href="#n"><span>HI</span></a></li>
+                                        <li><a href="#n"><span>조직도</span></a></li>
+                                        <li><a href="#n"><span>발전후원회</span></a></li>
+                                        <li><a href="#n"><span>전화번호안내</span></a></li>
+                                        <li><a href="#n"><span>병원둘러보기</span></a></li>
+                                        <li><a href="#n"><span>오시는길</span></a></li>
+                                        <li><a href="#n"><span>공지사항</span></a></li>
+                                        <li><a href="#n"><span>언론보도</span></a></li>
+                                        <li><a href="#n"><span>채용안내</span></a></li>
+                                        <li><a href="#n"><span>홍보동영상</span></a></li>
                                     </ul>
                                 </li>
                                 <li>
                                     <a href="#n">
-                                        진료안내
+                                        <span>진료안내</span>
                                     </a>
                                     <ul class="depth2">
-                                        <li><a href="#n">진료과소개</a></li>
-                                        <li><a href="#n">센터소개</a></li>
-                                        <li><a href="#n">진료지원소개</a></li>
-                                        <li><a href="#n">진료시간표</a></li>
-                                        <li><a href="#n">외래진료</a></li>
-                                        <li><a href="#n">응급진료</a></li>
-                                        <li><a href="#n">입원진료</a></li>
-                                        <li><a href="#n">진단서발급안내</a></li>
-                                        <li><a href="#n">의무기록사본발급안내</a></li>
-                                        <li><a href="#n">장비현황</a></li>
-                                        <li><a href="#n">비급여비용</a></li>
+                                        <li><a href="#n"><span>진료과소개</span></a></li>
+                                        <li><a href="#n"><span>센터소개</span></a></li>
+                                        <li><a href="#n"><span>진료지원소개</span></a></li>
+                                        <li><a href="#n"><span>진료시간표</span></a></li>
+                                        <li><a href="#n"><span>외래진료</span></a></li>
+                                        <li><a href="#n"><span>응급진료</span></a></li>
+                                        <li><a href="#n"><span>입원진료</span></a></li>
+                                        <li><a href="#n"><span>진단서발급안내</span></a></li>
+                                        <li><a href="#n"><span>의무기록사본발급안내</span></a></li>
+                                        <li><a href="#n"><span>장비현황</span></a></li>
+                                        <li><a href="#n"><span>비급여비용</span></a></li>
                                     </ul>
                                 </li>
                                 <li>
                                     <a href="#n">
-                                        건강상식
+                                        <span></span>건강상식
                                     </a>
                                     <ul class="depth2">
-                                        <li><a href="#n">건강상식</a></li>
-                                        <li><a href="#n">TV건강강좌</a></li>
+                                        <li><a href="#n"><span>건강상식</span></a></li>
+                                        <li><a href="#n"><span>TV건강강좌</span></a></li>
                                     </ul>
                                 </li>
                                 <li>
                                     <a href="#n">
-                                        진료예약
+                                        <span>진료예약</span>
                                     </a>
                                     <ul class="depth2">
-                                        <li><a href="#n">예약안내</a></li>
-                                        <li><a href="#n">온라인예약</a></li>
-                                        <li><a href="#n">건강검진예약</a></li>
-                                        <li><a href="#n">학생건강검진 예약</a></li>
-                                        <li><a href="#n">학생건강검진 예약조회</a></li>
-                                        <li><a href="#n">예약조회</a></li>
-                                        <li><a href="#n">예약 FAQ</a></li>
+                                        <li><a href="#n"><span>예약안내</span></a></li>
+                                        <li><a href="#n"><span>온라인예약</span></a></li>
+                                        <li><a href="#n"><span>건강검진예약</span></a></li>
+                                        <li><a href="#n"><span>학생건강검진 예약</span></a></li>
+                                        <li><a href="#n"><span>학생건강검진 예약조회</span></a></li>
+                                        <li><a href="#n"><span>예약조회</span></a></li>
+                                        <li><a href="#n"><span>예약 FAQ</span></a></li>
                                     </ul>
                                 </li>
                                 <li>
                                     <a href="#n">
-                                        고객서비스
+                                        <span></span>고객서비스
                                     </a>
                                     <ul class="depth2">
-                                        <li><a href="#n">온라인상담</a></li>
-                                        <li><a href="#n">감동을 전합니다</a></li>
-                                        <li><a href="#n">이달의 친절직원</a></li>
-                                        <li><a href="#n">고객의소리</a></li>
-                                        <li><a href="#n">온라인 웹진</a></li>
+                                        <li><a href="#n"><span>온라인상담</span></a></li>
+                                        <li><a href="#n"><span>감동을 전합니다</span></a></li>
+                                        <li><a href="#n"><span>이달의 친절직원</span></a></li>
+                                        <li><a href="#n"><span>고객의소리</span></a></li>
+                                        <li><a href="#n"><span>온라인 웹진</span></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -139,8 +144,8 @@
                         <button class="gnb_close">메뉴닫기</button>
                     </nav>
                     <div class="tnb">
-                        <div class="search">검색</div>
-                        <div class="full_menu">전체보기메뉴</div>
+                        <a href="#n" class="search">검색</a>
+                        <a href="#n" class="full_menu">전체보기메뉴</a>
                     </div>
                 </div>
             </div>
